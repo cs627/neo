@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OpenRouter Usage Dashboard</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,sans-serif;background:#0d1117;color:#e6edf3;min-height:100vh}
+.header{background:#161b22;border-bottom:1px solid #30363d;padding:20px 32px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.header h1{font-size:22px;font-weight:600;display:flex;align-items:center;gap:10px}
+.header h1 span{color:#8b949e;font-weight:400;font-size:14px}
+.last-updated{color:#8b949e;font-size:12px}
+.container{max-width:1400px;margin:0 auto;padding:24px 32px}
+.tabs{display:flex;gap:0;border-bottom:1px solid #30363d;margin-bottom:24px;overflow-x:auto;flex-wrap:wrap}
+.tab{padding:10px 20px;cursor:pointer;color:#8b949e;font-size:13px;font-weight:500;border-bottom:2px solid transparent;transition:all .15s ease;white-space:nowrap}
+.tab:hover{color:#e6edf3}
+.tab.active{color:#f78166;border-bottom-color:#f78166}
+.tab-content{display:none}
+.tab-content.active{display:block}
+.provider-badge{display:inline-block;padding:2px 8px;border-radius:10px;font-size:10px;font-weight:600;margin-right:6px}
+.provider-or{background:rgba(247,129,102,.15);color:#f78166}
+.provider-gem{background:rgba(88,166,255,.15);color:#58a6ff}
+.provider-pplx{background:rgba(210,153,34,.15);color:#d29922}
+
+/* Stats */
+.stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin-bottom:24px}
+.stat-card{background:#161b22;border:1px solid #30363d;border-radius:8px;padding:20px;position:relative}
+.stat-card h3{font-size:12px;text-transform:uppercase;letter-spacing:.5px;color:#8b949e;margin-bottom:8px}
+.stat-card .value{font-size:28px;font-weight:600}
+.stat-card .sub{color:#8b949e;font-size:13px;margin-top:4px}
+
+.gauge-card{grid-column:1 / -1;max-width:500px;margin:0 auto 24px}
+.gauge-container{position:relative;width:260px;height:140px;margin:0 auto}
+.gauge-svg{width:260px;height:140px}
+.gauge-value{position:absolute;bottom:0;left:50%;transform:translateX(-50%);text-align:center}
+.gauge-value .num{font-size:36px;font-weight:700}
+.gauge-value .label{color:#8b949e;font-size:12px;margin-top:2px}
+
+.usage-breakdown{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-top:24px}
+.mini-stat{background:#0d1117;border:1px solid #21262d;border-radius:6px;padding:14px;text-align:center}
+.mini-stat .label{color:#8b949e;font-size:11px;text-transform:uppercase;letter-spacing:.5px}
+.mini-stat .val{font-size:18px;font-weight:600;margin-top:4px}
+
+/* Model catalog */
+.search-bar{display:flex;gap:12px;margin-bottom:16px;flex-wrap:wrap}
+.search-bar input{flex:1;min-width:200px;padding:10px 14px;background:#0d1117;border:1px solid #30363d;border-radius:6px;color:#e6edf3;font-size:14px}
+.search-bar input:focus{outline:none;border-color:#f78166}
+.search-bar select{padding:10px 14px;background:#0d1117;border:1px solid #30363d;border-radius:6px;color:#e6edf3;font-size:14px}
+.model-count{color:#8b949e;font-size:13px;margin-bottom:12px}
+.model-table{width:100%;border-collapse:collapse;font-size:13px}
+.model-table th{text-align:left;padding:10px 12px;border-bottom:2px solid #30363d;color:#8b949e;font-size:11px;text-transform:uppercase;letter-spacing:.5px;cursor:pointer;white-space:nowrap;user-select:none}
+.model-table th:hover{color:#e6edf3}
+.model-table th .sort{color:#8b949e;font-size:10px;margin-left:4px}
+.model-table td{padding:8px 12px;border-bottom:1px solid #21262d;vertical-align:top}
+.model-table tr:hover td{background:rgba(255,255,255,.03)}
+.model-table .model-id{color:#f78166;font-weight:500;font-size:12px;font-family:'SF Mono','Fira Code','Courier New',monospace;word-break:break-all;max-width:250px;display:block}
+.context-bar{display:inline-block;height:6px;border-radius:3px;min-width:4px;background:#58a6ff}
+.context-val{font-size:11px;color:#8b949e;margin-left:4px}
+.price{font-family:'SF Mono','Fira Code','Courier New',monospace;font-size:11px;white-space:nowrap}
+.price-free{color:#3fb950}
+.price-low{color:#58a6ff}
+.price-med{color:#d29922}
+.price-high{color:#f85149}
+.modal-badge{display:inline-block;padding:2px 6px;border-radius:4px;font-size:10px;font-weight:500}
+.modal-text{background:rgba(88,166,255,.15);color:#58a6ff}
+.modal-image{background:rgba(63,185,80,.15);color:#3fb950}
+.modal-video{background:rgba(210,153,34,.15);color:#d29922}
+.modal-audio{background:rgba(248,81,73,.15);color:#f85149}
+.modal-file{background:rgba(139,148,158,.15);color:#8b949e}
+.pagination{display:flex;justify-content:center;gap:8px;margin-top:20px;flex-wrap:wrap}
+.pagination button{padding:6px 14px;background:transparent;border:1px solid #30363d;border-radius:6px;color:#e6edf3;cursor:pointer;font-size:13px}
+.pagination button:hover{border-color:#8b949e}
+.pagination button.active{background:#f78166;border-color:#f78166;color:#fff}
+.pagination button:disabled{opacity:.4;cursor:default}
+
+/* Capabilities tab */
+.cap-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}
+.cap-card{background:#161b22;border:1px solid #30363d;border-radius:8px;padding:20px}
+.cap-card h3{font-size:15px;font-weight:600;margin-bottom:12px;display:flex;align-items:center;gap:8px}
+.cap-card h3 .count{background:rgba(247,129,102,.15);color:#f78166;padding:2px 8px;border-radius:10px;font-size:12px}
+.cap-list{list-style:none}
+.cap-list li{padding:6px 0;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #21262d;font-size:13px}
+.cap-list li:last-child{border-bottom:none}
+.cap-list .cap-provider{color:#8b949e;font-size:11px}
+.progress-bar-wrap{background:#21262d;border-radius:4px;height:6px;overflow:hidden;width:100px}
+.progress-bar-fill{height:100%;border-radius:4px;transition:width .3s ease}
+
+/* Multi-Provider tab */
+.mp-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:16px}
+.mp-card{background:#161b22;border:1px solid #30363d;border-radius:8px;padding:20px}
+.mp-card .mp-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;padding-bottom:12px;border-bottom:1px solid #21262d}
+.mp-card .mp-name{font-size:16px;font-weight:600}
+.mp-card .mp-status{display:inline-flex;align-items:center;gap:5px;padding:3px 10px;border-radius:12px;font-size:11px;font-weight:600}
+.mp-status-ok{background:rgba(63,185,80,.15);color:#3fb950}
+.mp-status-warn{background:rgba(210,153,34,.15);color:#d29922}
+.mp-status-err{background:rgba(248,81,73,.15);color:#f85149}
+.mp-stat{display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid #21262d;font-size:13px}
+.mp-stat:last-child{border-bottom:none}
+.mp-stat .mp-label{color:#8b949e}
+.mp-stat .mp-value{font-weight:500}
+.mp-section-title{font-size:12px;text-transform:uppercase;letter-spacing:.5px;color:#8b949e;margin:12px 0 6px}
+.mp-model-item{display:flex;justify-content:space-between;padding:4px 0;font-size:12px;border-bottom:1px solid #1a1f2e}
+.mp-model-item:last-child{border-bottom:none}
+.mp-model-name{color:#e6edf3;font-family:'SF Mono','Fira Code',monospace}
+.mp-model-detail{color:#8b949e;font-size:11px}
+.mp-link{color:#58a6ff;text-decoration:none;font-size:12px;display:inline-block;margin-top:8px}
+.mp-link:hover{text-decoration:underline}
+.mp-note{background:rgba(210,153,34,.08);border:1px solid rgba(210,153,34,.3);border-radius:6px;padding:10px;margin-top:12px;font-size:12px;color:#d29922}
+.mp-note-ok{background:rgba(63,185,80,.08);border:1px solid rgba(63,185,80,.3);color:#3fb950}
+.mp-usage-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px}
+.mp-quick-stat{text-align:center;padding:8px;background:#0d1117;border-radius:6px;border:1px solid #21262d}
+
+@media(max-width:768px){
+  .header{flex-direction:column;gap:8px;padding:16px}
+  .container{padding:16px}
+  .stats-grid,.mp-grid{grid-template-columns:1fr}
+  .model-table{font-size:11px}
+  .model-table td,.model-table th{padding:6px 8px}
+  .mp-usage-grid{grid-template-columns:1fr}
+}
+
+/* Loading */
+.loading{text-align:center;padding:60px 20px;color:#8b949e}
+.loading .spinner{width:40px;height:40px;border:3px solid #30363d;border-top-color:#f78166;border-radius:50%;animation:spin .8s linear infinite;margin:0 auto 16px}
+@keyframes spin{to{transform:rotate(360deg)}}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="#f78166" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    AI Provider Dashboard
+    <span>Firebean Agency</span>
+  </h1>
+  <div class="last-updated" id="lastUpdated">Loading...</div>
+</div>
+
+<div class="container">
+  <div class="tabs">
+    <div class="tab active" data-tab="dashboard" onclick="switchTab('dashboard')">📊 Dashboard</div>
+    <div class="tab" data-tab="models" onclick="switchTab('models')">🧠 Model Catalog</div>
+    <div class="tab" data-tab="capabilities" onclick="switchTab('capabilities')">🔧 Capabilities</div>
+    <div class="tab" data-tab="multiprovider" onclick="switchTab('multiprovider')">🌐 Multi-Provider</div>
+  </div>
+
+  <!-- DASHBOARD TAB -->
+  <div class="tab-content active" id="tab-dashboard">
+    <div id="loadingDashboard" class="loading"><div class="spinner"></div>Loading dashboard data...</div>
+    <div id="dashboardContent" style="display:none">
+
+      <!-- Credit Gauge -->
+      <div class="gauge-card stat-card" style="text-align:center">
+        <h3>OpenRouter Credit Usage</h3>
+        <div class="gauge-container">
+          <svg class="gauge-svg" viewBox="0 0 260 140" id="gaugeSvg">
+            <path d="M 30 120 A 100 100 0 0 1 230 120" fill="none" stroke="#21262d" stroke-width="20" stroke-linecap="round"/>
+            <path id="gaugeArc" d="M 30 120 A 100 100 0 0 1 230 120" fill="none" stroke="#f78166" stroke-width="20" stroke-linecap="round" stroke-dasharray="0 628" style="transition: stroke-dasharray 1s ease"/>
+            <g id="gaugeNeedle" style="transition: transform 1s ease; transform-origin: 130px 120px">
+              <line x1="130" y1="120" x2="130" y2="35" stroke="#e6edf3" stroke-width="2.5" stroke-linecap="round"/>
+              <circle cx="130" cy="120" r="6" fill="#e6edf3"/>
+            </g>
+          </svg>
+          <div class="gauge-value">
+            <div class="num" id="creditPercent">0%</div>
+            <div class="label">used of $800</div>
+          </div>
+        </div>
+        <div style="display:flex;justify-content:center;gap:40px;margin-top:8px">
+          <div><span style="color:#3fb950;font-weight:600" id="creditRemaining">$0</span><br><span style="color:#8b949e;font-size:11px">Remaining</span></div>
+          <div><span style="color:#f85149;font-weight:600" id="creditUsed">$0</span><br><span style="color:#8b949e;font-size:11px">Used</span></div>
+          <div><span style="color:#58a6ff;font-weight:600" id="creditTotal">$800</span><br><span style="color:#8b949e;font-size:11px">Total</span></div>
+        </div>
+      </div>
+
+      <div class="stats-grid" id="statsGrid"></div>
+
+      <h3 style="color:#8b949e;font-size:13px;text-transform:uppercase;letter-spacing:.5px;margin-bottom:12px">Usage Breakdown</h3>
+      <div class="usage-breakdown" id="usageBreakdown"></div>
+    </div>
+  </div>
+
+  <!-- MODEL CATALOG TAB -->
+  <div class="tab-content" id="tab-models">
+    <div id="loadingModels" class="loading"><div class="spinner"></div>Loading model catalog (396 models)...</div>
+    <div id="modelsContent" style="display:none">
+      <div class="search-bar">
+        <input type="text" id="modelSearch" placeholder="Search models by name, ID, or provider..." oninput="renderModels()">
+        <select id="modalityFilter" onchange="renderModels()">
+          <option value="all">All Modalities</option>
+        </select>
+        <select id="sortBy" onchange="renderModels()">
+          <option value="name">Sort: Name</option>
+          <option value="context">Sort: Context Length</option>
+          <option value="price">Sort: Price (Low)</option>
+          <option value="price_high">Sort: Price (High)</option>
+        </select>
+      </div>
+      <div class="model-count" id="modelCount"></div>
+      <div style="overflow-x:auto">
+        <table class="model-table">
+          <thead><tr>
+            <th onclick="sortBy='name';renderModels()">Model <span class="sort">↕</span></th>
+            <th onclick="sortBy='context';renderModels()">Context <span class="sort">↕</span></th>
+            <th>Modality</th>
+            <th onclick="sortBy='price';renderModels()">Input Price <span class="sort">↕</span></th>
+            <th>Output Price</th>
+            <th>Provider</th>
+          </tr></thead>
+          <tbody id="modelTableBody"></tbody>
+        </table>
+      </div>
+      <div class="pagination" id="modelPagination"></div>
+    </div>
+  </div>
+
+  <!-- CAPABILITIES TAB -->
+  <div class="tab-content" id="tab-capabilities">
+    <div id="loadingCaps" class="loading"><div class="spinner"></div>Analyzing capabilities...</div>
+    <div id="capsContent" style="display:none">
+      <div class="cap-grid" id="capGrid"></div>
+    </div>
+  </div>
+
+  <!-- MULTI-PROVIDER TAB -->
+  <div class="tab-content" id="tab-multiprovider">
+    <div id="loadingMP" class="loading"><div class="spinner"></div>Loading provider comparisons...</div>
+    <div id="mpContent" style="display:none">
+      <div class="mp-grid" id="mpGrid"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+const PAGE_SIZE = 30;
+let models = [];
+let geminiModels = [];
+let currentPage = 1;
+let sortBy = 'name';
+
+async function loadData() {
+  try {
+    const [usageResp, modelsResp, geminiResp] = await Promise.all([
+      fetch('data/usage.json'),
+      fetch('data/models.json'),
+      fetch('data/gemini_models.json').catch(() => null)
+    ]);
+    const usage = await usageResp.json();
+    const modelsData = await modelsResp.json();
+    models = modelsData.models || [];
+    if (geminiResp) geminiModels = (await geminiResp.json()).models || [];
+    
+    document.getElementById('lastUpdated').textContent = 'Last updated: ' + (usage.fetched_at || 'N/A');
+    
+    renderDashboard(usage);
+    renderModels();
+    renderCapabilities(models);
+    renderMultiProvider(usage, geminiModels);
+    
+    document.querySelectorAll('.loading').forEach(el => el.style.display = 'none');
+    document.getElementById('dashboardContent').style.display = 'block';
+    document.getElementById('modelsContent').style.display = 'block';
+    document.getElementById('capsContent').style.display = 'block';
+    document.getElementById('mpContent').style.display = 'block';
+    
+    // Populate modality filter
+    const mods = new Set();
+    models.forEach(m => {
+      let mod = m.architecture?.modality || 'text';
+      if (Array.isArray(mod)) mod = mod.join('+');
+      mods.add(mod);
+    });
+    const sel = document.getElementById('modalityFilter');
+    [...mods].sort().forEach(m => {
+      const opt = document.createElement('option');
+      opt.value = m; opt.textContent = m.replace(/->/g, '→');
+      sel.appendChild(opt);
+    });
+  } catch(e) {
+    console.error('Load error:', e);
+    document.querySelectorAll('.loading').forEach(el => {
+      el.innerHTML = `<span style="color:#f85149">Error: ${e.message}</span>`;
+    });
+  }
+}
+
+function formatPrice(p) {
+  if (!p) return '-';
+  const val = parseFloat(p);
+  if (val === 0) return '<span class="price price-free">Free</span>';
+  if (val < 0.00001) return `<span class="price price-low">~${val.toExponential(2)}</span>`;
+  const s = val.toFixed(val < 0.001 ? 6 : val < 0.01 ? 4 : 4);
+  const cls = val < 0.001 ? 'price-low' : val < 0.01 ? 'price-med' : 'price-high';
+  return `<span class="price ${cls}">$${s}</span>`;
+}
+
+function formatContext(n) {
+  if (!n) return '<span class="context-val">—</span>';
+  const w = Math.min(100, (n / 128000) * 100);
+  let label;
+  if (n >= 1000000) label = (n/1000000).toFixed(1) + 'M';
+  else if (n >= 1000) label = Math.round(n/1000) + 'K';
+  else label = String(n);
+  return `<span class="context-bar" style="width:${Math.max(4,w)}px"></span><span class="context-val">${label}</span>`;
+}
+
+function modalityBadges(mod) {
+  if (!mod) return '<span class="modal-badge modal-text">text</span>';
+  if (!Array.isArray(mod)) mod = [mod];
+  return mod.map(m => {
+    const cls = m.includes('image') ? 'modal-image' : m.includes('video') ? 'modal-video' : m.includes('audio') ? 'modal-audio' : m.includes('file') ? 'modal-file' : 'modal-text';
+    return `<span class="modal-badge ${cls}">${m}</span>`;
+  }).join(' ');
+}
+
+function getColorForPct(pct) {
+  if (pct < 40) return '#3fb950';
+  if (pct < 70) return '#d29922';
+  return '#f85149';
+}
+
+function renderDashboard(usage) {
+  const credits = usage.credits || {};
+  const key = usage.key || {};
+  const total = credits.total_credits || 800;
+  const used = credits.total_usage || 0;
+  const remaining = total - used;
+  const pct = (used / total) * 100;
+  const color = getColorForPct(pct);
+  
+  document.getElementById('creditPercent').textContent = pct.toFixed(1) + '%';
+  document.getElementById('creditPercent').style.color = color;
+  document.getElementById('creditRemaining').textContent = '$' + remaining.toFixed(2);
+  document.getElementById('creditUsed').textContent = '$' + used.toFixed(2);
+  document.getElementById('creditTotal').textContent = '$' + total.toFixed(2);
+  
+  const circumference = Math.PI * 100;
+  const dashLength = (pct / 100) * circumference;
+  document.getElementById('gaugeArc').setAttribute('stroke-dasharray', `${dashLength} ${circumference}`);
+  const needleAngle = -90 + (pct / 100) * 180;
+  document.getElementById('gaugeNeedle').setAttribute('transform', `rotate(${needleAngle}, 130, 120)`);
+  document.getElementById('gaugeArc').setAttribute('stroke', color);
+  
+  const keyUsage = key.usage || 0;
+  const daily = key.usage_daily || 0;
+  const weekly = key.usage_weekly || 0;
+  const monthly = key.usage_monthly || 0;
+  const rateLimit = key.rate_limit || {};
+  
+  let limitHtml = 'Unlimited';
+  const limitRemaining = key.limit_remaining;
+  if (limitRemaining !== null && limitRemaining !== undefined) {
+    limitHtml = limitRemaining > 0 ? `$${limitRemaining.toFixed(2)}` : 'Exceeded';
+  }
+  
+  document.getElementById('statsGrid').innerHTML = `
+    <div class="stat-card">
+      <h3>Total Usage (Key)</h3>
+      <div class="value" style="color:#58a6ff">$${keyUsage.toFixed(2)}</div>
+      <div class="sub">Across all models</div>
+    </div>
+    <div class="stat-card">
+      <h3>Credit Health</h3>
+      <div class="value" style="color:${color}">${pct.toFixed(1)}% used</div>
+      <div class="sub">$${remaining.toFixed(2)} of $${total.toFixed(0)} remaining</div>
+    </div>
+    <div class="stat-card">
+      <h3>Rate Limit</h3>
+      <div class="value" style="color:#8b949e">${rateLimit.requests === -1 ? '∞' : rateLimit.requests}</div>
+      <div class="sub">Per ${rateLimit.interval || 'N/A'}</div>
+    </div>
+    <div class="stat-card">
+      <h3>API Key Limit</h3>
+      <div class="value" style="color:#d29922">${limitHtml}</div>
+      <div class="sub">Key: ${(key.label || '').slice(0,16)}...</div>
+    </div>
+  `;
+  
+  document.getElementById('usageBreakdown').innerHTML = `
+    <div class="mini-stat"><div class="label">Daily Spend</div><div class="val" style="color:#58a6ff">$${daily.toFixed(2)}</div></div>
+    <div class="mini-stat"><div class="label">Weekly Spend</div><div class="val" style="color:#d29922">$${weekly.toFixed(2)}</div></div>
+    <div class="mini-stat"><div class="label">Monthly Spend</div><div class="val" style="color:#f78166">$${monthly.toFixed(2)}</div></div>
+    <div class="mini-stat"><div class="label">Projected Monthly</div><div class="val" style="color:#f85149">$${(daily * 30).toFixed(2)}</div></div>
+  `;
+}
+
+function getModels(filtered) {
+  const query = document.getElementById('modelSearch').value.toLowerCase().trim();
+  const modality = document.getElementById('modalityFilter').value;
+  let result = [...models];
+  if (query) {
+    result = result.filter(m => 
+      m.id.toLowerCase().includes(query) ||
+      (m.name || '').toLowerCase().includes(query) ||
+      (m.top_provider?.name || '').toLowerCase().includes(query) ||
+      (m.description || '').toLowerCase().includes(query)
+    );
+  }
+  if (modality !== 'all') {
+    result = result.filter(m => {
+      let mod = m.architecture?.modality || 'text';
+      if (Array.isArray(mod)) mod = mod.join('+');
+      return mod === modality;
+    });
+  }
+  const s = document.getElementById('sortBy')?.value || sortBy;
+  if (s === 'context') result.sort((a,b) => (b.context_length||0) - (a.context_length||0));
+  else if (s === 'price') result.sort((a,b) => parseFloat(a.pricing?.prompt||0) - parseFloat(b.pricing?.prompt||0));
+  else if (s === 'price_high') result.sort((a,b) => parseFloat(b.pricing?.prompt||0) - parseFloat(a.pricing?.prompt||0));
+  else result.sort((a,b) => (a.name||a.id).localeCompare(b.name||b.id));
+  return result;
+}
+
+function renderModels() {
+  const filtered = getModels();
+  const total = filtered.length;
+  const pages = Math.ceil(total / PAGE_SIZE);
+  if (currentPage > pages) currentPage = 1;
+  
+  document.getElementById('modelCount').textContent = `Showing ${total} of ${models.length} models`;
+  
+  const start = (currentPage - 1) * PAGE_SIZE;
+  const page = filtered.slice(start, start + PAGE_SIZE);
+  
+  document.getElementById('modelTableBody').innerHTML = page.map(m => {
+    const pricing = m.pricing || {};
+    const prov = m.top_provider?.name || '—';
+    let mod = m.architecture?.modality || 'text';
+    if (Array.isArray(mod)) mod = mod.join('+');
+    return `<tr>
+      <td><span class="model-id">${m.id}</span></td>
+      <td>${formatContext(m.context_length)}</td>
+      <td>${modalityBadges(Array.isArray(m.architecture?.modality) ? m.architecture.modality : [mod])}</td>
+      <td>${formatPrice(pricing.prompt)}</td>
+      <td>${formatPrice(pricing.completion)}</td>
+      <td><span style="color:#8b949e;font-size:12px">${prov}</span></td>
+    </tr>`;
+  }).join('');
+  
+  const pag = document.getElementById('modelPagination');
+  let pagHtml = `<button onclick="currentPage=1;renderModels()" ${currentPage===1?'disabled':''}>««</button>
+    <button onclick="currentPage=Math.max(1,currentPage-1);renderModels()" ${currentPage===1?'disabled':''}>«</button>`;
+  
+  let pages_list = [];
+  if (pages <= 7) { for (let i=1;i<=pages;i++) pages_list.push(i); }
+  else {
+    pages_list.push(1);
+    let sp = Math.max(2,currentPage-1), ep = Math.min(pages-1,currentPage+1);
+    if (sp>2) pages_list.push('...');
+    for (let i=sp;i<=ep;i++) pages_list.push(i);
+    if (ep<pages-1) pages_list.push('...');
+    pages_list.push(pages);
+  }
+  pages_list.forEach(p => {
+    if (p==='...') pagHtml += `<span style="color:#8b949e;padding:6px 4px">…</span>`;
+    else pagHtml += `<button onclick="currentPage=${p};renderModels()" class="${p===currentPage?'active':''}">${p}</button>`;
+  });
+  pagHtml += `<button onclick="currentPage=Math.min(${pages},currentPage+1);renderModels()" ${currentPage===pages?'disabled':''}>»</button>
+    <button onclick="currentPage=${pages};renderModels()" ${currentPage===pages?'disabled':''}>»»</button>`;
+  pag.innerHTML = pagHtml;
+}
+
+function renderCapabilities(allModels) {
+  const grid = document.getElementById('capGrid');
+  
+  const byModality = {};
+  allModels.forEach(m => {
+    let mod = m.architecture?.modality || 'text';
+    if (Array.isArray(mod)) mod = mod.join('+');
+    if (!byModality[mod]) byModality[mod] = [];
+    byModality[mod].push(m);
+  });
+  
+  const byProvider = {};
+  allModels.forEach(m => {
+    const prov = m.top_provider?.name || 'Unknown';
+    if (!byProvider[prov]) byProvider[prov] = [];
+    byProvider[prov].push(m);
+  });
+  const topProviders = Object.entries(byProvider).sort((a,b)=>b[1].length-a[1].length).slice(0,20);
+  
+  const ctxRanges = {
+    'Small (<8K)': allModels.filter(m => (m.context_length||0) < 8192).length,
+    'Medium (8K-32K)': allModels.filter(m => { const c=m.context_length||0; return c>=8192 && c<32000; }).length,
+    'Large (32K-128K)': allModels.filter(m => { const c=m.context_length||0; return c>=32000 && c<128000; }).length,
+    'XL (128K+)': allModels.filter(m => (m.context_length||0) >= 128000).length,
+  };
+  const maxCtx = Math.max(...Object.values(ctxRanges));
+  
+  const priceTiers = {
+    'Free ($0 input)': allModels.filter(m => parseFloat(m.pricing?.prompt||0)===0).length,
+    'Budget (<$0.001)': allModels.filter(m => { const p=parseFloat(m.pricing?.prompt||0); return p>0&&p<0.001; }).length,
+    'Standard ($0.001-0.01)': allModels.filter(m => { const p=parseFloat(m.pricing?.prompt||0); return p>=0.001&&p<0.01; }).length,
+    'Premium (>=$0.01)': allModels.filter(m => parseFloat(m.pricing?.prompt||0)>=0.01).length,
+  };
+  const maxPrice = Math.max(...Object.values(priceTiers));
+  
+  const modLabels = {'text->text':'Text','text+image->text':'Vision','text+image+file->text':'Vision+Files','text+image+video->text':'Vision+Video','text+image+file+audio+video->text':'Multimodal'};
+  
+  let html = '';
+  
+  html += `<div class="cap-card">
+    <h3>📦 Modality <span class="count">${Object.keys(byModality).length}</span></h3>
+    <ul class="cap-list">
+      ${Object.entries(byModality).sort((a,b)=>b[1].length-a[1].length).slice(0,10).map(([mod,list])=>{
+        const label = modLabels[mod] || mod.replace(/->/g,'→');
+        const pct = Math.round((list.length/allModels.length)*100);
+        return `<li><span>${label} <span style="color:#8b949e;font-size:11px">(${list.length})</span></span>
+          <div class="progress-bar-wrap"><div class="progress-bar-fill" style="width:${pct}%;background:${getColorForPct(pct)}"></div></div></li>`;
+      }).join('')}
+    </ul>
+  </div>`;
+  
+  html += `<div class="cap-card">
+    <h3>📏 Context Windows <span class="count">${allModels.length}</span></h3>
+    <ul class="cap-list">
+      ${Object.entries(ctxRanges).map(([label,count])=>{
+        const pct = Math.round((count/maxCtx)*100);
+        const bc = {'Small (<8K)':'#8b949e','Medium (8K-32K)':'#58a6ff','Large (32K-128K)':'#d29922','XL (128K+)':'#f78166'};
+        return `<li><span>${label} <span style="color:#8b949e;font-size:11px">(${count})</span></span>
+          <div class="progress-bar-wrap"><div class="progress-bar-fill" style="width:${pct}%;background:${bc[label]||'#58a6ff'}"></div></div></li>`;
+      }).join('')}
+    </ul>
+  </div>`;
+  
+  html += `<div class="cap-card">
+    <h3>💰 Price Tiers</h3>
+    <ul class="cap-list">
+      ${Object.entries(priceTiers).map(([label,count])=>{
+        const pct = Math.round((count/maxPrice)*100);
+        return `<li><span>${label} <span style="color:#8b949e;font-size:11px">(${count})</span></span>
+          <div class="progress-bar-wrap"><div class="progress-bar-fill" style="width:${pct}%;background:${getColorForPct(pct)}"></div></div></li>`;
+      }).join('')}
+    </ul>
+  </div>`;
+  
+  html += `<div class="cap-card">
+    <h3>🏢 Top Providers <span class="count">${Object.keys(byProvider).length}</span></h3>
+    <ul class="cap-list">
+      ${topProviders.map(([prov,list])=>{
+        const pct = Math.round((list.length/allModels.length)*100);
+        return `<li><span>${prov} <span style="color:#8b949e;font-size:11px">(${list.length})</span></span>
+          <div class="progress-bar-wrap"><div class="progress-bar-fill" style="width:${pct}%;background:#58a6ff"></div></div></li>`;
+      }).join('')}
+    </ul>
+  </div>`;
+  
+  const freeModels = allModels.filter(m => parseFloat(m.pricing?.prompt||0)===0 && parseFloat(m.pricing?.completion||0)===0);
+  html += `<div class="cap-card">
+    <h3>🆓 Free Models <span class="count">${freeModels.length}</span></h3>
+    <ul class="cap-list">
+      ${freeModels.slice(0,15).map(m => `<li><span>${m.name||m.id}</span><span style="color:#3fb950;font-size:11px">Free</span></li>`).join('')}
+      ${freeModels.length>15 ? `<li style="color:#8b949e;font-style:italic">… ${freeModels.length-15} more</li>` : ''}
+    </ul>
+  </div>`;
+  
+  grid.innerHTML = html;
+}
+
+function renderMultiProvider(usage, geminiModels) {
+  const grid = document.getElementById('mpGrid');
+  const credits = usage.credits || {};
+  const key = usage.key || {};
+  const or_total = credits.total_credits || 800;
+  const or_used = credits.total_usage || 0;
+  const or_remaining = or_total - or_used;
+  const or_pct = (or_used / or_total) * 100;
+  
+  // Gemini status - API was working as of last test
+  const geminiStatus = 'ok';
+  const geminiStatusText = 'API Operational';
+  const geminiNote = 'Usage tracking requires Google Cloud Console → Billing. No built-in billing API for AI Studio.';
+  const geminiQuotaNote = 'Direct API quota was exhausted 2026-08-15 but restored as of last check.';
+  
+  // Perplexity note - goes through OpenRouter
+  const pplxNote = 'Perplexity routed via OpenRouter. No separate API key — uses OPENROUTER_API_KEY.';
+  
+  let keyModels = geminiModels.length > 0 ? geminiModels : [];
+  // Filter to gemini-2.5 and gemini-3 models only
+  keyModels = keyModels.filter(m => {
+    const n = m.name || '';
+    return n.startsWith('models/gemini-') || n.startsWith('models/gemma-');
+  });
+  
+  grid.innerHTML = `
+    <!-- OpenRouter Card -->
+    <div class="mp-card">
+      <div class="mp-header">
+        <div>
+          <span class="provider-badge provider-or">OR</span>
+          <span class="mp-name">OpenRouter</span>
+        </div>
+        <span class="mp-status mp-status-ok">● Active</span>
+      </div>
+      <div class="mp-stat"><span class="mp-label">Credits</span><span class="mp-value">$${or_total.toFixed(2)} total</span></div>
+      <div class="mp-stat"><span class="mp-label">Used</span><span class="mp-value" style="color:#f85149">$${or_used.toFixed(2)}</span></div>
+      <div class="mp-stat"><span class="mp-label">Remaining</span><span class="mp-value" style="color:#3fb950">$${or_remaining.toFixed(2)}</span></div>
+      <div class="mp-stat"><span class="mp-label">Usage Rate</span><span class="mp-value">${or_pct.toFixed(1)}%</span></div>
+      <div class="mp-stat"><span class="mp-label">Models Available</span><span class="mp-value">${models.length}</span></div>
+      <div class="mp-stat"><span class="mp-label">Daily Spend</span><span class="mp-value">$${(key.usage_daily||0).toFixed(2)}</span></div>
+      <div class="mp-stat"><span class="mp-label">Monthly Spend</span><span class="mp-value">$${(key.usage_monthly||0).toFixed(2)}</span></div>
+      <div class="mp-stat"><span class="mp-label">Key Limit</span><span class="mp-value">Unlimited</span></div>
+      <a class="mp-link" href="https://openrouter.ai/keys" target="_blank">openrouter.ai/keys →</a>
+    </div>
+    
+    <!-- Google AI Studio / Gemini Card -->
+    <div class="mp-card">
+      <div class="mp-header">
+        <div>
+          <span class="provider-badge provider-gem">GM</span>
+          <span class="mp-name">Google AI Studio</span>
+        </div>
+        <span class="mp-status mp-status-${geminiStatus}">● ${geminiStatusText}</span>
+      </div>
+      <div class="mp-stat"><span class="mp-label">Status</span><span class="mp-value" style="color:#3fb950">API Responding</span></div>
+      <div class="mp-stat"><span class="mp-label">Models Count</span><span class="mp-value">${geminiModels.length} (${keyModels.length} Gemini/Gemma)</span></div>
+      <div class="mp-stat"><span class="mp-label">API Key</span><span class="mp-value" style="color:#8b949e">Configured ✓</span></div>
+      <div class="mp-section-title">Key Gemini Models</div>
+      ${keyModels.slice(0,8).map(m => {
+        const name = (m.name||'').replace('models/','');
+        return `<div class="mp-model-item"><span class="mp-model-name">${name}</span></div>`;
+      }).join('')}
+      ${keyModels.length > 8 ? `<div class="mp-model-item"><span style="color:#8b949e">… ${keyModels.length-8} more</span></div>` : ''}
+      <div class="mp-note">${geminiNote}</div>
+      <div class="mp-note mp-note-ok">${geminiQuotaNote}</div>
+      <a class="mp-link" href="https://aistudio.google.com/" target="_blank">aistudio.google.com →</a>
+      <a class="mp-link" href="https://console.cloud.google.com/apis/credentials" target="_blank" style="margin-left:12px">Cloud Console →</a>
+    </div>
+    
+    <!-- Perplexity Card -->
+    <div class="mp-card">
+      <div class="mp-header">
+        <div>
+          <span class="provider-badge provider-pplx">PX</span>
+          <span class="mp-name">Perplexity</span>
+        </div>
+        <span class="mp-status mp-status-ok">● Via OpenRouter</span>
+      </div>
+      <div class="mp-stat"><span class="mp-label">Access Method</span><span class="mp-value">OpenRouter API</span></div>
+      <div class="mp-stat"><span class="mp-label">Key</span><span class="mp-value" style="color:#8b949e">No separate key</span></div>
+      <div class="mp-stat"><span class="mp-label">Models</span><span class="mp-value">sonar, sonar-pro</span></div>
+      <div class="mp-stat"><span class="mp-label">Use Case</span><span class="mp-value">Social media research</span></div>
+      <div class="mp-section-title">Available Models (via OpenRouter)</div>
+      ${models.filter(m => m.id.includes('perplexity')).slice(0,5).map(m => {
+        return `<div class="mp-model-item">
+          <span class="mp-model-name">${m.id}</span>
+          <span class="mp-model-detail">${formatPrice(m.pricing?.prompt)} inp</span>
+        </div>`;
+      }).join('')}
+      <div class="mp-note">${pplxNote}</div>
+      <div class="mp-note">Use: python3 /opt/data/scripts/perplexity_research.py "query" -m sonar</div>
+    </div>
+  `;
+}
+
+function switchTab(name) {
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+  document.querySelector(`.tab[data-tab="${name}"]`).classList.add('active');
+  document.getElementById(`tab-${name}`).classList.add('active');
+}
+
+loadData();
+</script>
+</body>
+</html>

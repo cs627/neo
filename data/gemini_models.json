@@ -1,0 +1,600 @@
+{
+  "fetched_at": "2026-08-30T00:00:00Z",
+  "total": 50,
+  "models": [
+    {
+      "name": "models/gemini-2.5-flash",
+      "description": "Stable version of Gemini 2.5 Flash, our mid-size multimodal model that supports up to 1 million tokens, released in June of 2025.",
+      "displayName": "Gemini 2.5 Flash",
+      "supportedMethods": [
+        "generateContent",
+        "countTokens",
+        "createCachedContent",
+        "batchGenerateContent"
+      ],
+      "inputTokenLimit": 1048576,
+      "outputTokenLimit": 65536
+    },
+    {
+      "name": "models/gemini-2.5-pro",
+      "description": "Stable release (June 17th, 2025) of Gemini 2.5 Pro",
+      "displayName": "Gemini 2.5 Pro",
+      "supportedMethods": [
+        "generateContent",
+        "countTokens",
+        "createCachedContent",
+        "batchGenerateContent"
+      ],
+      "inputTokenLimit": 1048576,
+      "outputTokenLimit": 65536
+    },
+    {
+      "name": "models/gemini-2.5-flash-preview-tts",
+      "description": "Gemini 2.5 Flash Preview TTS",
+      "displayName": "Gemini 2.5 Flash Preview TTS",
+      "supportedMethods": [
+        "countTokens",
+        "generateContent"
+      ],
+      "inputTokenLimit": 8192,
+      "outputTokenLimit": 16384
+    },
+    {
+      "name": "models/gemini-2.5-pro-preview-tts",
+      "description": "Gemini 2.5 Pro Preview TTS",
+      "displayName": "Gemini 2.5 Pro Preview TTS",
+      "supportedMethods": [
+        "countTokens",
+        "generateContent",
+        "batchGenerateContent"
+      ],
+      "inputTokenLimit": 8192,
+      "outputTokenLimit": 16384
+    },
+    {
+      "name": "models/gemma-4-26b-a4b-it",
+      "description": "Gemma 4 26B A4B IT",
+      "displayName": "Gemma 4 26B A4B IT",
+      "supportedMethods": [
+        "generateContent",
+        "countTokens"
+      ],
+      "inputTokenLimit": 262144,
+      "outputTokenLimit": 32768
+    },
+    {
+      "name": "models/gemma-4-31b-it",
+      "description": "Gemma 4 31B IT",
+      "displayName": "Gemma 4 31B IT",
+      "supportedMethods": [
+        "generateContent",
+        "countTokens"
+      ],
+      "inputTokenLimit": 262144,
+      "outputTokenLimit": 32768
+    },
+    {
+      "name": "models/gemini-flash-latest",
+      "description": "Latest release of Gemini Flash",
+      "displayName": "Gemini Flash Latest",
+      "supportedMethods": [
+        "generateContent",
+        "countTokens",
+        "createCachedContent",
+        "batchGenerateContent"
+      ],
+      "inputTokenLimit": 1048576,
+      "outputTokenLimit": 65536
+    },
+    {
+      "name": "models/gemini-flash-lite-latest",
+      "description": "Latest release of Gemini Flash-Lite",
+      "displayName": "Gemini Flash-Lite Latest",
+      "supportedMethods": [
+        "generateContent",
+        "countTokens",
+        "createCachedContent",
+        "batchGenerateContent"
+      ],
+      "inputTokenLimit": 1048576,
+      "outputTokenLimit": 65536
+    },
+    {
+      "name": "models/gemini-pro-latest",
+      "description": "Latest release of Gemini Pro",
+      "displayName": "Gemini Pro Latest",
+      "supportedMethods": [
+        "generateContent",
+        "countTokens",
+        "createCachedContent",
+        "batchGenerateContent"
+      ],
+      "inputTokenLimit": 1048576,
+      "outputTokenLimit": 65536
+    },
+    {
+      "name": "models/gemini-2.5-flash-lite",
+      "description": "Stable version of Gemini 2.5 Flash-Lite, released in July of 2025",
+      "displayName": "Gemini 2.5 Flash-Lite",
+      "supportedMethods": [
+        "generateContent",
+        "countTokens",
+        "createCachedContent",
+        "batchGenerateContent"
+      ],
+      "inputTokenLimit": 1048576,
+      "outputTokenLimit": 65536
+    },
+    {
+      "name": "models/gemini-2.5-flash-image",
+      "description": "Gemini 2.5 Flash Preview Image",
+      "displayName": "Nano Banana",
+      "supportedMethods": [
+        "generateContent",
+        "countTokens",
+        "batchGenerateContent"
+      ],
+      "inputTokenLimit": 32768,
+      "outputTokenLimit": 32768
+    },
+    {
+      "name": "models/gemini-3-flash-preview",
+      "description": "Gemini 3 Flash Preview",
+      "displayName": "Gemini 3 Flash Preview",
+      "supportedMethods": [
+        "generateContent",
+        "countTokens",
+        "createCachedContent",
+        "batchGenerateContent"
+      ],
+      "inputTokenLimit": 1048576,
+      "outputTokenLimit": 65536
+    },
+    {
+      "name": "models/gemini-3.1-pro-preview",
+      "description": "Gemini 3.1 Pro Preview",
+      "displayName": "Gemini 3.1 Pro Preview",
+      "supportedMethods": [
+        "generateContent",
+        "countTokens",
+        "createCachedContent",
+        "batchGenerateContent"
+      ],
+      "inputTokenLimit": 1048576,
+      "outputTokenLimit": 65536
+    },
+    {
+      "name": "models/gemini-3.1-pro-preview-customtools",
+      "description": "Gemini 3.1 Pro Preview optimized for custom tool usage",
+      "displayName": "Gemini 3.1 Pro Preview Custom Tools",
+      "supportedMethods": [
+        "generateContent",
+        "countTokens",
+        "createCachedContent",
+        "batchGenerateContent"
+      ],
+      "inputTokenLimit": 1048576,
+      "outputTokenLimit": 65536
+    },
+    {
+      "name": "models/gemini-3.1-flash-lite-preview",
+      "description": "Gemini 3.1 Flash Lite Preview",
+      "displayName": "Gemini 3.1 Flash Lite Preview",
+      "supportedMethods": [
+        "generateContent",
+        "countTokens",
+        "createCachedContent",
+        "batchGenerateContent"
+      ],
+      "inputTokenLimit": 1048576,
+      "outputTokenLimit": 65536
+    },
+    {
+      "name": "models/gemini-3.1-flash-lite",
+      "description": "Gemini 3.1 Flash Lite",
+      "displayName": "Gemini 3.1 Flash Lite",
+      "supportedMethods": [
+        "generateContent",
+        "countTokens",
+        "createCachedContent",
+        "batchGenerateContent"
+      ],
+      "inputTokenLimit": 1048576,
+      "outputTokenLimit": 65536
+    },
+    {
+      "name": "models/gemini-3-pro-image-preview",
+      "description": "Gemini 3 Pro Image Preview",
+      "displayName": "Nano Banana Pro",
+      "supportedMethods": [
+        "generateContent",
+        "countTokens",
+        "batchGenerateContent"
+      ],
+      "inputTokenLimit": 131072,
+      "outputTokenLimit": 32768
+    },
+    {
+      "name": "models/gemini-3-pro-image",
+      "description": "Gemini 3 Pro Image",
+      "displayName": "Nano Banana Pro",
+      "supportedMethods": [
+        "generateContent",
+        "countTokens",
+        "batchGenerateContent"
+      ],
+      "inputTokenLimit": 131072,
+      "outputTokenLimit": 32768
+    },
+    {
+      "name": "models/nano-banana-pro-preview",
+      "description": "Gemini 3 Pro Image Preview",
+      "displayName": "Nano Banana Pro",
+      "supportedMethods": [
+        "generateContent",
+        "countTokens",
+        "batchGenerateContent"
+      ],
+      "inputTokenLimit": 131072,
+      "outputTokenLimit": 32768
+    },
+    {
+      "name": "models/gemini-3.1-flash-image-preview",
+      "description": "Gemini 3.1 Flash Image Preview.",
+      "displayName": "Nano Banana 2",
+      "supportedMethods": [
+        "generateContent",
+        "countTokens",
+        "batchGenerateContent"
+      ],
+      "inputTokenLimit": 65536,
+      "outputTokenLimit": 65536
+    },
+    {
+      "name": "models/gemini-3.1-flash-image",
+      "description": "Gemini 3.1 Flash Image.",
+      "displayName": "Nano Banana 2",
+      "supportedMethods": [
+        "generateContent",
+        "countTokens",
+        "batchGenerateContent"
+      ],
+      "inputTokenLimit": 65536,
+      "outputTokenLimit": 65536
+    },
+    {
+      "name": "models/gemini-3.1-flash-lite-image",
+      "description": "Gemini 3.1 Flash Lite Image.",
+      "displayName": "Nano Banana 2 Lite",
+      "supportedMethods": [
+        "generateContent",
+        "countTokens",
+        "batchGenerateContent"
+      ],
+      "inputTokenLimit": 65536,
+      "outputTokenLimit": 65536
+    },
+    {
+      "name": "models/gemini-3.5-flash",
+      "description": "Gemini 3.5 Flash",
+      "displayName": "Gemini 3.5 Flash",
+      "supportedMethods": [
+        "generateContent",
+        "countTokens",
+        "createCachedContent",
+        "batchGenerateContent"
+      ],
+      "inputTokenLimit": 1048576,
+      "outputTokenLimit": 65536
+    },
+    {
+      "name": "models/gemini-3.5-flash-lite",
+      "description": "Gemini 3.5 Flash Lite",
+      "displayName": "Gemini 3.5 Flash Lite",
+      "supportedMethods": [
+        "generateContent",
+        "countTokens",
+        "createCachedContent",
+        "batchGenerateContent"
+      ],
+      "inputTokenLimit": 1048576,
+      "outputTokenLimit": 65536
+    },
+    {
+      "name": "models/gemini-omni-flash-preview",
+      "description": "Gemini Omni Flash Preview",
+      "displayName": "Gemini Omni Flash Preview",
+      "supportedMethods": [
+        "generateContent",
+        "countTokens"
+      ],
+      "inputTokenLimit": 131072,
+      "outputTokenLimit": 65536
+    },
+    {
+      "name": "models/gemini-omni-1.1-flash",
+      "description": "Gemini Omni 1.1 Flash ",
+      "displayName": "Gemini Omni 1.1 Flash",
+      "supportedMethods": [
+        "generateContent",
+        "countTokens"
+      ],
+      "inputTokenLimit": 131072,
+      "outputTokenLimit": 65536
+    },
+    {
+      "name": "models/gemini-3.5-transcribe",
+      "description": "Gemini 3.5 Transcribe",
+      "displayName": "Gemini 3.5 Transcribe",
+      "supportedMethods": [
+        "generateContent",
+        "countTokens"
+      ],
+      "inputTokenLimit": 98304,
+      "outputTokenLimit": 32768
+    },
+    {
+      "name": "models/gemini-3.6-flash",
+      "description": "Gemini 3.6 Flash",
+      "displayName": "Gemini 3.6 Flash",
+      "supportedMethods": [
+        "generateContent",
+        "countTokens",
+        "createCachedContent",
+        "batchGenerateContent"
+      ],
+      "inputTokenLimit": 1048576,
+      "outputTokenLimit": 65536
+    },
+    {
+      "name": "models/gemini-3.7-flash",
+      "description": "Gemini 3.7 Flash",
+      "displayName": "Gemini 3.7 Flash",
+      "supportedMethods": [
+        "generateContent",
+        "countTokens",
+        "createCachedContent",
+        "batchGenerateContent"
+      ],
+      "inputTokenLimit": 1048576,
+      "outputTokenLimit": 65536
+    },
+    {
+      "name": "models/lyria-3-clip-preview",
+      "description": "Lyria 3 30s model Preview",
+      "displayName": "Lyria 3 Clip Preview",
+      "supportedMethods": [
+        "generateContent",
+        "countTokens"
+      ],
+      "inputTokenLimit": 1048576,
+      "outputTokenLimit": 65536
+    },
+    {
+      "name": "models/lyria-3-pro-preview",
+      "description": "Lyria 3 Pro Preview",
+      "displayName": "Lyria 3 Pro Preview",
+      "supportedMethods": [
+        "generateContent",
+        "countTokens"
+      ],
+      "inputTokenLimit": 1048576,
+      "outputTokenLimit": 65536
+    },
+    {
+      "name": "models/gemini-3.1-flash-tts-preview",
+      "description": "Gemini 3.1 Flash TTS Preview",
+      "displayName": "Gemini 3.1 Flash TTS Preview",
+      "supportedMethods": [
+        "generateContent",
+        "countTokens",
+        "batchGenerateContent"
+      ],
+      "inputTokenLimit": 8192,
+      "outputTokenLimit": 16384
+    },
+    {
+      "name": "models/gemini-robotics-er-1.6-preview",
+      "description": "Gemini Robotics-ER 1.6 Preview",
+      "displayName": "Gemini Robotics-ER 1.6 Preview",
+      "supportedMethods": [
+        "generateContent",
+        "countTokens",
+        "createCachedContent",
+        "batchGenerateContent"
+      ],
+      "inputTokenLimit": 131072,
+      "outputTokenLimit": 65536
+    },
+    {
+      "name": "models/gemini-robotics-er-2-preview",
+      "description": "Gemini Robotics-ER 2 Preview",
+      "displayName": "Gemini Robotics-ER 2 Preview",
+      "supportedMethods": [
+        "generateContent",
+        "countTokens",
+        "createCachedContent",
+        "batchGenerateContent"
+      ],
+      "inputTokenLimit": 131072,
+      "outputTokenLimit": 65536
+    },
+    {
+      "name": "models/gemini-2.5-computer-use-preview-10-2025",
+      "description": "Gemini 2.5 Computer Use Preview 10-2025",
+      "displayName": "Gemini 2.5 Computer Use Preview 10-2025",
+      "supportedMethods": [
+        "generateContent",
+        "countTokens"
+      ],
+      "inputTokenLimit": 131072,
+      "outputTokenLimit": 65536
+    },
+    {
+      "name": "models/antigravity-preview-05-2026",
+      "description": "Preview release of Antigravity Agent (05-2026)",
+      "displayName": "Antigravity Agent Preview",
+      "supportedMethods": [
+        "generateContent",
+        "countTokens"
+      ],
+      "inputTokenLimit": 131072,
+      "outputTokenLimit": 65536
+    },
+    {
+      "name": "models/deep-research-max-preview-04-2026",
+      "description": "Preview release (April 21st, 2026) of Deep Research Max",
+      "displayName": "Deep Research Max Preview (Apr-21-2026)",
+      "supportedMethods": [
+        "generateContent",
+        "countTokens"
+      ],
+      "inputTokenLimit": 131072,
+      "outputTokenLimit": 65536
+    },
+    {
+      "name": "models/deep-research-preview-04-2026",
+      "description": "Preview release (April 21th, 2026) of Deep Research",
+      "displayName": "Deep Research Preview (Apr-21-2026)",
+      "supportedMethods": [
+        "generateContent",
+        "countTokens"
+      ],
+      "inputTokenLimit": 131072,
+      "outputTokenLimit": 65536
+    },
+    {
+      "name": "models/deep-research-pro-preview-12-2025",
+      "description": "Preview release (December 12th, 2025) of Deep Research Pro",
+      "displayName": "Deep Research Pro Preview (Dec-12-2025)",
+      "supportedMethods": [
+        "generateContent",
+        "countTokens"
+      ],
+      "inputTokenLimit": 131072,
+      "outputTokenLimit": 65536
+    },
+    {
+      "name": "models/gemini-embedding-001",
+      "description": "Obtain a distributed representation of a text.",
+      "displayName": "Gemini Embedding 001",
+      "supportedMethods": [
+        "embedContent",
+        "countTextTokens",
+        "countTokens",
+        "asyncBatchEmbedContent"
+      ],
+      "inputTokenLimit": 2048,
+      "outputTokenLimit": 1
+    },
+    {
+      "name": "models/gemini-embedding-2-preview",
+      "description": "Obtain a distributed representation of multimodal content.",
+      "displayName": "Gemini Embedding 2 Preview",
+      "supportedMethods": [
+        "embedContent",
+        "countTextTokens",
+        "countTokens",
+        "asyncBatchEmbedContent"
+      ],
+      "inputTokenLimit": 8192,
+      "outputTokenLimit": 1
+    },
+    {
+      "name": "models/gemini-embedding-2",
+      "description": "Obtain a distributed representation of multimodal content.",
+      "displayName": "Gemini Embedding 2",
+      "supportedMethods": [
+        "embedContent",
+        "countTextTokens",
+        "countTokens",
+        "asyncBatchEmbedContent"
+      ],
+      "inputTokenLimit": 8192,
+      "outputTokenLimit": 1
+    },
+    {
+      "name": "models/aqa",
+      "description": "Model trained to return answers to questions that are grounded in provided sources, along with estimating answerable probability.",
+      "displayName": "Model that performs Attributed Question Answering.",
+      "supportedMethods": [
+        "generateAnswer"
+      ],
+      "inputTokenLimit": 7168,
+      "outputTokenLimit": 1024
+    },
+    {
+      "name": "models/veo-3.1-generate-preview",
+      "description": "Veo 3.1",
+      "displayName": "Veo 3.1",
+      "supportedMethods": [
+        "predictLongRunning"
+      ],
+      "inputTokenLimit": 480,
+      "outputTokenLimit": 8192
+    },
+    {
+      "name": "models/veo-3.1-fast-generate-preview",
+      "description": "Veo 3.1 fast",
+      "displayName": "Veo 3.1 fast",
+      "supportedMethods": [
+        "predictLongRunning"
+      ],
+      "inputTokenLimit": 480,
+      "outputTokenLimit": 8192
+    },
+    {
+      "name": "models/veo-3.1-lite-generate-preview",
+      "description": "Veo 3.1 lite",
+      "displayName": "Veo 3.1 lite",
+      "supportedMethods": [
+        "predictLongRunning"
+      ],
+      "inputTokenLimit": 480,
+      "outputTokenLimit": 8192
+    },
+    {
+      "name": "models/gemini-3.5-transcribe-live",
+      "description": "Gemini 3.5 Transcribe Live",
+      "displayName": "Gemini 3.5 Transcribe Live",
+      "supportedMethods": [
+        "bidiGenerateContent"
+      ],
+      "inputTokenLimit": 131072,
+      "outputTokenLimit": 65536
+    },
+    {
+      "name": "models/gemini-2.5-flash-native-audio-latest",
+      "description": "Latest release of Gemini 2.5 Flash Native Audio",
+      "displayName": "Gemini 2.5 Flash Native Audio Latest",
+      "supportedMethods": [
+        "countTokens",
+        "bidiGenerateContent"
+      ],
+      "inputTokenLimit": 131072,
+      "outputTokenLimit": 8192
+    },
+    {
+      "name": "models/gemini-2.5-flash-native-audio-preview-09-2025",
+      "description": "Gemini 2.5 Flash Native Audio Preview 09-2025",
+      "displayName": "Gemini 2.5 Flash Native Audio Preview 09-2025",
+      "supportedMethods": [
+        "countTokens",
+        "bidiGenerateContent"
+      ],
+      "inputTokenLimit": 131072,
+      "outputTokenLimit": 8192
+    },
+    {
+      "name": "models/gemini-2.5-flash-native-audio-preview-12-2025",
+      "description": "Gemini 2.5 Flash Native Audio Preview 12-2025",
+      "displayName": "Gemini 2.5 Flash Native Audio Preview 12-2025",
+      "supportedMethods": [
+        "countTokens",
+        "bidiGenerateContent"
+      ],
+      "inputTokenLimit": 131072,
+      "outputTokenLimit": 8192
+    }
+  ]
+}
