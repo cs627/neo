@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-31T09:01:07Z",
+  "fetched_at": "2026-09-01T09:01:18Z",
   "total": 50,
   "models": [
     {
@@ -394,19 +394,6 @@
       "outputTokenLimit": 16384
     },
     {
-      "name": "models/gemini-robotics-er-1.6-preview",
-      "description": "Gemini Robotics-ER 1.6 Preview",
-      "displayName": "Gemini Robotics-ER 1.6 Preview",
-      "supportedMethods": [
-        "generateContent",
-        "countTokens",
-        "createCachedContent",
-        "batchGenerateContent"
-      ],
-      "inputTokenLimit": 131072,
-      "outputTokenLimit": 65536
-    },
-    {
       "name": "models/gemini-robotics-er-2-preview",
       "description": "Gemini Robotics-ER 2 Preview",
       "displayName": "Gemini Robotics-ER 2 Preview",
@@ -595,6 +582,16 @@
       ],
       "inputTokenLimit": 131072,
       "outputTokenLimit": 8192
+    },
+    {
+      "name": "models/gemini-3.1-flash-live-preview",
+      "description": "Gemini 3.1 Flash Live Preview",
+      "displayName": "Gemini 3.1 Flash Live Preview",
+      "supportedMethods": [
+        "bidiGenerateContent"
+      ],
+      "inputTokenLimit": 131072,
+      "outputTokenLimit": 65536
     }
   ]
 }
