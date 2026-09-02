@@ -1,7 +1,73 @@
 {
-  "fetched_at": "2026-09-01T09:01:18Z",
-  "total": 420,
+  "fetched_at": "2026-09-02T09:01:07Z",
+  "total": 421,
   "models": [
+    {
+      "id": "anthropic/claude-fable-5.1",
+      "name": "Anthropic: Claude Fable 5.1",
+      "created": 1788285838,
+      "description": "Claude Fable 5.1 improves on Claude Fable 5 across the board, with the biggest gains in agentic coding, long-running agentic workflows, and knowledge work: long code refactors, front-end and visual...",
+      "pricing": {
+        "prompt": "0.00001",
+        "completion": "0.00005",
+        "web_search": "0.01",
+        "input_cache_read": "0.00000025",
+        "input_cache_write": "0.0000125",
+        "input_cache_write_1h": "0.00002"
+      },
+      "context_length": 1000000,
+      "architecture": {
+        "modality": "text+image+file->text",
+        "tokenizer": "Claude"
+      },
+      "top_provider": {
+        "name": "",
+        "max_completion_tokens": 128000
+      }
+    },
+    {
+      "id": "anthropic/claude-fable-5.1:batch",
+      "name": "Anthropic: Claude Fable 5.1 (batch)",
+      "created": 1788285838,
+      "description": "Claude Fable 5.1 improves on Claude Fable 5 across the board, with the biggest gains in agentic coding, long-running agentic workflows, and knowledge work: long code refactors, front-end and visual...",
+      "pricing": {
+        "prompt": "0.000005",
+        "completion": "0.000025",
+        "web_search": "0.01",
+        "input_cache_read": "0.000000125",
+        "input_cache_write": "0.00000625",
+        "input_cache_write_1h": "0.00001"
+      },
+      "context_length": 1000000,
+      "architecture": {
+        "modality": "text+image+file->text",
+        "tokenizer": "Claude"
+      },
+      "top_provider": {
+        "name": "",
+        "max_completion_tokens": 128000
+      }
+    },
+    {
+      "id": "inception/mercury-2.5-preview",
+      "name": "Inception: Mercury 2.5 Preview",
+      "created": 1788209864,
+      "description": "Mercury 2.5 is the fastest reasoning LLM, and the latest diffusion LLM (dLLM) from Inception. Instead of generating tokens sequentially, Mercury 2.5 produces and refines multiple tokens in parallel, achieving...",
+      "pricing": {
+        "prompt": "0.00000004",
+        "completion": "0.00000015",
+        "input_cache_read": "0.000000004"
+      },
+      "context_length": 260000,
+      "architecture": {
+        "modality": "text->text",
+        "tokenizer": "Other"
+      },
+      "top_provider": {
+        "name": "",
+        "max_completion_tokens": 65536
+      }
+    },
     {
       "id": "ibm-granite/granite-4.2-8b",
       "name": "IBM: Granite 4.2 8B",
@@ -59,6 +125,26 @@
       "top_provider": {
         "name": "",
         "max_completion_tokens": 32768
+      }
+    },
+    {
+      "id": "~z-ai/glm-flash-latest",
+      "name": "Z.ai: GLM Flash Latest",
+      "created": 1787817633,
+      "description": "This model always redirects to the latest model in the GLM Flash family.",
+      "pricing": {
+        "prompt": "0.000000075",
+        "completion": "0.00000025",
+        "input_cache_read": "0.000000015"
+      },
+      "context_length": 1310720,
+      "architecture": {
+        "modality": "text+image+video->text",
+        "tokenizer": "Router"
+      },
+      "top_provider": {
+        "name": "",
+        "max_completion_tokens": 131072
       }
     },
     {
@@ -460,7 +546,7 @@
       "pricing": {
         "prompt": "0.000002",
         "completion": "0.000006",
-        "input_cache_read": "0.00000025"
+        "input_cache_read": "0.0000002"
       },
       "context_length": 1048576,
       "architecture": {
@@ -469,7 +555,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 262144
+        "max_completion_tokens": 131072
       }
     },
     {
@@ -478,9 +564,9 @@
       "created": 1786551702,
       "description": "Qwen3.8 2.4T A95B is an open-weight sparse mixture-of-experts model from Qwen and the open-weight variant of [Qwen3.8 Max](/qwen/qwen3.8-max), with 95 billion active parameters out of 2.4 trillion total. It is...",
       "pricing": {
-        "prompt": "0.0000025",
-        "completion": "0.00000625",
-        "input_cache_read": "0.0000005"
+        "prompt": "0.000002",
+        "completion": "0.000006",
+        "input_cache_read": "0.00000025"
       },
       "context_length": 1010000,
       "architecture": {
@@ -922,29 +1008,6 @@
       "top_provider": {
         "name": "",
         "max_completion_tokens": 65536
-      }
-    },
-    {
-      "id": "anthropic/claude-opus-5-fast",
-      "name": "Claude Opus 5 (Fast)",
-      "created": 1784912546,
-      "description": "Fast-mode variant of [Opus 5](/anthropic/claude-opus-5) - identical capabilities with higher output speed at 2x pricing relative to regular Opus 5.\n\nLearn more in Anthropic's docs: https://platform.claude.com/docs/en/build-with-claude/fast-mode",
-      "pricing": {
-        "prompt": "0.00001",
-        "completion": "0.00005",
-        "web_search": "0.01",
-        "input_cache_read": "0.000001",
-        "input_cache_write": "0.0000125",
-        "input_cache_write_1h": "0.00002"
-      },
-      "context_length": 1000000,
-      "architecture": {
-        "modality": "text+image+file->text",
-        "tokenizer": "Claude"
-      },
-      "top_provider": {
-        "name": "",
-        "max_completion_tokens": 128000
       }
     },
     {
@@ -2060,9 +2123,9 @@
       "created": 1781631930,
       "description": "GLM 5.2 is a large-scale reasoning model from Z.ai. It supports text input and output with a 1M-token context window, and is suited for long-horizon agent workflows, project-level software engineering,...",
       "pricing": {
-        "prompt": "0.00000119",
-        "completion": "0.00000374",
-        "input_cache_read": "0.000000221"
+        "prompt": "0.000000966",
+        "completion": "0.000003036",
+        "input_cache_read": "0.0000001932"
       },
       "context_length": 1048576,
       "architecture": {
@@ -2071,7 +2134,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 262144
+        "max_completion_tokens": 131072
       }
     },
     {
@@ -2141,7 +2204,7 @@
         "prompt": "0.00001",
         "completion": "0.00005",
         "web_search": "0.01",
-        "input_cache_read": "0.000001",
+        "input_cache_read": "0.00000025",
         "input_cache_write": "0.0000125",
         "input_cache_write_1h": "0.00002"
       },
@@ -2246,9 +2309,9 @@
       "created": 1780551208,
       "description": "NVIDIA Nemotron 3 Ultra is an open frontier-reasoning and orchestration model from NVIDIA, with 55B active parameters out of 550B total (MoE). Built on a hybrid Transformer-Mamba mixture-of-experts architecture, it...",
       "pricing": {
-        "prompt": "0.0000005",
-        "completion": "0.0000022",
-        "input_cache_read": "0.0000001"
+        "prompt": "0.000000625",
+        "completion": "0.000003125",
+        "input_cache_read": "0.0000001875"
       },
       "context_length": 262144,
       "architecture": {
@@ -2257,7 +2320,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 16384
+        "max_completion_tokens": 32768
       }
     },
     {
@@ -2409,29 +2472,6 @@
       }
     },
     {
-      "id": "anthropic/claude-opus-4.8-fast",
-      "name": "Anthropic: Claude Opus 4.8 (Fast)",
-      "created": 1779913703,
-      "description": "Fast-mode variant of [Opus 4.8](/anthropic/claude-opus-4.8) - identical capabilities with higher output speed at 2x pricing relative to regular Opus 4.8.\n\nLearn more in Anthropic's docs: https://platform.claude.com/docs/en/build-with-claude/fast-mode",
-      "pricing": {
-        "prompt": "0.00001",
-        "completion": "0.00005",
-        "web_search": "0.01",
-        "input_cache_read": "0.000001",
-        "input_cache_write": "0.0000125",
-        "input_cache_write_1h": "0.00002"
-      },
-      "context_length": 1000000,
-      "architecture": {
-        "modality": "text+image+file->text",
-        "tokenizer": "Claude"
-      },
-      "top_provider": {
-        "name": "",
-        "max_completion_tokens": 128000
-      }
-    },
-    {
       "id": "anthropic/claude-opus-4.8",
       "name": "Anthropic: Claude Opus 4.8",
       "created": 1779905091,
@@ -2576,29 +2616,6 @@
       "top_provider": {
         "name": "",
         "max_completion_tokens": 65536
-      }
-    },
-    {
-      "id": "anthropic/claude-opus-4.7-fast",
-      "name": "Anthropic: Claude Opus 4.7 (Fast)",
-      "created": 1778613011,
-      "description": "Fast-mode variant of [Opus 4.7](/anthropic/claude-opus-4.7) - identical capabilities with higher output speed at premium 6x pricing.\n\nLearn more in Anthropic's docs: https://platform.claude.com/docs/en/build-with-claude/fast-mode",
-      "pricing": {
-        "prompt": "0.00003",
-        "completion": "0.00015",
-        "web_search": "0.01",
-        "input_cache_read": "0.000003",
-        "input_cache_write": "0.0000375",
-        "input_cache_write_1h": "0.00006"
-      },
-      "context_length": 1000000,
-      "architecture": {
-        "modality": "text+image+file->text",
-        "tokenizer": "Claude"
-      },
-      "top_provider": {
-        "name": "",
-        "max_completion_tokens": 128000
       }
     },
     {
@@ -3220,9 +3237,9 @@
       "created": 1777000679,
       "description": "DeepSeek V4 Pro is a large-scale Mixture-of-Experts model from DeepSeek with 1.6T total parameters and 49B activated parameters, supporting a 1M-token context window. It is designed for advanced reasoning, coding,...",
       "pricing": {
-        "prompt": "0.0000016",
-        "completion": "0.0000032",
-        "input_cache_read": "0.000000135"
+        "prompt": "0.00000104226",
+        "completion": "0.00000208452",
+        "input_cache_read": "0.000000086855"
       },
       "context_length": 1048576,
       "architecture": {
@@ -3231,7 +3248,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 393216
+        "max_completion_tokens": 384000
       }
     },
     {
@@ -3240,9 +3257,9 @@
       "created": 1777000666,
       "description": "DeepSeek V4 Flash is an efficiency-optimized Mixture-of-Experts model from DeepSeek with 284B total parameters and 13B activated parameters, supporting a 1M-token context window. It is designed for fast inference and...",
       "pricing": {
-        "prompt": "0.00000008092",
-        "completion": "0.00000016184",
-        "input_cache_read": "0.000000016184"
+        "prompt": "0.000000088606",
+        "completion": "0.000000177212",
+        "input_cache_read": "0.0000000177212"
       },
       "context_length": 1048576,
       "architecture": {
@@ -6373,9 +6390,9 @@
       "created": 1755779628,
       "description": "DeepSeek-V3.1 is a large hybrid reasoning model (671B parameters, 37B active) that supports both thinking and non-thinking modes via prompt templates. It extends the DeepSeek-V3 base with a two-phase long-context...",
       "pricing": {
-        "prompt": "0.00000055",
-        "completion": "0.00000165",
-        "input_cache_read": "0.00000055"
+        "prompt": "0.00000025",
+        "completion": "0.00000095",
+        "input_cache_read": "0.00000013"
       },
       "context_length": 163840,
       "architecture": {
@@ -6384,7 +6401,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 144900
+        "max_completion_tokens": 32768
       }
     },
     {
