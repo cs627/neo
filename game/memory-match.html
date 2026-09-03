@@ -3,42 +3,54 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>基本法 3D 巴士記憶配對遊戲</title>
+<title>基本法 3D 巴士記憶配對遊戲 v2</title>
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 body{user-select:none;-webkit-user-select:none;-webkit-touch-callout:none;overscroll-behavior:none;touch-action:none;
-     font-family:'Noto Sans HK',system-ui,-apple-system,sans-serif;overflow:hidden;background:#0f172a;color:#fff}
+     font-family:'Noto Sans HK',system-ui,-apple-system,sans-serif;overflow:hidden;background:#0f172a;color:#fff;width:100vw;height:100vh}
 #game{position:fixed;inset:0}
-canvas{display:block}
+canvas{display:block;position:absolute;inset:0}
 .zone{position:absolute;z-index:10;pointer-events:none}
 #progress-zone{top:0;left:0;right:0;padding:14px}
-.track{position:relative;height:60px;background:linear-gradient(#64748b,#475569);border-radius:30px;max-width:640px;margin:0 auto;border:3px solid #334155;box-shadow:inset 0 3px 8px rgba(0,0,0,.4)}
-.road-line{position:absolute;top:50%;left:0;right:0;height:4px;background:repeating-linear-gradient(90deg,#e2e8f0 0 20px,#64748b 20px 40px);transform:translateY(-50%)}
+.track{position:relative;height:60px;background:linear-gradient(#64748b,#475569);border-radius:30px;max-width:640px;margin:0 auto;
+       border:3px solid #334155;box-shadow:inset 0 3px 8px rgba(0,0,0,.4)}
+.track .road-line{position:absolute;top:50%;left:0;right:0;height:4px;background:repeating-linear-gradient(90deg,#e2e8f0 0 20px,#64748b 20px 40px);transform:translateY(-50%)}
 .node{position:absolute;top:50%;transform:translate(-50%,-50%);width:22px;height:22px;border-radius:50%;background:#38bdf8;border:3px solid #0ea5e9;box-shadow:0 0 12px #38bdf8}
-#ui-bus{position:absolute;top:50%;left:3%;transform:translate(0,-50%);width:58px;height:28px;background:#facc15;border-radius:6px;border:2px solid #ca8a04;transition:left .8s cubic-bezier(.4,0,.2,1);display:flex;align-items:center;justify-content:center}
+.node.done{background:#22c55e;border-color:#16a34a;box-shadow:0 0 12px #22c55e}
+#ui-bus{position:absolute;top:50%;left:3%;transform:translate(0,-50%);width:58px;height:28px;background:#facc15;border-radius:8px;
+        border:2px solid #ca8a04;transition:left .8s cubic-bezier(.4,0,.2,1);display:flex;align-items:center;justify-content:center}
 #ui-bus .win{width:8px;height:8px;border-radius:50%;background:#444}
 @keyframes shake{0%,100%{transform:translate(-50%,-50%)}20%{transform:translate(calc(-50% - 9px),-50%)}40%{transform:translate(calc(-50% + 9px),-50%)}60%{transform:translate(calc(-50% - 6px),-50%)}80%{transform:translate(calc(-50% + 6px),-50%)}}
 #ui-bus.shake{animation:shake .5s}
-#hud-zone{top:92px;left:0;right:0;display:flex;justify-content:center}
-#timer{font-size:2.6rem;font-weight:900;background:rgba(15,23,42,.85);padding:8px 30px;border-radius:40px;box-shadow:0 6px 24px rgba(0,0,0,.6);border:3px solid #38bdf8;letter-spacing:2px;text-shadow:0 3px 8px rgba(0,0,0,.5)}
-#stars{position:fixed;top:14px;right:18px;z-index:20;font-size:1.6rem;background:rgba(15,23,42,.85);padding:8px 16px;border-radius:30px;box-shadow:0 4px 16px rgba(0,0,0,.5);border:2px solid #f59e0b}
+#hud-zone{top:88px;left:0;right:0;display:flex;justify-content:center;align-items:center;gap:16px}
+#timer{font-size:2.6rem;font-weight:900;background:rgba(15,23,42,.85);padding:8px 30px;border-radius:40px;
+       box-shadow:0 6px 24px rgba(0,0,0,.6);border:3px solid #38bdf8;letter-spacing:2px;text-shadow:0 3px 8px rgba(0,0,0,.5)}
+#timer.warning{border-color:#f59e0b;color:#fbbf24}
+#timer.danger{border-color:#ef4444;color:#ef4444}
+#stars{position:fixed;top:14px;right:18px;z-index:20;font-size:1.6rem;background:rgba(15,23,42,.85);padding:8px 16px;border-radius:30px;
+       box-shadow:0 4px 16px rgba(0,0,0,.5);border:2px solid #f59e0b}
 #stars .s{color:#fbbf24}
 .screen{position:absolute;inset:0;z-index:30;display:none;align-items:center;justify-content:center}
 .screen.active{display:flex}
-.modal{background:rgba(255,255,255,.12);backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,.25);border-radius:24px;padding:34px 42px;max-width:520px;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,.5)}
-.modal h1{font-size:1.8rem;font-weight:900;margin-bottom:10px;text-shadow:0 3px 10px rgba(0,0,0,.4)}
-.modal p{font-size:1.02rem;color:#e2e8f0;margin-bottom:22px;line-height:1.6}
-.btn{display:inline-block;padding:14px 44px;font-size:1.2rem;font-weight:800;border:none;border-radius:40px;cursor:pointer;background:linear-gradient(135deg,#f59e0b,#f97316);color:#fff;box-shadow:0 6px 20px rgba(249,115,22,.5);transition:transform .15s}
+.modal{background:rgba(255,255,255,.12);backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,.25);border-radius:24px;
+       padding:36px 44px;max-width:540px;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,.5)}
+.modal h1{font-size:1.9rem;font-weight:900;margin-bottom:10px;text-shadow:0 3px 10px rgba(0,0,0,.4)}
+.modal p{font-size:1.05rem;color:#e2e8f0;margin-bottom:22px;line-height:1.6}
+.btn{display:inline-block;padding:14px 44px;font-size:1.2rem;font-weight:800;border:none;border-radius:40px;cursor:pointer;
+     background:linear-gradient(135deg,#f59e0b,#f97316);color:#fff;box-shadow:0 6px 20px rgba(249,115,22,.5);transition:transform .15s}
 .btn:hover{transform:scale(1.05)}
 .btn.blue{background:linear-gradient(135deg,#38bdf8,#2563eb);box-shadow:0 6px 20px rgba(56,189,248,.5)}
-.quiz-opt{display:block;width:100%;margin:8px 0;padding:13px 20px;font-size:1.02rem;font-weight:600;border-radius:14px;cursor:pointer;background:rgba(255,255,255,.14);color:#fff;border:2px solid rgba(255,255,255,.3);text-align:left;transition:background .15s}
+.quiz-opt{display:block;width:100%;margin:8px 0;padding:13px 20px;font-size:1.02rem;font-weight:600;border-radius:14px;cursor:pointer;
+          background:rgba(255,255,255,.14);color:#fff;border:2px solid rgba(255,255,255,.3);text-align:left;transition:background .15s}
 .quiz-opt:hover{background:rgba(255,255,255,.3)}
 .quiz-opt.correct{background:#22c55e;border-color:#16a34a}
 .quiz-opt.wrong{background:#ef4444;border-color:#dc2626}
+#progress-text{font-size:.95rem;color:#cbd5e1;margin-bottom:14px;font-weight:600}
 </style>
 </head>
 <body>
 <div id="game"></div>
+
 <div class="zone" id="progress-zone">
   <div class="track">
     <div class="road-line"></div>
@@ -55,7 +67,7 @@ canvas{display:block}
 <div id="start-screen" class="screen active">
   <div class="modal">
     <h1>🚌 基本法巴士記憶遊戲</h1>
-    <p>先答啱一條基本法問題，然後喺限時內將相同顏色嘅巴士配對。Click 巴士揭開佢嘅配對顏色。</p>
+    <p>先答啱一條基本法問題，然後喺限時內將相同顏色嘅巴士配對。Click 巴士揭開佢嘅配對顏色，成功配對就會開走！</p>
     <button class="btn" onclick="startGame()">開始遊戲</button>
   </div>
 </div>
@@ -914,29 +926,244 @@ canvas{display:block}
 
 </script>
 <script>
-// ============ 3D BUS MEMORY MATCH GAME LOGIC ============
-// Matching element = the full front-console side of the bus is painted the match color
 
-let scene, camera, renderer, raycaster, pointer, busGroup;
+// ============ 3D BUS MEMORY MATCH v2 ============
+// FIX: timerStarted global flag — timer fires only once after all buses land
+// FIX: RoundedBoxGeometry for all bus panels (ExtrudeGeometry + bevel)
+// FIX: Level 1 → Level 2 directly (no quiz between levels)
+// FIX: OrthographicCamera isometric [20,20,20]
+// FIX: 60s idle auto-reset
+
+let scene, camera, renderer, raycaster, pointer, fleetGroup;
 let phase = 0;                 // 0=start, 0.5=quiz, 1=lvl1, 2=lvl2, 3=end
 let stars = 0, level = 1;
-let busList = [];              // all bus meshes (with .matchColor, .isStation, .anim state)
-let selected = [];             // currently selected pair
+let busList = [];
+let selected = [];
 let animating = false, lockInput = false;
-let timer, timeLeft = 30;
-let camX = 20, camY = 20, camZ = 20;
-let spawnTimer = null;
-let fleetGroup;                // match color bus
-const MATCH_COLORS = [0xf43f5e,0x38bdf8,0xfacc15,0x22c55e,0xa78bfa,0xfb923c,0x2dd4bf,0xf472b6];
+let timerInterval = null;
+let timeLeft = 30;
+let timerStarted = false;      // ← THE CRITICAL FIX: guard flag
+let landedCount = 0;
+let spawnTimeout = null;
+const camPos = {x:20, y:20, z:20};
 
-// ----- init three.js -----
+const MATCH_COLORS = [0xf43f5e, 0x38bdf8, 0xfacc15, 0x22c55e, 0xa78bfa, 0xfb923c, 0x2dd4bf, 0xf472b6];
+
+// ============ ROUNDED BOX GEOMETRY ============
+// Uses ExtrudeGeometry with bevel to create a true rounded-corner box
+function makeRoundedBox(w, h, d, r, seg) {
+  seg = seg || 3;
+  r = Math.min(r, w/2, h/2);
+  const shape = new THREE.Shape();
+  shape.moveTo(-w/2 + r, -h/2);
+  shape.lineTo(w/2 - r, -h/2);
+  shape.quadraticCurveTo(w/2, -h/2, w/2, -h/2 + r);
+  shape.lineTo(w/2, h/2 - r);
+  shape.quadraticCurveTo(w/2, h/2, w/2 - r, h/2);
+  shape.lineTo(-w/2 + r, h/2);
+  shape.quadraticCurveTo(-w/2, h/2, -w/2, h/2 - r);
+  shape.lineTo(-w/2, -h/2 + r);
+  shape.quadraticCurveTo(-w/2, -h/2, -w/2 + r, -h/2);
+  const settings = {
+    steps: 1,
+    depth: d,
+    bevelEnabled: true,
+    bevelThickness: r * 0.4,
+    bevelSize: r * 0.4,
+    bevelSegments: seg,
+    bevelOffset: 0
+  };
+  const geo = new THREE.ExtrudeGeometry(shape, settings);
+  // Center the geometry in Z
+  geo.translate(0, 0, -d/2);
+  return geo;
+}
+
+// ============ BUS MODEL (rounded, modern 3-tone) ============
+function createBus(matchColor, scale) {
+  scale = scale || 1;
+  const g = new THREE.Group();
+  const s = scale;
+
+  // Materials
+  const matYellow = new THREE.MeshLambertMaterial({ color: 0xfacc15 });
+  const matWhite  = new THREE.MeshLambertMaterial({ color: 0xf8fafc });
+  const matPurple = new THREE.MeshLambertMaterial({ color: 0x7c3aed });
+  const matGlass  = new THREE.MeshLambertMaterial({ color: 0x1e293b, transparent: true, opacity: 0.65 });
+  const matDark   = new THREE.MeshLambertMaterial({ color: 0x0f172a });
+  const matVent   = new THREE.MeshLambertMaterial({ color: 0x94a3b8 });
+  const matTire   = new THREE.MeshLambertMaterial({ color: 0x111827 });
+  const matRim    = new THREE.MeshLambertMaterial({ color: 0x9ca3af });
+  const matLED    = new THREE.MeshLambertMaterial({ color: 0xf97316, emissive: 0xf97316 });
+  const r = 0.2 * s;  // rounding radius
+
+  // Dimensions
+  const L = 5.5 * s, H = 3.2 * s, W = 1.5 * s;
+
+  // Chassis (thin platform)
+  const chGeo = makeRoundedBox(L, 0.2*s, W, r*1.2, 4);
+  const ch = new THREE.Mesh(chGeo, matWhite);
+  ch.position.y = 0.7*s;
+  g.add(ch);
+
+  // Lower deck body (white, rounded)
+  const ldGeo = makeRoundedBox(L, 1.0*s, W, r, 4);
+  const ld = new THREE.Mesh(ldGeo, matWhite);
+  ld.position.y = 1.0*s;
+  g.add(ld);
+
+  // Upper deck body (white, rounded)
+  const udGeo = makeRoundedBox(L, 1.2*s, W, r, 4);
+  const ud = new THREE.Mesh(udGeo, matWhite);
+  ud.position.y = 2.2*s;
+  g.add(ud);
+
+  // Roof (rounded, purple)
+  const roofGeo = makeRoundedBox(L-0.3*s, 0.18*s, W+0.1*s, r*0.8, 4);
+  const roof = new THREE.Mesh(roofGeo, matPurple);
+  roof.position.y = 3.05*s;
+  g.add(roof);
+
+  // --- 3-tone color panels (thin rounded planes on +Z and -Z sides) ---
+
+  // Yellow front (on long sides)
+  const yfGeo = makeRoundedBox(1.5*s, 2.5*s, 0.04*s, r*1.5, 4);
+  const yf = new THREE.Mesh(yfGeo, matYellow);
+  yf.position.set(L*0.5-0.9*s, 1.65*s, W/2);
+  g.add(yf);
+  const yf2 = yf.clone(); yf2.position.z = -W/2; g.add(yf2);
+
+  // Purple rear
+  const prGeo = makeRoundedBox(1.5*s, 2.5*s, 0.04*s, r*1.5, 4);
+  const pr = new THREE.Mesh(prGeo, matPurple);
+  pr.position.set(-L*0.5+0.9*s, 1.65*s, W/2);
+  g.add(pr);
+  const pr2 = pr.clone(); pr2.position.z = -W/2; g.add(pr2);
+
+  // --- Front windshield (rounded, front = -X) ---
+  const wsGeo = makeRoundedBox(0.04*s, 1.4*s, W*0.9, r*0.3, 3);
+  const ws = new THREE.Mesh(wsGeo, matGlass);
+  ws.position.set(-L/2, 2.0*s, 0);
+  g.add(ws);
+
+  // Rear window
+  const rw = ws.clone();
+  rw.position.x = L/2;
+  g.add(rw);
+
+  // --- MATCH COLOR SIDE BAND (on +Z side, covering where windows would be) ---
+  // This is the identifying feature — a wide colored band on the +Z face
+  const matchGeo = makeRoundedBox(L*0.8, 2.2*s, 0.04*s, r*1.5, 4);
+  const matchMat = new THREE.MeshLambertMaterial({ color: matchColor });
+  const matchMesh = new THREE.Mesh(matchGeo, matchMat);
+  matchMesh.position.set(0, 1.7*s, W/2 + 0.02*s);
+  g.add(matchMesh);
+
+  // --- Windows on -Z side (5 upper, 5 lower) ---
+  const winGeo = makeRoundedBox(0.5*s, 0.5*s, 0.03*s, r*0.3, 3);
+  const winGeoLow = makeRoundedBox(0.5*s, 0.35*s, 0.03*s, r*0.3, 3);
+  for (let i = 0; i < 5; i++) {
+    const x = -L/2 + (i + 0.5) * (L/5);
+    const wu = new THREE.Mesh(winGeo, matGlass);
+    wu.position.set(x, 2.5*s, -W/2);
+    g.add(wu);
+    const wl = new THREE.Mesh(winGeoLow, matGlass);
+    wl.position.set(x, 1.25*s, -W/2);
+    g.add(wl);
+  }
+
+  // --- Wheels (2 axles) ---
+  const wheelR = 0.38*s, wheelW = 0.2*s;
+  const wheelGeo = new THREE.CylinderGeometry(wheelR, wheelR, wheelW, 20);
+  wheelGeo.translate(0, 0, 0); // keep centered
+  function addWheel(axleX) {
+    [1, -1].forEach(side => {
+      const tire = new THREE.Mesh(wheelGeo, matTire);
+      tire.rotation.z = Math.PI/2;
+      tire.position.set(axleX, wheelR, side * (W/2 + 0.05));
+      g.add(tire);
+      const rim = new THREE.Mesh(
+        new THREE.CylinderGeometry(wheelR*0.5, wheelR*0.5, wheelW+0.01, 16),
+        matRim
+      );
+      rim.rotation.z = Math.PI/2;
+      rim.position.set(axleX, wheelR, side * (W/2 + 0.05));
+      g.add(rim);
+    });
+  }
+  addWheel(-L/2 + 1.0*s);
+  addWheel(L/2 - 1.0*s);
+
+  // --- Roof vents (rounded) ---
+  const ventGeo = makeRoundedBox(0.4*s, 0.1*s, 0.35*s, r*0.4, 3);
+  [[-1.8,0], [0,0], [1.8,0]].forEach(([vx, vz]) => {
+    const vent = new THREE.Mesh(ventGeo, matVent);
+    vent.position.set(vx, 3.18*s, vz);
+    g.add(vent);
+  });
+
+  // --- Door (small rounded rect on -Z side, lower deck) ---
+  const doorGeo = makeRoundedBox(0.7*s, 0.8*s, 0.03*s, r*0.5, 3);
+  const door = new THREE.Mesh(doorGeo, matDark);
+  door.position.set(L/2 - 1.6*s, 1.0*s, -W/2);
+  g.add(door);
+
+  // --- LED route signs ---
+  const ledGeo = makeRoundedBox(0.06*s, 0.28*s, W*0.7, r*0.2, 3);
+  const ledFront = new THREE.Mesh(ledGeo, matLED);
+  ledFront.position.set(-L/2 - 0.05, 3.1*s, 0);
+  g.add(ledFront);
+  const ledRear = ledFront.clone();
+  ledRear.position.x = L/2 + 0.05;
+  g.add(ledRear);
+
+  // store match color
+  g.userData.matchColor = matchColor;
+  return g;
+}
+
+// ============ STATION ============
+function createStation(scale) {
+  scale = scale || 1;
+  const g = new THREE.Group();
+  const s = scale;
+  const green = new THREE.MeshLambertMaterial({ color: 0x16a34a });
+  const blue  = new THREE.MeshLambertMaterial({ color: 0x2563eb });
+  const roofMat = new THREE.MeshLambertMaterial({ color: 0x22c55e });
+  const r = 0.15*s;
+
+  // Base platform
+  const baseGeo = makeRoundedBox(3.0*s, 0.25*s, 2.0*s, r, 4);
+  const base = new THREE.Mesh(baseGeo, green);
+  base.position.y = 0.4*s;
+  g.add(base);
+
+  // Poles (rounded cylinders)
+  const poleGeo = new THREE.CylinderGeometry(0.08*s, 0.08*s, 2.0*s, 10);
+  [[-1.1, 0.7], [1.1, 0.7], [-1.1, -0.7], [1.1, -0.7]].forEach(([px, pz]) => {
+    const pole = new THREE.Mesh(poleGeo, blue);
+    pole.position.set(px, 1.4*s, pz);
+    g.add(pole);
+  });
+
+  // Roof awning (rounded)
+  const awningGeo = makeRoundedBox(3.2*s, 0.12*s, 2.2*s, r, 4);
+  const awning = new THREE.Mesh(awningGeo, roofMat);
+  awning.position.y = 2.7*s;
+  g.add(awning);
+
+  g.userData.isStation = true;
+  return g;
+}
+
+// ============ THREE.JS INIT ============
 function init() {
   const container = document.getElementById('game');
   scene = new THREE.Scene();
   scene.background = new THREE.Color(0x0f172a);
 
-  camera = new THREE.OrthographicCamera(-12, 12, 8, -8, 0.1, 200);
-  camera.position.set(camX, camY, camZ);
+  camera = new THREE.OrthographicCamera(-14, 14, 10, -10, 0.1, 200);
+  camera.position.set(camPos.x, camPos.y, camPos.z);
   camera.lookAt(0, 0, 0);
 
   renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
@@ -945,7 +1172,7 @@ function init() {
   renderer.shadowMap.enabled = true;
   container.appendChild(renderer.domElement);
 
-  // lights
+  // Lights
   scene.add(new THREE.AmbientLight(0xffffff, 0.6));
   const sun = new THREE.DirectionalLight(0xffffff, 1.0);
   sun.position.set(10, 20, 8);
@@ -955,17 +1182,17 @@ function init() {
   fill.position.set(-10, 5, -8);
   scene.add(fill);
 
-  // ground plane (subtle)
+  // Ground
   const ground = new THREE.Mesh(
     new THREE.PlaneGeometry(60, 60),
     new THREE.MeshLambertMaterial({ color: 0x1e293b })
   );
   ground.rotation.x = -Math.PI/2;
-  ground.position.y = -0.5;
+  ground.position.y = -0.6;
   ground.receiveShadow = true;
   scene.add(ground);
 
-  // raycaster
+  // Raycaster
   raycaster = new THREE.Raycaster();
   renderer.domElement.addEventListener('click', onTap);
 
@@ -983,439 +1210,376 @@ function onResize() {
 
 function animate() {
   requestAnimationFrame(animate);
-  // idle rotate for start bus
   if (phase === 0 && fleetGroup) fleetGroup.rotation.y += 0.005;
-  if (TWEEN && TWEEN.update) TWEEN.update();
+  if (typeof TWEEN !== 'undefined' && TWEEN.update) TWEEN.update();
   renderer.render(scene, camera);
 }
 
-// ----- camera re-frame for level grid -----
 function frameCamera() {
-  camera.position.set(camX, camY, camZ);
+  camera.position.set(camPos.x, camPos.y, camPos.z);
   camera.lookAt(0, 0, -1);
 }
 
-// ============ BUS MODEL ============
-// Match side = +Z (faces camera): whole long side painted the match color (the simplification).
-// Actually per spec: Left side (+Z, facing camera) = windows, no doors, color match banner.
-// User changed: use ONE side's window color as matching element. We'll paint the +Z long wall
-// with the match color as a wide band where windows are, making matching obvious.
-
-function createBus(matchColor, scale=1) {
-  const g = new THREE.Group();
-  const s = scale;
-
-  // body (main box) - modern 3-tone: yellow front / white mid / purple rear
-  const bodyMatYellow = new THREE.MeshLambertMaterial({ color: 0xfacc15 });
-  const bodyMatWhite  = new THREE.MeshLambertMaterial({ color: 0xf8fafc });
-  const bodyMatPurple= new THREE.MeshLambertMaterial({ color: 0x7c3aed });
-  const darkMat       = new THREE.MeshLambertMaterial({ color: 0x0f172a });
-  const glassMat      = new THREE.MeshLambertMaterial({ color: 0x1e293b, transparent:true, opacity:.7 });
-
-  // dimensions
-  const L = 6*s, H = 3.4*s, W = 1.6*s;
-  // chassis
-  const chassis = new THREE.Mesh(new THREE.BoxGeometry(L, 0.25*s, W), bodyMatWhite);
-  chassis.position.y = 0.8*s;
-  g.add(chassis);
-
-  // lower deck
-  const lower = new THREE.Mesh(new THREE.BoxGeometry(L, 1.1*s, W), bodyMatWhite);
-  lower.position.y = 1.1*s;
-  g.add(lower);
-
-  // upper deck
-  const upper = new THREE.Mesh(new THREE.BoxGeometry(L, 1.3*s, W), bodyMatWhite);
-  upper.position.y = 2.35*s;
-  g.add(upper);
-
-  // roof
-  const roof = new THREE.Mesh(new THREE.BoxGeometry(L-0.2*s, 0.18*s, W+0.1*s), bodyMatPurple);
-  roof.position.y = 3.15*s;
-  g.add(roof);
-
-  // 3-tone overlays on the LONG sides (both +Z and -Z).
-  // yellow front segment
-  const yFront = new THREE.Mesh(new THREE.BoxGeometry(1.6*s, 2.6*s, 0.02*s), bodyMatYellow);
-  yFront.position.set(L*0.5-1.0*s, 1.75*s, W/2);
-  g.add(yFront);
-  const yFrontBack = yFront.clone(); yFrontBack.position.z = -W/2; g.add(yFrontBack);
-  // purple rear segment
-  const pRear = new THREE.Mesh(new THREE.BoxGeometry(1.6*s, 2.6*s, 0.02*s), bodyMatPurple);
-  pRear.position.set(-L*0.5+1.0*s, 1.75*s, W/2);
-  g.add(pRear);
-  const pRearBack = pRear.clone(); pRearBack.position.z = -W/2; g.add(pRearBack);
-
-  // MATCH COLOR BAND: on +Z facing side, a wide horizontal band where windows are,
-  // painted with the match color. This is the matching element.
-  const matchBand = new THREE.Mesh(
-    new THREE.BoxGeometry(L*0.8, 2.2*s, 0.03*s),
-    new THREE.MeshLambertMaterial({ color: matchColor })
-  );
-  matchBand.position.set(0, 1.8*s, W/2 - 0.01);
-  g.add(matchBand);
-
-  // windows (upper deck row + lower deck row) as dark glass, but the +Z side match band covers them.
-  // put windows on the -Z side and front/back for detail.
-  for (let i=0;i<5;i++){
-    const x = -L/2 + (i+0.5)*(L/5);
-    // -Z side windows
-    const wu = new THREE.Mesh(new THREE.BoxGeometry(0.5*s,0.5*s,0.03*s), glassMat);
-    wu.position.set(x, 2.5*s, -W/2);
-    g.add(wu);
-    const wu2 = new THREE.Mesh(new THREE.BoxGeometry(0.5*s,0.5*s,0.03*s), glassMat);
-    wu2.position.set(x, 2.5*s, W/2);
-    g.add(wu2);
-    // lower deck windows -Z
-    const wl = new THREE.Mesh(new THREE.BoxGeometry(0.5*s,0.4*s,0.03*s), glassMat);
-    wl.position.set(x, 1.25*s, -W/2);
-    g.add(wl);
-    const wl2 = new THREE.Mesh(new THREE.BoxGeometry(0.5*s,0.4*s,0.03*s), glassMat);
-    wl2.position.set(x, 1.25*s, W/2);
-    g.add(wl2);
-  }
-
-  // front windshield (front = -X)
-  const wind = new THREE.Mesh(new THREE.BoxGeometry(0.03, 1.4*s, W), glassMat);
-  wind.position.set(-L/2, 2.1*s, 0);
-  wind.rotation.y = 0;
-  g.add(wind);
-  // rear window
-  const rearW = wind.clone(); rearW.position.x = L/2; g.add(rearW);
-
-  // route LED signs (front & rear), orange emissive
-  const ledMat = new THREE.MeshLambertMaterial({ color: 0xf97316, emissive: 0xf97316 });
-  const ledFront = new THREE.Mesh(new THREE.BoxGeometry(0.06, 0.3*s, W*0.8), ledMat);
-  ledFront.position.set(-L/2-0.05, 3.2*s, 0);
-  g.add(ledFront);
-  const ledRear = ledFront.clone(); ledRear.position.x = L/2+0.05; g.add(ledRear);
-
-  // wheels: 2 axles, big rear, small front
-  const tireMat = new THREE.MeshLambertMaterial({ color: 0x111827 });
-  const rimMat  = new THREE.MeshLambertMaterial({ color: 0x9ca3af });
-  const wheelR = 0.42*s, wheelW = 0.22*s;
-  const wheelGeo = new THREE.CylinderGeometry(wheelR, wheelR, wheelW, 18);
-  function addWheel(x){
-    ['0.9','-0.9'].forEach((side, i)=>{
-      const tire = new THREE.Mesh(wheelGeo, tireMat);
-      tire.rotation.z = Math.PI/2;
-      tire.position.set(x, wheelR, (side==='0.9'?1: -1)*W/2 + 0.1);
-      g.add(tire);
-      const rim = new THREE.Mesh(new THREE.CylinderGeometry(wheelR*0.5, wheelR*0.5, wheelW+0.01, 12), rimMat);
-      rim.rotation.z = Math.PI/2;
-      rim.position.set(x, wheelR, (side==='0.9'?1:-1)*W/2 + 0.1);
-      g.add(rim);
-    });
-  }
-  addWheel(-L/2 + 1.1*s);
-  addWheel(L/2 - 1.1*s);
-
-  // roof vents
-  const ventMat = new THREE.MeshLambertMaterial({ color: 0x94a3b8 });
-  [[-1.5,0],[0,0],[1.5,0]].forEach(([vx,vz])=>{
-    const vent = new THREE.Mesh(new THREE.BoxGeometry(0.4*s,0.12*s,0.4*s), ventMat);
-    vent.position.set(vx, 3.3*s, vz);
-    g.add(vent);
-  });
-
-  // store match color
-  g.userData.matchColor = matchColor;
-  return g;
+// ============ GAMEPLAY ============
+function clearFleet() {
+  if (fleetGroup) scene.remove(fleetGroup);
+  fleetGroup = null;
+  busList = [];
+  selected = [];
+  landedCount = 0;
+  timerStarted = false; // ← reset guard for next level
 }
 
-// ============ STATION ============
-function createStation(scale=1){
-  const g = new THREE.Group();
-  const s = scale;
-  const green = new THREE.MeshLambertMaterial({color:0x16a34a});
-  const blue  = new THREE.MeshLambertMaterial({color:0x2563eb});
-  const roofMat= new THREE.MeshLambertMaterial({color:0x22c55e});
-  // base platform
-  const base = new THREE.Mesh(new THREE.BoxGeometry(3.2*s,0.3*s,2.2*s), green);
-  base.position.y=0.5*s; g.add(base);
-  // poles
-  [[-1.2,0.8],[1.2,0.8],[-1.2,-0.8],[1.2,-0.8]].forEach(([px,pz])=>{
-    const pole=new THREE.Mesh(new THREE.BoxGeometry(0.12*s,2.0*s,0.12*s), blue);
-    pole.position.set(px,1.6*s,pz); g.add(pole);
-  });
-  // roof awning
-  const roof=new THREE.Mesh(new THREE.BoxGeometry(3.4*s,0.15*s,2.4*s), roofMat);
-  roof.position.y=2.9*s; g.add(roof);
-  g.userData.isStation=true;
-  return g;
-}
-
-// ============ GAMEPLAY SETUP ============
-function clearFleet(){
-  if(fleetGroup) scene.remove(fleetGroup);
-  fleetGroup=null;
-  busList=[];
-  selected=[];
-}
-
-function spawnLevel(lvl){
+function spawnLevel(lvl) {
   clearFleet();
-  fleetGroup=new THREE.Group();
+  fleetGroup = new THREE.Group();
   scene.add(fleetGroup);
-  lockInput=true;
+  lockInput = true;
+  animating = false;
 
   let pairs, cols;
-  if(lvl===1){ pairs=5; cols=3; }
-  else { pairs=6; cols=3; }
+  if (lvl === 1) { pairs = 5; cols = 3; }
+  else { pairs = 6; cols = 3; }
 
-  // shuffle a palette
-  let palette=[]; 
-  const used=MATCH_COLORS.slice(0,MATCH_COLORS.length);
-  for(let i=0;i<pairs;i++){
-    const c=used[i % used.length];
+  // Palette
+  let palette = [];
+  for (let i = 0; i < pairs; i++) {
+    const c = MATCH_COLORS[i % MATCH_COLORS.length];
     palette.push(c); palette.push(c);
   }
-  // shuffle
-  for(let i=palette.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[palette[i],palette[j]]=[palette[j],palette[i]];}
+  for (let i = palette.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [palette[i], palette[j]] = [palette[j], palette[i]];
+  }
 
-  const total=pairs*2;
-  // grid positions: 3 cols x 4 rows =12. Level1: 2 stations occupy 2 cells of 12 -> 10 buses.
-  let cells=[];
-  for(let r=0;r<4;r++) for(let c=0;c<3;c++) cells.push({r,c});
-  // For level 1, mark 2 cells as stations (top row middle & right)
-  const stationCells = lvl===1 ? [1,2] : []; // indexes 1,2 = top row col1, col2
-  const busCells = cells.filter((ci)=>!stationCells.includes(cells.indexOf(ci)));
+  const total = pairs * 2;
+  let cells = [];
+  for (let r = 0; r < 4; r++) for (let c = 0; c < 3; c++) cells.push({ r, c });
 
-  let busIdx=0;
-  // span based on screen
-  const spanX = 7;
-  const spanZ = 3.5;
-  cells.forEach((cell, ci)=>{
-    const x = (cell.c - (cols-1)/2) * spanX;
-    const z = (cell.r - 3/2) * spanZ;
+  const stationCells = (lvl === 1) ? [1, 2] : [];
+  let busIdx = 0;
+  const spanX = 6.5;
+  const spanZ = 3.2;
+
+  cells.forEach((cell, ci) => {
+    const x = (cell.c - (cols - 1) / 2) * spanX;
+    const z = (cell.r - 3 / 2) * spanZ;
     let obj;
-    if(stationCells.includes(ci)){
+    if (stationCells.includes(ci)) {
       obj = createStation(1.2);
-      obj.userData.isStation=true;
-      obj.position.set(x, -10, z);
+      obj.userData.isStation = true;
+      obj.position.set(x, -15, z);
     } else {
       const color = palette[busIdx];
       obj = createBus(color);
-      obj.userData.isStation=false;
-      obj.userData.matchColor=color;
-      obj.userData.flipped=false;
-      obj.userData.isAnimating=false;
-      obj.userData.matched=false;
-      obj.position.set(x, -10, z);
+      obj.userData.isStation = false;
+      obj.userData.matchColor = color;
+      obj.userData.flipped = false;
+      obj.userData.isAnimating = false;
+      obj.userData.matched = false;
+      obj.position.set(x, -15, z);
       busIdx++;
     }
+    obj.userData._landed = false;
     fleetGroup.add(obj);
   });
 
-  // drop animation from sky (Tween)
-  setTimeout(()=>{
-    const buses = fleetGroup.children;
-    buses.forEach((obj, i)=>{
-      const targetY = obj.userData.isStation ? 0.5*1.2 : 0;
-      const drop = new TWEEN.Tween(obj.position)
+  // Drop animation from sky — use countdown to start timer ONCE
+  const busChildren = fleetGroup.children;
+  const totalBuses = busChildren.length;
+  let landedCount = 0;
+
+  setTimeout(() => {
+    busChildren.forEach((obj, i) => {
+      const targetY = obj.userData.isStation ? 0.3 * 1.2 : 0;
+      new TWEEN.Tween(obj.position)
         .to({ y: targetY }, 900)
         .easing(TWEEN.Easing.Bounce.Out)
-        .delay(i*80)
+        .delay(i * 80)
+        .onComplete(() => {
+          obj.userData._landed = true;
+          landedCount++;
+          // Only start timer when ALL objects have landed (the FIX)
+          if (landedCount >= totalBuses && !timerStarted) {
+            startTimer();
+          }
+        })
         .start();
-      drop.onComplete(()=>{ lockInput=false; startTimer(); });
     });
   }, 300);
+
+  // Also release lock after all have landed (final bus + delay)
+  setTimeout(() => {
+    lockInput = false;
+  }, 300 + (totalBuses * 80) + 950);
 }
 
-function onTap(ev){
-  if(lockInput || animating) return;
+// ============ TIMER (guard with timerStarted flag) ============
+function startTimer() {
+  if (timerStarted) return; // ← THE CRITICAL GUARD
+  timerStarted = true;
+  timeLeft = 30;
+  const el = document.getElementById('timer');
+  el.textContent = timeLeft;
+  el.className = '';
+  timerInterval = setInterval(() => {
+    timeLeft--;
+    el.textContent = timeLeft;
+    if (timeLeft <= 10 && timeLeft > 5) el.className = 'warning';
+    else if (timeLeft <= 5) el.className = 'danger';
+    if (timeLeft <= 0) {
+      clearInterval(timerInterval);
+      timerInterval = null;
+      endGame(false);
+    }
+  }, 1000);
+}
+
+function stopTimer() {
+  if (timerInterval) {
+    clearInterval(timerInterval);
+    timerInterval = null;
+  }
+}
+
+// ============ CLICK / SELECTION ============
+function onTap(ev) {
+  if (lockInput || animating) return;
   const rect = renderer.domElement.getBoundingClientRect();
-  const x = ((ev.clientX-rect.left)/rect.width)*2-1;
-  const y = -((ev.clientY-rect.top)/rect.height)*2+1;
-  pointer = new THREE.Vector2(x,y);
+  const x = ((ev.clientX - rect.left) / rect.width) * 2 - 1;
+  const y = -((ev.clientY - rect.top) / rect.height) * 2 + 1;
+  pointer = new THREE.Vector2(x, y);
   raycaster.setFromCamera(pointer, camera);
   const children = fleetGroup ? fleetGroup.children : [];
   const intersects = raycaster.intersectObjects(children, true);
-  if(intersects.length===0) return;
-  let found=null;
-  // walk up to find the top-level bus/station
-  for(const it of intersects){
-    let o=it.object;
-    while(o.parent && o.parent!==fleetGroup) o=o.parent;
-    if(o.userData && !o.userData.isStation){ found=o; break; }
+  if (intersects.length === 0) return;
+  let found = null;
+  for (const it of intersects) {
+    let o = it.object;
+    while (o.parent && o.parent !== fleetGroup) o = o.parent;
+    if (o.userData && !o.userData.isStation && !o.userData.matched) {
+      found = o;
+      break;
+    }
   }
-  if(!found) return;
+  if (!found) return;
   selectBus(found);
 }
 
-function selectBus(bus){
-  if(bus.userData.isAnimating || bus.userData.matched) return;
-  if(selected.length && selected[0]===bus) return;
-  if(selected.length===2) return;
+function selectBus(bus) {
+  if (bus.userData.isAnimating || bus.userData.matched) return;
+  if (selected.length && selected[0] === bus) return;
+  if (selected.length === 2) return;
   selected.push(bus);
   flipBus(bus, true);
-  if(selected.length===2){
-    animating=true;
+  if (selected.length === 2) {
+    animating = true;
     setTimeout(checkMatch, 700);
   }
 }
 
-function flipBus(bus, reveal){
-  bus.userData.isAnimating=true;
-  // rotate around Y axis 180deg (on its own center) - actually rotate the whole group's inner? 
-  // We rotate the bus around its vertical axis. The match band is +Z. To reveal, rotate 180.
-  // But bus object in fleetGroup is positioned; rotating rotates around its local origin (center). Good.
-  const target = bus.rotation.y + (reveal?1:0)*Math.PI;
+function flipBus(bus, reveal) {
+  bus.userData.isAnimating = true;
+  const target = bus.rotation.y + (reveal ? 1 : 0) * Math.PI;
   new TWEEN.Tween(bus.rotation)
     .to({ y: target }, 600)
     .easing(TWEEN.Easing.Cubic.InOut)
-    .onComplete(()=>{ bus.userData.isAnimating=false; bus.userData.flipped=reveal; })
+    .onComplete(() => {
+      bus.userData.isAnimating = false;
+      bus.userData.flipped = reveal;
+    })
     .start();
 }
 
-function checkMatch(){
-  const [a,b]=selected;
-  const match = a.userData.matchColor===b.userData.matchColor;
-  selected=[];
-  if(match){
-    a.userData.matched=true; b.userData.matched=true;
-    // drive off +X
-    setTimeout(()=>{
-      new TWEEN.Tween(a.position).to({x:a.position.x+12},700).easing(TWEEN.Easing.Quad.In).start();
-      new TWEEN.Tween(b.position).to({x:b.position.x+12},700).easing(TWEEN.Easing.Quad.In).start();
-      setTimeout(()=>{ if(fleetGroup){fleetGroup.remove(a);fleetGroup.remove(b);} 
-        animating=false; checkWin(); },700);
-    },400);
+function checkMatch() {
+  const [a, b] = selected;
+  const match = a.userData.matchColor === b.userData.matchColor;
+  selected = [];
+  if (match) {
+    a.userData.matched = true;
+    b.userData.matched = true;
+    // Drive off to +X
+    setTimeout(() => {
+      new TWEEN.Tween(a.position)
+        .to({ x: a.position.x + 12 }, 700)
+        .easing(TWEEN.Easing.Quad.In)
+        .start();
+      new TWEEN.Tween(b.position)
+        .to({ x: b.position.x + 12 }, 700)
+        .easing(TWEEN.Easing.Quad.In)
+        .start();
+      setTimeout(() => {
+        if (fleetGroup) { fleetGroup.remove(a); fleetGroup.remove(b); }
+        animating = false;
+        checkWin();
+      }, 700);
+    }, 400);
   } else {
-    // flip back
-    setTimeout(()=>{
-      flipBus(a,false); flipBus(b,false);
-      setTimeout(()=>{ animating=false; },700);
-    },300);
+    // Flip back
+    animating = true;
+    setTimeout(() => {
+      flipBus(a, false);
+      flipBus(b, false);
+      setTimeout(() => { animating = false; }, 700);
+    }, 300);
   }
 }
 
-function checkWin(){
-  const remaining = fleetGroup ? fleetGroup.children.filter(o=>!o.userData.isStation && !o.userData.matched) : [];
-  const matched = fleetGroup ? fleetGroup.children.filter(o=>!o.userData.isStation && o.userData.matched) : [];
-  if(remaining.length===0){
-    // won level
-    clearTimeout(timer);
+function checkWin() {
+  const matched = fleetGroup
+    ? fleetGroup.children.filter(o => !o.userData.isStation && o.userData.matched)
+    : [];
+  const allBuses = fleetGroup
+    ? fleetGroup.children.filter(o => !o.userData.isStation)
+    : [];
+  // Stations also need to be checked but they're not buses
+  const remainingBuses = allBuses.length;
+  // Actually check if any unmatched buses remain
+  const unmatched = allBuses.filter(o => !o.userData.matched);
+  if (unmatched.length === 0 && allBuses.length > 0) {
+    // Won level
+    stopTimer();
     addStar();
-    if(level===1){
-      moveProgressBus(2); // to node 3
+    if (level === 1) {
+      moveProgressBus(1); // node 2 (0-indexed)
+      // Go directly to Level 2 (no quiz)
       level = 2;
-      setTimeout(()=>{ spawnLevel(2); }, 600);
+      timerStarted = false;
+      setTimeout(() => spawnLevel(2), 800);
     } else {
-      moveProgressBus(3); // node 4
+      moveProgressBus(2); // node 3 (0-indexed: index 2 = 65%)
       endGame(true);
     }
   }
 }
 
-// ============ TIMER ============
-function startTimer(){
-  timeLeft=30;
-  const el=document.getElementById('timer');
-  el.textContent=timeLeft;
-  timer=setInterval(()=>{
-    timeLeft--;
-    el.textContent=timeLeft;
-    if(timeLeft<=0){
-      clearInterval(timer);
-      endGame(false);
-    }
-  },1000);
-}
-function stopTimer(){ clearInterval(timer); }
-
-// ============ PROGRESS BUS ============
-function moveProgressBus(node){
-  const names=['','','',''];
-  const track=document.getElementById('progress-track');
-  const uiBus=document.getElementById('ui-bus');
-  const stops=[6,35,65,94];
-  if(node>=0 && node<4) uiBus.style.left=stops[node]+'%';
-}
-function shakeUiBus(){
-  const b=document.getElementById('ui-bus');
-  b.classList.remove('shake'); void b.offsetWidth; b.classList.add('shake');
+// ============ PROGRESS ============
+function moveProgressBus(nodeIdx) {
+  const stops = [6, 35, 65, 94];
+  document.getElementById('ui-bus').style.left = stops[nodeIdx] + '%';
+  // Mark node as done
+  const nodes = document.querySelectorAll('.node');
+  if (nodes[nodeIdx]) nodes[nodeIdx].classList.add('done');
 }
 
-// ============ STARS ============
-function addStar(){
+function shakeUiBus() {
+  const b = document.getElementById('ui-bus');
+  b.classList.remove('shake');
+  void b.offsetWidth;
+  b.classList.add('shake');
+}
+
+function addStar() {
   stars++;
-  document.getElementById('star-count').textContent=stars;
+  document.getElementById('star-count').textContent = stars;
 }
 
 // ============ QUIZ ============
 const QUIZ = [
-  {q:"香港基本法一共有幾多條？", opts:["150條","160條","180條","200條"], ans:1},
-  {q:"香港特別行政區係中華人民共和國嘅邊部分？", opts:["唔可分離嘅部分","高度獨立嘅部分","自治邦","海外領地"], ans:0},
-  {q:"基本法規定香港實行乜嘢制度？", opts:["資本主義制度","社會主義制度","封建制度","君主立憲"], ans:0},
-  {q:"基本法邊年開始實施？", opts:["1995年","1997年","1999年","2001年"], ans:1},
-  {q:"香港特別行政區首長稱為什麼？", opts:["總督","行政長官","主席","總理"], ans:1},
-  {q:"基本法保障香港居民擁有邊啲自由？", opts:["只限宗教信仰","個人自由、言論、集會自由等","只限人身自由","無任何自由"], ans:1},
-  {q:"香港嘅司法制度喺基本法下屬於邊個體系？", opts:["大陸法系","普通法系","伊斯蘭法系","混合法系"], ans:1},
-  {q:"基本法規定香港可用邊種語文？", opts:["只可用中文","只可用英文","中文同英文","只可用普通話"], ans:2},
+  {q: "香港基本法一共有幾多條？", opts: ["150條", "160條", "180條", "200條"], ans: 1},
+  {q: "香港特別行政區係中華人民共和國嘅邊部分？", opts: ["唔可分離嘅部分", "高度獨立嘅部分", "自治邦", "海外領地"], ans: 0},
+  {q: "基本法規定香港實行乜嘢制度？", opts: ["資本主義制度", "社會主義制度", "封建制度", "君主立憲"], ans: 0},
+  {q: "基本法邊年開始實施？", opts: ["1995年", "1997年", "1999年", "2001年"], ans: 1},
+  {q: "香港特別行政區首長稱為什麼？", opts: ["總督", "行政長官", "主席", "總理"], ans: 1},
+  {q: "基本法保障香港居民擁有邊啲自由？", opts: ["只限宗教信仰", "個人自由、言論、集會自由等", "只限人身自由", "無任何自由"], ans: 1},
+  {q: "香港嘅司法制度喺基本法下屬於邊個體系？", opts: ["大陸法系", "普通法系", "伊斯蘭法系", "混合法系"], ans: 1},
+  {q: "基本法規定香港可用邊種語文？", opts: ["只可用中文", "只可用英文", "中文同英文", "只可用普通話"], ans: 2},
 ];
 
-function showQuiz(){
-  phase=0.5;
+function showQuiz() {
+  phase = 0.5;
   stopTimer();
-  document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
+  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
   document.getElementById('quiz-screen').classList.add('active');
-  const q = QUIZ[Math.floor(Math.random()*QUIZ.length)];
-  document.getElementById('quiz-question').textContent=q.q;
-  const optEl=document.getElementById('quiz-options');
-  optEl.innerHTML='';
-  q.opts.forEach((o,idx)=>{
-    const b=document.createElement('button');
-    b.className='quiz-opt';
-    b.textContent=o;
-    b.onclick=()=>{
-      if(b.classList.contains('correct')||b.classList.contains('wrong'))return;
-      if(idx===q.ans){ b.classList.add('correct'); setTimeout(()=>{phase=level; showGame(); },800); }
-      else { b.classList.add('wrong'); shakeUiBus(); setTimeout(()=>{ showQuiz(); },700); }
+
+  const q = QUIZ[Math.floor(Math.random() * QUIZ.length)];
+  document.getElementById('quiz-question').textContent = q.q;
+  const optEl = document.getElementById('quiz-options');
+  optEl.innerHTML = '';
+  let answered = false;
+  q.opts.forEach((o, idx) => {
+    const b = document.createElement('button');
+    b.className = 'quiz-opt';
+    b.textContent = o;
+    b.onclick = () => {
+      if (answered) return;
+      answered = true;
+      if (idx === q.ans) {
+        b.classList.add('correct');
+        setTimeout(() => {
+          phase = level;
+          showGame();
+        }, 800);
+      } else {
+        b.classList.add('wrong');
+        shakeUiBus();
+        // Show correct answer visually
+        const opts = optEl.querySelectorAll('.quiz-opt');
+        opts[q.ans].classList.add('correct');
+        setTimeout(() => {
+          answered = false;
+          showQuiz();
+        }, 1200);
+      }
     };
     optEl.appendChild(b);
   });
 }
 
 // ============ GAME FLOW ============
-function startGame(){
-  // remove giant bus if any
-  if(fleetGroup){ scene.remove(fleetGroup); fleetGroup=null; }
-  document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
+function startGame() {
+  if (fleetGroup) { scene.remove(fleetGroup); fleetGroup = null; }
+  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
   showQuiz();
 }
-function showGame(){
-  document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
+
+function showGame() {
+  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+  document.getElementById('timer').textContent = '30';
+  timerStarted = false;
   spawnLevel(level);
 }
-function endGame(win){
-  phase=3;
+
+function endGame(win) {
+  phase = 3;
   stopTimer();
-  document.getElementById('end-title').textContent = win ? (stars>=2?"🎉 恭喜！完成全部關卡！":"🎉 過關！") : "⏰ 時間到";
-  document.getElementById('end-msg').textContent = win ? "你真係好犀利！" : "下次再試下！";
-  document.getElementById('end-stars').textContent= '⭐'.repeat(stars||1);
-  document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
+  const title = win
+    ? (stars >= 2 ? "🎉 恭喜！完成全部關卡！" : "🎉 過關！")
+    : "⏰ 時間到";
+  const msg = win ? "你真係好犀利！全部巴士都配對晒！" : "下次再試下啦！";
+  document.getElementById('end-title').textContent = title;
+  document.getElementById('end-msg').textContent = msg;
+  document.getElementById('end-stars').textContent = '⭐'.repeat(stars || 1);
+  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
   document.getElementById('end-screen').classList.add('active');
 }
 
-// ============ IDLE TIMEOUT (kiosk) ============
+// ============ IDLE TIMEOUT ============
 let idleTimer;
-const IDLE_TIME_LIMIT=60000;
-function resetIdleTimer(){ clearTimeout(idleTimer); idleTimer=setTimeout(()=>location.reload(),IDLE_TIME_LIMIT); }
-window.onload=resetIdleTimer; document.onpointerdown=resetIdleTimer; document.ontouchstart=resetIdleTimer;
+const IDLE_TIME_LIMIT = 60000;
+function resetIdleTimer() {
+  clearTimeout(idleTimer);
+  idleTimer = setTimeout(() => location.reload(), IDLE_TIME_LIMIT);
+}
+window.onload = resetIdleTimer;
+document.onpointerdown = resetIdleTimer;
+document.ontouchstart = resetIdleTimer;
 
 // ============ BOOT ============
-window.addEventListener('load', ()=>{
+window.addEventListener('load', () => {
   init();
-  // giant bus on start screen (out-of-box effect)
-  fleetGroup=new THREE.Group();
-  const gb=createBus(MATCH_COLORS[0], 2.2);
-  gb.position.y=1.5;
+
+  // Giant bus on start screen (out-of-box effect: bus protrudes from the left)
+  fleetGroup = new THREE.Group();
+  const gb = createBus(MATCH_COLORS[0], 2.5);
+  gb.position.y = 1.5;
+  // Out-of-box: bus extends beyond camera edge to the left
   fleetGroup.add(gb);
   scene.add(fleetGroup);
-  camX=24; camY=14; camZ=24;
-  frameCamera();
+  camera.position.set(camPos.x+4, camPos.y-2, camPos.z+4);
+  camera.lookAt(0, 0, 0);
 });
+
 </script>
 </body>
 </html>
