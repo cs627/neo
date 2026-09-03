@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-02T09:01:07Z",
+  "fetched_at": "2026-09-03T09:00:30Z",
   "total": 50,
   "models": [
     {
@@ -50,6 +50,19 @@
       ],
       "inputTokenLimit": 8192,
       "outputTokenLimit": 16384
+    },
+    {
+      "name": "models/gemini-flash-latest-high-res-exp",
+      "description": "Latest release of Gemini Flash",
+      "displayName": "Gemini Flash Latest",
+      "supportedMethods": [
+        "generateContent",
+        "countTokens",
+        "createCachedContent",
+        "batchGenerateContent"
+      ],
+      "inputTokenLimit": 1048576,
+      "outputTokenLimit": 65536
     },
     {
       "name": "models/gemma-4-26b-a4b-it",
@@ -360,6 +373,19 @@
       "outputTokenLimit": 65536
     },
     {
+      "name": "models/gemini-3.8-flash",
+      "description": "Gemini 3.8 Flash",
+      "displayName": "Gemini 3.8 Flash",
+      "supportedMethods": [
+        "generateContent",
+        "countTokens",
+        "createCachedContent",
+        "batchGenerateContent"
+      ],
+      "inputTokenLimit": 1048576,
+      "outputTokenLimit": 65536
+    },
+    {
       "name": "models/lyria-3-clip-preview",
       "description": "Lyria 3 30s model Preview",
       "displayName": "Lyria 3 Clip Preview",
@@ -571,27 +597,6 @@
       ],
       "inputTokenLimit": 131072,
       "outputTokenLimit": 8192
-    },
-    {
-      "name": "models/gemini-2.5-flash-native-audio-preview-12-2025",
-      "description": "Gemini 2.5 Flash Native Audio Preview 12-2025",
-      "displayName": "Gemini 2.5 Flash Native Audio Preview 12-2025",
-      "supportedMethods": [
-        "countTokens",
-        "bidiGenerateContent"
-      ],
-      "inputTokenLimit": 131072,
-      "outputTokenLimit": 8192
-    },
-    {
-      "name": "models/gemini-3.1-flash-live-preview",
-      "description": "Gemini 3.1 Flash Live Preview",
-      "displayName": "Gemini 3.1 Flash Live Preview",
-      "supportedMethods": [
-        "bidiGenerateContent"
-      ],
-      "inputTokenLimit": 131072,
-      "outputTokenLimit": 65536
     }
   ]
 }
