@@ -121,20 +121,20 @@ bus.position.y = -0.95;
 const busW = 2.5, busL = 6.0, lowH = 1.3, stripH = 0.2, upH = 1.25, roofH = 0.18;
 const lowerColor = 0xE87E1E, upperColor = 0x7CCFA0, stripColor = 0xEAEAEA, roofColor = 0xCDD6D0;
 
-// ---- LOWER DECK ----
-const lowerBody = new THREE.Mesh(new THREE.BoxGeometry(busW, lowH, busL), new THREE.MeshLambertMaterial({ color: lowerColor }));
+// ---- LOWER DECK (rounded corners) ----
+const lowerBody = new THREE.Mesh(new THREE.RoundedBoxGeometry(busW, lowH, busL, 2, 0.15), new THREE.MeshLambertMaterial({ color: lowerColor }));
 lowerBody.position.y = lowH/2; lowerBody.castShadow = true; bus.add(lowerBody);
 
 // ---- WHITE STRIP ----
-const stripMesh = new THREE.Mesh(new THREE.BoxGeometry(busW, stripH, busL), new THREE.MeshLambertMaterial({ color: stripColor }));
+const stripMesh = new THREE.Mesh(new THREE.RoundedBoxGeometry(busW, stripH, busL, 2, 0.06), new THREE.MeshLambertMaterial({ color: stripColor }));
 stripMesh.position.y = lowH + stripH/2; bus.add(stripMesh);
 
-// ---- UPPER DECK ----
-const upperBody = new THREE.Mesh(new THREE.BoxGeometry(busW, upH, busL), new THREE.MeshLambertMaterial({ color: upperColor }));
+// ---- UPPER DECK (rounded corners) ----
+const upperBody = new THREE.Mesh(new THREE.RoundedBoxGeometry(busW, upH, busL, 2, 0.15), new THREE.MeshLambertMaterial({ color: upperColor }));
 upperBody.position.y = lowH + stripH + upH/2; upperBody.castShadow = true; bus.add(upperBody);
 
-// ---- ROOF ----
-const roofMesh = new THREE.Mesh(new THREE.BoxGeometry(busW + 0.05, roofH, busL + 0.05), new THREE.MeshLambertMaterial({ color: roofColor }));
+// ---- ROOF (rounded) ----
+const roofMesh = new THREE.Mesh(new THREE.RoundedBoxGeometry(busW + 0.05, roofH, busL + 0.05, 2, 0.10), new THREE.MeshLambertMaterial({ color: roofColor }));
 roofMesh.position.y = lowH + stripH + upH + roofH/2; bus.add(roofMesh);
 
 // ---- SIDE WINDOWS (flush) ----
@@ -172,14 +172,14 @@ function addWheel(x, z) {
   const g = new THREE.Group();
   const tire = new THREE.Mesh(new THREE.CylinderGeometry(0.30, 0.30, 0.22, 14),
     new THREE.MeshLambertMaterial({ color: 0x1a1a1a }));
-  tire.rotation.y = Math.PI/2;   // axis along X (bus width) -> hub face sideways, tread ring visible from side
+  tire.rotation.x = Math.PI/2;   // axis along Z (bus length/direction) -> circular tread face visible from the side
   tire.castShadow = true;
   g.add(tire);
   const hub = new THREE.Mesh(new THREE.CylinderGeometry(0.11, 0.11, 0.24, 10),
     new THREE.MeshLambertMaterial({ color: 0x999999 }));
-  hub.rotation.y = Math.PI/2;
+  hub.rotation.x = Math.PI/2;
   g.add(hub);
-  g.position.set(x, 0.15, z);
+  g.position.set(x, -0.08, z);    // wheel center slightly below body base -> lower half clearly visible below body
   bus.add(g);
 }
 
