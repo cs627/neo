@@ -99,7 +99,7 @@ function buildAll(){
   wheelMeshes=[];
   wheels.forEach(function(wd){
     var w=new THREE.Mesh(new THREE.CylinderGeometry(wd.r,wd.r,0.15,14),new THREE.MeshLambertMaterial({color:0x121212}));
-    w.rotation.x=Math.PI;
+    w.rotation.z=Math.PI/2;   // axis along X (roll direction), so the flat face shows on the ±Z sides
     w.position.set(wd.x,wd.r,wd.z);
     w.castShadow=true;
     w.userData=wd; w.userData.type='wheel';
