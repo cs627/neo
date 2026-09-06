@@ -29,8 +29,8 @@
 
     <div class="group">
       <h2>車身</h2>
-      <label>長度 <span class="val" id="v_len"></span> <input type="range" id="len" min="2.0" max="4.5" step="0.1" value="3.4"></label>
-      <label>高度(兩層) <input type="range" id="hgt" min="2.2" max="3.2" step="0.1" value="2.6"><span class="val" id="v_hgt"></span></label>
+      <label>長度 <span class="val" id="v_len"></span> <input type="range" id="len" min="2.0" max="6.0" step="0.1" value="3.4"></label>
+      <label>高度(兩層) <input type="range" id="hgt" min="1.8" max="5.0" step="0.1" value="2.6"><span class="val" id="v_hgt"></span></label>
       <label>寬度 <input type="range" id="wid" min="0.8" max="1.3" step="0.05" value="1.05"><span class="val" id="v_wid"></span></label>
       <label>圓角 <input type="range" id="rad" min="0.02" max="0.3" step="0.01" value="0.14"><span class="val" id="v_rad"></span></label>
       <label>車身顏色 <input type="color" id="bodycol" value="#f6851f"><span class="val">Orange</span></label>
@@ -98,6 +98,10 @@ function build(){
   // build a fresh bus from params
   bus = buildBus(p);
   scene.add(bus);
+  // Auto-fit camera so taller buses stay fully visible
+  var dist = Math.max(4, p.hgt * 1.35);
+  cam.position.set(dist, dist * 0.72, dist);
+  cam.lookAt(0, p.hgt * 0.42, 0);
 }
 function buildBus(p){
   var g = new THREE.Group();
@@ -136,10 +140,11 @@ function buildBus(p){
     d.position.set(x,p.hgt*0.30,p.wid/2+0.04); g.add(d);
   });
 
-  // wheels 3 axles*2
+  // wheels: 3 axles spread across the length (front, mid, rear) by -len/2 to +len/2
   var wg = new THREE.CylinderGeometry(p.wRad,p.wRad,0.15,14);
   var wm = new THREE.MeshLambertMaterial({color:0x121212});
-  [p.axlen,0,-p.axlen].forEach(function(x){
+  var frontAxle = p.len * 0.34;
+  [frontAxle, 0, -frontAxle].forEach(function(x){
     [-p.wid/2+0.09,p.wid/2-0.09].forEach(function(z){
       var w = new THREE.Mesh(wg,wm); w.rotation.x=Math.PI/2; w.position.set(x, p.wRad, z); w.castShadow=true; g.add(w);
     });
