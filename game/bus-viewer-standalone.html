@@ -4761,6 +4761,20 @@ loader.load('data:model/gltf-binary;base64,Z2xURgIAAAA0wygAFEwAAEpTT057ImFzc2V0I
       });
     }
   });
+  // ---- WINDOWS -> pure black (no reflection) ----
+  // window materials: cyan glass #59e2e2, light-grey panels #cccccc / #797979
+  bus.traverse(function(o){
+    if(o.isMesh && o.material){
+      var ms = Array.isArray(o.material) ? o.material : [o.material];
+      ms.forEach(function(m){
+        if(!m || !m.color) return;
+        var hex = m.color.getHexString();
+        if(hex === '59e2e2' || hex === 'cccccc' || hex === '797979'){
+          m.color.setHex(0x000000);          // pure black glass, no reflection
+        }
+      });
+    }
+  });
   // normalize: put the box MIN at (0,0,0) and center on X/Z
   bb = new THREE.Box3().setFromObject(bus);
   var mn = bb.min, mx = bb.max;
