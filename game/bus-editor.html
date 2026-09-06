@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>3D 巴士視覺編輯器 (Bus Visual Editor)</title>
+<style>
+  body { margin:0; font-family:'Segoe UI',sans-serif; display:flex; height:100vh; background:#1a1f2e; color:#eee; }
+  #viewer { flex:1; position:relative; background:linear-gradient(180deg,#6db7e8,#cdeafd); }
+  canvas { display:block; }
+  #panel { width:340px; padding:16px; overflow-y:auto; background:#232a3b; border-left:1px solid #333; }
+  h2 { margin:0 0 8px; font-size:15px; color:#7cc4f0; }
+  .group { border-bottom:1px solid #333; padding:10px 0; }
+  .group:last-child { border-bottom:none; }
+  label { display:flex; justify-content:space-between; align-items:center; font-size:12px; margin:6px 0; color:#bbb; }
+  input[type=range] { width:150px; }
+  input[type=color] { width:40px; height:24px; border:none; cursor:pointer; }
+  .val { width:38px; text-align:right; color:#7cc4f0; }
+  button { width:100%; margin-top:8px; padding:10px; background:#2f6fd0; color:#fff; border:none; border-radius:6px; cursor:pointer; font-size:14px; }
+  button:hover { background:#3a7ce0; }
+  textarea { width:100%; height:90px; font-family:monospace; font-size:11px; background:#12151f; color:#7ff; border:1px solid #333; border-radius:4px; }
+  .hint { font-size:11px; color:#888; margin-top:6px; line-height:1.4; }
+</style>
+</head>
+<body>
+  <div id="viewer"><canvas id="cv"></canvas></div>
+  <div id="panel">
+    <h2>🚌 巴士參數</h2>
+
+    <div class="group">
+      <h2>車身</h2>
+      <label>長度 <span class="val" id="v_len"></span> <input type="range" id="len" min="2.0" max="4.5" step="0.1" value="3.4"></label>
+      <label>高度(兩層) <input type="range" id="hgt" min="2.2" max="3.2" step="0.1" value="2.6"><span class="val" id="v_hgt"></span></label>
+      <label>寬度 <input type="range" id="wid" min="0.8" max="1.3" step="0.05" value="1.05"><span class="val" id="v_wid"></span></label>
+      <label>圓角 <input type="range" id="rad" min="0.02" max="0.3" step="0.01" value="0.14"><span class="val" id="v_rad"></span></label>
+      <label>車身顏色 <input type="color" id="bodycol" value="#f6851f"><span class="val">Orange</span></label>
+    </divval>
+
+    <div class="group">
+      <h2>車轆 (3條軸 × 2個 = 6個)</h2>
+      <label>車輪半徑 <input type="range" id="wrad" min="0.2" max="0.42" step="0.02" value="0.32"><span class="val" id="v_wrad"></span></label>
+      <label>軸位置(左中右) <input type="range" id="axlen" min="0.8" max="1.3" step="0.05" value="1.1"><span class="val" id="v_axlen"></span></label>
+    </div>
+
+    <div class="group">
+      <h2>玻璃 + 窗帶</h2>
+      <label>窗帶色(Match) <input type="color" id="wincol" value="#3498db"><span class="val">Blue</span></label>
+      <label>下層窗帶高<input type="range" id="lwh" min="0.3" max="0.8" step="0.05" value="0.55"><span class="val" id="v_lwh"></span></label>
+      <label>上層窗帶高<input type="range" id="uwh" min="0.3" max="0.8" step="0.05" value="0.6"><span class="val" id="v_uwh"></span></label>
+      <h2>車頭玻璃(兩層)</h2>
+      <label>上層玻璃 <input type="range" id="fuh" min="0.3" max="0.8" step="0.05" value="0.6"><span class="val" id="v_fuh"></span></label>
+      <label>下層玻璃 <input type="range" id="flh" min="0.3" max="0.8" step="0.05" value="0.5"><span class="val" id="v_flh"></span></label>
+    </div>
+
+    <div class="group">
+      <h2>門 (車頭方向左邊)</h2>
+      <label>前門位置 <input type="range" id="d1" min="0.3" max="1.5" step="0.05" value="0.9"><span class="val" id="v_d1"></span></label>
+      <label>中門位置 <input type="range" id="d2" min="-1.5" max="-0.2" step="0.05" value="-0.8"><span class="val" id="v_d2"></span></label>
+      <label>門高 <input type="range" id="dh" min="0.4" max="0.9" step="0.05" value="0.6"><span class="val" id="v_dh"></span></label>
+      <h2>目的地牌</h2>
+      <label>牌色 <input type="color" id="destcol" value="#080808"><span class="val">Dark</span></label>
+    </div>
+
+    <div class="group">
+      <h2>匯出</h2>
+      <button id="export">📋 匯出 3D 巴士數值 (JSON)</button>
+      <textarea id="out" readonly placeholder="撳匯出會覆製數值"></textarea>
+      <div class="hint">將匯出嘅 JSON 貼返入主遊戲<br>game build -> bus_model.js 的 createBus(winColor)<br>即可完美呈現你調整嘅巴士</div>
+    </div>
+  </div>
+
+<script src="three.min.js"></script>
+<script src="roundedbox-umd.js"></script>
+<script>
+// Scene
+var W = document.getElementById('cv');
+var scene = new THREE.Scene();
+// transparent so gradient shows
+scene.background = null;
+var cam = new THREE.PerspectiveCamera(45, 1, 0.1, 100);
+cam.position.set(9, 7, 9);
+cam.lookAt(0, 1, 0);
+var renderer = new THREE.WebGLRenderer({ canvas: W, alpha: true, antialias: true });
+renderer.setSize(800, 600);
+var sun = new THREE.DirectionalLight(0xffffff,1.5); sun.position.set(6,10,6); scene.add(sun);
+scene.add(new THREE.AmbientLight(0xffffff,0.9));
+var ground = new THREE.GridHelper(8, 20, 0xffffff, 0xffffff);
+ground.position.y = 0.001;
+scene.add(ground);
+function resize(){ var r=document.getElementById('viewer').getBoundingClientRect(); W.width=r.width; W.height=r.height; renderer.setSize(r.width,r.height); cam.aspect=r.width/r.height; cam.updateProjectionMatrix(); }
+window.addEventListener('resize', resize);
+
+var bus = null;
+function build(){
+  if(bus){ scene.remove(bus); }
+  var p = readParams();
+  bus = null; // placeholder — real build below
+  // build a fresh bus from params
+  bus = buildBus(p);
+  scene.add(bus);
+}
+function buildBus(p){
+  var g = new THREE.Group();
+  // materials
+  var bodyM = new THREE.MeshLambertMaterial({color:p.bodycol});
+  var winM = new THREE.MeshLambertMaterial({color:p.winCol});
+  var glassM = new THREE.MeshLambertMaterial({color:0xbfe6ff, transparent:true, opacity:0.9});
+  var darkM = new THREE.MeshLambertMaterial({color:0x1a1a1a});
+  var destM = new THREE.MeshLambertMaterial({color:p.destCol});
+  var doorM = new THREE.MeshLambertMaterial({color:p.winCol});
+
+  // body (single cuboid)
+  var body = new THREE.Mesh(new THREE.RoundedBoxGeometry(p.len,p.hgt,p.wid,3,p.rad), bodyM);
+  body.position.set(0, p.hgt/2, 0);
+  g.add(body);
+
+  // window bands (+Z, front-left long side)
+  var lb = new THREE.Mesh(new THREE.BoxGeometry(p.len-0.3,p.lwh,0.05), winM);
+  lb.position.set(0, p.hgt*0.30, p.wid/2+0.02); g.add(lb);
+  var ub = new THREE.Mesh(new THREE.BoxGeometry(p.len-0.3,p.uwh,0.05),winM);
+  ub.position.set(0,p.hgt*0.72,p.wid/2+0.02); g.add(ub);
+
+  // front two-layer glass (+X)
+  var fg1 = new THREE.Mesh(new THREE.RoundedBoxGeometry(0.1,p.fuh,p.wid-0.1,2,0.04),glassM);
+  fg1.position.set(p.len/2+0.02,p.hgt*0.72,0); g.add(fg1);
+  var fg2 = new THREE.Mesh(new THREE.RoundedBoxGeometry(0.1,p.flh,p.wid-0.1,2,0.04),glassM);
+  fg2.position.set(p.len/2+0.02,p.hgt*0.30,0); g.add(fg2);
+
+  // dest board
+  var db = new THREE.Mesh(new THREE.RoundedBoxGeometry(0.1,0.4,p.wid-0.1,2,0.04),destM);
+  db.position.set(p.len/2+0.02,p.hgt*0.9,0); g.add(db);
+
+  // doors front-left
+  [p.d1,p.d2].forEach(x=>{
+    var d = new THREE.Mesh(new THREE.BoxGeometry(0.5,p.dh,0.06),doorM);
+    d.position.set(x,p.hgt*0.30,p.wid/2+0.04); g.add(d);
+  });
+
+  // wheels 3 axles*2
+  var wg = new THREE.CylinderGeometry(p.wRad,p.wRad,0.15,14);
+  var wm = new THREE.MeshLambertMaterial({color:0x121212});
+  [p.axlen,0,-p.axlen].forEach(function(x){
+    [-p.wid/2+0.09,p.wid/2-0.09].forEach(function(z){
+      var w = new THREE.Mesh(wg,wm); w.rotation.x=Math.PI/2; w.position.set(x, p.wRad, z); w.castShadow=true; g.add(w);
+    });
+  });
+
+  g.userData.isBus = true;
+  g.userData.typeColor = p.winCol;
+  return g;
+}
+function readParams(){
+  return {
+    len:+document.getElementById("len").value,
+    hgt:+document.getElementById("hgt").value,
+    wid:+document.getElementById("wid").value,
+    rad:+document.getElementById("rad").value,
+    bodycol:hex2num(document.getElementById("bodycol").value),
+    winCol:hex2num(document.getElementById("wincol").value),
+    lwh:+document.getElementById("lwh").value,
+    uwh:+document.getElementById("uwh").value,
+    fuh:+document.getElementById("fuh").value,
+    flh:+document.getElementById("flh").value,
+    d1:+document.getElementById("d1").value,
+    d2:+document.getElementById("d2").value,
+    dh:+document.getElementById("dh").value,
+    wRad:+document.getElementById("wrad").value,
+    axlen:+document.getElementById("axlen").value,
+    destCol:hex2num(document.getElementById("destcol").value)
+  };
+}
+function hex2num(h){ return parseInt(h.replace('#',''),16); }
+function updateLabels(){
+  function val(id){ return document.getElementById(id).value; }
+  ["len","hgt","wid","rad","wrad","axlen","lwh","uwh","fuh","flh","d1","d2","dh"].forEach(function(k){
+    var el = document.getElementById("v_"+k);
+    if(el) el.textContent = val(k);
+  });
+}
+var controls = document.querySelectorAll("#panel input[type=range]");
+controls.forEach(c=>{ c.addEventListener("input", function(){ updateLabels(); build(); }); });
+document.querySelectorAll("#panel input[type=color]").forEach(c=>{ c.addEventListener("input", build); });
+document.getElementById("export").addEventListener("click", function(){
+  var p = readParams();
+  var json = JSON.stringify(p, null, 2);
+  document.getElementById("out").value = json;
+  var ta = document.getElementById("out");
+  ta.select(); ta.setSelectionRange(0,99999);
+  document.execCommand("copy");
+  alert("已複製 3D 巴士數值 JSON ✅");
+});
+function animate(t){ requestAnimationFrame(animate); if(bus){ bus.rotation.y += 0.005; } renderer.render(scene,cam); }
+updateLabels(); build(); resize(); animate();
+</script>
+</body>
+</html>
