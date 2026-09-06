@@ -4742,6 +4742,25 @@ loader.load('data:model/gltf-binary;base64,Z2xURgIAAAA0wygAFEwAAEpTT057ImFzc2V0I
   var s = bb.getSize(new THREE.Vector3());
   var sc = 5.0 / Math.max(s.x, s.y, s.z);
   bus.scale.setScalar(sc);
+  // ---- recolor by color family: orange/red lower -> Tiffany Blue, green upper -> light grey ----
+  bus.traverse(function(o){
+    if(o.isMesh && o.material){
+      var ms = Array.isArray(o.material) ? o.material : [o.material];
+      ms.forEach(function(m){
+        if(!m || !m.color) return;
+        var c = m.color;
+        var r=c.r, g=c.g, b=c.b;
+        var hex = c.getHexString();
+        // exactly the known source colors
+        var EXACT = { e23d00: 0x0ABAB5, 004221: 0xD0D2D4 };
+        if(EXACT[hex] !== undefined){ c.setHex(EXACT[hex]); return; }
+        // family match as fallback: green (g dominant over r) -> light grey
+        if(g > 0.5 && g > r*1.4 && r < 0.4){ c.setHex(0xD0D2D4); return; }
+        // orange/red (r dominant) -> Tiffany Blue
+        if(r > 0.5 && r > g*1.3 && r > b*1.3){ c.setHex(0x0ABAB5); }
+      });
+    }
+  });
   // normalize: put the box MIN at (0,0,0) and center on X/Z
   bb = new THREE.Box3().setFromObject(bus);
   var mn = bb.min, mx = bb.max;
