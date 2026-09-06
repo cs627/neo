@@ -152,6 +152,8 @@ function startRender(){
 // -------- resize --------
 function resize(){ var r=document.getElementById('cw').getBoundingClientRect(); cv.width=r.width; cv.height=r.height; ren.setSize(r.width,r.height); cam.aspect=r.width/r.height; cam.updateProjectionMatrix(); }
 window.addEventListener('resize',resize);
+// expose for automation/debug
+window.__bus = function(){ return {params:params, wheels:wheels, doors:doors}; };
 
 // ---------- raycast ----------
 var ray=new THREE.Raycaster();
@@ -174,43 +176,55 @@ var state={mode:'body', dragObj:null, dragType:null, offset:new THREE.Vector3()}
 var plane=new THREE.Plane(new THREE.Vector3(0,1,0),0);
 var downX=0,downY=0,az=0.7,el=0.5,dist=13;
 
+// -------- drag state for gizmo --------
+var lastDragX=0, lastDragY=0, gizmoStartVal=0, gizmoAxis='';
+
 cv.addEventListener('pointerdown',function(e){
   setM(e); downX=e.clientX; downY=e.clientY;
   if(state.mode==='orbit'){ state.dragType='orbit'; return; }
   var o=pick(e);
-  if(!o) return;
-  if(state.mode==='body' && o.userData.type==='gizmo'){ state.dragType='gizmo'; state.dragObj=o; state.offset.copy(o.position); }
+  if(!o){ state.dragType='rot'; return; } // free orbit on empty space
+  if(state.mode==='body' && o.userData.type==='gizmo'){
+    state.dragType='gizmo'; state.dragObj=o;
+    gizmoAxis=o.userData.axis;
+    lastDragX=e.clientX; lastDragY=e.clientY;
+    gizmoStartVal=(gizmoAxis==='+X'||gizmoAxis==='-X')?params.len:(gizmoAxis==='+Y'||gizmoAxis==='-Y')?params.hgt:params.wid;
+  }
   else if(state.mode==='wheel' && o.userData.type==='wheel'){ state.dragType='wheel'; state.dragObj=o; }
   else if(state.mode==='door' && o.userData.type==='door'){ state.dragType='door'; state.dragObj=o; }
+  else { state.dragType='rot'; }
 });
 window.addEventListener('pointermove',function(e){
-  if(state.dragType==='orbit'){
+  if(state.dragType==='orbit'||state.dragType==='rot'){
     var dx=e.clientX-downX, dy=e.clientY-downY;
-    az += dx*0.01; el = Math.max(0.1, Math.min(1.5, el + dy*0.01));
-    var d=dist;
-    cam.position.set(d*Math.cos(el)*Math.cos(az), d*Math.sin(el), d*Math.cos(el)*Math.sin(az));
-    cam.lookAt(0,1.2,0);
+    az += dx*0.008; el = Math.max(0.1, Math.min(1.5, el + dy*0.008));
+    applyCam();
     downX=e.clientX; downY=e.clientY;
     return;
   }
+  // GIZMO resize (pixel-delta based — axis-agnostic, avoids plane-projection bug)
   if(state.dragType==='gizmo' && state.dragObj){
-    setM(e); ray.setFromCamera(mp,cam); var p=new THREE.Vector3(); ray.ray.intersectPlane(plane,p);
-    // project onto axis
-    var axis=state.dragObj.userData.axis;
-    if(axis==='+X'||axis==='-X'){ params.len=Math.max(1.2, Math.abs(p.x)*2); }
-    else if(axis==='+Y'||axis==='-Y'){ params.hgt=Math.max(0.8, Math.abs(p.y)*2); }
-    else if(axis==='+Z'||axis==='-Z'){ params.wid=Math.max(0.5, Math.abs(p.z)*2); }
-    buildAll(); buildGizmo();
+    var ddx=e.clientX-lastDragX, ddy=e.clientY-lastDragY;
+    var gravity = (gizmoAxis==='+Y'||gizmoAxis==='-Y') ? -ddy : ddx;
+    var dval = gravity * 0.01;
+    if(gizmoAxis==='+X'||gizmoAxis==='-X'){ params.len=Math.max(1.2, gizmoStartVal + dval); }
+    else if(gizmoAxis==='+Y'||gizmoAxis==='-Y'){ params.hgt=Math.max(0.8, gizmoStartVal + dval); }
+    else if(gizmoAxis==='+Z'||gizmoAxis==='-Z'){ params.wid=Math.max(0.5, gizmoStartVal + dval); }
+    buildAll(); bodyGizmo();
+    lastDragX=e.clientX; lastDragY=e.clientY;
+    return;
   }
-  else if(state.dragType==='wheel' && state.dragObj){
+  if(state.dragType==='wheel' && state.dragObj){
     setM(e); ray.setFromCamera(mp,cam); var p2=new THREE.Vector3(); ray.ray.intersectPlane(plane,p2);
     state.dragObj.userData.x=p2.x; state.dragObj.userData.z=p2.z;
     buildAll();
+    return;
   }
-  else if(state.dragType==='door' && state.dragObj){
+  if(state.dragType==='door' && state.dragObj){
     setM(e); ray.setFromCamera(mp,cam); var p3=new THREE.Vector3(); ray.ray.intersectPlane(plane,p3);
     state.dragObj.userData.x=Math.max(-params.len/2+0.3, Math.min(params.len/2-0.3, p3.x));
     buildAll();
+    return;
   }
 });
 window.addEventListener('pointerup',function(){ state.dragType=null; });
