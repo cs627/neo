@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+<meta charset="utf-8">
+<title>OBJ 巴士檢視器</title>
+<style>
+  body{margin:0;overflow:hidden;background:linear-gradient(#b8e2f5,#eef7fb);font-family:sans-serif}
+  #inf{position:absolute;top:10px;left:0;width:100%;text-align:center;color:#333;pointer-events:none;font-size:14px}
+</style>
+</head>
+<body>
+<div id=inf>拖曳旋轉，滾輪拉近縮遠</div>
+<canvas id=c2></canvas>
+<script src="three.min.js"></script>
+<script src="OrbitControls.js"></script>
+<script src="GLTFLoader.js"></script>
+<script>
+var scene = new THREE.Scene();
+var cam = new THREE.PerspectiveCamera(45, window.innerWidth/window.innerHeight, 0.01, 5000);
+var ren = new THREE.WebGLRenderer({canvas:document.getElementById('c2'), antialias:true, alpha:true});
+ren.setSize(window.innerWidth, window.innerHeight);
+ren.setPixelRatio(window.devicePixelRatio);
+ren.outputEncoding = THREE.sRGBEncoding;
+scene.add(new THREE.HemisphereLight(0xffffff, 0xdddddd, 1.2));
+var dir = new THREE.DirectionalLight(0xffffff, 1);
+dir.position.set(10, 30, 10);
+scene.add(dir);
+var ctrl = new THREE.OrbitControls(cam, ren.domElement);
+ctrl.enableDamping = true;
+
+var loader = new THREE.GLTFLoader();
+loader.load('tour_bus.glb', function(g){
+  // center the geometry on origin
+  var b = new THREE.Box3().setFromObject(g.scene);
+  var c = b.getCenter(new THREE.Vector3());
+  g.scene.position.sub(c);
+  // sit the bus on y=0 ground
+  var b2 = new THREE.Box3().setFromObject(g.scene);
+  g.scene.position.y -= b2.min.y;
+  // scale to game units (~-10..10)
+  g.scene.scale.setScalar(0.16);
+  scene.add(g.scene);
+  // fit camera
+  var bb = new THREE.Box3().setFromObject(g.scene);
+  var cc = bb.getCenter(new THREE.Vector3());
+  var ss = bb.getSize(new THREE.Vector3());
+  var dist = ss.length() * 1.1;
+  cam.position.set(cc.x + dist*0.7, cc.y + dist*0.9, cc.z + dist*0.7);
+  cam.lookAt(cc);
+  ctrl.target.copy(cc);
+  window.__done = true;
+});
+
+window.addEventListener('resize', function(){
+  cam.aspect = window.innerWidth/window.innerHeight;
+  cam.updateProjectionMatrix();
+  ren.setSize(window.innerWidth, window.innerHeight);
+});
+
+function anim(){ requestAnimationFrame(anim); ctrl.update(); ren.render(scene, cam); }
+anim();
+</script>
+</body></html>
