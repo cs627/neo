@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>3D 巴士直接操控編輯器</title>
+<style>
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:'Segoe UI',sans-serif; height:100vh; overflow:hidden; background:#141926; color:#eee; display:flex; flex-direction:column; }
+  #tb { height:52px; display:flex; align-items:center; gap:8px; padding:0 14px; background:#1d2637; border-bottom:1px solid #2c3749; }
+  #tb .tt { font-weight:700; font-size:15px; color:#7cc4f0; margin-right:14px; }
+  .mb { padding:7px 14px; border-radius:6px; background:#2a3450; color:#cfd6e4; border:none; cursor:pointer; font-size:13px; }
+  .mb.on { background:#2f6fd0; color:#fff; }
+  #cw { flex:1; position:relative; background:linear-gradient(180deg,#6db7e8,#cdeafd); }
+  canvas { display:block; }
+  #hlp { position:absolute; bottom:12px; left:50%; transform:translateX(-50%); background:rgba(0,0,0,.65); color:#bcd; padding:7px 14px; border-radius:8px; font-size:12px; pointer-events:none; }
+  #pop { position:absolute; top:14px; right:14px; width:270px; background:rgba(20,26,38,.95); border:1px solid #2c3749; border-radius:10px; padding:10px; display:none; }
+  #pop h3 { margin:0 0 6px; font-size:13px; color:#7cc4f0; }
+  textarea { width:100%; height:120px; font-family:monospace; font-size:11px; background:#0e131c; color:#7ff; border:1px solid #2c3749; border-radius:6px; }
+  b.sm { display:block; width:100%; margin-top:6px; padding:7px; background:#2f6fd0; border:none; border-radius:6px; color:#fff; cursor:pointer; font-size:12px; }
+</style>
+</head>
+<body>
+<div id="tb">
+  <span class="tt">🚌 巴士 Direct Edit</span>
+  <button class="mb on" data-m="body">車身</button>
+  <button class="mb" data-m="wheel">車轆</button>
+  <button class="mb" data-m="door">門</button>
+  <button class="mb" data-m="orbit">視角</button>
+  <button class="mb" data-m="export">匯出</button>
+  <span style="margin-left:auto;font-size:11px;color:#7a8699" id="hint">拖曳箭嘴伸縮車身</span>
+</div>
+<div id="cw">
+  <canvas id="cv"></canvas>
+  <div id="hlp">🖱️ 拖曳 = 編輯（車身/轆/門）· RMB拖 = 旋轉視角 · 滾輪 = 拉近</div>
+  <div id="pop">
+    <h3>匯出 JSON</h3>
+    <textarea id="out"></textarea>
+    <b class="sm" id="copy">複製</b>
+  </div>
+</div>
+
+<script src="three.min.js"></script>
+<script src="roundedbox-umd.js"></script>
+<script>
+// ---------- boot ----------
+var cv = document.getElementById('cv');
+var scene = new THREE.Scene();
+scene.background = new THREE.Color(0x7ec0ea);
+var cam = new THREE.PerspectiveCamera(50,1,0.1,200);
+cam.position.set(10,8,10);
+cam.lookAt(0,1.2,0);
+var ren = new THREE.WebGLRenderer({canvas:cv,antialias:true});
+ren.setPixelRatio(Math.min(window.devicePixelRatio,2));
+ren.shadowMap.enabled = true;
+
+var sun= new THREE.DirectionalLight(0xffffff,1.6); sun.position.set(8,12,6); sun.castShadow=true; scene.add(sun);
+scene.add(new THREE.AmbientLight(0xffffff,1.0));
+var grid=new THREE.GridHelper(24,24,0xffffff,0xffffff); grid.position.y=0.01; grid.material.transparent=true; grid.material.opacity=0.35; scene.add(grid);
+
+// -------- bus params (live, edit in place) --------
+var params = {
+  len:3.4, hgt:2.8, wid:1.05, rad:0.14, bodycol:0xf6851f, winCol:0x3498db,
+  lwh:0.55, uwh:0.6, fuh:0.6, flh:0.5
+};
+var wheels = [ {x:1.1,r:0.32,z:0.4},{x:0.0,r:0.32,z:0.4},{x:-1.1,r:0.32,z:0.4},
+               {x:1.1,r:0.32,z:-0.4},{x:0.0,r:0.32,z:-0.4},{x:-1.1,r:0.32,z:-0.4} ];
+var doors = [ {x:0.9,dh:0.65,side:1},{x:-0.8,dh:0.65,side:1} ];
+
+// -------- build bus --------
+var busGroup=null;
+var wheelMeshes=[], doorMeshes=[];
+
+function getDragPlane(pt){ return {x:pt.x, y:pt.y, z:pt.z}; }
+
+function buildAll(){
+  if(busGroup){ scene.remove(busGroup); }
+  busGroup=new THREE.Group();
+  var bodyM=new THREE.MeshLambertMaterial({color:params.bodycol});
+  var winM =new THREE.MeshLambertMaterial({color:params.winCol});
+  var glassM=new THREE.MeshLambertMaterial({color:0xbfe6ff,transparent:true,opacity:0.9});
+  var destM=new THREE.MeshLambertMaterial({color:0x080808,emissive:0x0c0c14});
+
+  var body=new THREE.Mesh(new THREE.RoundedBoxGeometry(params.len,params.hgt,params.wid,3,params.rad),bodyM);
+  body.position.set(0,params.hgt/2,0); busGroup.add(body);
+
+  // four-sided glass
+  var lb=new THREE.Mesh(new THREE.BoxGeometry(params.len-0.3,params.lwh,0.05),winM); lb.position.set(0,params.hgt*0.30, params.wid/2+0.02); busGroup.add(lb);
+  var lb2=new THREE.Mesh(new THREE.BoxGeometry(params.len-0.3,params.lwh,0.05),winM); lb2.position.set(0,params.hgt*0.30,-params.wid/2-0.02); busGroup.add(lb2);
+  var ub=new THREE.Mesh(new THREE.BoxGeometry(params.len-0.3,params.uwh,0.05),winM); ub.position.set(0,params.hgt*0.72, params.wid/2+0.02); busGroup.add(ub);
+  var ub2=new THREE.Mesh(new THREE.BoxGeometry(params.len-0.3,params.uwh,0.05),winM); ub2.position.set(0,params.hgt*0.72,-params.wid/2-0.02); busGroup.add(ub2);
+  [1,-1].forEach(function(sx){
+    var f1=new THREE.Mesh(new THREE.RoundedBoxGeometry(0.1,params.fuh,params.wid-0.1,2,0.04),glassM); f1.position.set(sx*params.len/2, params.hgt*0.72,0); busGroup.add(f1);
+    var f2=new THREE.Mesh(new THREE.RoundedBoxGeometry(0.1,params.flh,params.wid-0.1,2,0.04),glassM); f2.position.set(sx*params.len/2, params.hgt*0.30,0); busGroup.add(f2);
+  });
+  var db=new THREE.Mesh(new THREE.RoundedBoxGeometry(0.1,0.4,params.wid-0.1,2,0.04),destM); db.position.set(params.len/2,params.hgt*0.9,0); busGroup.add(db);
+
+  // wheels
+  wheelMeshes=[];
+  wheels.forEach(function(wd){
+    var w=new THREE.Mesh(new THREE.CylinderGeometry(wd.r,wd.r,0.15,14),new THREE.MeshLambertMaterial({color:0x121212}));
+    w.rotation.x=Math.PI;
+    w.position.set(wd.x,wd.r,wd.z);
+    w.castShadow=true;
+    w.userData=wd; w.userData.type='wheel';
+    wheelMeshes.push(w); busGroup.add(w);
+  });
+  // doors
+  doorMeshes=[];
+  doors.forEach(function(d){
+    var dd=new THREE.Mesh(new THREE.BoxGeometry(0.5,d.dh,0.06),winM);
+    dd.position.set(d.x,params.hgt*0.30,d.side*(params.wid/2+0.05));
+    dd.userData=d; dd.userData.type='door';
+    doorMeshes.push(dd); busGroup.add(dd);
+  });
+
+  scene.add(busGroup);
+}
+
+// ---------- gizmo (body resize arrows) ----------
+var gizmoGroup=null;
+function buildGizmo(){
+  if(gizmoGroup){ scene.remove(gizmoGroup); }
+  gizmoGroup=new THREE.Group();
+  var axM=new THREE.MeshLambertMaterial({color:0xffcc00});
+  var pl=params.len/2+0.7, ph=params.hgt/2+0.5, pw=params.wid/2+0.7;
+  var defs=[
+    {axis:'+X', pos:[pl, ph*0.6,0]},
+    {axis:'-X', pos:[-pl, ph*0.6,0]},
+    {axis:'+Y', pos:[0, ph*1.8,0]},
+    {axis:'-Y', pos:[0, 0.15,0]},
+    {axis:'+Z', pos:[0, ph*0.6, pw]},
+    {axis:'-Z', pos:[0, ph*0.6, -pw]},
+  ];
+  defs.forEach(function(d){
+    var m=new THREE.Mesh(new THREE.ConeGeometry(0.14,0.34,8),axM);
+    m.position.set(d.pos[0],d.pos[1],d.pos[2]);
+    m.userData={axis:d.axis,type:'gizmo'};
+    gizmoGroup.add(m);
+  });
+  scene.add(gizmoGroup);
+}
+
+function bodyGizmo(){ if(state.mode==='body') buildGizmo(); else { if(gizmoGroup){scene.remove(gizmoGroup);gizmoGroup=null;} } }
+
+// ---------- render ----------
+function startRender(){
+  function loop(){ requestAnimationFrame(loop); ren.render(scene,cam); }
+  loop();
+}
+
+// -------- resize --------
+function resize(){ var r=document.getElementById('cw').getBoundingClientRect(); cv.width=r.width; cv.height=r.height; ren.setSize(r.width,r.height); cam.aspect=r.width/r.height; cam.updateProjectionMatrix(); }
+window.addEventListener('resize',resize);
+
+// ---------- raycast ----------
+var ray=new THREE.Raycaster();
+var mp=new THREE.Vector2();
+function setM(e){ var r=cv.getBoundingClientRect(); mp.x=((e.clientX-r.left)/r.width)*2-1; mp.y=-((e.clientY-r.top)/r.height)*2+1; }
+
+function pick(e){
+  setM(e);
+  ray.setFromCamera(mp,cam);
+  var hits=ray.intersectObjects(scene.children,true);
+  for(var i=0;i<hits.length;i++){
+    var o=hits[i].object;
+    if(o.userData && o.userData.type) return o;
+  }
+  return null;
+}
+
+// -------- interaction --------
+var state={mode:'body', dragObj:null, dragType:null, offset:new THREE.Vector3()};
+var plane=new THREE.Plane(new THREE.Vector3(0,1,0),0);
+var downX=0,downY=0,az=0.7,el=0.5,dist=13;
+
+cv.addEventListener('pointerdown',function(e){
+  setM(e); downX=e.clientX; downY=e.clientY;
+  if(state.mode==='orbit'){ state.dragType='orbit'; return; }
+  var o=pick(e);
+  if(!o) return;
+  if(state.mode==='body' && o.userData.type==='gizmo'){ state.dragType='gizmo'; state.dragObj=o; state.offset.copy(o.position); }
+  else if(state.mode==='wheel' && o.userData.type==='wheel'){ state.dragType='wheel'; state.dragObj=o; }
+  else if(state.mode==='door' && o.userData.type==='door'){ state.dragType='door'; state.dragObj=o; }
+});
+window.addEventListener('pointermove',function(e){
+  if(state.dragType==='orbit'){
+    var dx=e.clientX-downX, dy=e.clientY-downY;
+    az += dx*0.01; el = Math.max(0.1, Math.min(1.5, el + dy*0.01));
+    var d=dist;
+    cam.position.set(d*Math.cos(el)*Math.cos(az), d*Math.sin(el), d*Math.cos(el)*Math.sin(az));
+    cam.lookAt(0,1.2,0);
+    downX=e.clientX; downY=e.clientY;
+    return;
+  }
+  if(state.dragType==='gizmo' && state.dragObj){
+    setM(e); ray.setFromCamera(mp,cam); var p=new THREE.Vector3(); ray.ray.intersectPlane(plane,p);
+    // project onto axis
+    var axis=state.dragObj.userData.axis;
+    if(axis==='+X'||axis==='-X'){ params.len=Math.max(1.2, Math.abs(p.x)*2); }
+    else if(axis==='+Y'||axis==='-Y'){ params.hgt=Math.max(0.8, Math.abs(p.y)*2); }
+    else if(axis==='+Z'||axis==='-Z'){ params.wid=Math.max(0.5, Math.abs(p.z)*2); }
+    buildAll(); buildGizmo();
+  }
+  else if(state.dragType==='wheel' && state.dragObj){
+    setM(e); ray.setFromCamera(mp,cam); var p2=new THREE.Vector3(); ray.ray.intersectPlane(plane,p2);
+    state.dragObj.userData.x=p2.x; state.dragObj.userData.z=p2.z;
+    buildAll();
+  }
+  else if(state.dragType==='door' && state.dragObj){
+    setM(e); ray.setFromCamera(mp,cam); var p3=new THREE.Vector3(); ray.ray.intersectPlane(plane,p3);
+    state.dragObj.userData.x=Math.max(-params.len/2+0.3, Math.min(params.len/2-0.3, p3.x));
+    buildAll();
+  }
+});
+window.addEventListener('pointerup',function(){ state.dragType=null; });
+
+// mode buttons
+document.querySelectorAll('.mb').forEach(function(b){
+  b.addEventListener('click',function(){
+    document.querySelectorAll('.mb').forEach(function(x){x.classList.remove('on');});
+    b.classList.add('on');
+    state.mode=b.dataset.m;
+    var hintMap={body:'拖曳箭嘴伸縮車身',wheel:'拖曳車轆自由擺位',door:'拖曳門沿側移動',orbit:'拖住旋轉視角',export:'匯出 JSON'};
+    document.getElementById('hint').textContent=hintMap[state.mode];
+    if(state.mode==='export'){ doExport(); document.getElementById('pop').style.display='block'; }
+    else { document.getElementById('pop').style.display='none'; bodyGizmo(); }
+  });
+});
+function doExport(){
+  document.getElementById('pop').style.display='block';
+  document.getElementById('out').value=JSON.stringify({params:params,wheels:wheels,doors:doors},null,2);
+}
+document.getElementById('copy').addEventListener('click',function(){
+  var t=document.getElementById('out'); t.select(); document.execCommand('copy');
+});
+
+// zoom wheel
+cv.addEventListener('wheel',function(e){ e.preventDefault(); dist=Math.max(4,Math.min(24,dist+e.deltaY*0.01)); applyCam(); });
+function applyCam(){ var d=dist; cam.position.set(d*Math.cos(el)*Math.cos(az), d*Math.sin(el), d*Math.cos(el)*Math.sin(az)); cam.lookAt(0,1.2,0); }
+applyCam();
+
+resize();
+buildAll(); buildGizmo();
+startRender();
+</script>
+</body>
+</html>
