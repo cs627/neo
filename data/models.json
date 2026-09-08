@@ -1,6 +1,6 @@
 {
-  "fetched_at": "2026-09-07T09:01:25Z",
-  "total": 430,
+  "fetched_at": "2026-09-08T09:00:09Z",
+  "total": 428,
   "models": [
     {
       "id": "openai/gpt-6-astra",
@@ -652,9 +652,9 @@
       "created": 1787151053,
       "description": "This model always redirects to the latest GLM model from Z.ai.",
       "pricing": {
-        "prompt": "0.000001113",
-        "completion": "0.000003498",
-        "input_cache_read": "0.0000002067"
+        "prompt": "0.00000112",
+        "completion": "0.00000352",
+        "input_cache_read": "0.000000208"
       },
       "context_length": 1310720,
       "architecture": {
@@ -663,7 +663,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 128000
+        "max_completion_tokens": 943718
       }
     },
     {
@@ -1136,9 +1136,9 @@
       "created": 1785478908,
       "description": "DeepSeek V4 Flash 0731 is a sparse mixture-of-experts model from DeepSeek, with 13B active parameters out of 284B total. This re-post-trained revision is suited for coding, reasoning, and agent workflows....",
       "pricing": {
-        "prompt": "0.00000014",
-        "completion": "0.00000028",
-        "input_cache_read": "0.000000028"
+        "prompt": "0.000000065",
+        "completion": "0.00000018",
+        "input_cache_read": "0.000000016"
       },
       "context_length": 1310720,
       "architecture": {
@@ -1147,7 +1147,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 131072
+        "max_completion_tokens": 943718
       }
     },
     {
@@ -2418,9 +2418,9 @@
       "created": 1781266361,
       "description": "MoonshotAI: Kimi K2.7 Code is a coding-focused model in Moonshot AI's Kimi K2 family, built to complete end-to-end programming tasks reliably over long contexts. It uses a native multimodal mixture-of-experts...",
       "pricing": {
-        "prompt": "0.00000066",
-        "completion": "0.0000034",
-        "input_cache_read": "0.00000018"
+        "prompt": "0.00000071",
+        "completion": "0.0000035",
+        "input_cache_read": "0.00000015"
       },
       "context_length": 262144,
       "architecture": {
@@ -2666,25 +2666,6 @@
       "top_provider": {
         "name": "",
         "max_completion_tokens": 471859
-      }
-    },
-    {
-      "id": "minimax/minimax-m3:free",
-      "name": "MiniMax: MiniMax M3 (free)",
-      "created": 1780245374,
-      "description": "MiniMax-M3 is a multimodal foundation model from MiniMax. It supports text, image, and video inputs with text output, a 1M-token context window, and is suited for long-horizon agentic work, coding,...",
-      "pricing": {
-        "prompt": "0",
-        "completion": "0"
-      },
-      "context_length": 1048576,
-      "architecture": {
-        "modality": "text+image+video->text",
-        "tokenizer": "Other"
-      },
-      "top_provider": {
-        "name": "",
-        "max_completion_tokens": 943718
       }
     },
     {
@@ -3031,14 +3012,14 @@
         "prompt": "0.00000075",
         "completion": "0.00000375"
       },
-      "context_length": 32768,
+      "context_length": 262144,
       "architecture": {
         "modality": "text+image+file->text",
         "tokenizer": "Mistral"
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 26214
+        "max_completion_tokens": 209715
       }
     },
     {
@@ -3146,9 +3127,9 @@
       "created": 1777318428,
       "description": "This model always redirects to the latest model in the MoonshotAI Kimi family.",
       "pricing": {
-        "prompt": "0.00000255",
-        "completion": "0.00001275",
-        "input_cache_read": "0.00000025599999"
+        "prompt": "0.0000025",
+        "completion": "0.000014",
+        "input_cache_read": "0.00000029"
       },
       "context_length": 1048576,
       "architecture": {
@@ -4043,25 +4024,6 @@
       "top_provider": {
         "name": "",
         "max_completion_tokens": 131072
-      }
-    },
-    {
-      "id": "minimax/minimax-m2.7:free",
-      "name": "MiniMax: MiniMax M2.7 (free)",
-      "created": 1773836697,
-      "description": "MiniMax-M2.7 is a next-generation large language model designed for autonomous, real-world productivity and continuous improvement. Built to actively participate in its own evolution, M2.7 integrates advanced agentic capabilities through multi-agent...",
-      "pricing": {
-        "prompt": "0",
-        "completion": "0"
-      },
-      "context_length": 196608,
-      "architecture": {
-        "modality": "text->text",
-        "tokenizer": "Other"
-      },
-      "top_provider": {
-        "name": "",
-        "max_completion_tokens": 176947
       }
     },
     {
@@ -5109,9 +5071,8 @@
       "created": 1768833913,
       "description": "As a 30B-class SOTA model, GLM-4.7-Flash offers a new option that balances performance and efficiency. It is further optimized for agentic coding use cases, strengthening coding capabilities, long-horizon task planning,...",
       "pricing": {
-        "prompt": "0.00000006",
-        "completion": "0.0000004",
-        "input_cache_read": "0.00000001"
+        "prompt": "0.0000000605",
+        "completion": "0.0000004"
       },
       "context_length": 202752,
       "architecture": {
@@ -5120,7 +5081,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 16384
+        "max_completion_tokens": 117964
       }
     },
     {
@@ -5790,8 +5751,7 @@
       "description": "Kimi K2 Thinking is Moonshot AI\u2019s most advanced open reasoning model to date, extending the K2 series into agentic, long-horizon reasoning. Built on the trillion-parameter Mixture-of-Experts (MoE) architecture introduced in...",
       "pricing": {
         "prompt": "0.0000006",
-        "completion": "0.0000025",
-        "input_cache_read": "0.00000015"
+        "completion": "0.0000025"
       },
       "context_length": 262144,
       "architecture": {
@@ -5800,7 +5760,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 100352
+        "max_completion_tokens": 235929
       }
     },
     {
@@ -6180,9 +6140,9 @@
       "created": 1759235576,
       "description": "Compared with GLM-4.5, this generation brings several key improvements: Longer context window: The context window has been expanded from 128K to 200K tokens, enabling the model to handle more complex...",
       "pricing": {
-        "prompt": "0.00000043",
-        "completion": "0.00000175",
-        "input_cache_read": "0.00000008"
+        "prompt": "0.00000055",
+        "completion": "0.0000022",
+        "input_cache_read": "0.00000011"
       },
       "context_length": 204800,
       "architecture": {
@@ -6191,7 +6151,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 16384
+        "max_completion_tokens": 131072
       }
     },
     {
@@ -6635,9 +6595,9 @@
       "created": 1755779628,
       "description": "DeepSeek-V3.1 is a large hybrid reasoning model (671B parameters, 37B active) that supports both thinking and non-thinking modes via prompt templates. It extends the DeepSeek-V3 base with a two-phase long-context...",
       "pricing": {
-        "prompt": "0.00000055",
-        "completion": "0.00000165",
-        "input_cache_read": "0.00000055"
+        "prompt": "0.00000025",
+        "completion": "0.00000095",
+        "input_cache_read": "0.00000013"
       },
       "context_length": 163840,
       "architecture": {
@@ -6646,7 +6606,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 144900
+        "max_completion_tokens": 32768
       }
     },
     {
@@ -7304,7 +7264,7 @@
       "created": 1750200414,
       "description": "MiniMax-M1 is a large-scale, open-weight reasoning model designed for extended context and high-efficiency inference. It leverages a hybrid Mixture-of-Experts (MoE) architecture paired with a custom \"lightning attention\" mechanism, allowing it...",
       "pricing": {
-        "prompt": "0.00000055",
+        "prompt": "0.0000004",
         "completion": "0.0000022"
       },
       "context_length": 1000000,
@@ -7690,8 +7650,8 @@
       "created": 1745876478,
       "description": "Qwen3-14B is a dense 14.8B parameter causal language model from the Qwen3 series, designed for both complex reasoning and efficient dialogue. It supports seamless switching between a \"thinking\" mode for...",
       "pricing": {
-        "prompt": "0.00000012",
-        "completion": "0.00000024"
+        "prompt": "0.0000002275",
+        "completion": "0.00000091"
       },
       "context_length": 131072,
       "architecture": {
@@ -7700,7 +7660,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 16384
+        "max_completion_tokens": 8192
       }
     },
     {
@@ -8016,8 +7976,9 @@
       "created": 1742824755,
       "description": "DeepSeek V3, a 685B-parameter, mixture-of-experts model, is the latest iteration of the flagship chat model family from the DeepSeek team. It succeeds the [DeepSeek V3](/deepseek/deepseek-chat-v3) model and performs really well...",
       "pricing": {
-        "prompt": "0.00000025",
-        "completion": "0.000001"
+        "prompt": "0.00000029",
+        "completion": "0.00000114",
+        "input_cache_read": "0.00000011"
       },
       "context_length": 163840,
       "architecture": {
