@@ -1,7 +1,108 @@
 {
-  "fetched_at": "2026-09-09T09:00:47Z",
-  "total": 431,
+  "fetched_at": "2026-09-10T09:00:59Z",
+  "total": 436,
   "models": [
+    {
+      "id": "deepseek/deepseek-v4.1-flash",
+      "name": "DeepSeek: DeepSeek V4.1 Flash",
+      "created": 1789021285,
+      "description": "DeepSeek V4.1 Flash is a sparse mixture-of-experts model from DeepSeek, and the cost-efficient tier of the V4.1 family. DeepSeek reports that it exceeds V4 Pro on performance, speed, and task...",
+      "pricing": {
+        "prompt": "0.0000003",
+        "completion": "0.0000012",
+        "input_cache_read": "0.000000006",
+        "overrides": [
+          {
+            "utc_days": [
+              "saturday",
+              "sunday"
+            ],
+            "prompt": "0.00000015",
+            "completion": "0.0000006",
+            "input_cache_read": "0.000000003"
+          },
+          {
+            "utc_days": [
+              "monday",
+              "tuesday",
+              "wednesday",
+              "thursday",
+              "friday"
+            ],
+            "utc_start": 0,
+            "utc_end": 100,
+            "prompt": "0.00000015",
+            "completion": "0.0000006",
+            "input_cache_read": "0.000000003"
+          },
+          {
+            "utc_days": [
+              "monday",
+              "tuesday",
+              "wednesday",
+              "thursday",
+              "friday"
+            ],
+            "utc_start": 100,
+            "utc_end": 400,
+            "prompt": "0.0000003",
+            "completion": "0.0000012",
+            "input_cache_read": "0.000000006"
+          },
+          {
+            "utc_days": [
+              "monday",
+              "tuesday",
+              "wednesday",
+              "thursday",
+              "friday"
+            ],
+            "utc_start": 400,
+            "utc_end": 600,
+            "prompt": "0.00000015",
+            "completion": "0.0000006",
+            "input_cache_read": "0.000000003"
+          },
+          {
+            "utc_days": [
+              "monday",
+              "tuesday",
+              "wednesday",
+              "thursday",
+              "friday"
+            ],
+            "utc_start": 600,
+            "utc_end": 1000,
+            "prompt": "0.0000003",
+            "completion": "0.0000012",
+            "input_cache_read": "0.000000006"
+          },
+          {
+            "utc_days": [
+              "monday",
+              "tuesday",
+              "wednesday",
+              "thursday",
+              "friday"
+            ],
+            "utc_start": 1000,
+            "utc_end": 0,
+            "prompt": "0.00000015",
+            "completion": "0.0000006",
+            "input_cache_read": "0.000000003"
+          }
+        ]
+      },
+      "context_length": 1048576,
+      "architecture": {
+        "modality": "text+image->text",
+        "tokenizer": "DeepSeek"
+      },
+      "top_provider": {
+        "name": "",
+        "max_completion_tokens": 384000
+      }
+    },
     {
       "id": "inception/mercury-2.5",
       "name": "Inception: Mercury 2.5",
@@ -33,7 +134,7 @@
       },
       "context_length": 262144,
       "architecture": {
-        "modality": "text->text",
+        "modality": "text+image->text",
         "tokenizer": "Qwen3"
       },
       "top_provider": {
@@ -460,7 +561,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 943718
+        "max_completion_tokens": 131072
       }
     },
     {
@@ -629,9 +730,9 @@
       "created": 1787151053,
       "description": "This model always redirects to the latest GLM model from Z.ai.",
       "pricing": {
-        "prompt": "0.000001113",
-        "completion": "0.000003498",
-        "input_cache_read": "0.0000002067"
+        "prompt": "0.000001085",
+        "completion": "0.00000341",
+        "input_cache_read": "0.0000002015"
       },
       "context_length": 1310720,
       "architecture": {
@@ -1508,7 +1609,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 471859
+        "max_completion_tokens": 32768
       }
     },
     {
@@ -4108,6 +4209,26 @@
       }
     },
     {
+      "id": "mistralai/mistral-small-2603:batch",
+      "name": "Mistral: Mistral Small 4 (batch)",
+      "created": 1773695685,
+      "description": "Mistral Small 4 is the next major release in the Mistral Small family, unifying the capabilities of several flagship Mistral models into a single system. It combines strong reasoning from...",
+      "pricing": {
+        "prompt": "0.000000075",
+        "completion": "0.0000003",
+        "input_cache_read": "0.0000000075"
+      },
+      "context_length": 262144,
+      "architecture": {
+        "modality": "text+image->text",
+        "tokenizer": "Mistral"
+      },
+      "top_provider": {
+        "name": "",
+        "max_completion_tokens": 209715
+      }
+    },
+    {
       "id": "z-ai/glm-5-turbo",
       "name": "Z.ai: GLM 5 Turbo",
       "created": 1773583573,
@@ -4479,8 +4600,8 @@
       "created": 1772053789,
       "description": "The Qwen3.5 122B-A10B native vision-language model is built on a hybrid architecture that integrates a linear attention mechanism with a sparse mixture-of-experts model, achieving higher inference efficiency. In terms of...",
       "pricing": {
-        "prompt": "0.00000029",
-        "completion": "0.0000024"
+        "prompt": "0.00000026",
+        "completion": "0.00000208"
       },
       "context_length": 262144,
       "architecture": {
@@ -4489,7 +4610,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 81920
+        "max_completion_tokens": 65536
       }
     },
     {
@@ -4753,9 +4874,9 @@
       "created": 1770908502,
       "description": "MiniMax-M2.5 is a SOTA large language model designed for real-world productivity. Trained in a diverse range of complex real-world digital working environments, M2.5 builds upon the coding expertise of M2.1...",
       "pricing": {
-        "prompt": "0.00000027",
-        "completion": "0.00000108",
-        "input_cache_read": "0.000000027"
+        "prompt": "0.0000003",
+        "completion": "0.0000012",
+        "input_cache_read": "0.00000003"
       },
       "context_length": 204800,
       "architecture": {
@@ -4764,7 +4885,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 128000
+        "max_completion_tokens": 131072
       }
     },
     {
@@ -5506,6 +5627,26 @@
       }
     },
     {
+      "id": "mistralai/ministral-8b-2512:batch",
+      "name": "Mistral: Ministral 3 8B 2512 (batch)",
+      "created": 1764681654,
+      "description": "A balanced model in the Ministral 3 family, Ministral 3 8B is a powerful, efficient tiny language model with vision capabilities.",
+      "pricing": {
+        "prompt": "0.000000075",
+        "completion": "0.000000075",
+        "input_cache_read": "0.0000000075"
+      },
+      "context_length": 262144,
+      "architecture": {
+        "modality": "text+image->text",
+        "tokenizer": "Mistral"
+      },
+      "top_provider": {
+        "name": "",
+        "max_completion_tokens": 209715
+      }
+    },
+    {
       "id": "mistralai/ministral-3b-2512",
       "name": "Mistral: Ministral 3 3B 2512",
       "created": 1764681560,
@@ -5534,6 +5675,26 @@
         "prompt": "0.0000005",
         "completion": "0.0000015",
         "input_cache_read": "0.00000005"
+      },
+      "context_length": 262144,
+      "architecture": {
+        "modality": "text+image+file->text",
+        "tokenizer": "Mistral"
+      },
+      "top_provider": {
+        "name": "",
+        "max_completion_tokens": 209715
+      }
+    },
+    {
+      "id": "mistralai/mistral-large-2512:batch",
+      "name": "Mistral: Mistral Large 3 2512 (batch)",
+      "created": 1764624472,
+      "description": "Mistral Large 3 2512 is Mistral\u2019s most capable model to date, featuring a sparse mixture-of-experts architecture with 41B active parameters (675B total), and released under the Apache 2.0 license.",
+      "pricing": {
+        "prompt": "0.00000025",
+        "completion": "0.00000075",
+        "input_cache_read": "0.000000025"
       },
       "context_length": 262144,
       "architecture": {
@@ -5729,7 +5890,8 @@
       "description": "Kimi K2 Thinking is Moonshot AI\u2019s most advanced open reasoning model to date, extending the K2 series into agentic, long-horizon reasoning. Built on the trillion-parameter Mixture-of-Experts (MoE) architecture introduced in...",
       "pricing": {
         "prompt": "0.0000006",
-        "completion": "0.0000025"
+        "completion": "0.0000025",
+        "input_cache_read": "0.00000015"
       },
       "context_length": 262144,
       "architecture": {
@@ -5738,7 +5900,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 235929
+        "max_completion_tokens": 100352
       }
     },
     {
@@ -6529,25 +6691,6 @@
       }
     },
     {
-      "id": "nousresearch/hermes-4-70b",
-      "name": "Nous: Hermes 4 70B",
-      "created": 1756236182,
-      "description": "Hermes 4 70B is a hybrid reasoning model from Nous Research, built on Meta-Llama-3.1-70B. It introduces the same hybrid mode as the larger 405B release, allowing the model to either...",
-      "pricing": {
-        "prompt": "0.00000013",
-        "completion": "0.0000004"
-      },
-      "context_length": 131072,
-      "architecture": {
-        "modality": "text->text",
-        "tokenizer": "Llama3"
-      },
-      "top_provider": {
-        "name": "",
-        "max_completion_tokens": 117964
-      }
-    },
-    {
       "id": "nousresearch/hermes-4-405b",
       "name": "Nous: Hermes 4 405B",
       "created": 1756235463,
@@ -6595,6 +6738,26 @@
         "prompt": "0.0000004",
         "completion": "0.000002",
         "input_cache_read": "0.00000004"
+      },
+      "context_length": 131072,
+      "architecture": {
+        "modality": "text+image+file->text",
+        "tokenizer": "Mistral"
+      },
+      "top_provider": {
+        "name": "",
+        "max_completion_tokens": 104857
+      }
+    },
+    {
+      "id": "mistralai/mistral-medium-3.1:batch",
+      "name": "Mistral: Mistral Medium 3.1 (batch)",
+      "created": 1755095639,
+      "description": "Mistral Medium 3.1 is an updated version of Mistral Medium 3, which is a high-performance enterprise-grade language model designed to deliver frontier-level capabilities at significantly reduced operational cost. It balances...",
+      "pricing": {
+        "prompt": "0.0000002",
+        "completion": "0.000001",
+        "input_cache_read": "0.00000002"
       },
       "context_length": 131072,
       "architecture": {
@@ -6884,6 +7047,26 @@
         "prompt": "0.0000003",
         "completion": "0.0000009",
         "input_cache_read": "0.00000003"
+      },
+      "context_length": 256000,
+      "architecture": {
+        "modality": "text+file->text",
+        "tokenizer": "Mistral"
+      },
+      "top_provider": {
+        "name": "",
+        "max_completion_tokens": 204800
+      }
+    },
+    {
+      "id": "mistralai/codestral-2508:batch",
+      "name": "Mistral: Codestral 2508 (batch)",
+      "created": 1754079630,
+      "description": "Mistral's cutting-edge language model for coding released end of July 2025. Codestral specializes in low-latency, high-frequency tasks such as fill-in-the-middle (FIM), code correction and test generation.\n\n[Blog Post](https://mistral.ai/news/codestral-25-08)",
+      "pricing": {
+        "prompt": "0.00000015",
+        "completion": "0.00000045",
+        "input_cache_read": "0.000000015"
       },
       "context_length": 256000,
       "architecture": {
@@ -8456,8 +8639,8 @@
       "created": 1735241320,
       "description": "DeepSeek-V3 is the latest model from the DeepSeek team, building upon the instruction following and coding abilities of the previous versions. Pre-trained on nearly 15 trillion tokens, the reported evaluations...",
       "pricing": {
-        "prompt": "0.00000032",
-        "completion": "0.00000089"
+        "prompt": "0.0000002574",
+        "completion": "0.0000010287"
       },
       "context_length": 163840,
       "architecture": {
@@ -8466,7 +8649,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 16384
+        "max_completion_tokens": 16000
       }
     },
     {
