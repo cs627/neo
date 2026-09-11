@@ -1,12 +1,81 @@
 {
-  "fetched_at": "2026-09-10T09:00:59Z",
-  "total": 436,
+  "fetched_at": "2026-09-11T09:01:00Z",
+  "total": 439,
   "models": [
+    {
+      "id": "sakana/fugu-ultra-v2",
+      "name": "Sakana: Fugu Ultra v2",
+      "created": 1789105383,
+      "description": "Fugu Ultra v2 is the higher-performance model in Sakana AI's Fugu family. Rather than a single monolithic model, Fugu is a learned multi-agent orchestration system: a language model trained to...",
+      "pricing": {
+        "prompt": "0.000005",
+        "completion": "0.00003",
+        "web_search": "0.01",
+        "input_cache_read": "0.0000005",
+        "overrides": [
+          {
+            "min_prompt_tokens": 272000,
+            "prompt": "0.00001",
+            "completion": "0.000045",
+            "input_cache_read": "0.000001"
+          }
+        ]
+      },
+      "context_length": 1000000,
+      "architecture": {
+        "modality": "text+image+file->text",
+        "tokenizer": "Other"
+      },
+      "top_provider": {
+        "name": "",
+        "max_completion_tokens": 128000
+      }
+    },
+    {
+      "id": "sakana/fugu-max",
+      "name": "Sakana: Fugu Max",
+      "created": 1789104771,
+      "description": "Fugu Max is the cost-performance model in Sakana AI's Fugu family. Rather than a single monolithic model, Fugu is a learned multi-agent orchestration system: a language model trained to route...",
+      "pricing": {
+        "prompt": "0.000002",
+        "completion": "0.000006",
+        "web_search": "0.01",
+        "input_cache_read": "0.00000025"
+      },
+      "context_length": 1000000,
+      "architecture": {
+        "modality": "text+image+file->text",
+        "tokenizer": "Other"
+      },
+      "top_provider": {
+        "name": "",
+        "max_completion_tokens": 128000
+      }
+    },
+    {
+      "id": "inclusionai/ling-3.0-flash-vl:free",
+      "name": "inclusionAI: Ling 3.0 Flash VL (free)",
+      "created": 1789056114,
+      "description": "Ling 3.0 Flash VL builds on Ling 3.0 Flash (124B total / 5.5B active MoE from InclusionAI), further strengthening its language capabilities while adding native visual perception and advanced visual...",
+      "pricing": {
+        "prompt": "0",
+        "completion": "0"
+      },
+      "context_length": 262144,
+      "architecture": {
+        "modality": "text+image+video->text",
+        "tokenizer": "Other"
+      },
+      "top_provider": {
+        "name": "",
+        "max_completion_tokens": 32768
+      }
+    },
     {
       "id": "deepseek/deepseek-v4.1-flash",
       "name": "DeepSeek: DeepSeek V4.1 Flash",
       "created": 1789021285,
-      "description": "DeepSeek V4.1 Flash is a sparse mixture-of-experts model from DeepSeek, and the cost-efficient tier of the V4.1 family. DeepSeek reports that it exceeds V4 Pro on performance, speed, and task...",
+      "description": "DeepSeek V4.1 Flash is a sparse mixture-of-experts model from DeepSeek, and the first built on the company's Causal Encoder-Decoder (CED) architecture. It activates 8B parameters on input and 16B on...",
       "pricing": {
         "prompt": "0.0000003",
         "completion": "0.0000012",
@@ -591,9 +660,9 @@
       "created": 1787752741,
       "description": "GLM-5.3-Flash is a native multimodal model from Z.ai. It is suited for efficient coding and long-horizon agent tasks. Its hybrid sparse and linear attention architecture maintains accurate long-context behavior while...",
       "pricing": {
-        "prompt": "0.000000075",
-        "completion": "0.00000025",
-        "input_cache_read": "0.000000015"
+        "prompt": "0.00000015",
+        "completion": "0.0000005",
+        "input_cache_read": "0.00000003"
       },
       "context_length": 1310720,
       "architecture": {
@@ -730,9 +799,9 @@
       "created": 1787151053,
       "description": "This model always redirects to the latest GLM model from Z.ai.",
       "pricing": {
-        "prompt": "0.000001085",
-        "completion": "0.00000341",
-        "input_cache_read": "0.0000002015"
+        "prompt": "0.00000097",
+        "completion": "0.0000033077",
+        "input_cache_read": "0.000000194"
       },
       "context_length": 1310720,
       "architecture": {
@@ -741,7 +810,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 128000
+        "max_completion_tokens": 943718
       }
     },
     {
@@ -985,9 +1054,9 @@
       "created": 1786549364,
       "description": "DeepSeek V4 Pro 0813 is a large-scale mixture-of-experts model from DeepSeek. This is the GA release of DeepSeek V4 Pro.",
       "pricing": {
-        "prompt": "0.0000010494",
-        "completion": "0.0000031482",
-        "input_cache_read": "0.00000003498"
+        "prompt": "0.00000066",
+        "completion": "0.00000198",
+        "input_cache_read": "0.000000066"
       },
       "context_length": 1048576,
       "architecture": {
@@ -996,7 +1065,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 384000
+        "max_completion_tokens": 943718
       }
     },
     {
@@ -1133,9 +1202,9 @@
       "created": 1786371636,
       "description": "Solar Pro 4 is Upstage's cost-efficient large language model, featuring a 524K context window. It is built for long-horizon tasks and agentic workflows, with strong capabilities in office productivity, document-intensive...",
       "pricing": {
-        "prompt": "0.00000003",
-        "completion": "0.00000012",
-        "input_cache_read": "0.000000006"
+        "prompt": "0.00000009",
+        "completion": "0.00000036",
+        "input_cache_read": "0.000000018"
       },
       "context_length": 524288,
       "architecture": {
@@ -1676,9 +1745,9 @@
       "created": 1784215858,
       "description": "Kimi K3 is a 2.8T parameter open-weight multimodal reasoning model from Moonshot AI. It is suited for complex coding, knowledge work, and long-horizon agentic workflows, and is particularly strong at...",
       "pricing": {
-        "prompt": "0.000003",
-        "completion": "0.000015",
-        "input_cache_read": "0.0000003"
+        "prompt": "0.00000234",
+        "completion": "0.0000117",
+        "input_cache_read": "0.000000261"
       },
       "context_length": 1048576,
       "architecture": {
@@ -3205,9 +3274,9 @@
       "created": 1777318428,
       "description": "This model always redirects to the latest model in the MoonshotAI Kimi family.",
       "pricing": {
-        "prompt": "0.0000024",
-        "completion": "0.000012",
-        "input_cache_read": "0.00000024"
+        "prompt": "0.00000234",
+        "completion": "0.0000117",
+        "input_cache_read": "0.000000261"
       },
       "context_length": 1048576,
       "architecture": {
@@ -3791,8 +3860,8 @@
       "created": 1775227989,
       "description": "Gemma 4 26B A4B IT is an instruction-tuned Mixture-of-Experts (MoE) model from Google DeepMind. Despite 25.2B total parameters, only 3.8B activate per token during inference \u2014 delivering near-31B quality at...",
       "pricing": {
-        "prompt": "0.00000007",
-        "completion": "0.00000034"
+        "prompt": "0.000000042",
+        "completion": "0.00000022"
       },
       "context_length": 262144,
       "architecture": {
@@ -3801,7 +3870,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 16384
+        "max_completion_tokens": 32768
       }
     },
     {
@@ -5173,7 +5242,7 @@
         "prompt": "0.0000000605",
         "completion": "0.0000004"
       },
-      "context_length": 202752,
+      "context_length": 200000,
       "architecture": {
         "modality": "text->text",
         "tokenizer": "Other"
@@ -8136,9 +8205,8 @@
       "created": 1742824755,
       "description": "DeepSeek V3, a 685B-parameter, mixture-of-experts model, is the latest iteration of the flagship chat model family from the DeepSeek team. It succeeds the [DeepSeek V3](/deepseek/deepseek-chat-v3) model and performs really well...",
       "pricing": {
-        "prompt": "0.00000029",
-        "completion": "0.00000114",
-        "input_cache_read": "0.00000011"
+        "prompt": "0.00000025",
+        "completion": "0.000001"
       },
       "context_length": 163840,
       "architecture": {
@@ -9100,8 +9168,8 @@
       "created": 1721692800,
       "description": "Meta's latest class of model (Llama 3.1) launched with a variety of sizes & flavors. This 70B instruct-tuned version is optimized for high quality dialogue usecases. It has demonstrated strong...",
       "pricing": {
-        "prompt": "0.0000004",
-        "completion": "0.0000004"
+        "prompt": "0.00000072",
+        "completion": "0.00000072"
       },
       "context_length": 131072,
       "architecture": {
@@ -9110,7 +9178,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 16384
+        "max_completion_tokens": 8192
       }
     },
     {
