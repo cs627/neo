@@ -1,7 +1,169 @@
 {
-  "fetched_at": "2026-09-11T09:01:00Z",
-  "total": 439,
+  "fetched_at": "2026-09-12T09:00:12Z",
+  "total": 445,
   "models": [
+    {
+      "id": "inference-net/schematron-v2-turbo",
+      "name": "Inference.net: Schematron V2 Turbo",
+      "created": 1789176949,
+      "description": "Schematron V2 Turbo is a 3B-parameter HTML-to-JSON extraction model from Inference.net. It prioritizes throughput for high-volume extraction workloads. Extraction instructions must be supplied through a JSON schema in response_format rather...",
+      "pricing": {
+        "prompt": "0.00000003",
+        "completion": "0.00000015"
+      },
+      "context_length": 128000,
+      "architecture": {
+        "modality": "text->text",
+        "tokenizer": "Other"
+      },
+      "top_provider": {
+        "name": "",
+        "max_completion_tokens": 8192
+      }
+    },
+    {
+      "id": "inference-net/schematron-v2-small",
+      "name": "Inference.net: Schematron V2 Small",
+      "created": 1789176933,
+      "description": "Schematron V2 Small is a 3B-parameter HTML-to-JSON extraction model from Inference.net. It prioritizes extraction quality for complex schemas and long pages. Extraction instructions must be supplied through a JSON schema...",
+      "pricing": {
+        "prompt": "0.00000005",
+        "completion": "0.00000023"
+      },
+      "context_length": 128000,
+      "architecture": {
+        "modality": "text->text",
+        "tokenizer": "Other"
+      },
+      "top_provider": {
+        "name": "",
+        "max_completion_tokens": 4096
+      }
+    },
+    {
+      "id": "~openai/gpt-astra-latest",
+      "name": "OpenAI GPT Astra Latest",
+      "created": 1789130932,
+      "description": "This model always redirects to the latest model in the OpenAI GPT Astra family.",
+      "pricing": {
+        "prompt": "0.00001",
+        "completion": "0.00005",
+        "web_search": "0.01",
+        "input_cache_read": "0.000001",
+        "input_cache_write": "0.0000125",
+        "overrides": [
+          {
+            "min_prompt_tokens": 272000,
+            "prompt": "0.00002",
+            "completion": "0.000075",
+            "input_cache_read": "0.000002",
+            "input_cache_write": "0.000025"
+          }
+        ]
+      },
+      "context_length": 1050000,
+      "architecture": {
+        "modality": "text+image+file->text",
+        "tokenizer": "Router"
+      },
+      "top_provider": {
+        "name": "",
+        "max_completion_tokens": 128000
+      }
+    },
+    {
+      "id": "~openai/gpt-sol-latest",
+      "name": "OpenAI GPT Sol Latest",
+      "created": 1789130928,
+      "description": "This model always redirects to the latest model in the OpenAI GPT Sol family.",
+      "pricing": {
+        "prompt": "0.000002",
+        "completion": "0.00001",
+        "web_search": "0.01",
+        "input_cache_read": "0.0000002",
+        "input_cache_write": "0.0000025",
+        "overrides": [
+          {
+            "min_prompt_tokens": 272000,
+            "prompt": "0.000004",
+            "completion": "0.000015",
+            "input_cache_read": "0.0000004",
+            "input_cache_write": "0.000005"
+          }
+        ]
+      },
+      "context_length": 1050000,
+      "architecture": {
+        "modality": "text+image+file->text",
+        "tokenizer": "Router"
+      },
+      "top_provider": {
+        "name": "",
+        "max_completion_tokens": 128000
+      }
+    },
+    {
+      "id": "~openai/gpt-terra-latest",
+      "name": "OpenAI GPT Terra Latest",
+      "created": 1789130925,
+      "description": "This model always redirects to the latest model in the OpenAI GPT Terra family.",
+      "pricing": {
+        "prompt": "0.000002",
+        "completion": "0.000012",
+        "web_search": "0.01",
+        "input_cache_read": "0.0000002",
+        "input_cache_write": "0.0000025",
+        "overrides": [
+          {
+            "min_prompt_tokens": 272000,
+            "prompt": "0.000004",
+            "completion": "0.000018",
+            "input_cache_read": "0.0000004",
+            "input_cache_write": "0.000005"
+          }
+        ]
+      },
+      "context_length": 1050000,
+      "architecture": {
+        "modality": "text+image+file->text",
+        "tokenizer": "Router"
+      },
+      "top_provider": {
+        "name": "",
+        "max_completion_tokens": 128000
+      }
+    },
+    {
+      "id": "~openai/gpt-luna-latest",
+      "name": "OpenAI GPT Luna Latest",
+      "created": 1789130922,
+      "description": "This model always redirects to the latest model in the OpenAI GPT Luna family.",
+      "pricing": {
+        "prompt": "0.0000002",
+        "completion": "0.0000012",
+        "web_search": "0.01",
+        "input_cache_read": "0.00000002",
+        "input_cache_write": "0.00000025",
+        "overrides": [
+          {
+            "min_prompt_tokens": 272000,
+            "prompt": "0.0000004",
+            "completion": "0.0000018",
+            "input_cache_read": "0.00000004",
+            "input_cache_write": "0.0000005"
+          }
+        ]
+      },
+      "context_length": 1050000,
+      "architecture": {
+        "modality": "text+image+file->text",
+        "tokenizer": "Router"
+      },
+      "top_provider": {
+        "name": "",
+        "max_completion_tokens": 128000
+      }
+    },
     {
       "id": "sakana/fugu-ultra-v2",
       "name": "Sakana: Fugu Ultra v2",
@@ -53,6 +215,26 @@
       }
     },
     {
+      "id": "inclusionai/ling-3.0-flash-vl",
+      "name": "inclusionAI: Ling 3.0 Flash VL",
+      "created": 1789056114,
+      "description": "Ling 3.0 Flash VL builds on Ling 3.0 Flash (124B total / 5.5B active MoE from InclusionAI), further strengthening its language capabilities while adding native visual perception and advanced visual...",
+      "pricing": {
+        "prompt": "0.00000006",
+        "completion": "0.00000018",
+        "input_cache_read": "0.000000012"
+      },
+      "context_length": 131072,
+      "architecture": {
+        "modality": "text+image+video->text",
+        "tokenizer": "Other"
+      },
+      "top_provider": {
+        "name": "",
+        "max_completion_tokens": 32768
+      }
+    },
+    {
       "id": "inclusionai/ling-3.0-flash-vl:free",
       "name": "inclusionAI: Ling 3.0 Flash VL (free)",
       "created": 1789056114,
@@ -77,9 +259,9 @@
       "created": 1789021285,
       "description": "DeepSeek V4.1 Flash is a sparse mixture-of-experts model from DeepSeek, and the first built on the company's Causal Encoder-Decoder (CED) architecture. It activates 8B parameters on input and 16B on...",
       "pricing": {
-        "prompt": "0.0000003",
-        "completion": "0.0000012",
-        "input_cache_read": "0.000000006",
+        "prompt": "0.00000015",
+        "completion": "0.0000006",
+        "input_cache_read": "0.000000003",
         "overrides": [
           {
             "utc_days": [
@@ -799,9 +981,9 @@
       "created": 1787151053,
       "description": "This model always redirects to the latest GLM model from Z.ai.",
       "pricing": {
-        "prompt": "0.00000097",
-        "completion": "0.0000033077",
-        "input_cache_read": "0.000000194"
+        "prompt": "0.0000008727",
+        "completion": "0.00000336",
+        "input_cache_read": "0.0000001639"
       },
       "context_length": 1310720,
       "architecture": {
@@ -878,9 +1060,9 @@
       "created": 1786722910,
       "description": "Qwen3.8 27B is an open-weight dense vision-language model from Qwen. It is suited for coding, professional workflows, research, multimodal interaction, and long-running agent tasks, with flexible thinking that can be...",
       "pricing": {
-        "prompt": "0.00000042",
-        "completion": "0.000003",
-        "input_cache_read": "0.000000085"
+        "prompt": "0.000000214",
+        "completion": "0.00000255",
+        "input_cache_read": "0.00000015"
       },
       "context_length": 1000000,
       "architecture": {
@@ -1054,9 +1236,9 @@
       "created": 1786549364,
       "description": "DeepSeek V4 Pro 0813 is a large-scale mixture-of-experts model from DeepSeek. This is the GA release of DeepSeek V4 Pro.",
       "pricing": {
-        "prompt": "0.00000066",
-        "completion": "0.00000198",
-        "input_cache_read": "0.000000066"
+        "prompt": "0.00000057816",
+        "completion": "0.00000173448",
+        "input_cache_read": "0.000000018396"
       },
       "context_length": 1048576,
       "architecture": {
@@ -1065,7 +1247,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 943718
+        "max_completion_tokens": 393216
       }
     },
     {
@@ -1283,9 +1465,9 @@
       "created": 1785606009,
       "description": "This model always redirects to the latest model in the DeepSeek V4 Flash family.",
       "pricing": {
-        "prompt": "0.00000005",
-        "completion": "0.00000016",
-        "input_cache_read": "0.000000013"
+        "prompt": "0.00000003",
+        "completion": "0.00000007",
+        "input_cache_read": "0.000000003"
       },
       "context_length": 1310720,
       "architecture": {
@@ -1303,9 +1485,9 @@
       "created": 1785478908,
       "description": "DeepSeek V4 Flash 0731 is a sparse mixture-of-experts model from DeepSeek, with 13B active parameters out of 284B total. This re-post-trained revision is suited for coding, reasoning, and agent workflows....",
       "pricing": {
-        "prompt": "0.000000065",
-        "completion": "0.00000018",
-        "input_cache_read": "0.000000016"
+        "prompt": "0.00000004",
+        "completion": "0.00000008",
+        "input_cache_read": "0.000000008"
       },
       "context_length": 1310720,
       "architecture": {
@@ -1678,7 +1860,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 32768
+        "max_completion_tokens": 471859
       }
     },
     {
@@ -1745,9 +1927,9 @@
       "created": 1784215858,
       "description": "Kimi K3 is a 2.8T parameter open-weight multimodal reasoning model from Moonshot AI. It is suited for complex coding, knowledge work, and long-horizon agentic workflows, and is particularly strong at...",
       "pricing": {
-        "prompt": "0.00000234",
-        "completion": "0.0000117",
-        "input_cache_read": "0.000000261"
+        "prompt": "0.00000230272875",
+        "completion": "0.000011550195",
+        "input_cache_read": "0.000000263169"
       },
       "context_length": 1048576,
       "architecture": {
@@ -2526,9 +2708,9 @@
       "created": 1781631930,
       "description": "GLM 5.2 is a large-scale reasoning model from Z.ai. It supports text input and output with a 1M-token context window, and is suited for long-horizon agent workflows, project-level software engineering,...",
       "pricing": {
-        "prompt": "0.000000966",
-        "completion": "0.000003036",
-        "input_cache_read": "0.0000001932"
+        "prompt": "0.0000006",
+        "completion": "0.000002",
+        "input_cache_read": "0.00000015"
       },
       "context_length": 1048576,
       "architecture": {
@@ -2537,7 +2719,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 131072
+        "max_completion_tokens": 182476
       }
     },
     {
@@ -3274,9 +3456,9 @@
       "created": 1777318428,
       "description": "This model always redirects to the latest model in the MoonshotAI Kimi family.",
       "pricing": {
-        "prompt": "0.00000234",
-        "completion": "0.0000117",
-        "input_cache_read": "0.000000261"
+        "prompt": "0.000002125",
+        "completion": "0.0000119",
+        "input_cache_read": "0.0000002465"
       },
       "context_length": 1048576,
       "architecture": {
@@ -3328,37 +3510,6 @@
         "input_cache_write_1h": "0.000004"
       },
       "context_length": 1000000,
-      "architecture": {
-        "modality": "text+image+file->text",
-        "tokenizer": "Router"
-      },
-      "top_provider": {
-        "name": "",
-        "max_completion_tokens": 128000
-      }
-    },
-    {
-      "id": "~openai/gpt-latest",
-      "name": "OpenAI GPT Latest",
-      "created": 1777318334,
-      "description": "This model always redirects to the latest model in the OpenAI GPT family.",
-      "pricing": {
-        "prompt": "0.000002",
-        "completion": "0.00001",
-        "web_search": "0.01",
-        "input_cache_read": "0.0000002",
-        "input_cache_write": "0.0000025",
-        "overrides": [
-          {
-            "min_prompt_tokens": 272000,
-            "prompt": "0.000004",
-            "completion": "0.000015",
-            "input_cache_read": "0.0000004",
-            "input_cache_write": "0.000005"
-          }
-        ]
-      },
-      "context_length": 1050000,
       "architecture": {
         "modality": "text+image+file->text",
         "tokenizer": "Router"
@@ -3610,9 +3761,9 @@
       "created": 1777000679,
       "description": "DeepSeek V4 Pro is a large-scale Mixture-of-Experts model from DeepSeek with 1.6T total parameters and 49B activated parameters, supporting a 1M-token context window. It is designed for advanced reasoning, coding,...",
       "pricing": {
-        "prompt": "0.00000095526",
-        "completion": "0.00000191052",
-        "input_cache_read": "0.000000079605"
+        "prompt": "0.000000809274",
+        "completion": "0.000001618548",
+        "input_cache_read": "0.0000000674395"
       },
       "context_length": 1048576,
       "architecture": {
@@ -3630,9 +3781,9 @@
       "created": 1777000666,
       "description": "DeepSeek V4 Flash is an efficiency-optimized Mixture-of-Experts model from DeepSeek with 284B total parameters and 13B activated parameters, supporting a 1M-token context window. It is designed for fast inference and...",
       "pricing": {
-        "prompt": "0.000000088606",
-        "completion": "0.000000177212",
-        "input_cache_read": "0.0000000177212"
+        "prompt": "0.00000006678",
+        "completion": "0.00000013356",
+        "input_cache_read": "0.000000013356"
       },
       "context_length": 1048576,
       "architecture": {
@@ -5959,8 +6110,7 @@
       "description": "Kimi K2 Thinking is Moonshot AI\u2019s most advanced open reasoning model to date, extending the K2 series into agentic, long-horizon reasoning. Built on the trillion-parameter Mixture-of-Experts (MoE) architecture introduced in...",
       "pricing": {
         "prompt": "0.0000006",
-        "completion": "0.0000025",
-        "input_cache_read": "0.00000015"
+        "completion": "0.0000025"
       },
       "context_length": 262144,
       "architecture": {
@@ -5969,7 +6119,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 100352
+        "max_completion_tokens": 235929
       }
     },
     {
@@ -7341,8 +7491,9 @@
       "created": 1753119555,
       "description": "Qwen3-235B-A22B-Instruct-2507 is a multilingual, instruction-tuned mixture-of-experts language model based on the Qwen3-235B architecture, with 22B active parameters per forward pass. It is optimized for general-purpose text generation, including instruction following,...",
       "pricing": {
-        "prompt": "0.00000022",
-        "completion": "0.00000088"
+        "prompt": "0.0000000875",
+        "completion": "0.00000035",
+        "input_cache_read": "0.0000000175"
       },
       "context_length": 262144,
       "architecture": {
@@ -7351,7 +7502,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 16384
+        "max_completion_tokens": 235929
       }
     },
     {
@@ -7477,7 +7628,7 @@
         "prompt": "0.000000075",
         "completion": "0.0000002"
       },
-      "context_length": 131072,
+      "context_length": 256000,
       "architecture": {
         "modality": "text+image->text",
         "tokenizer": "Mistral"
