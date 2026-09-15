@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-14T09:00:18Z",
+  "fetched_at": "2026-09-15T09:00:53Z",
   "total": 50,
   "models": [
     {
@@ -449,7 +449,18 @@
         "generateContent",
         "countTokens"
       ],
-      "inputTokenLimit": 131072,
+      "inputTokenLimit": 1048576,
+      "outputTokenLimit": 65536
+    },
+    {
+      "name": "models/antigravity-preview-09-2026",
+      "description": "Preview release of Antigravity Agent (09-2026)",
+      "displayName": "Antigravity Agent Preview",
+      "supportedMethods": [
+        "generateContent",
+        "countTokens"
+      ],
+      "inputTokenLimit": 1048576,
       "outputTokenLimit": 65536
     },
     {
@@ -578,17 +589,6 @@
       "name": "models/gemini-2.5-flash-native-audio-latest",
       "description": "Latest release of Gemini 2.5 Flash Native Audio",
       "displayName": "Gemini 2.5 Flash Native Audio Latest",
-      "supportedMethods": [
-        "countTokens",
-        "bidiGenerateContent"
-      ],
-      "inputTokenLimit": 131072,
-      "outputTokenLimit": 8192
-    },
-    {
-      "name": "models/gemini-2.5-flash-native-audio-preview-09-2025",
-      "description": "Gemini 2.5 Flash Native Audio Preview 09-2025",
-      "displayName": "Gemini 2.5 Flash Native Audio Preview 09-2025",
       "supportedMethods": [
         "countTokens",
         "bidiGenerateContent"
