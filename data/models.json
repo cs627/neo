@@ -1,6 +1,6 @@
 {
-  "fetched_at": "2026-09-15T09:00:53Z",
-  "total": 445,
+  "fetched_at": "2026-09-16T09:00:37Z",
+  "total": 443,
   "models": [
     {
       "id": "~deepseek/deepseek-pro-latest",
@@ -884,9 +884,9 @@
       "created": 1787752741,
       "description": "GLM-5.3-Flash is a native multimodal model from Z.ai. It is suited for efficient coding and long-horizon agent tasks. Its hybrid sparse and linear attention architecture maintains accurate long-context behavior while...",
       "pricing": {
-        "prompt": "0.00000015",
-        "completion": "0.0000005",
-        "input_cache_read": "0.00000003"
+        "prompt": "0.0000001",
+        "completion": "0.0000003333",
+        "input_cache_read": "0.00000002"
       },
       "context_length": 1310720,
       "architecture": {
@@ -1582,26 +1582,6 @@
       }
     },
     {
-      "id": "thinkingmachines/inkling-small:batch",
-      "name": "Thinking Machines: Inkling Small (batch)",
-      "created": 1785443117,
-      "description": "Inkling Small is an open-weight multimodal mixture-of-experts model from Thinking Machines Lab, with 12B active parameters out of 276B total. It is positioned as the smaller, more efficient member of...",
-      "pricing": {
-        "prompt": "0.0000005",
-        "completion": "0.0000012",
-        "input_cache_read": "0.0000001"
-      },
-      "context_length": 524288,
-      "architecture": {
-        "modality": "text+image+audio->text",
-        "tokenizer": "Other"
-      },
-      "top_provider": {
-        "name": "",
-        "max_completion_tokens": 471859
-      }
-    },
-    {
       "id": "thinkingmachines/inkling-small:free",
       "name": "Thinking Machines: Inkling Small (free)",
       "created": 1785443117,
@@ -1659,7 +1639,7 @@
     },
     {
       "id": "anthropic/claude-opus-5",
-      "name": "Claude Opus 5",
+      "name": "Anthropic: Claude Opus 5",
       "created": 1784912544,
       "description": "Claude Opus 5 is Anthropic\u2019s flagship model for demanding reasoning, coding, and long-horizon agentic work. It is particularly strong at end-to-end software tasks, code review and bug finding, visual analysis...",
       "pricing": {
@@ -1682,7 +1662,7 @@
     },
     {
       "id": "anthropic/claude-opus-5:batch",
-      "name": "Claude Opus 5 (batch)",
+      "name": "Anthropic: Claude Opus 5 (batch)",
       "created": 1784912544,
       "description": "Claude Opus 5 is Anthropic\u2019s flagship model for demanding reasoning, coding, and long-horizon agentic work. It is particularly strong at end-to-end software tasks, code review and bug finding, visual analysis...",
       "pricing": {
@@ -2785,6 +2765,25 @@
       }
     },
     {
+      "id": "z-ai/glm-5.2:free",
+      "name": "Z.ai: GLM 5.2 (free)",
+      "created": 1781631930,
+      "description": "GLM 5.2 is a large-scale reasoning model from Z.ai. It supports text input and output with a 1M-token context window, and is suited for long-horizon agent workflows, project-level software engineering,...",
+      "pricing": {
+        "prompt": "0",
+        "completion": "0"
+      },
+      "context_length": 32768,
+      "architecture": {
+        "modality": "text->text",
+        "tokenizer": "Other"
+      },
+      "top_provider": {
+        "name": "",
+        "max_completion_tokens": 29491
+      }
+    },
+    {
       "id": "openrouter/fusion",
       "name": "OpenRouter: Fusion",
       "created": 1781371647,
@@ -2809,9 +2808,9 @@
       "created": 1781266361,
       "description": "MoonshotAI: Kimi K2.7 Code is a coding-focused model in Moonshot AI's Kimi K2 family, built to complete end-to-end programming tasks reliably over long contexts. It uses a native multimodal mixture-of-experts...",
       "pricing": {
-        "prompt": "0.00000071",
-        "completion": "0.0000035",
-        "input_cache_read": "0.00000015"
+        "prompt": "0.0000007062",
+        "completion": "0.00000321",
+        "input_cache_read": "0.00000018"
       },
       "context_length": 262144,
       "architecture": {
@@ -2936,9 +2935,9 @@
       "created": 1780551208,
       "description": "NVIDIA Nemotron 3 Ultra is an open frontier-reasoning and orchestration model from NVIDIA, with 55B active parameters out of 550B total (MoE). Built on a hybrid Transformer-Mamba mixture-of-experts architecture, it...",
       "pricing": {
-        "prompt": "0.0000006",
-        "completion": "0.0000024",
-        "input_cache_read": "0.00000012"
+        "prompt": "0.000000625",
+        "completion": "0.000003125",
+        "input_cache_read": "0.0000001875"
       },
       "context_length": 262144,
       "architecture": {
@@ -2947,7 +2946,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 182520
+        "max_completion_tokens": 32768
       }
     },
     {
@@ -3498,9 +3497,9 @@
       "created": 1777318428,
       "description": "This model always redirects to the latest model in the Kimi family.",
       "pricing": {
-        "prompt": "0.0000021",
-        "completion": "0.00001095",
-        "input_cache_read": "0.00000023"
+        "prompt": "0.000001775",
+        "completion": "0.00000994",
+        "input_cache_read": "0.0000002059"
       },
       "context_length": 1048576,
       "architecture": {
@@ -4104,25 +4103,6 @@
       "top_provider": {
         "name": "",
         "max_completion_tokens": 16384
-      }
-    },
-    {
-      "id": "google/gemma-4-31b-it:batch",
-      "name": "Google: Gemma 4 31B (batch)",
-      "created": 1775148486,
-      "description": "Gemma 4 31B Instruct is Google DeepMind's 30.7B dense multimodal model supporting text and image input with text output. Features a 256K token context window, configurable thinking/reasoning mode, native function...",
-      "pricing": {
-        "prompt": "0.00000039",
-        "completion": "0.00000097"
-      },
-      "context_length": 262144,
-      "architecture": {
-        "modality": "text+image+video->text",
-        "tokenizer": "Gemma"
-      },
-      "top_provider": {
-        "name": "",
-        "max_completion_tokens": 235929
       }
     },
     {
@@ -7236,25 +7216,6 @@
       }
     },
     {
-      "id": "openai/gpt-oss-20b:batch",
-      "name": "OpenAI: gpt-oss-20b (batch)",
-      "created": 1754414229,
-      "description": "gpt-oss-20b is an open-weight 21B parameter model released by OpenAI under the Apache 2.0 license. It uses a Mixture-of-Experts (MoE) architecture with 3.6B active parameters per forward pass, optimized for...",
-      "pricing": {
-        "prompt": "0.00000005",
-        "completion": "0.0000002"
-      },
-      "context_length": 131072,
-      "architecture": {
-        "modality": "text->text",
-        "tokenizer": "GPT"
-      },
-      "top_provider": {
-        "name": "",
-        "max_completion_tokens": 117964
-      }
-    },
-    {
       "id": "anthropic/claude-opus-4.1",
       "name": "Anthropic: Claude Opus 4.1",
       "created": 1754411591,
@@ -7668,8 +7629,8 @@
       "created": 1750443016,
       "description": "Mistral-Small-3.2-24B-Instruct-2506 is an updated 24B parameter model from Mistral optimized for instruction following, repetition reduction, and improved function calling. Compared to the 3.1 release, version 3.2 significantly improves accuracy on...",
       "pricing": {
-        "prompt": "0.000000075",
-        "completion": "0.0000002"
+        "prompt": "0.00000009375",
+        "completion": "0.00000025"
       },
       "context_length": 256000,
       "architecture": {
@@ -7687,7 +7648,7 @@
       "created": 1750200414,
       "description": "MiniMax-M1 is a large-scale, open-weight reasoning model designed for extended context and high-efficiency inference. It leverages a hybrid Mixture-of-Experts (MoE) architecture paired with a custom \"lightning attention\" mechanism, allowing it...",
       "pricing": {
-        "prompt": "0.00000055",
+        "prompt": "0.0000004",
         "completion": "0.0000022"
       },
       "context_length": 1000000,
