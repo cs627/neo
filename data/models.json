@@ -1,16 +1,35 @@
 {
-  "fetched_at": "2026-09-16T09:00:37Z",
-  "total": 443,
+  "fetched_at": "2026-09-17T09:00:53Z",
+  "total": 444,
   "models": [
+    {
+      "id": "stealth/union-alpha",
+      "name": "Union Alpha",
+      "created": 1789569723,
+      "description": "Union Alpha is a multimodal model built for research, coding, and agentic workflows, while delivering frontier-level performance across a broad range of general-purpose tasks. Union Alpha is a stealth model....",
+      "pricing": {
+        "prompt": "0",
+        "completion": "0"
+      },
+      "context_length": 262144,
+      "architecture": {
+        "modality": "text+image->text",
+        "tokenizer": "Other"
+      },
+      "top_provider": {
+        "name": "",
+        "max_completion_tokens": 131072
+      }
+    },
     {
       "id": "~deepseek/deepseek-pro-latest",
       "name": "DeepSeek: DeepSeek Pro Latest",
       "created": 1789399174,
       "description": "This model always redirects to the latest model in the DeepSeek Pro family.",
       "pricing": {
-        "prompt": "0.00000096",
-        "completion": "0.00000288",
-        "input_cache_read": "0.000000088"
+        "prompt": "0.0000007",
+        "completion": "0.00000296",
+        "input_cache_read": "0.000000033"
       },
       "context_length": 1048576,
       "architecture": {
@@ -19,7 +38,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 943718
+        "max_completion_tokens": 384000
       }
     },
     {
@@ -884,9 +903,9 @@
       "created": 1787752741,
       "description": "GLM-5.3-Flash is a native multimodal model from Z.ai. It is suited for efficient coding and long-horizon agent tasks. Its hybrid sparse and linear attention architecture maintains accurate long-context behavior while...",
       "pricing": {
-        "prompt": "0.0000001",
-        "completion": "0.0000003333",
-        "input_cache_read": "0.00000002"
+        "prompt": "0.00000009",
+        "completion": "0.0000003",
+        "input_cache_read": "0.000000018"
       },
       "context_length": 1310720,
       "architecture": {
@@ -1278,9 +1297,90 @@
       "created": 1786549364,
       "description": "DeepSeek V4 Pro 0813 is a large-scale mixture-of-experts model from DeepSeek. This is the GA release of DeepSeek V4 Pro.",
       "pricing": {
-        "prompt": "0.0000009834",
-        "completion": "0.0000029502",
-        "input_cache_read": "0.00000003278"
+        "prompt": "0.00000132",
+        "completion": "0.00000396",
+        "input_cache_read": "0.000000044",
+        "overrides": [
+          {
+            "utc_days": [
+              "saturday",
+              "sunday"
+            ],
+            "prompt": "0.00000066",
+            "completion": "0.00000198",
+            "input_cache_read": "0.000000022"
+          },
+          {
+            "utc_days": [
+              "monday",
+              "tuesday",
+              "wednesday",
+              "thursday",
+              "friday"
+            ],
+            "utc_start": 0,
+            "utc_end": 100,
+            "prompt": "0.00000066",
+            "completion": "0.00000198",
+            "input_cache_read": "0.000000022"
+          },
+          {
+            "utc_days": [
+              "monday",
+              "tuesday",
+              "wednesday",
+              "thursday",
+              "friday"
+            ],
+            "utc_start": 100,
+            "utc_end": 400,
+            "prompt": "0.00000132",
+            "completion": "0.00000396",
+            "input_cache_read": "0.000000044"
+          },
+          {
+            "utc_days": [
+              "monday",
+              "tuesday",
+              "wednesday",
+              "thursday",
+              "friday"
+            ],
+            "utc_start": 400,
+            "utc_end": 600,
+            "prompt": "0.00000066",
+            "completion": "0.00000198",
+            "input_cache_read": "0.000000022"
+          },
+          {
+            "utc_days": [
+              "monday",
+              "tuesday",
+              "wednesday",
+              "thursday",
+              "friday"
+            ],
+            "utc_start": 600,
+            "utc_end": 1000,
+            "prompt": "0.00000132",
+            "completion": "0.00000396",
+            "input_cache_read": "0.000000044"
+          },
+          {
+            "utc_days": [
+              "monday",
+              "tuesday",
+              "wednesday",
+              "thursday",
+              "friday"
+            ],
+            "utc_start": 1000,
+            "utc_end": 0,
+            "prompt": "0.00000066",
+            "completion": "0.00000198",
+            "input_cache_read": "0.000000022"
+          }
+        ]
       },
       "context_length": 1048576,
       "architecture": {
@@ -1507,8 +1607,8 @@
       "created": 1785606009,
       "description": "This model always redirects to the latest model in the DeepSeek V4 Flash family.",
       "pricing": {
-        "prompt": "0.00000004",
-        "completion": "0.0000001",
+        "prompt": "0.00000003",
+        "completion": "0.00000013",
         "input_cache_read": "0.00000001"
       },
       "context_length": 1310720,
@@ -1949,9 +2049,9 @@
       "created": 1784215858,
       "description": "Kimi K3 is a 2.8T parameter open-weight multimodal reasoning model from Moonshot AI. It is suited for complex coding, knowledge work, and long-horizon agentic workflows, and is particularly strong at...",
       "pricing": {
-        "prompt": "0.000002648138063",
-        "completion": "0.00001328272425",
-        "input_cache_read": "0.00000030264435"
+        "prompt": "0.000003",
+        "completion": "0.000015",
+        "input_cache_read": "0.0000003"
       },
       "context_length": 1048576,
       "architecture": {
@@ -2741,7 +2841,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 128000
+        "max_completion_tokens": 131072
       }
     },
     {
@@ -3497,9 +3597,9 @@
       "created": 1777318428,
       "description": "This model always redirects to the latest model in the Kimi family.",
       "pricing": {
-        "prompt": "0.000001775",
-        "completion": "0.00000994",
-        "input_cache_read": "0.0000002059"
+        "prompt": "0.0000021",
+        "completion": "0.00001095",
+        "input_cache_read": "0.00000023"
       },
       "context_length": 1048576,
       "architecture": {
@@ -5593,9 +5693,8 @@
       "created": 1765731275,
       "description": "NVIDIA Nemotron 3 Nano 30B A3B is a small language MoE model with highest compute efficiency and accuracy for developers to build specialized agentic AI systems. The model is fully...",
       "pricing": {
-        "prompt": "0.00000005",
-        "completion": "0.0000002",
-        "input_cache_read": "0.00000003"
+        "prompt": "0.00000006",
+        "completion": "0.00000024"
       },
       "context_length": 262144,
       "architecture": {
@@ -6463,8 +6562,8 @@
       "created": 1759794476,
       "description": "Qwen3-VL-30B-A3B-Instruct is a multimodal model that unifies strong text generation with visual understanding for images and videos. Its Instruct variant optimizes instruction-following for general multimodal tasks. It excels in perception...",
       "pricing": {
-        "prompt": "0.00000015",
-        "completion": "0.0000006"
+        "prompt": "0.00000013",
+        "completion": "0.00000052"
       },
       "context_length": 262144,
       "architecture": {
@@ -6473,7 +6572,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 16384
+        "max_completion_tokens": 32768
       }
     },
     {
@@ -6522,9 +6621,9 @@
       "created": 1759235576,
       "description": "Compared with GLM-4.5, this generation brings several key improvements: Longer context window: The context window has been expanded from 128K to 200K tokens, enabling the model to handle more complex...",
       "pricing": {
-        "prompt": "0.00000043",
-        "completion": "0.00000175",
-        "input_cache_read": "0.00000008"
+        "prompt": "0.0000005",
+        "completion": "0.000002",
+        "input_cache_read": "0.0000001"
       },
       "context_length": 204800,
       "architecture": {
@@ -6533,7 +6632,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 16384
+        "max_completion_tokens": 131072
       }
     },
     {
@@ -9720,8 +9819,8 @@
       "created": 1688256000,
       "description": "One of the highest performing and most popular fine-tunes of Llama 2 13B, with rich descriptions and roleplay. #merge",
       "pricing": {
-        "prompt": "0.00000006",
-        "completion": "0.00000006"
+        "prompt": "0.00000008",
+        "completion": "0.00000011"
       },
       "context_length": 8192,
       "architecture": {
