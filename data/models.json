@@ -1,15 +1,16 @@
 {
-  "fetched_at": "2026-09-17T09:00:53Z",
-  "total": 444,
+  "fetched_at": "2026-09-18T09:01:04Z",
+  "total": 445,
   "models": [
     {
-      "id": "stealth/union-alpha",
-      "name": "Union Alpha",
-      "created": 1789569723,
-      "description": "Union Alpha is a multimodal model built for research, coding, and agentic workflows, while delivering frontier-level performance across a broad range of general-purpose tasks. Union Alpha is a stealth model....",
+      "id": "unbiased/pareto",
+      "name": "Pareto",
+      "created": 1789686178,
+      "description": "Pareto is a multimodal composite model built for research, coding, and agentic workflows, while delivering frontier-level performance across a broad range of general-purpose tasks.",
       "pricing": {
-        "prompt": "0",
-        "completion": "0"
+        "prompt": "0.0000025",
+        "completion": "0.0000075",
+        "input_cache_read": "0.00000025"
       },
       "context_length": 262144,
       "architecture": {
@@ -47,9 +48,9 @@
       "created": 1789399150,
       "description": "This model always redirects to the latest model in the DeepSeek Flash family.",
       "pricing": {
-        "prompt": "0.00000015",
-        "completion": "0.0000006",
-        "input_cache_read": "0.000000015"
+        "prompt": "0.000000135",
+        "completion": "0.00000054",
+        "input_cache_read": "0.00000000405"
       },
       "context_length": 1048576,
       "architecture": {
@@ -964,9 +965,9 @@
       "created": 1787311563,
       "description": "DeepSeek V4 Flash Vision Exp is an experimental vision-enabled version of [DeepSeek V4 Flash 0731](https://openrouter.ai/deepseek/deepseek-v4-flash-0731) from DeepSeek, adding image understanding while matching the base model on text capabilities including agents,...",
       "pricing": {
-        "prompt": "0.00000022",
-        "completion": "0.00000066",
-        "input_cache_read": "0.000000007"
+        "prompt": "0.0000002156",
+        "completion": "0.0000006468",
+        "input_cache_read": "0.00000000686"
       },
       "context_length": 1048576,
       "architecture": {
@@ -975,7 +976,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 943718
+        "max_completion_tokens": 262144
       }
     },
     {
@@ -1133,6 +1134,25 @@
       "top_provider": {
         "name": "",
         "max_completion_tokens": 131072
+      }
+    },
+    {
+      "id": "qwen/qwen3.8-27b:free",
+      "name": "Qwen: Qwen3.8 27B (free)",
+      "created": 1786722910,
+      "description": "Qwen3.8 27B is an open-weight dense vision-language model from Qwen. It is suited for coding, professional workflows, research, multimodal interaction, and long-running agent tasks, with flexible thinking that can be...",
+      "pricing": {
+        "prompt": "0",
+        "completion": "0"
+      },
+      "context_length": 262144,
+      "architecture": {
+        "modality": "text+image+video->text",
+        "tokenizer": "Qwen"
+      },
+      "top_provider": {
+        "name": "",
+        "max_completion_tokens": 235929
       }
     },
     {
@@ -1546,8 +1566,8 @@
       "created": 1786302394,
       "description": "Muse Glimmer 30B is a dense, open-weight multimodal model from Meta Superintelligence Labs, distilled from Muse Spark and optimized for autonomous agents on consumer hardware. It is suited for long-horizon...",
       "pricing": {
-        "prompt": "0.00000035",
-        "completion": "0.0000015",
+        "prompt": "0.0000003",
+        "completion": "0.0000011",
         "input_cache_read": "0.00000004"
       },
       "context_length": 131072,
@@ -1607,9 +1627,9 @@
       "created": 1785606009,
       "description": "This model always redirects to the latest model in the DeepSeek V4 Flash family.",
       "pricing": {
-        "prompt": "0.00000003",
-        "completion": "0.00000013",
-        "input_cache_read": "0.00000001"
+        "prompt": "0.0000000558",
+        "completion": "0.0000001767",
+        "input_cache_read": "0.0000000088"
       },
       "context_length": 1310720,
       "architecture": {
@@ -1618,7 +1638,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 393216
+        "max_completion_tokens": 943718
       }
     },
     {
@@ -1659,6 +1679,25 @@
       "top_provider": {
         "name": "",
         "max_completion_tokens": 943718
+      }
+    },
+    {
+      "id": "deepseek/deepseek-v4-flash-0731:free",
+      "name": "DeepSeek: DeepSeek V4 Flash 0731 (free)",
+      "created": 1785478908,
+      "description": "DeepSeek V4 Flash 0731 is a sparse mixture-of-experts model from DeepSeek, with 13B active parameters out of 284B total. This re-post-trained revision is suited for coding, reasoning, and agent workflows....",
+      "pricing": {
+        "prompt": "0",
+        "completion": "0"
+      },
+      "context_length": 1048576,
+      "architecture": {
+        "modality": "text->text",
+        "tokenizer": "DeepSeek"
+      },
+      "top_provider": {
+        "name": "",
+        "max_completion_tokens": 393216
       }
     },
     {
@@ -2049,9 +2088,9 @@
       "created": 1784215858,
       "description": "Kimi K3 is a 2.8T parameter open-weight multimodal reasoning model from Moonshot AI. It is suited for complex coding, knowledge work, and long-horizon agentic workflows, and is particularly strong at...",
       "pricing": {
-        "prompt": "0.000003",
-        "completion": "0.000015",
-        "input_cache_read": "0.0000003"
+        "prompt": "0.0000021",
+        "completion": "0.00001095",
+        "input_cache_read": "0.00000023"
       },
       "context_length": 1048576,
       "architecture": {
@@ -2830,9 +2869,9 @@
       "created": 1781631930,
       "description": "GLM 5.2 is a large-scale reasoning model from Z.ai. It supports text input and output with a 1M-token context window, and is suited for long-horizon agent workflows, project-level software engineering,...",
       "pricing": {
-        "prompt": "0.0000014",
-        "completion": "0.0000044",
-        "input_cache_read": "0.00000014"
+        "prompt": "0.0000005625",
+        "completion": "0.0000018",
+        "input_cache_read": "0.000000105"
       },
       "context_length": 1048576,
       "architecture": {
@@ -2841,7 +2880,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 131072
+        "max_completion_tokens": 163840
       }
     },
     {
@@ -6008,26 +6047,6 @@
       }
     },
     {
-      "id": "mistralai/mistral-large-2512",
-      "name": "Mistral: Mistral Large 3 2512",
-      "created": 1764624472,
-      "description": "Mistral Large 3 2512 is Mistral\u2019s most capable model to date, featuring a sparse mixture-of-experts architecture with 41B active parameters (675B total), and released under the Apache 2.0 license.",
-      "pricing": {
-        "prompt": "0.0000005",
-        "completion": "0.0000015",
-        "input_cache_read": "0.00000005"
-      },
-      "context_length": 262144,
-      "architecture": {
-        "modality": "text+image+file->text",
-        "tokenizer": "Mistral"
-      },
-      "top_provider": {
-        "name": "",
-        "max_completion_tokens": 209715
-      }
-    },
-    {
       "id": "mistralai/mistral-large-2512:batch",
       "name": "Mistral: Mistral Large 3 2512 (batch)",
       "created": 1764624472,
@@ -6621,9 +6640,9 @@
       "created": 1759235576,
       "description": "Compared with GLM-4.5, this generation brings several key improvements: Longer context window: The context window has been expanded from 128K to 200K tokens, enabling the model to handle more complex...",
       "pricing": {
-        "prompt": "0.0000005",
-        "completion": "0.000002",
-        "input_cache_read": "0.0000001"
+        "prompt": "0.00000043",
+        "completion": "0.00000175",
+        "input_cache_read": "0.00000008"
       },
       "context_length": 204800,
       "architecture": {
@@ -6632,7 +6651,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 131072
+        "max_completion_tokens": 16384
       }
     },
     {
@@ -7262,8 +7281,9 @@
       "created": 1754414231,
       "description": "gpt-oss-120b is an open-weight, 117B-parameter Mixture-of-Experts (MoE) language model from OpenAI designed for high-reasoning, agentic, and general-purpose production use cases. It activates 5.1B parameters per forward pass and is optimized...",
       "pricing": {
-        "prompt": "0.000000037",
-        "completion": "0.00000017"
+        "prompt": "0.00000015",
+        "completion": "0.0000006",
+        "input_cache_read": "0.000000075"
       },
       "context_length": 131072,
       "architecture": {
@@ -7272,7 +7292,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 117964
+        "max_completion_tokens": 65536
       }
     },
     {
@@ -8925,8 +8945,8 @@
       "created": 1735241320,
       "description": "DeepSeek-V3 is the latest model from the DeepSeek team, building upon the instruction following and coding abilities of the previous versions. Pre-trained on nearly 15 trillion tokens, the reported evaluations...",
       "pricing": {
-        "prompt": "0.0000002574",
-        "completion": "0.0000010287"
+        "prompt": "0.00000032",
+        "completion": "0.00000089"
       },
       "context_length": 163840,
       "architecture": {
@@ -8935,7 +8955,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 16000
+        "max_completion_tokens": 16384
       }
     },
     {
