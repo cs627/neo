@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-20T09:00:33Z",
+  "fetched_at": "2026-09-21T09:00:15Z",
   "total": 446,
   "models": [
     {
@@ -67,9 +67,9 @@
       "created": 1789399174,
       "description": "This model always redirects to the latest model in the DeepSeek Pro family.",
       "pricing": {
-        "prompt": "0.00000056892",
-        "completion": "0.00000170676",
-        "input_cache_read": "0.000000018964"
+        "prompt": "0.0000007",
+        "completion": "0.00000288",
+        "input_cache_read": "0.000000088"
       },
       "context_length": 1048576,
       "architecture": {
@@ -78,7 +78,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 384000
+        "max_completion_tokens": 943718
       }
     },
     {
@@ -87,9 +87,9 @@
       "created": 1789399150,
       "description": "This model always redirects to the latest model in the DeepSeek Flash family.",
       "pricing": {
-        "prompt": "0.00000013",
-        "completion": "0.00000052",
-        "input_cache_read": "0.0000000026"
+        "prompt": "0.00000012",
+        "completion": "0.00000048",
+        "input_cache_read": "0.0000000036"
       },
       "context_length": 1048576,
       "architecture": {
@@ -360,9 +360,9 @@
       "created": 1789021285,
       "description": "DeepSeek V4.1 Flash is a sparse mixture-of-experts model from DeepSeek, and the first built on the company's Causal Encoder-Decoder (CED) architecture. It activates 8B parameters on input and 16B on...",
       "pricing": {
-        "prompt": "0.00000015",
-        "completion": "0.0000006",
-        "input_cache_read": "0.000000003",
+        "prompt": "0.0000003",
+        "completion": "0.0000012",
+        "input_cache_read": "0.000000006",
         "overrides": [
           {
             "utc_days": [
@@ -823,9 +823,9 @@
       "created": 1788206780,
       "description": "Granite 4.2 8B is a dense reasoning model from IBM. It is suited for mathematics, code generation, multilingual dialogue, and agentic workflows that need multi-step reasoning. It supports full, low-effort,...",
       "pricing": {
-        "prompt": "0.00000006",
-        "completion": "0.00000025",
-        "input_cache_read": "0.000000015"
+        "prompt": "0.0000001",
+        "completion": "0.00000015",
+        "input_cache_read": "0.00000005"
       },
       "context_length": 131072,
       "architecture": {
@@ -1004,9 +1004,9 @@
       "created": 1787311563,
       "description": "DeepSeek V4 Flash Vision Exp is an experimental vision-enabled version of [DeepSeek V4 Flash 0731](https://openrouter.ai/deepseek/deepseek-v4-flash-0731) from DeepSeek, adding image understanding while matching the base model on text capabilities including agents,...",
       "pricing": {
-        "prompt": "0.0000002156",
-        "completion": "0.0000006468",
-        "input_cache_read": "0.00000000686"
+        "prompt": "0.00000022",
+        "completion": "0.00000066",
+        "input_cache_read": "0.000000007"
       },
       "context_length": 1048576,
       "architecture": {
@@ -1015,7 +1015,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 262144
+        "max_completion_tokens": 943718
       }
     },
     {
@@ -1082,9 +1082,9 @@
       "created": 1787151053,
       "description": "This model always redirects to the latest GLM model from Z.ai.",
       "pricing": {
-        "prompt": "0.0000008442",
-        "completion": "0.0000026532",
-        "input_cache_read": "0.00000015678"
+        "prompt": "0.0000007735",
+        "completion": "0.000002431",
+        "input_cache_read": "0.000000127075"
       },
       "context_length": 1310720,
       "architecture": {
@@ -1093,7 +1093,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 131072
+        "max_completion_tokens": 943718
       }
     },
     {
@@ -1121,9 +1121,9 @@
       "created": 1787086655,
       "description": "GLM-5.3 is a large-scale reasoning model from Z.ai, built for complex software engineering and long-horizon agent tasks. It supports text input and output with a 1M-token context window, and improves...",
       "pricing": {
-        "prompt": "0.000000896",
-        "completion": "0.000002816",
-        "input_cache_read": "0.0000001664"
+        "prompt": "0.00000091",
+        "completion": "0.00000286",
+        "input_cache_read": "0.000000169"
       },
       "context_length": 1310720,
       "architecture": {
@@ -1161,9 +1161,9 @@
       "created": 1786722910,
       "description": "Qwen3.8 27B is an open-weight dense vision-language model from Qwen. It is suited for coding, professional workflows, research, multimodal interaction, and long-running agent tasks, with flexible thinking that can be...",
       "pricing": {
-        "prompt": "0.00000042",
-        "completion": "0.000003",
-        "input_cache_read": "0.000000085"
+        "prompt": "0.0000002",
+        "completion": "0.0000025",
+        "input_cache_read": "0.00000005"
       },
       "context_length": 1000000,
       "architecture": {
@@ -1356,9 +1356,9 @@
       "created": 1786549364,
       "description": "DeepSeek V4 Pro 0813 is a large-scale mixture-of-experts model from DeepSeek. This is the GA release of DeepSeek V4 Pro.",
       "pricing": {
-        "prompt": "0.00000066",
-        "completion": "0.00000198",
-        "input_cache_read": "0.000000022",
+        "prompt": "0.00000132",
+        "completion": "0.00000396",
+        "input_cache_read": "0.000000044",
         "overrides": [
           {
             "utc_days": [
@@ -1667,7 +1667,7 @@
       "description": "This model always redirects to the latest model in the DeepSeek V4 Flash family.",
       "pricing": {
         "prompt": "0.00000004",
-        "completion": "0.00000008",
+        "completion": "0.00000016",
         "input_cache_read": "0.000000016"
       },
       "context_length": 1310720,
@@ -1687,7 +1687,7 @@
       "description": "DeepSeek V4 Flash 0731 is a sparse mixture-of-experts model from DeepSeek, with 13B active parameters out of 284B total. This re-post-trained revision is suited for coding, reasoning, and agent workflows....",
       "pricing": {
         "prompt": "0.00000004",
-        "completion": "0.00000008",
+        "completion": "0.00000016",
         "input_cache_read": "0.000000016"
       },
       "context_length": 1310720,
@@ -3781,8 +3781,8 @@
       "created": 1777260255,
       "description": "Qwen3.6-35B-A3B is an open-weight multimodal model from Alibaba Cloud with 35 billion total parameters and 3 billion active parameters per token. It uses a hybrid sparse mixture-of-experts architecture combining Gated...",
       "pricing": {
-        "prompt": "0.0000001",
-        "completion": "0.0000009",
+        "prompt": "0.00000015",
+        "completion": "0.000001",
         "input_cache_read": "0.00000005"
       },
       "context_length": 262144,
@@ -3961,9 +3961,9 @@
       "created": 1777000679,
       "description": "DeepSeek V4 Pro is a large-scale Mixture-of-Experts model from DeepSeek with 1.6T total parameters and 49B activated parameters, supporting a 1M-token context window. It is designed for advanced reasoning, coding,...",
       "pricing": {
-        "prompt": "0.000000422298",
-        "completion": "0.000000844596",
-        "input_cache_read": "0.0000000351915"
+        "prompt": "0.00000095526",
+        "completion": "0.00000191052",
+        "input_cache_read": "0.000000079605"
       },
       "context_length": 1048576,
       "architecture": {
@@ -3981,9 +3981,9 @@
       "created": 1777000666,
       "description": "DeepSeek V4 Flash is an efficiency-optimized Mixture-of-Experts model from DeepSeek with 284B total parameters and 13B activated parameters, supporting a 1M-token context window. It is designed for fast inference and...",
       "pricing": {
-        "prompt": "0.0000000364",
-        "completion": "0.0000000728",
-        "input_cache_read": "0.00000000728"
+        "prompt": "0.000000088606",
+        "completion": "0.000000177212",
+        "input_cache_read": "0.0000000177212"
       },
       "context_length": 1048576,
       "architecture": {
@@ -8426,8 +8426,8 @@
       "created": 1743881822,
       "description": "Llama 4 Maverick 17B Instruct (128E) is a high-capacity multimodal language model from Meta, built on a mixture-of-experts (MoE) architecture with 128 experts and 17 billion active parameters per forward...",
       "pricing": {
-        "prompt": "0.0000001875",
-        "completion": "0.0000006525"
+        "prompt": "0.0000002",
+        "completion": "0.0000008"
       },
       "context_length": 1048576,
       "architecture": {
@@ -9427,8 +9427,8 @@
       "created": 1721692800,
       "description": "Meta's latest class of model (Llama 3.1) launched with a variety of sizes & flavors. This 70B instruct-tuned version is optimized for high quality dialogue usecases. It has demonstrated strong...",
       "pricing": {
-        "prompt": "0.0000004",
-        "completion": "0.0000004"
+        "prompt": "0.00000072",
+        "completion": "0.00000072"
       },
       "context_length": 131072,
       "architecture": {
@@ -9437,7 +9437,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 16384
+        "max_completion_tokens": 8192
       }
     },
     {
