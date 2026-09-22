@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-21T09:00:15Z",
+  "fetched_at": "2026-09-22T09:00:18Z",
   "total": 50,
   "models": [
     {
@@ -464,6 +464,17 @@
       "outputTokenLimit": 65536
     },
     {
+      "name": "models/antigravity-preview-latest",
+      "description": "Latest preview release of Antigravity Agent",
+      "displayName": "Antigravity Agent Preview Latest",
+      "supportedMethods": [
+        "generateContent",
+        "countTokens"
+      ],
+      "inputTokenLimit": 1048576,
+      "outputTokenLimit": 65536
+    },
+    {
       "name": "models/deep-research-max-preview-04-2026",
       "description": "Preview release (April 21st, 2026) of Deep Research Max",
       "displayName": "Deep Research Max Preview (Apr-21-2026)",
@@ -584,17 +595,6 @@
       ],
       "inputTokenLimit": 131072,
       "outputTokenLimit": 65536
-    },
-    {
-      "name": "models/gemini-2.5-flash-native-audio-latest",
-      "description": "Latest release of Gemini 2.5 Flash Native Audio",
-      "displayName": "Gemini 2.5 Flash Native Audio Latest",
-      "supportedMethods": [
-        "countTokens",
-        "bidiGenerateContent"
-      ],
-      "inputTokenLimit": 131072,
-      "outputTokenLimit": 8192
     }
   ]
 }
