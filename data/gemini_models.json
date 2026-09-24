@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-23T09:01:03Z",
+  "fetched_at": "2026-09-24T09:00:08Z",
   "total": 50,
   "models": [
     {
@@ -418,6 +418,30 @@
       "outputTokenLimit": 16384
     },
     {
+      "name": "models/gemini-3.8-flash-tts",
+      "description": "Gemini 3.8 Flash TTS",
+      "displayName": "Gemini 3.8 Flash TTS",
+      "supportedMethods": [
+        "generateContent",
+        "countTokens",
+        "batchGenerateContent"
+      ],
+      "inputTokenLimit": 8192,
+      "outputTokenLimit": 16384
+    },
+    {
+      "name": "models/gemini-3.8-flash-lite-tts",
+      "description": "Gemini 3.8 Flash Lite TTS",
+      "displayName": "Gemini 3.8 Flash Lite TTS",
+      "supportedMethods": [
+        "generateContent",
+        "countTokens",
+        "batchGenerateContent"
+      ],
+      "inputTokenLimit": 8192,
+      "outputTokenLimit": 16384
+    },
+    {
       "name": "models/gemini-robotics-er-2-preview",
       "description": "Gemini Robotics-ER 2 Preview",
       "displayName": "Gemini Robotics-ER 2 Preview",
@@ -575,26 +599,6 @@
       ],
       "inputTokenLimit": 480,
       "outputTokenLimit": 8192
-    },
-    {
-      "name": "models/veo-3.1-lite-generate-preview",
-      "description": "Veo 3.1 lite",
-      "displayName": "Veo 3.1 lite",
-      "supportedMethods": [
-        "predictLongRunning"
-      ],
-      "inputTokenLimit": 480,
-      "outputTokenLimit": 8192
-    },
-    {
-      "name": "models/gemini-3.5-transcribe-live",
-      "description": "Gemini 3.5 Transcribe Live",
-      "displayName": "Gemini 3.5 Transcribe Live",
-      "supportedMethods": [
-        "bidiGenerateContent"
-      ],
-      "inputTokenLimit": 131072,
-      "outputTokenLimit": 65536
     }
   ]
 }
