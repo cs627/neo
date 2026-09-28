@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-27T09:01:03Z",
+  "fetched_at": "2026-09-28T09:00:57Z",
   "total": 458,
   "models": [
     {
@@ -667,9 +667,9 @@
       "created": 1789399174,
       "description": "This model always redirects to the latest model in the DeepSeek Pro family.",
       "pricing": {
-        "prompt": "0.0000002442",
-        "completion": "0.0000007326",
-        "input_cache_read": "0.00000000777"
+        "prompt": "0.000000128",
+        "completion": "0.0000019584",
+        "input_cache_read": "0.00000008832"
       },
       "context_length": 1048576,
       "architecture": {
@@ -678,7 +678,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 393216
+        "max_completion_tokens": 943718
       }
     },
     {
@@ -687,9 +687,9 @@
       "created": 1789399150,
       "description": "This model always redirects to the latest model in the DeepSeek Flash family.",
       "pricing": {
-        "prompt": "0.000000035",
-        "completion": "0.00000029",
-        "input_cache_read": "0.000000001"
+        "prompt": "0.0000000245",
+        "completion": "0.0000006",
+        "input_cache_read": "0.000000024"
       },
       "context_length": 1048576,
       "architecture": {
@@ -698,7 +698,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 384000
+        "max_completion_tokens": 943718
       }
     },
     {
@@ -941,9 +941,9 @@
       "created": 1789021285,
       "description": "DeepSeek V4.1 Flash is a sparse mixture-of-experts model from DeepSeek, and the first built on the company's Causal Encoder-Decoder (CED) architecture. It activates 8B parameters on input and 16B on...",
       "pricing": {
-        "prompt": "0.000000035",
-        "completion": "0.00000029",
-        "input_cache_read": "0.000000001"
+        "prompt": "0.0000000245",
+        "completion": "0.0000006",
+        "input_cache_read": "0.000000024"
       },
       "context_length": 1048576,
       "architecture": {
@@ -952,7 +952,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 384000
+        "max_completion_tokens": 943718
       }
     },
     {
@@ -1172,7 +1172,7 @@
       },
       "context_length": 1048576,
       "architecture": {
-        "modality": "text+image+file+audio+video->text",
+        "modality": "text+image+file+video->text",
         "tokenizer": "Other"
       },
       "top_provider": {
@@ -1193,7 +1193,7 @@
       },
       "context_length": 1048576,
       "architecture": {
-        "modality": "text+image+file+audio+video->text",
+        "modality": "text+image+file+video->text",
         "tokenizer": "Other"
       },
       "top_provider": {
@@ -1425,9 +1425,9 @@
       "created": 1787752741,
       "description": "GLM-5.3-Flash is a native multimodal model from Z.ai. It is suited for efficient coding and long-horizon agent tasks. Its hybrid sparse and linear attention architecture maintains accurate long-context behavior while...",
       "pricing": {
-        "prompt": "0.000000045",
-        "completion": "0.00000014",
-        "input_cache_read": "0.00000001"
+        "prompt": "0.00000015",
+        "completion": "0.0000005",
+        "input_cache_read": "0.00000003"
       },
       "context_length": 1310720,
       "architecture": {
@@ -1436,7 +1436,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 128000
+        "max_completion_tokens": 943717
       }
     },
     {
@@ -1472,7 +1472,7 @@
       },
       "context_length": 1048576,
       "architecture": {
-        "modality": "text+image+file+audio+video->text",
+        "modality": "text+image+file+video->text",
         "tokenizer": "Other"
       },
       "top_provider": {
@@ -1486,9 +1486,9 @@
       "created": 1787311563,
       "description": "DeepSeek V4 Flash Vision Exp is an experimental vision-enabled version of [DeepSeek V4 Flash 0731](https://openrouter.ai/deepseek/deepseek-v4-flash-0731) from DeepSeek, adding image understanding while matching the base model on text capabilities including agents,...",
       "pricing": {
-        "prompt": "0.0000002156",
-        "completion": "0.0000006468",
-        "input_cache_read": "0.00000000686"
+        "prompt": "0.00000044",
+        "completion": "0.00000132",
+        "input_cache_read": "0.000000014"
       },
       "context_length": 1048576,
       "architecture": {
@@ -1497,7 +1497,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 262144
+        "max_completion_tokens": 943717
       }
     },
     {
@@ -1545,8 +1545,8 @@
       "description": "This model always redirects to the latest GLM model from Z.ai.",
       "pricing": {
         "prompt": "0.0000001785",
-        "completion": "0.0000006732",
-        "input_cache_read": "0.0000000367"
+        "completion": "0.000002805",
+        "input_cache_read": "0.000000146625"
       },
       "context_length": 1310720,
       "architecture": {
@@ -1583,9 +1583,9 @@
       "created": 1787086655,
       "description": "GLM-5.3 is a large-scale reasoning model from Z.ai, built for complex software engineering and long-horizon agent tasks. It supports text input and output with a 1M-token context window, and improves...",
       "pricing": {
-        "prompt": "0.0000014",
-        "completion": "0.0000044",
-        "input_cache_read": "0.00000026"
+        "prompt": "0.0000001785",
+        "completion": "0.000002805",
+        "input_cache_read": "0.000000146625"
       },
       "context_length": 1310720,
       "architecture": {
@@ -1594,7 +1594,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 943717
+        "max_completion_tokens": 943718
       }
     },
     {
@@ -1798,9 +1798,9 @@
       "created": 1786549364,
       "description": "DeepSeek V4 Pro 0813 is a large-scale mixture-of-experts model from DeepSeek. This is the GA release of DeepSeek V4 Pro.",
       "pricing": {
-        "prompt": "0.00000024502",
-        "completion": "0.0000035",
-        "input_cache_read": "0.00000024452"
+        "prompt": "0.0000003995",
+        "completion": "0.0000042",
+        "input_cache_read": "0.000000399"
       },
       "context_length": 1048576,
       "architecture": {
@@ -1964,7 +1964,7 @@
       "id": "meta/muse-spark-1.2",
       "name": "Meta: Muse Spark 1.2",
       "created": 1785959287,
-      "description": "Muse Spark 1.2 is a reasoning model from Meta, designed for complex agentic tasks. It accepts text, images, video, audio, and PDF documents, returns text, and offers a 1M-token context...",
+      "description": "Muse Spark 1.2 is a reasoning model from Meta, designed for complex agentic tasks. It accepts text, images, video, and PDF documents, returns text, and offers a 1M-token context window....",
       "pricing": {
         "prompt": "0.00000125",
         "completion": "0.00000425",
@@ -1973,7 +1973,7 @@
       },
       "context_length": 1048576,
       "architecture": {
-        "modality": "text+image+file+audio+video->text",
+        "modality": "text+image+file+video->text",
         "tokenizer": "Other"
       },
       "top_provider": {
@@ -2427,7 +2427,7 @@
       "id": "meta/muse-spark-1.1",
       "name": "Meta: Muse Spark 1.1",
       "created": 1784215741,
-      "description": "Muse Spark 1.1 is a multimodal reasoning model from Meta, built for agentic tasks. It accepts text, images, video, audio, and PDF documents and returns text, with a 1M-token context...",
+      "description": "Muse Spark 1.1 is a multimodal reasoning model from Meta, built for agentic tasks. It accepts text, images, video, and PDF documents and returns text, with a 1M-token context window....",
       "pricing": {
         "prompt": "0.00000125",
         "completion": "0.00000425",
@@ -2436,7 +2436,7 @@
       },
       "context_length": 1048576,
       "architecture": {
-        "modality": "text+image+file+audio+video->text",
+        "modality": "text+image+file+video->text",
         "tokenizer": "Other"
       },
       "top_provider": {
@@ -4182,9 +4182,9 @@
       "created": 1777000679,
       "description": "DeepSeek V4 Pro is a large-scale Mixture-of-Experts model from DeepSeek with 1.6T total parameters and 49B activated parameters, supporting a 1M-token context window. It is designed for advanced reasoning, coding,...",
       "pricing": {
-        "prompt": "0.000000348",
-        "completion": "0.000000696",
-        "input_cache_read": "0.000000029"
+        "prompt": "0.00000095526",
+        "completion": "0.00000191052",
+        "input_cache_read": "0.000000079605"
       },
       "context_length": 1048576,
       "architecture": {
@@ -4202,9 +4202,9 @@
       "created": 1777000666,
       "description": "DeepSeek V4 Flash is an efficiency-optimized Mixture-of-Experts model from DeepSeek with 284B total parameters and 13B activated parameters, supporting a 1M-token context window. It is designed for fast inference and...",
       "pricing": {
-        "prompt": "0.0000000469",
-        "completion": "0.0000000938",
-        "input_cache_read": "0.00000000938"
+        "prompt": "0.00000014",
+        "completion": "0.00000028",
+        "input_cache_read": "0.000000028"
       },
       "context_length": 1048576,
       "architecture": {
@@ -4346,9 +4346,9 @@
       "created": 1776699402,
       "description": "Kimi K2.6 is Moonshot AI's next-generation multimodal model, designed for long-horizon coding, coding-driven UI/UX generation, and multi-agent orchestration. It handles complex end-to-end coding tasks across Python, Rust, and Go, and...",
       "pricing": {
-        "prompt": "0.00000095",
-        "completion": "0.000004",
-        "input_cache_read": "0.00000016"
+        "prompt": "0.00000065",
+        "completion": "0.00000341",
+        "input_cache_read": "0.00000015"
       },
       "context_length": 262144,
       "architecture": {
@@ -4412,9 +4412,9 @@
       "created": 1775578025,
       "description": "GLM-5.1 delivers a major leap in coding capability, with particularly significant gains in handling long-horizon tasks. Unlike previous models built around minute-level interactions, GLM-5.1 can work independently and continuously on...",
       "pricing": {
-        "prompt": "0.0000009646",
-        "completion": "0.0000030316",
-        "input_cache_read": "0.00000017914"
+        "prompt": "0.0000014",
+        "completion": "0.0000044",
+        "input_cache_read": "0.00000026"
       },
       "context_length": 204800,
       "architecture": {
@@ -4432,9 +4432,9 @@
       "created": 1775227989,
       "description": "Gemma 4 26B A4B IT is an instruction-tuned Mixture-of-Experts (MoE) model from Google DeepMind. Despite 25.2B total parameters, only 3.8B activate per token during inference \u2014 delivering near-31B quality at...",
       "pricing": {
-        "prompt": "0.0000000675",
-        "completion": "0.000000225",
-        "input_cache_read": "0.0000000375"
+        "prompt": "0.00000009",
+        "completion": "0.0000003",
+        "input_cache_read": "0.00000005"
       },
       "context_length": 262144,
       "architecture": {
@@ -4693,9 +4693,9 @@
       "created": 1773836697,
       "description": "MiniMax-M2.7 is a next-generation large language model designed for autonomous, real-world productivity and continuous improvement. Built to actively participate in its own evolution, M2.7 integrates advanced agentic capabilities through multi-agent...",
       "pricing": {
-        "prompt": "0.00000021",
-        "completion": "0.00000084",
-        "input_cache_read": "0.000000042"
+        "prompt": "0.0000003",
+        "completion": "0.0000012",
+        "input_cache_read": "0.00000006"
       },
       "context_length": 204800,
       "architecture": {
@@ -4704,7 +4704,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 176947
+        "max_completion_tokens": 131072
       }
     },
     {
@@ -5145,9 +5145,8 @@
       "created": 1772053822,
       "description": "The Qwen3.5 Series 35B-A3B is a native vision-language model designed with a hybrid architecture that integrates linear attention mechanisms and a sparse mixture-of-experts model, achieving higher inference efficiency. Its overall...",
       "pricing": {
-        "prompt": "0.0000003125",
-        "completion": "0.00000125",
-        "input_cache_read": "0.00000015625"
+        "prompt": "0.0000001625",
+        "completion": "0.0000013"
       },
       "context_length": 262144,
       "architecture": {
@@ -5156,7 +5155,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 16384
+        "max_completion_tokens": 65536
       }
     },
     {
@@ -6296,9 +6295,9 @@
       "created": 1764594642,
       "description": "DeepSeek-V3.2 is a large language model designed to harmonize high computational efficiency with strong reasoning and agentic tool-use performance. It introduces DeepSeek Sparse Attention (DSA), a fine-grained sparse attention mechanism...",
       "pricing": {
-        "prompt": "0.000000269",
-        "completion": "0.0000004",
-        "input_cache_read": "0.0000001345"
+        "prompt": "0.00000028",
+        "completion": "0.00000042",
+        "input_cache_read": "0.000000028"
       },
       "context_length": 163840,
       "architecture": {
@@ -6574,8 +6573,8 @@
       "created": 1761252093,
       "description": "MiniMax-M2 is a compact, high-efficiency large language model optimized for end-to-end coding and agentic workflows. With 10 billion activated parameters (230 billion total), it delivers near-frontier intelligence across general reasoning,...",
       "pricing": {
-        "prompt": "0.000000255",
-        "completion": "0.00000102"
+        "prompt": "0.0000003",
+        "completion": "0.0000012"
       },
       "context_length": 204800,
       "architecture": {
@@ -6584,7 +6583,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 131072
+        "max_completion_tokens": 176947
       }
     },
     {
@@ -8663,8 +8662,9 @@
       "created": 1742824755,
       "description": "DeepSeek V3, a 685B-parameter, mixture-of-experts model, is the latest iteration of the flagship chat model family from the DeepSeek team. It succeeds the [DeepSeek V3](/deepseek/deepseek-chat-v3) model and performs really well...",
       "pricing": {
-        "prompt": "0.00000025",
-        "completion": "0.000001"
+        "prompt": "0.00000029",
+        "completion": "0.00000114",
+        "input_cache_read": "0.00000011"
       },
       "context_length": 163840,
       "architecture": {
@@ -9165,8 +9165,8 @@
       "created": 1735241320,
       "description": "DeepSeek-V3 is the latest model from the DeepSeek team, building upon the instruction following and coding abilities of the previous versions. Pre-trained on nearly 15 trillion tokens, the reported evaluations...",
       "pricing": {
-        "prompt": "0.00000032",
-        "completion": "0.00000089"
+        "prompt": "0.0000002574",
+        "completion": "0.0000010287"
       },
       "context_length": 163840,
       "architecture": {
@@ -9175,7 +9175,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 16384
+        "max_completion_tokens": 16000
       }
     },
     {
