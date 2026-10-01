@@ -1,6 +1,6 @@
 {
-  "fetched_at": "2026-09-30T09:00:36Z",
-  "total": 464,
+  "fetched_at": "2026-10-01T09:00:46Z",
+  "total": 462,
   "models": [
     {
       "id": "openai/gpt-6.1-sol-pro",
@@ -34,37 +34,6 @@
       }
     },
     {
-      "id": "openai/gpt-6.1-sol-pro:batch",
-      "name": "OpenAI: GPT-6.1 Sol Pro (batch)",
-      "created": 1790702886,
-      "description": "GPT-6.1 Sol Pro is the same underlying model as [GPT-6.1 Sol](https://openrouter.ai/openai/gpt-6.1-sol), served with `reasoning.mode` set to `pro` for higher-quality responses on complex tasks. **Cost note:** pro mode spends far more...",
-      "pricing": {
-        "prompt": "0.000001",
-        "completion": "0.000005",
-        "web_search": "0.01",
-        "input_cache_read": "0.00000005",
-        "input_cache_write": "0.00000125",
-        "overrides": [
-          {
-            "min_prompt_tokens": 272000,
-            "prompt": "0.000002",
-            "completion": "0.0000075",
-            "input_cache_read": "0.0000001",
-            "input_cache_write": "0.0000025"
-          }
-        ]
-      },
-      "context_length": 1050000,
-      "architecture": {
-        "modality": "text+image+file->text",
-        "tokenizer": "GPT"
-      },
-      "top_provider": {
-        "name": "",
-        "max_completion_tokens": 128000
-      }
-    },
-    {
       "id": "openai/gpt-6.1-sol",
       "name": "OpenAI: GPT-6.1 Sol",
       "created": 1790702882,
@@ -82,37 +51,6 @@
             "completion": "0.000015",
             "input_cache_read": "0.0000002",
             "input_cache_write": "0.000005"
-          }
-        ]
-      },
-      "context_length": 1050000,
-      "architecture": {
-        "modality": "text+image+file->text",
-        "tokenizer": "GPT"
-      },
-      "top_provider": {
-        "name": "",
-        "max_completion_tokens": 128000
-      }
-    },
-    {
-      "id": "openai/gpt-6.1-sol:batch",
-      "name": "OpenAI: GPT-6.1 Sol (batch)",
-      "created": 1790702882,
-      "description": "GPT-6.1 Sol is an upgrade to GPT-6 Sol from OpenAI, positioned below the flagship GPT-6 Astra in the GPT-6 series. It is suited for agentic coding, computer use, document-heavy professional...",
-      "pricing": {
-        "prompt": "0.000001",
-        "completion": "0.000005",
-        "web_search": "0.01",
-        "input_cache_read": "0.00000005",
-        "input_cache_write": "0.00000125",
-        "overrides": [
-          {
-            "min_prompt_tokens": 272000,
-            "prompt": "0.000002",
-            "completion": "0.0000075",
-            "input_cache_read": "0.0000001",
-            "input_cache_write": "0.0000025"
           }
         ]
       },
@@ -838,9 +776,9 @@
       "created": 1789399174,
       "description": "This model always redirects to the latest model in the DeepSeek Pro family.",
       "pricing": {
-        "prompt": "0.000000134",
-        "completion": "0.0000035",
-        "input_cache_read": "0.000000134"
+        "prompt": "0.0000002376",
+        "completion": "0.0000007128",
+        "input_cache_read": "0.00000000756"
       },
       "context_length": 1048576,
       "architecture": {
@@ -858,9 +796,9 @@
       "created": 1789399150,
       "description": "This model always redirects to the latest model in the DeepSeek Flash family.",
       "pricing": {
-        "prompt": "0.0000000198",
-        "completion": "0.000000396",
-        "input_cache_read": "0.00000000291"
+        "prompt": "0.000000027",
+        "completion": "0.0000006",
+        "input_cache_read": "0.000000027"
       },
       "context_length": 1048576,
       "architecture": {
@@ -1112,9 +1050,9 @@
       "created": 1789021285,
       "description": "DeepSeek V4.1 Flash is a sparse mixture-of-experts model from DeepSeek, and the first built on the company's Causal Encoder-Decoder (CED) architecture. It activates 8B parameters on input and 16B on...",
       "pricing": {
-        "prompt": "0.0000000198",
-        "completion": "0.000000396",
-        "input_cache_read": "0.00000000291"
+        "prompt": "0.000000027",
+        "completion": "0.0000006",
+        "input_cache_read": "0.000000027"
       },
       "context_length": 1048576,
       "architecture": {
@@ -1538,7 +1476,23 @@
       "pricing": {
         "prompt": "0.000000834",
         "completion": "0.000002501",
-        "input_cache_read": "0.000000042"
+        "input_cache_read": "0.000000042",
+        "overrides": [
+          {
+            "utc_start": 0,
+            "utc_end": 1600,
+            "prompt": "0.000000834",
+            "completion": "0.000002501",
+            "input_cache_read": "0.000000042"
+          },
+          {
+            "utc_start": 1600,
+            "utc_end": 0,
+            "prompt": "0.0000007506",
+            "completion": "0.0000022509",
+            "input_cache_read": "0.0000000378"
+          }
+        ]
       },
       "context_length": 1048576,
       "architecture": {
@@ -1577,7 +1531,7 @@
       "description": "This model always redirects to the latest model in the GLM Flash family.",
       "pricing": {
         "prompt": "0.00000002",
-        "completion": "0.0000002475",
+        "completion": "0.0000003",
         "input_cache_read": "0.00000001"
       },
       "context_length": 1048576,
@@ -1736,9 +1690,9 @@
       "created": 1787151053,
       "description": "This model always redirects to the latest GLM model from Z.ai.",
       "pricing": {
-        "prompt": "0.00000013",
+        "prompt": "0.0000001566",
         "completion": "0.000004",
-        "input_cache_read": "0.00000013"
+        "input_cache_read": "0.0000001566"
       },
       "context_length": 1048576,
       "architecture": {
@@ -1775,9 +1729,9 @@
       "created": 1787086655,
       "description": "GLM-5.3 is a large-scale reasoning model from Z.ai, built for complex software engineering and long-horizon agent tasks. It supports text input and output with a 1M-token context window, and improves...",
       "pricing": {
-        "prompt": "0.0000014",
+        "prompt": "0.0000002219",
         "completion": "0.0000044",
-        "input_cache_read": "0.00000026"
+        "input_cache_read": "0.0000001775"
       },
       "context_length": 1048576,
       "architecture": {
@@ -1786,7 +1740,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 943717
+        "max_completion_tokens": 943718
       }
     },
     {
@@ -2139,9 +2093,9 @@
       "created": 1786452751,
       "description": "NVIDIA Nemotron 3.5 Lightning is an open mixture-of-experts model from NVIDIA, with 3B active parameters out of 30B total. It is suited for high-throughput agentic workloads and specialized tasks that...",
       "pricing": {
-        "prompt": "0.00000006",
-        "completion": "0.00000016",
-        "input_cache_read": "0.00000003"
+        "prompt": "0.0000000595",
+        "completion": "0.00000017",
+        "input_cache_read": "0.00000002975"
       },
       "context_length": 262144,
       "architecture": {
@@ -2150,7 +2104,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 32768
+        "max_completion_tokens": 131072
       }
     },
     {
@@ -2260,9 +2214,9 @@
       "created": 1785606009,
       "description": "This model always redirects to the latest model in the DeepSeek V4 Flash family.",
       "pricing": {
-        "prompt": "0.0000000099",
-        "completion": "0.00000013068",
-        "input_cache_read": "0.000000001386"
+        "prompt": "0.0000000108",
+        "completion": "0.00000128",
+        "input_cache_read": "0.0000000108"
       },
       "context_length": 1048576,
       "architecture": {
@@ -2280,9 +2234,9 @@
       "created": 1785478908,
       "description": "DeepSeek V4 Flash 0731 is a sparse mixture-of-experts model from DeepSeek, with 13B active parameters out of 284B total. This re-post-trained revision is suited for coding, reasoning, and agent workflows....",
       "pricing": {
-        "prompt": "0.00000001",
+        "prompt": "0.0000000108",
         "completion": "0.00000128",
-        "input_cache_read": "0.00000001"
+        "input_cache_read": "0.0000000108"
       },
       "context_length": 1048576,
       "architecture": {
@@ -2662,9 +2616,9 @@
       "created": 1784215858,
       "description": "Kimi K3 is a 2.8T parameter open-weight multimodal reasoning model from Moonshot AI. It is suited for complex coding, knowledge work, and long-horizon agentic workflows, and is particularly strong at...",
       "pricing": {
-        "prompt": "0.000003",
-        "completion": "0.000015",
-        "input_cache_read": "0.0000003"
+        "prompt": "0.000000677",
+        "completion": "0.00001",
+        "input_cache_read": "0.000000677"
       },
       "context_length": 1048576,
       "architecture": {
@@ -3443,8 +3397,8 @@
       "created": 1781631930,
       "description": "GLM 5.2 is a large-scale reasoning model from Z.ai. It supports text input and output with a 1M-token context window, and is suited for long-horizon agent workflows, project-level software engineering,...",
       "pricing": {
-        "prompt": "0.00000041",
-        "completion": "0.00000399",
+        "prompt": "0.0000014",
+        "completion": "0.0000044",
         "input_cache_read": "0.00000026"
       },
       "context_length": 1048576,
@@ -4151,9 +4105,9 @@
       "created": 1777318428,
       "description": "This model always redirects to the latest model in the Kimi family.",
       "pricing": {
-        "prompt": "0.0000003654",
-        "completion": "0.0000091343",
-        "input_cache_read": "0.0000004"
+        "prompt": "0.000000677",
+        "completion": "0.00001",
+        "input_cache_read": "0.000000677"
       },
       "context_length": 1048576,
       "architecture": {
@@ -4455,9 +4409,9 @@
       "created": 1777000679,
       "description": "DeepSeek V4 Pro is a large-scale Mixture-of-Experts model from DeepSeek with 1.6T total parameters and 49B activated parameters, supporting a 1M-token context window. It is designed for advanced reasoning, coding,...",
       "pricing": {
-        "prompt": "0.00000095526",
-        "completion": "0.00000191052",
-        "input_cache_read": "0.000000079605"
+        "prompt": "0.0000002088",
+        "completion": "0.0000004176",
+        "input_cache_read": "0.0000000174"
       },
       "context_length": 1048576,
       "architecture": {
@@ -4475,9 +4429,9 @@
       "created": 1777000666,
       "description": "DeepSeek V4 Flash is an efficiency-optimized Mixture-of-Experts model from DeepSeek with 284B total parameters and 13B activated parameters, supporting a 1M-token context window. It is designed for fast inference and...",
       "pricing": {
-        "prompt": "0.00000014",
-        "completion": "0.00000028",
-        "input_cache_read": "0.000000028"
+        "prompt": "0.000000042",
+        "completion": "0.000000084",
+        "input_cache_read": "0.0000000084"
       },
       "context_length": 1048576,
       "architecture": {
@@ -4486,7 +4440,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 131072
+        "max_completion_tokens": 384000
       }
     },
     {
@@ -4685,9 +4639,9 @@
       "created": 1775578025,
       "description": "GLM-5.1 delivers a major leap in coding capability, with particularly significant gains in handling long-horizon tasks. Unlike previous models built around minute-level interactions, GLM-5.1 can work independently and continuously on...",
       "pricing": {
-        "prompt": "0.0000014",
-        "completion": "0.0000044",
-        "input_cache_read": "0.00000026"
+        "prompt": "0.0000009646",
+        "completion": "0.0000030316",
+        "input_cache_read": "0.00000017914"
       },
       "context_length": 204800,
       "architecture": {
@@ -6746,8 +6700,7 @@
       "description": "Kimi K2 Thinking is Moonshot AI\u2019s most advanced open reasoning model to date, extending the K2 series into agentic, long-horizon reasoning. Built on the trillion-parameter Mixture-of-Experts (MoE) architecture introduced in...",
       "pricing": {
         "prompt": "0.0000006",
-        "completion": "0.0000025",
-        "input_cache_read": "0.00000015"
+        "completion": "0.0000025"
       },
       "context_length": 262144,
       "architecture": {
@@ -6756,7 +6709,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 98304
+        "max_completion_tokens": 235929
       }
     },
     {
@@ -8282,7 +8235,7 @@
       "created": 1750200414,
       "description": "MiniMax-M1 is a large-scale, open-weight reasoning model designed for extended context and high-efficiency inference. It leverages a hybrid Mixture-of-Experts (MoE) architecture paired with a custom \"lightning attention\" mechanism, allowing it...",
       "pricing": {
-        "prompt": "0.0000004",
+        "prompt": "0.00000055",
         "completion": "0.0000022"
       },
       "context_length": 1000000,
@@ -8571,8 +8524,8 @@
       "created": 1745878604,
       "description": "Qwen3, the latest generation in the Qwen large language model series, features both dense and mixture-of-experts (MoE) architectures to excel in reasoning, multilingual support, and advanced agent tasks. Its unique...",
       "pricing": {
-        "prompt": "0.00000013",
-        "completion": "0.00000052"
+        "prompt": "0.00000012",
+        "completion": "0.0000005"
       },
       "context_length": 131072,
       "architecture": {
@@ -8581,7 +8534,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 8192
+        "max_completion_tokens": 16384
       }
     },
     {
