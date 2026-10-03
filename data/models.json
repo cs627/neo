@@ -1,7 +1,26 @@
 {
-  "fetched_at": "2026-10-02T09:00:30Z",
-  "total": 464,
+  "fetched_at": "2026-10-03T09:00:56Z",
+  "total": 466,
   "models": [
+    {
+      "id": "inclusionai/ling-3.1-flash",
+      "name": "inclusionAI: Ling 3.1 Flash",
+      "created": 1790950024,
+      "description": "Ling 3.1 Flash is a hybrid reasoning mixture-of-experts model from inclusionAI, with 25B active parameters out of 560B total.",
+      "pricing": {
+        "prompt": "0",
+        "completion": "0"
+      },
+      "context_length": 262144,
+      "architecture": {
+        "modality": "text->text",
+        "tokenizer": "Other"
+      },
+      "top_provider": {
+        "name": "",
+        "max_completion_tokens": 32768
+      }
+    },
     {
       "id": "apodex/apodex-1.1-mini:free",
       "name": "Apodex: Apodex 1.1 Mini (free)",
@@ -641,6 +660,25 @@
       }
     },
     {
+      "id": "nvidia/switchyard",
+      "name": "NVIDIA: Switchyard",
+      "created": 1790025947,
+      "description": "Switchyard is an open-source model router that switches between multiple models to optimize the cost of requests. By default it will use OpenRouter market data to select the most popular...",
+      "pricing": {
+        "prompt": "-1",
+        "completion": "-1"
+      },
+      "context_length": 1000000,
+      "architecture": {
+        "modality": "text->text",
+        "tokenizer": "Router"
+      },
+      "top_provider": {
+        "name": "",
+        "max_completion_tokens": null
+      }
+    },
+    {
       "id": "xiaomi/mimo-v2.6-pro-ultraspeed",
       "name": "Xiaomi: MiMo-V2.6-Pro-UltraSpeed",
       "created": 1790021267,
@@ -815,9 +853,9 @@
       "created": 1789399174,
       "description": "This model always redirects to the latest model in the DeepSeek Pro family.",
       "pricing": {
-        "prompt": "0.000000132",
-        "completion": "0.000000396",
-        "input_cache_read": "0.0000000042"
+        "prompt": "0.00000012",
+        "completion": "0.0000042",
+        "input_cache_read": "0.0000001"
       },
       "context_length": 1048576,
       "architecture": {
@@ -826,7 +864,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 393216
+        "max_completion_tokens": 943718
       }
     },
     {
@@ -835,9 +873,9 @@
       "created": 1789399150,
       "description": "This model always redirects to the latest model in the DeepSeek Flash family.",
       "pricing": {
-        "prompt": "0.000000015",
-        "completion": "0.0000012",
-        "input_cache_read": "0.000000002115"
+        "prompt": "0.00000002",
+        "completion": "0.0000006",
+        "input_cache_read": "0.000000005"
       },
       "context_length": 1048576,
       "architecture": {
@@ -1549,9 +1587,9 @@
       "created": 1787846290,
       "description": "Ling 3.0 Flash Fin is a finance-focused mixture-of-experts model from InclusionAI, built on Ling 3.0 Flash with 5.1B active parameters out of 124B total. It is designed for real-world investment...",
       "pricing": {
-        "prompt": "0.00000006",
-        "completion": "0.00000018",
-        "input_cache_read": "0.000000012"
+        "prompt": "0.000000042",
+        "completion": "0.0000001232",
+        "input_cache_read": "0.0000000084"
       },
       "context_length": 262144,
       "architecture": {
@@ -1560,7 +1598,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 235929
+        "max_completion_tokens": 32768
       }
     },
     {
@@ -1569,9 +1607,9 @@
       "created": 1787817633,
       "description": "This model always redirects to the latest model in the GLM Flash family.",
       "pricing": {
-        "prompt": "0.00000002625",
-        "completion": "0.0000009",
-        "input_cache_read": "0.00000001125"
+        "prompt": "0.000000035",
+        "completion": "0.0000005",
+        "input_cache_read": "0.000000035"
       },
       "context_length": 1048576,
       "architecture": {
@@ -1580,7 +1618,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 943718
+        "max_completion_tokens": 131072
       }
     },
     {
@@ -1731,7 +1769,7 @@
       "pricing": {
         "prompt": "0.00000012",
         "completion": "0.000004",
-        "input_cache_read": "0.00000006"
+        "input_cache_read": "0.00000008"
       },
       "context_length": 1048576,
       "architecture": {
@@ -1983,9 +2021,9 @@
       "created": 1786549364,
       "description": "DeepSeek V4 Pro 0813 is a large-scale mixture-of-experts model from DeepSeek. This is the GA release of DeepSeek V4 Pro.",
       "pricing": {
-        "prompt": "0.00000132",
-        "completion": "0.00000396",
-        "input_cache_read": "0.000000044",
+        "prompt": "0.00000066",
+        "completion": "0.00000198",
+        "input_cache_read": "0.000000022",
         "overrides": [
           {
             "utc_days": [
@@ -2132,9 +2170,9 @@
       "created": 1786452751,
       "description": "NVIDIA Nemotron 3.5 Lightning is an open mixture-of-experts model from NVIDIA, with 3B active parameters out of 30B total. It is suited for high-throughput agentic workloads and specialized tasks that...",
       "pricing": {
-        "prompt": "0.00000006",
-        "completion": "0.00000016",
-        "input_cache_read": "0.00000003"
+        "prompt": "0.0000000595",
+        "completion": "0.00000017",
+        "input_cache_read": "0.00000002975"
       },
       "context_length": 262144,
       "architecture": {
@@ -2143,7 +2181,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 32768
+        "max_completion_tokens": 131072
       }
     },
     {
@@ -2253,9 +2291,9 @@
       "created": 1785606009,
       "description": "This model always redirects to the latest model in the DeepSeek V4 Flash family.",
       "pricing": {
-        "prompt": "0.0000000051",
+        "prompt": "0.0000000171",
         "completion": "0.00000128",
-        "input_cache_read": "0.0000000051"
+        "input_cache_read": "0.0000000171"
       },
       "context_length": 1048576,
       "architecture": {
@@ -2273,9 +2311,9 @@
       "created": 1785478908,
       "description": "DeepSeek V4 Flash 0731 is a sparse mixture-of-experts model from DeepSeek, with 13B active parameters out of 284B total. This re-post-trained revision is suited for coding, reasoning, and agent workflows....",
       "pricing": {
-        "prompt": "0.0000000051",
+        "prompt": "0.0000000171",
         "completion": "0.00000128",
-        "input_cache_read": "0.0000000051"
+        "input_cache_read": "0.0000000171"
       },
       "context_length": 1048576,
       "architecture": {
@@ -4144,9 +4182,9 @@
       "created": 1777318428,
       "description": "This model always redirects to the latest model in the Kimi family.",
       "pricing": {
-        "prompt": "0.000000625",
-        "completion": "0.000013405",
-        "input_cache_read": "0.00000029"
+        "prompt": "0.00000098",
+        "completion": "0.000013",
+        "input_cache_read": "0.00000045"
       },
       "context_length": 1048576,
       "architecture": {
@@ -4468,9 +4506,9 @@
       "created": 1777000666,
       "description": "DeepSeek V4 Flash is an efficiency-optimized Mixture-of-Experts model from DeepSeek with 284B total parameters and 13B activated parameters, supporting a 1M-token context window. It is designed for fast inference and...",
       "pricing": {
-        "prompt": "0.000000042",
-        "completion": "0.000000084",
-        "input_cache_read": "0.0000000084"
+        "prompt": "0.000000028",
+        "completion": "0.000000056",
+        "input_cache_read": "0.0000000056"
       },
       "context_length": 1048576,
       "architecture": {
@@ -4612,9 +4650,9 @@
       "created": 1776699402,
       "description": "Kimi K2.6 is Moonshot AI's next-generation multimodal model, designed for long-horizon coding, coding-driven UI/UX generation, and multi-agent orchestration. It handles complex end-to-end coding tasks across Python, Rust, and Go, and...",
       "pricing": {
-        "prompt": "0.00000043415",
-        "completion": "0.000001828",
-        "input_cache_read": "0.00000007312"
+        "prompt": "0.00000095",
+        "completion": "0.000004",
+        "input_cache_read": "0.00000016"
       },
       "context_length": 262144,
       "architecture": {
@@ -4678,9 +4716,9 @@
       "created": 1775578025,
       "description": "GLM-5.1 delivers a major leap in coding capability, with particularly significant gains in handling long-horizon tasks. Unlike previous models built around minute-level interactions, GLM-5.1 can work independently and continuously on...",
       "pricing": {
-        "prompt": "0.0000009646",
-        "completion": "0.0000030316",
-        "input_cache_read": "0.00000017914"
+        "prompt": "0.0000014",
+        "completion": "0.0000044",
+        "input_cache_read": "0.00000026"
       },
       "context_length": 204800,
       "architecture": {
@@ -4698,9 +4736,9 @@
       "created": 1775227989,
       "description": "Gemma 4 26B A4B IT is an instruction-tuned Mixture-of-Experts (MoE) model from Google DeepMind. Despite 25.2B total parameters, only 3.8B activate per token during inference \u2014 delivering near-31B quality at...",
       "pricing": {
-        "prompt": "0.00000009",
-        "completion": "0.0000003",
-        "input_cache_read": "0.00000005"
+        "prompt": "0.0000000675",
+        "completion": "0.000000225",
+        "input_cache_read": "0.0000000375"
       },
       "context_length": 262144,
       "architecture": {
@@ -6740,8 +6778,7 @@
       "description": "Kimi K2 Thinking is Moonshot AI\u2019s most advanced open reasoning model to date, extending the K2 series into agentic, long-horizon reasoning. Built on the trillion-parameter Mixture-of-Experts (MoE) architecture introduced in...",
       "pricing": {
         "prompt": "0.0000006",
-        "completion": "0.0000025",
-        "input_cache_read": "0.00000015"
+        "completion": "0.0000025"
       },
       "context_length": 262144,
       "architecture": {
@@ -6750,7 +6787,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 98304
+        "max_completion_tokens": 235929
       }
     },
     {
@@ -7387,9 +7424,8 @@
       "created": 1758548275,
       "description": "DeepSeek-V3.1 Terminus is an update to [DeepSeek V3.1](/deepseek/deepseek-chat-v3.1) that maintains the model's original capabilities while addressing issues reported by users, including language consistency and agent capabilities, further optimizing the model's...",
       "pricing": {
-        "prompt": "0.0000003",
-        "completion": "0.000001",
-        "input_cache_read": "0.000000135"
+        "prompt": "0.00000027",
+        "completion": "0.000001"
       },
       "context_length": 163840,
       "architecture": {
@@ -7398,7 +7434,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 65536
+        "max_completion_tokens": 147456
       }
     },
     {
@@ -7454,7 +7490,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 235929
+        "max_completion_tokens": 32768
       }
     },
     {
@@ -7954,8 +7990,8 @@
       "created": 1753806965,
       "description": "Qwen3-30B-A3B-Instruct-2507 is a 30.5B-parameter mixture-of-experts language model from Qwen, with 3.3B active parameters per inference. It operates in non-thinking mode and is designed for high-quality instruction following, multilingual understanding, and...",
       "pricing": {
-        "prompt": "0.0000001",
-        "completion": "0.0000003"
+        "prompt": "0.00000004815",
+        "completion": "0.00000019305"
       },
       "context_length": 262144,
       "architecture": {
@@ -7964,7 +8000,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 235929
+        "max_completion_tokens": 32000
       }
     },
     {
