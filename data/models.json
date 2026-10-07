@@ -1,7 +1,48 @@
 {
-  "fetched_at": "2026-10-06T09:00:15Z",
-  "total": 464,
+  "fetched_at": "2026-10-07T09:00:04Z",
+  "total": 465,
   "models": [
+    {
+      "id": "google/gemini-nano-banana-2.1",
+      "name": "Google: Nano Banana 2.1",
+      "created": 1791300825,
+      "description": "Nano Banana 2.1 (Gemini Nano Banana 2.1) is Google's image generation and editing model on the Flash tier, succeeding Nano Banana 2 and Nano Banana Pro. It improves product recontextualization,...",
+      "pricing": {
+        "prompt": "0.0000015",
+        "completion": "0.0000075",
+        "image_output": "0.00003",
+        "web_search": "0.014"
+      },
+      "context_length": 65536,
+      "architecture": {
+        "modality": "text+image->text+image",
+        "tokenizer": "Gemini"
+      },
+      "top_provider": {
+        "name": "",
+        "max_completion_tokens": 58982
+      }
+    },
+    {
+      "id": "mistralai/mistral-large-4-0",
+      "name": "Mistral: Mistral Large 4",
+      "created": 1791294122,
+      "description": "Mistral Large 4 is a frontier multimodal (text and image input) model from Mistral AI built for reasoning, coding, and agentic workloads. It offers a 512K-token context window with up...",
+      "pricing": {
+        "prompt": "0.00000068",
+        "completion": "0.00000209",
+        "input_cache_read": "0.00000007"
+      },
+      "context_length": 524288,
+      "architecture": {
+        "modality": "text+image->text",
+        "tokenizer": "Mistral"
+      },
+      "top_provider": {
+        "name": "",
+        "max_completion_tokens": 262144
+      }
+    },
     {
       "id": "inclusionai/ling-3.1-flash",
       "name": "inclusionAI: Ling 3.1 Flash",
@@ -834,9 +875,9 @@
       "created": 1789399174,
       "description": "This model always redirects to the latest model in the DeepSeek Pro family.",
       "pricing": {
-        "prompt": "0.0000002694",
+        "prompt": "0.0000002999",
         "completion": "0.0000042",
-        "input_cache_read": "0.00000027"
+        "input_cache_read": "0.0000003"
       },
       "context_length": 1048576,
       "architecture": {
@@ -854,9 +895,9 @@
       "created": 1789399150,
       "description": "This model always redirects to the latest model in the DeepSeek Flash family.",
       "pricing": {
-        "prompt": "0.000000045",
+        "prompt": "0.00000005",
         "completion": "0.0000012",
-        "input_cache_read": "0.000000015"
+        "input_cache_read": "0.00000002"
       },
       "context_length": 1048576,
       "architecture": {
@@ -1108,9 +1149,9 @@
       "created": 1789021285,
       "description": "DeepSeek V4.1 Flash is a sparse mixture-of-experts model from DeepSeek, and the first built on the company's Causal Encoder-Decoder (CED) architecture. It activates 8B parameters on input and 16B on...",
       "pricing": {
-        "prompt": "0.0000000495",
-        "completion": "0.00000132",
-        "input_cache_read": "0.0000000165"
+        "prompt": "0.00000005",
+        "completion": "0.0000012",
+        "input_cache_read": "0.00000002"
       },
       "context_length": 1048576,
       "architecture": {
@@ -1588,9 +1629,9 @@
       "created": 1787817633,
       "description": "This model always redirects to the latest model in the GLM Flash family.",
       "pricing": {
-        "prompt": "0.0000000214",
+        "prompt": "0.0000000278",
         "completion": "0.0000005",
-        "input_cache_read": "0.0000000214"
+        "input_cache_read": "0.0000000278"
       },
       "context_length": 1048576,
       "architecture": {
@@ -1748,9 +1789,9 @@
       "created": 1787151053,
       "description": "This model always redirects to the latest GLM model from Z.ai.",
       "pricing": {
-        "prompt": "0.00000003",
-        "completion": "0.000012",
-        "input_cache_read": "0.00000003"
+        "prompt": "0.000000063",
+        "completion": "0.0000063",
+        "input_cache_read": "0.0000000585"
       },
       "context_length": 1048576,
       "architecture": {
@@ -2213,8 +2254,8 @@
       "created": 1786302394,
       "description": "Muse Glimmer 30B is a dense, open-weight multimodal model from Meta Superintelligence Labs, distilled from Muse Spark and optimized for autonomous agents on consumer hardware. It is suited for long-horizon...",
       "pricing": {
-        "prompt": "0.00000035",
-        "completion": "0.0000015",
+        "prompt": "0.0000003",
+        "completion": "0.0000012",
         "input_cache_read": "0.00000004"
       },
       "context_length": 131072,
@@ -2224,7 +2265,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 117964
+        "max_completion_tokens": 16384
       }
     },
     {
@@ -2254,9 +2295,9 @@
       "created": 1785606009,
       "description": "This model always redirects to the latest model in the DeepSeek V4 Flash family.",
       "pricing": {
-        "prompt": "0.0000000103",
+        "prompt": "0.000000018",
         "completion": "0.00000128",
-        "input_cache_read": "0.0000000103"
+        "input_cache_read": "0.000000018"
       },
       "context_length": 1048576,
       "architecture": {
@@ -2274,9 +2315,9 @@
       "created": 1785478908,
       "description": "DeepSeek V4 Flash 0731 is a sparse mixture-of-experts model from DeepSeek, with 13B active parameters out of 284B total. This re-post-trained revision is suited for coding, reasoning, and agent workflows....",
       "pricing": {
-        "prompt": "0.0000000103",
+        "prompt": "0.000000018",
         "completion": "0.00000128",
-        "input_cache_read": "0.0000000103"
+        "input_cache_read": "0.000000018"
       },
       "context_length": 1048576,
       "architecture": {
@@ -2598,9 +2639,9 @@
       "created": 1784325956,
       "description": "Inkling is an open-weight multimodal mixture-of-experts model from Thinking Machines Lab, with 41B active parameters out of 975B total. It is designed for general-purpose reasoning, coding, agentic and tool-use systems,...",
       "pricing": {
-        "prompt": "0.00000095",
+        "prompt": "0.000001",
         "completion": "0.00000405",
-        "input_cache_read": "0.00000016"
+        "input_cache_read": "0.00000017"
       },
       "context_length": 524288,
       "architecture": {
@@ -2609,7 +2650,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 262144
+        "max_completion_tokens": 471859
       }
     },
     {
@@ -2656,9 +2697,9 @@
       "created": 1784215858,
       "description": "Kimi K3 is a 2.8T parameter open-weight multimodal reasoning model from Moonshot AI. It is suited for complex coding, knowledge work, and long-horizon agentic workflows, and is particularly strong at...",
       "pricing": {
-        "prompt": "0.00000083",
-        "completion": "0.000014",
-        "input_cache_read": "0.00000027"
+        "prompt": "0.00000062",
+        "completion": "0.000015",
+        "input_cache_read": "0.00000043"
       },
       "context_length": 1048576,
       "architecture": {
@@ -2709,26 +2750,6 @@
       "top_provider": {
         "name": "",
         "max_completion_tokens": 943718
-      }
-    },
-    {
-      "id": "kwaipilot/kat-coder-pro-v2.5",
-      "name": "Kwaipilot: KAT-Coder-Pro V2.5",
-      "created": 1783714589,
-      "description": "KAT-Coder-Pro V2.5 is a flagship-level Agentic Coding model that can directly hand over an entire issue or an entire business workflow to it, allowing it to autonomously locate and make...",
-      "pricing": {
-        "prompt": "0.00000074",
-        "completion": "0.00000296",
-        "input_cache_read": "0.00000015"
-      },
-      "context_length": 262144,
-      "architecture": {
-        "modality": "text->text",
-        "tokenizer": "Other"
-      },
-      "top_provider": {
-        "name": "",
-        "max_completion_tokens": 235929
       }
     },
     {
@@ -3437,9 +3458,9 @@
       "created": 1781631930,
       "description": "GLM 5.2 is a large-scale reasoning model from Z.ai. It supports text input and output with a 1M-token context window, and is suited for long-horizon agent workflows, project-level software engineering,...",
       "pricing": {
-        "prompt": "0.000000152",
-        "completion": "0.000012",
-        "input_cache_read": "0.00000015"
+        "prompt": "0.000000171",
+        "completion": "0.0000072",
+        "input_cache_read": "0.000000162"
       },
       "context_length": 1048576,
       "architecture": {
@@ -4145,7 +4166,7 @@
       "created": 1777318428,
       "description": "This model always redirects to the latest model in the Kimi family.",
       "pricing": {
-        "prompt": "0.00000082",
+        "prompt": "0.00000061",
         "completion": "0.000013",
         "input_cache_read": "0.00000045"
       },
@@ -4318,8 +4339,8 @@
       "created": 1777255064,
       "description": "Qwen3.6 27B is a dense 27-billion-parameter language model from the Qwen Team at Alibaba, released in April 2026. It features hybrid multimodal capabilities \u2014 accepting text, image, and video inputs...",
       "pricing": {
-        "prompt": "0.00000032",
-        "completion": "0.00000325",
+        "prompt": "0.0000003",
+        "completion": "0.000002",
         "input_cache_read": "0.00000003"
       },
       "context_length": 262144,
@@ -4329,7 +4350,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 262140
+        "max_completion_tokens": 65536
       }
     },
     {
@@ -4470,9 +4491,9 @@
       "created": 1777000666,
       "description": "DeepSeek V4 Flash is an efficiency-optimized Mixture-of-Experts model from DeepSeek with 284B total parameters and 13B activated parameters, supporting a 1M-token context window. It is designed for fast inference and...",
       "pricing": {
-        "prompt": "0.0000000011",
+        "prompt": "0.00000003",
         "completion": "0.00000128",
-        "input_cache_read": "0.0000000011"
+        "input_cache_read": "0.00000003"
       },
       "context_length": 1048576,
       "architecture": {
@@ -4614,9 +4635,9 @@
       "created": 1776699402,
       "description": "Kimi K2.6 is Moonshot AI's next-generation multimodal model, designed for long-horizon coding, coding-driven UI/UX generation, and multi-agent orchestration. It handles complex end-to-end coding tasks across Python, Rust, and Go, and...",
       "pricing": {
-        "prompt": "0.00000095",
-        "completion": "0.000004",
-        "input_cache_read": "0.00000016"
+        "prompt": "0.000000465",
+        "completion": "0.00000245",
+        "input_cache_read": "0.0000000975"
       },
       "context_length": 262144,
       "architecture": {
@@ -4680,9 +4701,9 @@
       "created": 1775578025,
       "description": "GLM-5.1 delivers a major leap in coding capability, with particularly significant gains in handling long-horizon tasks. Unlike previous models built around minute-level interactions, GLM-5.1 can work independently and continuously on...",
       "pricing": {
-        "prompt": "0.0000014",
-        "completion": "0.0000044",
-        "input_cache_read": "0.00000026"
+        "prompt": "0.000000966",
+        "completion": "0.000003036",
+        "input_cache_read": "0.0000001794"
       },
       "context_length": 204800,
       "architecture": {
@@ -4691,7 +4712,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 131072
+        "max_completion_tokens": 128000
       }
     },
     {
@@ -5413,9 +5434,9 @@
       "created": 1772053822,
       "description": "The Qwen3.5 Series 35B-A3B is a native vision-language model designed with a hybrid architecture that integrates linear attention mechanisms and a sparse mixture-of-experts model, achieving higher inference efficiency. Its overall...",
       "pricing": {
-        "prompt": "0.00000008",
-        "completion": "0.00000075",
-        "input_cache_read": "0.00000004"
+        "prompt": "0.00000015",
+        "completion": "0.000001",
+        "input_cache_read": "0.00000005"
       },
       "context_length": 262144,
       "architecture": {
@@ -5424,7 +5445,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 32768
+        "max_completion_tokens": 235929
       }
     },
     {
@@ -7954,8 +7975,8 @@
       "created": 1753806965,
       "description": "Qwen3-30B-A3B-Instruct-2507 is a 30.5B-parameter mixture-of-experts language model from Qwen, with 3.3B active parameters per inference. It operates in non-thinking mode and is designed for high-quality instruction following, multilingual understanding, and...",
       "pricing": {
-        "prompt": "0.0000001",
-        "completion": "0.0000003"
+        "prompt": "0.00000004815",
+        "completion": "0.00000019305"
       },
       "context_length": 262144,
       "architecture": {
@@ -7964,7 +7985,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 235929
+        "max_completion_tokens": 32000
       }
     },
     {
@@ -8891,7 +8912,8 @@
       "description": "Llama 4 Maverick 17B Instruct (128E) is a high-capacity multimodal language model from Meta, built on a mixture-of-experts (MoE) architecture with 128 experts and 17 billion active parameters per forward...",
       "pricing": {
         "prompt": "0.0000001875",
-        "completion": "0.0000006525"
+        "completion": "0.0000006525",
+        "input_cache_read": "0.00000005"
       },
       "context_length": 1048576,
       "architecture": {
