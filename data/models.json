@@ -1,6 +1,6 @@
 {
-  "fetched_at": "2026-10-09T01:00:29Z",
-  "total": 469,
+  "fetched_at": "2026-10-10T01:00:47Z",
+  "total": 458,
   "models": [
     {
       "id": "stepfun/step-5-preview",
@@ -1023,9 +1023,9 @@
       "created": 1789399174,
       "description": "This model always redirects to the latest model in the DeepSeek Pro family.",
       "pricing": {
-        "prompt": "0.00000018",
-        "completion": "0.000008",
-        "input_cache_read": "0.00000018"
+        "prompt": "0.0000003",
+        "completion": "0.000005",
+        "input_cache_read": "0.000000219"
       },
       "context_length": 1048576,
       "architecture": {
@@ -1034,7 +1034,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 393216
+        "max_completion_tokens": 943718
       }
     },
     {
@@ -1044,7 +1044,7 @@
       "description": "This model always redirects to the latest model in the DeepSeek Flash family.",
       "pricing": {
         "prompt": "0.000000016",
-        "completion": "0.0000012",
+        "completion": "0.0000006",
         "input_cache_read": "0.000000005"
       },
       "context_length": 1048576,
@@ -1543,8 +1543,7 @@
       "pricing": {
         "prompt": "0.000002",
         "completion": "0.000006",
-        "input_cache_read": "0.00000025",
-        "input_cache_write": "0.0000025"
+        "input_cache_read": "0.00000025"
       },
       "context_length": 1000000,
       "architecture": {
@@ -1778,9 +1777,9 @@
       "created": 1787817633,
       "description": "This model always redirects to the latest model in the GLM Flash family.",
       "pricing": {
-        "prompt": "0.00000001248",
-        "completion": "0.000002",
-        "input_cache_read": "0.00000001248"
+        "prompt": "0.000000032",
+        "completion": "0.00000072",
+        "input_cache_read": "0.00000001"
       },
       "context_length": 1048576,
       "architecture": {
@@ -1800,8 +1799,7 @@
       "pricing": {
         "prompt": "0.00000015",
         "completion": "0.00000047",
-        "input_cache_read": "0.000000016",
-        "input_cache_write": "0.0000002"
+        "input_cache_read": "0.000000016"
       },
       "context_length": 1000000,
       "architecture": {
@@ -1938,9 +1936,9 @@
       "created": 1787151053,
       "description": "This model always redirects to the latest GLM model from Z.ai.",
       "pricing": {
-        "prompt": "0.0000000312",
-        "completion": "0.000012",
-        "input_cache_read": "0.000000029"
+        "prompt": "0.000000039",
+        "completion": "0.000006",
+        "input_cache_read": "0.000000038"
       },
       "context_length": 1048576,
       "architecture": {
@@ -1949,7 +1947,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 131072
+        "max_completion_tokens": 943718
       }
     },
     {
@@ -1978,7 +1976,7 @@
       "description": "GLM-5.3 is a large-scale reasoning model from Z.ai, built for complex software engineering and long-horizon agent tasks. It supports text input and output with a 1M-token context window, and improves...",
       "pricing": {
         "prompt": "0.000000039",
-        "completion": "0.00000339",
+        "completion": "0.000006",
         "input_cache_read": "0.000000038"
       },
       "context_length": 1048576,
@@ -2323,9 +2321,9 @@
       "created": 1786452751,
       "description": "NVIDIA Nemotron 3.5 Lightning is an open mixture-of-experts model from NVIDIA, with 3B active parameters out of 30B total. It is suited for high-throughput agentic workloads and specialized tasks that...",
       "pricing": {
-        "prompt": "0.000000049",
-        "completion": "0.00000014",
-        "input_cache_read": "0.0000000245"
+        "prompt": "0.0000000469",
+        "completion": "0.000000134",
+        "input_cache_read": "0.00000002345"
       },
       "context_length": 262144,
       "architecture": {
@@ -2444,9 +2442,9 @@
       "created": 1785606009,
       "description": "This model always redirects to the latest model in the DeepSeek V4 Flash family.",
       "pricing": {
-        "prompt": "0.0000000144",
-        "completion": "0.000000431564",
-        "input_cache_read": "0.0000000144"
+        "prompt": "0.0000000048",
+        "completion": "0.000001536",
+        "input_cache_read": "0.0000000048"
       },
       "context_length": 1048576,
       "architecture": {
@@ -2464,9 +2462,9 @@
       "created": 1785478908,
       "description": "DeepSeek V4 Flash 0731 is a sparse mixture-of-experts model from DeepSeek, with 13B active parameters out of 284B total. This re-post-trained revision is suited for coding, reasoning, and agent workflows....",
       "pricing": {
-        "prompt": "0.000000018",
+        "prompt": "0.000000006",
         "completion": "0.00000128",
-        "input_cache_read": "0.000000018"
+        "input_cache_read": "0.000000006"
       },
       "context_length": 1048576,
       "architecture": {
@@ -2846,9 +2844,9 @@
       "created": 1784215858,
       "description": "Kimi K3 is a 2.8T parameter open-weight multimodal reasoning model from Moonshot AI. It is suited for complex coding, knowledge work, and long-horizon agentic workflows, and is particularly strong at...",
       "pricing": {
-        "prompt": "0.00000076",
-        "completion": "0.000013",
-        "input_cache_read": "0.0000004"
+        "prompt": "0.0000008",
+        "completion": "0.0000135",
+        "input_cache_read": "0.00000055"
       },
       "context_length": 1048576,
       "architecture": {
@@ -3607,9 +3605,9 @@
       "created": 1781631930,
       "description": "GLM 5.2 is a large-scale reasoning model from Z.ai. It supports text input and output with a 1M-token context window, and is suited for long-horizon agent workflows, project-level software engineering,...",
       "pricing": {
-        "prompt": "0.000000084",
-        "completion": "0.0000043",
-        "input_cache_read": "0.000000083"
+        "prompt": "0.00000006",
+        "completion": "0.000007",
+        "input_cache_read": "0.000000059"
       },
       "context_length": 1048576,
       "architecture": {
@@ -4325,9 +4323,9 @@
       "created": 1777318428,
       "description": "This model always redirects to the latest model in the Kimi family.",
       "pricing": {
-        "prompt": "0.00000075",
-        "completion": "0.000013",
-        "input_cache_read": "0.0000003"
+        "prompt": "0.0000008",
+        "completion": "0.0000135",
+        "input_cache_read": "0.00000055"
       },
       "context_length": 1048576,
       "architecture": {
@@ -4465,41 +4463,13 @@
       }
     },
     {
-      "id": "qwen/qwen3.6-max-preview",
-      "name": "Qwen: Qwen3.6 Max Preview",
-      "created": 1777260242,
-      "description": "Qwen3.6-Max-Preview is a proprietary frontier model from Alibaba Cloud built on a sparse mixture-of-experts architecture with approximately 1 trillion total parameters. It is optimized for agentic coding, tool use, and...",
-      "pricing": {
-        "prompt": "0.000001027",
-        "completion": "0.000006162",
-        "input_cache_write": "0.00000128375",
-        "overrides": [
-          {
-            "min_prompt_tokens": 128000,
-            "prompt": "0.00000158",
-            "completion": "0.00000948",
-            "input_cache_write": "0.000001975"
-          }
-        ]
-      },
-      "context_length": 262144,
-      "architecture": {
-        "modality": "text->text",
-        "tokenizer": "Qwen"
-      },
-      "top_provider": {
-        "name": "",
-        "max_completion_tokens": 65536
-      }
-    },
-    {
       "id": "qwen/qwen3.6-27b",
       "name": "Qwen: Qwen3.6 27B",
       "created": 1777255064,
       "description": "Qwen3.6 27B is a dense 27-billion-parameter language model from the Qwen Team at Alibaba, released in April 2026. It features hybrid multimodal capabilities \u2014 accepting text, image, and video inputs...",
       "pricing": {
-        "prompt": "0.00000045",
-        "completion": "0.0000027"
+        "prompt": "0.00000032",
+        "completion": "0.0000032"
       },
       "context_length": 262144,
       "architecture": {
@@ -4508,7 +4478,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 65536
+        "max_completion_tokens": 81920
       }
     },
     {
@@ -4629,9 +4599,9 @@
       "created": 1777000679,
       "description": "DeepSeek V4 Pro is a large-scale Mixture-of-Experts model from DeepSeek with 1.6T total parameters and 49B activated parameters, supporting a 1M-token context window. It is designed for advanced reasoning, coding,...",
       "pricing": {
-        "prompt": "0.00000095526",
-        "completion": "0.00000191052",
-        "input_cache_read": "0.000000079605"
+        "prompt": "0.0000002088",
+        "completion": "0.0000004176",
+        "input_cache_read": "0.0000000174"
       },
       "context_length": 1048576,
       "architecture": {
@@ -4649,9 +4619,9 @@
       "created": 1777000666,
       "description": "DeepSeek V4 Flash is an efficiency-optimized Mixture-of-Experts model from DeepSeek with 284B total parameters and 13B activated parameters, supporting a 1M-token context window. It is designed for fast inference and...",
       "pricing": {
-        "prompt": "0.00000003",
+        "prompt": "0.0000000057",
         "completion": "0.00000128",
-        "input_cache_read": "0.00000003"
+        "input_cache_read": "0.0000000057"
       },
       "context_length": 1048576,
       "architecture": {
@@ -4795,7 +4765,7 @@
       "pricing": {
         "prompt": "0.000000465",
         "completion": "0.00000245",
-        "input_cache_read": "0.0000000975"
+        "input_cache_read": "0.0000000875"
       },
       "context_length": 262144,
       "architecture": {
@@ -4879,9 +4849,9 @@
       "created": 1775227989,
       "description": "Gemma 4 26B A4B IT is an instruction-tuned Mixture-of-Experts (MoE) model from Google DeepMind. Despite 25.2B total parameters, only 3.8B activate per token during inference \u2014 delivering near-31B quality at...",
       "pricing": {
-        "prompt": "0.0000000765",
-        "completion": "0.000000255",
-        "input_cache_read": "0.0000000425"
+        "prompt": "0.0000000675",
+        "completion": "0.000000225",
+        "input_cache_read": "0.0000000375"
       },
       "context_length": 262144,
       "architecture": {
@@ -5592,8 +5562,9 @@
       "created": 1772053822,
       "description": "The Qwen3.5 Series 35B-A3B is a native vision-language model designed with a hybrid architecture that integrates linear attention mechanisms and a sparse mixture-of-experts model, achieving higher inference efficiency. Its overall...",
       "pricing": {
-        "prompt": "0.0000001625",
-        "completion": "0.0000013"
+        "prompt": "0.00000008",
+        "completion": "0.00000075",
+        "input_cache_read": "0.00000004"
       },
       "context_length": 262144,
       "architecture": {
@@ -5602,7 +5573,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 65536
+        "max_completion_tokens": 32768
       }
     },
     {
@@ -5936,37 +5907,6 @@
       "top_provider": {
         "name": "",
         "max_completion_tokens": 128000
-      }
-    },
-    {
-      "id": "qwen/qwen3-max-thinking",
-      "name": "Qwen: Qwen3 Max Thinking",
-      "created": 1770671901,
-      "description": "Qwen3-Max-Thinking is the flagship reasoning model in the Qwen3 series, designed for high-stakes cognitive tasks that require deep, multi-step reasoning. By significantly scaling model capacity and reinforcement learning compute, it...",
-      "pricing": {
-        "prompt": "0.00000078",
-        "completion": "0.0000039",
-        "overrides": [
-          {
-            "min_prompt_tokens": 32000,
-            "prompt": "0.00000156",
-            "completion": "0.0000078"
-          },
-          {
-            "min_prompt_tokens": 128000,
-            "prompt": "0.00000195",
-            "completion": "0.00000975"
-          }
-        ]
-      },
-      "context_length": 262144,
-      "architecture": {
-        "modality": "text->text",
-        "tokenizer": "Qwen"
-      },
-      "top_provider": {
-        "name": "",
-        "max_completion_tokens": 65536
       }
     },
     {
@@ -6919,7 +6859,8 @@
       "description": "Kimi K2 Thinking is Moonshot AI\u2019s most advanced open reasoning model to date, extending the K2 series into agentic, long-horizon reasoning. Built on the trillion-parameter Mixture-of-Experts (MoE) architecture introduced in...",
       "pricing": {
         "prompt": "0.0000006",
-        "completion": "0.0000025"
+        "completion": "0.0000025",
+        "input_cache_read": "0.00000015"
       },
       "context_length": 262144,
       "architecture": {
@@ -6928,7 +6869,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 235929
+        "max_completion_tokens": 98304
       }
     },
     {
@@ -7032,25 +6973,6 @@
       }
     },
     {
-      "id": "qwen/qwen3-vl-32b-instruct",
-      "name": "Qwen: Qwen3 VL 32B Instruct",
-      "created": 1761231332,
-      "description": "Qwen3-VL-32B-Instruct is a large-scale multimodal vision-language model designed for high-precision understanding and reasoning across text, images, and video. With 32 billion parameters, it combines deep visual perception with advanced text...",
-      "pricing": {
-        "prompt": "0.000000104",
-        "completion": "0.000000416"
-      },
-      "context_length": 131072,
-      "architecture": {
-        "modality": "text+image->text",
-        "tokenizer": "Qwen"
-      },
-      "top_provider": {
-        "name": "",
-        "max_completion_tokens": 32768
-      }
-    },
-    {
       "id": "ibm-granite/granite-4.0-h-micro",
       "name": "IBM: Granite 4.0 Micro",
       "created": 1760927695,
@@ -7138,32 +7060,14 @@
       }
     },
     {
-      "id": "qwen/qwen3-vl-8b-thinking",
-      "name": "Qwen: Qwen3 VL 8B Thinking",
-      "created": 1760463746,
-      "description": "Qwen3-VL-8B-Thinking is the reasoning-optimized variant of the Qwen3-VL-8B multimodal model, designed for advanced visual and textual reasoning across complex scenes, documents, and temporal sequences. It integrates enhanced multimodal alignment and...",
-      "pricing": {
-        "prompt": "0.00000018",
-        "completion": "0.0000021"
-      },
-      "context_length": 131072,
-      "architecture": {
-        "modality": "text+image->text",
-        "tokenizer": "Qwen3"
-      },
-      "top_provider": {
-        "name": "",
-        "max_completion_tokens": 32768
-      }
-    },
-    {
       "id": "qwen/qwen3-vl-8b-instruct",
       "name": "Qwen: Qwen3 VL 8B Instruct",
       "created": 1760463308,
       "description": "Qwen3-VL-8B-Instruct is a multimodal vision-language model from the Qwen3-VL series, built for high-fidelity understanding and reasoning across text, images, and video. It features improved multimodal fusion with Interleaved-MRoPE for long-horizon...",
       "pricing": {
-        "prompt": "0.000000117",
-        "completion": "0.000000455"
+        "prompt": "0.00000025",
+        "completion": "0.00000075",
+        "input_cache_read": "0.00000012"
       },
       "context_length": 262144,
       "architecture": {
@@ -7172,7 +7076,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 32768
+        "max_completion_tokens": 235929
       }
     },
     {
@@ -7230,8 +7134,8 @@
       "created": 1759794479,
       "description": "Qwen3-VL-30B-A3B-Thinking is a multimodal model that unifies strong text generation with visual understanding for images and videos. Its Thinking variant enhances reasoning in STEM, math, and complex tasks. It excels...",
       "pricing": {
-        "prompt": "0.0000002",
-        "completion": "0.0000024"
+        "prompt": "0.00000029",
+        "completion": "0.000001"
       },
       "context_length": 262144,
       "architecture": {
@@ -7240,7 +7144,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 32768
+        "max_completion_tokens": 235929
       }
     },
     {
@@ -7308,9 +7212,9 @@
       "created": 1759235576,
       "description": "Compared with GLM-4.5, this generation brings several key improvements: Longer context window: The context window has been expanded from 128K to 200K tokens, enabling the model to handle more complex...",
       "pricing": {
-        "prompt": "0.00000043",
-        "completion": "0.00000175",
-        "input_cache_read": "0.00000008"
+        "prompt": "0.0000005",
+        "completion": "0.000002",
+        "input_cache_read": "0.0000001"
       },
       "context_length": 204800,
       "architecture": {
@@ -7319,7 +7223,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 16384
+        "max_completion_tokens": 131072
       }
     },
     {
@@ -7447,25 +7351,6 @@
       }
     },
     {
-      "id": "qwen/qwen3-vl-235b-a22b-thinking",
-      "name": "Qwen: Qwen3 VL 235B A22B Thinking",
-      "created": 1758668690,
-      "description": "Qwen3-VL-235B-A22B Thinking is a multimodal model that unifies strong text generation with visual understanding across images and video. The Thinking model is optimized for multimodal reasoning in STEM and math....",
-      "pricing": {
-        "prompt": "0.0000004",
-        "completion": "0.000004"
-      },
-      "context_length": 131072,
-      "architecture": {
-        "modality": "text+image->text",
-        "tokenizer": "Qwen3"
-      },
-      "top_provider": {
-        "name": "",
-        "max_completion_tokens": 32768
-      }
-    },
-    {
       "id": "qwen/qwen3-vl-235b-a22b-instruct",
       "name": "Qwen: Qwen3 VL 235B A22B Instruct",
       "created": 1758668687,
@@ -7483,80 +7368,6 @@
       "top_provider": {
         "name": "",
         "max_completion_tokens": 32768
-      }
-    },
-    {
-      "id": "qwen/qwen3-max",
-      "name": "Qwen: Qwen3 Max",
-      "created": 1758662808,
-      "description": "Qwen3-Max is an updated release built on the Qwen3 series, offering major improvements in reasoning, instruction following, multilingual support, and long-tail knowledge coverage compared to the January 2025 version. It...",
-      "pricing": {
-        "prompt": "0.00000078",
-        "completion": "0.0000039",
-        "input_cache_read": "0.000000156",
-        "input_cache_write": "0.000000975",
-        "overrides": [
-          {
-            "min_prompt_tokens": 32000,
-            "prompt": "0.00000156",
-            "completion": "0.0000078",
-            "input_cache_read": "0.000000312",
-            "input_cache_write": "0.00000195"
-          },
-          {
-            "min_prompt_tokens": 128000,
-            "prompt": "0.00000195",
-            "completion": "0.00000975",
-            "input_cache_read": "0.00000039",
-            "input_cache_write": "0.0000024375"
-          }
-        ]
-      },
-      "context_length": 262144,
-      "architecture": {
-        "modality": "text->text",
-        "tokenizer": "Qwen3"
-      },
-      "top_provider": {
-        "name": "",
-        "max_completion_tokens": 65536
-      }
-    },
-    {
-      "id": "qwen/qwen3-coder-plus",
-      "name": "Qwen: Qwen3 Coder Plus",
-      "created": 1758662707,
-      "description": "Qwen3 Coder Plus is Alibaba's proprietary version of the Open Source Qwen3 Coder 480B A35B. It is a powerful coding agent model specializing in autonomous programming via tool calling and...",
-      "pricing": {
-        "prompt": "0.00000065",
-        "completion": "0.00000325",
-        "input_cache_read": "0.00000013",
-        "input_cache_write": "0.0000008125",
-        "overrides": [
-          {
-            "min_prompt_tokens": 32000,
-            "prompt": "0.00000117",
-            "completion": "0.00000585",
-            "input_cache_read": "0.000000234",
-            "input_cache_write": "0.0000014625"
-          },
-          {
-            "min_prompt_tokens": 128000,
-            "prompt": "0.00000195",
-            "completion": "0.00000975",
-            "input_cache_read": "0.00000039",
-            "input_cache_write": "0.0000024375"
-          }
-        ]
-      },
-      "context_length": 1000000,
-      "architecture": {
-        "modality": "text->text",
-        "tokenizer": "Qwen3"
-      },
-      "top_provider": {
-        "name": "",
-        "max_completion_tokens": 65536
       }
     },
     {
@@ -7631,7 +7442,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 32768
+        "max_completion_tokens": 235929
       }
     },
     {
@@ -7640,8 +7451,9 @@
       "created": 1757612213,
       "description": "Qwen3-Next-80B-A3B-Instruct is an instruction-tuned chat model in the Qwen3-Next series optimized for fast, stable responses without \u201cthinking\u201d traces. It targets complex tasks across reasoning, code generation, knowledge QA, and multilingual...",
       "pricing": {
-        "prompt": "0.00000009",
-        "completion": "0.0000011"
+        "prompt": "0.0000001",
+        "completion": "0.0000011",
+        "input_cache_read": "0.00000007"
       },
       "context_length": 262144,
       "architecture": {
@@ -7650,33 +7462,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 16384
-      }
-    },
-    {
-      "id": "qwen/qwen-plus-2025-07-28",
-      "name": "Qwen: Qwen Plus 0728",
-      "created": 1757347599,
-      "description": "Qwen Plus 0728, based on the Qwen3 foundation model, is a 1 million context hybrid reasoning model with a balanced performance, speed, and cost combination.",
-      "pricing": {
-        "prompt": "0.00000026",
-        "completion": "0.00000078",
-        "overrides": [
-          {
-            "min_prompt_tokens": 256000,
-            "prompt": "0.00000078",
-            "completion": "0.00000234"
-          }
-        ]
-      },
-      "context_length": 1000000,
-      "architecture": {
-        "modality": "text->text",
-        "tokenizer": "Qwen3"
-      },
-      "top_provider": {
-        "name": "",
-        "max_completion_tokens": 32768
+        "max_completion_tokens": 235929
       }
     },
     {
@@ -7696,25 +7482,6 @@
       "top_provider": {
         "name": "",
         "max_completion_tokens": 98304
-      }
-    },
-    {
-      "id": "qwen/qwen3-30b-a3b-thinking-2507",
-      "name": "Qwen: Qwen3 30B A3B Thinking 2507",
-      "created": 1756399192,
-      "description": "Qwen3-30B-A3B-Thinking-2507 is a 30B parameter Mixture-of-Experts reasoning model optimized for complex tasks requiring extended multi-step thinking. The model is designed specifically for \u201cthinking mode,\u201d where internal reasoning traces are separated...",
-      "pricing": {
-        "prompt": "0.0000002",
-        "completion": "0.0000024"
-      },
-      "context_length": 81920,
-      "architecture": {
-        "modality": "text->text",
-        "tokenizer": "Qwen3"
-      },
-      "top_provider": {
-        "name": "",
-        "max_completion_tokens": 32768
       }
     },
     {
@@ -8189,17 +7956,17 @@
       "created": 1753449557,
       "description": "Qwen3-235B-A22B-Thinking-2507 is a high-performance, open-weight Mixture-of-Experts (MoE) language model optimized for complex reasoning tasks. It activates 22B of its 235B parameters per forward pass and natively supports up to 262,144...",
       "pricing": {
-        "prompt": "0.00000023",
-        "completion": "0.0000023"
+        "prompt": "0.00000045",
+        "completion": "0.0000035"
       },
-      "context_length": 131072,
+      "context_length": 128000,
       "architecture": {
         "modality": "text->text",
         "tokenizer": "Qwen3"
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 117964
+        "max_completion_tokens": 16384
       }
     },
     {
@@ -8724,7 +8491,7 @@
         "prompt": "0.00000012",
         "completion": "0.0000005"
       },
-      "context_length": 131072,
+      "context_length": 40960,
       "architecture": {
         "modality": "text->text",
         "tokenizer": "Qwen3"
@@ -8732,25 +8499,6 @@
       "top_provider": {
         "name": "",
         "max_completion_tokens": 16384
-      }
-    },
-    {
-      "id": "qwen/qwen3-8b",
-      "name": "Qwen: Qwen3 8B",
-      "created": 1745876632,
-      "description": "Qwen3-8B is a dense 8.2B parameter causal language model from the Qwen3 series, designed for both reasoning-heavy tasks and efficient dialogue. It supports seamless switching between \"thinking\" mode for math,...",
-      "pricing": {
-        "prompt": "0.000000117",
-        "completion": "0.000000455"
-      },
-      "context_length": 131072,
-      "architecture": {
-        "modality": "text->text",
-        "tokenizer": "Qwen3"
-      },
-      "top_provider": {
-        "name": "",
-        "max_completion_tokens": 8192
       }
     },
     {
@@ -8759,17 +8507,17 @@
       "created": 1745876478,
       "description": "Qwen3-14B is a dense 14.8B parameter causal language model from the Qwen3 series, designed for both complex reasoning and efficient dialogue. It supports seamless switching between a \"thinking\" mode for...",
       "pricing": {
-        "prompt": "0.00000012",
-        "completion": "0.00000024"
+        "prompt": "0.0000001",
+        "completion": "0.00000022"
       },
-      "context_length": 131072,
+      "context_length": 40960,
       "architecture": {
         "modality": "text->text",
         "tokenizer": "Qwen3"
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 16384
+        "max_completion_tokens": 36864
       }
     },
     {
@@ -8789,25 +8537,6 @@
       "top_provider": {
         "name": "",
         "max_completion_tokens": 16384
-      }
-    },
-    {
-      "id": "qwen/qwen3-235b-a22b",
-      "name": "Qwen: Qwen3 235B A22B",
-      "created": 1745875757,
-      "description": "Qwen3-235B-A22B is a 235B parameter mixture-of-experts (MoE) model developed by Qwen, activating 22B parameters per forward pass. It supports seamless switching between a \"thinking\" mode for complex reasoning, math, and...",
-      "pricing": {
-        "prompt": "0.000000455",
-        "completion": "0.00000182"
-      },
-      "context_length": 131072,
-      "architecture": {
-        "modality": "text->text",
-        "tokenizer": "Qwen3"
-      },
-      "top_provider": {
-        "name": "",
-        "max_completion_tokens": 8192
       }
     },
     {
@@ -9570,8 +9299,8 @@
       "created": 1735241320,
       "description": "DeepSeek-V3 is the latest model from the DeepSeek team, building upon the instruction following and coding abilities of the previous versions. Pre-trained on nearly 15 trillion tokens, the reported evaluations...",
       "pricing": {
-        "prompt": "0.0000002574",
-        "completion": "0.0000010287"
+        "prompt": "0.00000032",
+        "completion": "0.00000089"
       },
       "context_length": 163840,
       "architecture": {
@@ -9580,7 +9309,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 16000
+        "max_completion_tokens": 16384
       }
     },
     {
