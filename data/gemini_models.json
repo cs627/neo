@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-10-12T01:01:04Z",
+  "fetched_at": "2026-10-19T01:01:05Z",
   "total": 50,
   "models": [
     {
@@ -385,6 +385,18 @@
       "outputTokenLimit": 65536
     },
     {
+      "name": "models/gemini-4-argon",
+      "description": "Gemini 4 Argon",
+      "displayName": "Gemini 4 Argon",
+      "supportedMethods": [
+        "generateContent",
+        "countTokens",
+        "batchGenerateContent"
+      ],
+      "inputTokenLimit": 1048576,
+      "outputTokenLimit": 32768
+    },
+    {
       "name": "models/lyria-3-clip-preview",
       "description": "Lyria 3 30s model Preview",
       "displayName": "Lyria 3 Clip Preview",
@@ -591,16 +603,6 @@
       ],
       "inputTokenLimit": 7168,
       "outputTokenLimit": 1024
-    },
-    {
-      "name": "models/veo-3.1-generate-preview",
-      "description": "Veo 3.1",
-      "displayName": "Veo 3.1",
-      "supportedMethods": [
-        "predictLongRunning"
-      ],
-      "inputTokenLimit": 480,
-      "outputTokenLimit": 8192
     }
   ]
 }
