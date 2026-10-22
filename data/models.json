@@ -1,7 +1,26 @@
 {
-  "fetched_at": "2026-10-21T01:00:16Z",
+  "fetched_at": "2026-10-22T01:00:14Z",
   "total": 468,
   "models": [
+    {
+      "id": "recursive/flint-v1.0:free",
+      "name": "Recursive: Flint (free)",
+      "created": 1792622765,
+      "description": "Flint is an open-weight mixture-of-experts model from Recursive, with about 2.5B active parameters out of 40B total, built by Recursive's autoresearch system Eureka Machine for coding agents. It is suited...",
+      "pricing": {
+        "prompt": "0",
+        "completion": "0"
+      },
+      "context_length": 262144,
+      "architecture": {
+        "modality": "text->text",
+        "tokenizer": "Other"
+      },
+      "top_provider": {
+        "name": "",
+        "max_completion_tokens": 235929
+      }
+    },
     {
       "id": "minimax/minimax-m3.1-flash:free",
       "name": "MiniMax: MiniMax M3.1 Flash (free)",
@@ -1452,9 +1471,9 @@
       "created": 1789399174,
       "description": "This model always redirects to the latest model in the DeepSeek Pro family.",
       "pricing": {
-        "prompt": "0.000000225",
+        "prompt": "0.0000002235",
         "completion": "0.000008",
-        "input_cache_read": "0.00000023"
+        "input_cache_read": "0.00000022"
       },
       "context_length": 1048576,
       "architecture": {
@@ -1726,9 +1745,9 @@
       "created": 1789021285,
       "description": "DeepSeek V4.1 Flash is a sparse mixture-of-experts model from DeepSeek, and the first built on the company's Causal Encoder-Decoder (CED) architecture. It activates 8B parameters on input and 16B on...",
       "pricing": {
-        "prompt": "0.000000056",
-        "completion": "0.00000012",
-        "input_cache_read": "0.0000000016"
+        "prompt": "0.0000003",
+        "completion": "0.0000012",
+        "input_cache_read": "0.000000006"
       },
       "context_length": 1048576,
       "architecture": {
@@ -2166,9 +2185,9 @@
       "created": 1787817633,
       "description": "This model always redirects to the latest model in the GLM Flash family.",
       "pricing": {
-        "prompt": "0.000000024",
-        "completion": "0.00000012",
-        "input_cache_read": "0.000000006"
+        "prompt": "0.0000000318",
+        "completion": "0.000000083",
+        "input_cache_read": "0.00000003"
       },
       "context_length": 1048576,
       "architecture": {
@@ -2206,9 +2225,9 @@
       "created": 1787752741,
       "description": "GLM-5.3-Flash is a native multimodal model from Z.ai. It is suited for efficient coding and long-horizon agent tasks. Its hybrid sparse and linear attention architecture maintains accurate long-context behavior while...",
       "pricing": {
-        "prompt": "0.000000024",
-        "completion": "0.00000012",
-        "input_cache_read": "0.000000006"
+        "prompt": "0.0000000318",
+        "completion": "0.000000083",
+        "input_cache_read": "0.00000003"
       },
       "context_length": 1048576,
       "architecture": {
@@ -2562,7 +2581,88 @@
       "pricing": {
         "prompt": "0.00000066",
         "completion": "0.00000198",
-        "input_cache_read": "0.000000022"
+        "input_cache_read": "0.000000022",
+        "overrides": [
+          {
+            "utc_days": [
+              "saturday",
+              "sunday"
+            ],
+            "prompt": "0.00000066",
+            "completion": "0.00000198",
+            "input_cache_read": "0.000000022"
+          },
+          {
+            "utc_days": [
+              "monday",
+              "tuesday",
+              "wednesday",
+              "thursday",
+              "friday"
+            ],
+            "utc_start": 0,
+            "utc_end": 100,
+            "prompt": "0.00000066",
+            "completion": "0.00000198",
+            "input_cache_read": "0.000000022"
+          },
+          {
+            "utc_days": [
+              "monday",
+              "tuesday",
+              "wednesday",
+              "thursday",
+              "friday"
+            ],
+            "utc_start": 100,
+            "utc_end": 400,
+            "prompt": "0.00000132",
+            "completion": "0.00000396",
+            "input_cache_read": "0.000000044"
+          },
+          {
+            "utc_days": [
+              "monday",
+              "tuesday",
+              "wednesday",
+              "thursday",
+              "friday"
+            ],
+            "utc_start": 400,
+            "utc_end": 600,
+            "prompt": "0.00000066",
+            "completion": "0.00000198",
+            "input_cache_read": "0.000000022"
+          },
+          {
+            "utc_days": [
+              "monday",
+              "tuesday",
+              "wednesday",
+              "thursday",
+              "friday"
+            ],
+            "utc_start": 600,
+            "utc_end": 1000,
+            "prompt": "0.00000132",
+            "completion": "0.00000396",
+            "input_cache_read": "0.000000044"
+          },
+          {
+            "utc_days": [
+              "monday",
+              "tuesday",
+              "wednesday",
+              "thursday",
+              "friday"
+            ],
+            "utc_start": 1000,
+            "utc_end": 0,
+            "prompt": "0.00000066",
+            "completion": "0.00000198",
+            "input_cache_read": "0.000000022"
+          }
+        ]
       },
       "context_length": 1048576,
       "architecture": {
@@ -2571,7 +2671,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 384000
+        "max_completion_tokens": 393216
       }
     },
     {
@@ -2749,9 +2849,9 @@
       "created": 1785606009,
       "description": "This model always redirects to the latest model in the DeepSeek V4 Flash family.",
       "pricing": {
-        "prompt": "0.0000000168",
-        "completion": "0.00000010728",
-        "input_cache_read": "0.00000000336"
+        "prompt": "0.0000000475",
+        "completion": "0.0000001568",
+        "input_cache_read": "0.000000028"
       },
       "context_length": 1048576,
       "architecture": {
@@ -3912,9 +4012,9 @@
       "created": 1781631930,
       "description": "GLM 5.2 is a large-scale reasoning model from Z.ai. It supports text input and output with a 1M-token context window, and is suited for long-horizon agent workflows, project-level software engineering,...",
       "pricing": {
-        "prompt": "0.00000062",
-        "completion": "0.00000242",
-        "input_cache_read": "0.00000014"
+        "prompt": "0.0000000341",
+        "completion": "0.000007",
+        "input_cache_read": "0.000000033"
       },
       "context_length": 1048576,
       "architecture": {
@@ -4639,9 +4739,9 @@
       "created": 1777318428,
       "description": "This model always redirects to the latest model in the Kimi family.",
       "pricing": {
-        "prompt": "0.000000239",
-        "completion": "0.000011936",
-        "input_cache_read": "0.00000021"
+        "prompt": "0.000000238",
+        "completion": "0.000024",
+        "input_cache_read": "0.000000228"
       },
       "context_length": 1048576,
       "architecture": {
@@ -4976,9 +5076,9 @@
       "created": 1776874273,
       "description": "MiMo-V2.5-Pro is Xiaomi\u2019s flagship model, delivering strong performance in general agentic capabilities, complex software engineering, and long-horizon tasks, with top rankings on benchmarks such as ClawEval, GDPVal, and SWE-bench Pro....",
       "pricing": {
-        "prompt": "0.000000435",
-        "completion": "0.00000087",
-        "input_cache_read": "0.0000000036"
+        "prompt": "0.0000003045",
+        "completion": "0.000000609",
+        "input_cache_read": "0.0000000028"
       },
       "context_length": 1050000,
       "architecture": {
@@ -4987,7 +5087,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 131072
+        "max_completion_tokens": 945000
       }
     },
     {
@@ -4996,9 +5096,9 @@
       "created": 1776874269,
       "description": "MiMo-V2.5 is a native omnimodal model by Xiaomi. It delivers Pro-level agentic performance at roughly half the inference cost, while surpassing MiMo-V2-Omni in multimodal perception across image and video understanding...",
       "pricing": {
-        "prompt": "0.00000014",
-        "completion": "0.00000028",
-        "input_cache_read": "0.0000000028"
+        "prompt": "0.000000119",
+        "completion": "0.000000238",
+        "input_cache_read": "0.00000000255"
       },
       "context_length": 1050000,
       "architecture": {
@@ -5007,7 +5107,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 131072
+        "max_completion_tokens": 945000
       }
     },
     {
@@ -5920,8 +6020,8 @@
       "created": 1772053789,
       "description": "The Qwen3.5 122B-A10B native vision-language model is built on a hybrid architecture that integrates a linear attention mechanism with a sparse mixture-of-experts model, achieving higher inference efficiency. In terms of...",
       "pricing": {
-        "prompt": "0.00000026",
-        "completion": "0.00000208"
+        "prompt": "0.0000004",
+        "completion": "0.0000032"
       },
       "context_length": 262144,
       "architecture": {
@@ -7177,8 +7277,7 @@
       "description": "Kimi K2 Thinking is Moonshot AI\u2019s most advanced open reasoning model to date, extending the K2 series into agentic, long-horizon reasoning. Built on the trillion-parameter Mixture-of-Experts (MoE) architecture introduced in...",
       "pricing": {
         "prompt": "0.0000006",
-        "completion": "0.0000025",
-        "input_cache_read": "0.00000015"
+        "completion": "0.0000025"
       },
       "context_length": 262144,
       "architecture": {
@@ -7187,7 +7286,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 98304
+        "max_completion_tokens": 235929
       }
     },
     {
@@ -8342,31 +8441,6 @@
         "internal_reasoning": "0.0000004",
         "input_cache_read": "0.00000001",
         "input_cache_write": "0.0000000833333333333333"
-      },
-      "context_length": 1048576,
-      "architecture": {
-        "modality": "text+image+file+audio+video->text",
-        "tokenizer": "Gemini"
-      },
-      "top_provider": {
-        "name": "",
-        "max_completion_tokens": 65535
-      }
-    },
-    {
-      "id": "google/gemini-2.5-flash-lite:batch",
-      "name": "Google: Gemini 2.5 Flash Lite (batch)",
-      "created": 1753200276,
-      "description": "Gemini 2.5 Flash-Lite is a lightweight reasoning model in the Gemini 2.5 family, optimized for ultra-low latency and cost efficiency. It offers improved throughput, faster token generation, and better performance...",
-      "pricing": {
-        "prompt": "0.00000005",
-        "completion": "0.0000002",
-        "image": "0.00000005",
-        "audio": "0.00000015",
-        "input_audio_cache": "0.00000003",
-        "web_search": "0.014",
-        "internal_reasoning": "0.0000002",
-        "input_cache_read": "0.00000001"
       },
       "context_length": 1048576,
       "architecture": {
