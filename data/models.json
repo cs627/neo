@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-10-22T01:00:14Z",
+  "fetched_at": "2026-10-23T01:00:30Z",
   "total": 468,
   "models": [
     {
@@ -22,13 +22,14 @@
       }
     },
     {
-      "id": "minimax/minimax-m3.1-flash:free",
-      "name": "MiniMax: MiniMax M3.1 Flash (free)",
+      "id": "minimax/minimax-m3.1-flash",
+      "name": "MiniMax: MiniMax M3.1 Flash",
       "created": 1792379569,
       "description": "MiniMax-M3.1-Flash is a multimodal model from MiniMax. Compared with M3, it delivers significant improvements across multiple benchmarks, particularly in complex agentic tasks, coding, and cybersecurity. It is built for complex,...",
       "pricing": {
-        "prompt": "0",
-        "completion": "0"
+        "prompt": "0.00000015",
+        "completion": "0.0000006",
+        "input_cache_read": "0.000000015"
       },
       "context_length": 1000000,
       "architecture": {
@@ -186,9 +187,9 @@
       "created": 1792160499,
       "description": "Beam 1.0 is Reflection's open-weight reasoning model for coding and long-horizon agentic workflows. It uses a sparse mixture-of-experts architecture with 501B total and 23B active parameters per token, and a...",
       "pricing": {
-        "prompt": "0.0000003",
+        "prompt": "0.00000025",
         "completion": "0.000001",
-        "input_cache_read": "0.00000004"
+        "input_cache_read": "0.00000005"
       },
       "context_length": 1048576,
       "architecture": {
@@ -197,7 +198,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 943718
+        "max_completion_tokens": 131072
       }
     },
     {
@@ -841,7 +842,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": null
+        "max_completion_tokens": 65536
       }
     },
     {
@@ -1471,9 +1472,9 @@
       "created": 1789399174,
       "description": "This model always redirects to the latest model in the DeepSeek Pro family.",
       "pricing": {
-        "prompt": "0.0000002235",
+        "prompt": "0.000000225",
         "completion": "0.000008",
-        "input_cache_read": "0.00000022"
+        "input_cache_read": "0.00000023"
       },
       "context_length": 1048576,
       "architecture": {
@@ -1745,8 +1746,8 @@
       "created": 1789021285,
       "description": "DeepSeek V4.1 Flash is a sparse mixture-of-experts model from DeepSeek, and the first built on the company's Causal Encoder-Decoder (CED) architecture. It activates 8B parameters on input and 16B on...",
       "pricing": {
-        "prompt": "0.0000003",
-        "completion": "0.0000012",
+        "prompt": "0.000000165",
+        "completion": "0.00000066",
         "input_cache_read": "0.000000006"
       },
       "context_length": 1048576,
@@ -2185,9 +2186,9 @@
       "created": 1787817633,
       "description": "This model always redirects to the latest model in the GLM Flash family.",
       "pricing": {
-        "prompt": "0.0000000318",
-        "completion": "0.000000083",
-        "input_cache_read": "0.00000003"
+        "prompt": "0.0000000052",
+        "completion": "0.0000001985",
+        "input_cache_read": "0.0000000052"
       },
       "context_length": 1048576,
       "architecture": {
@@ -2225,9 +2226,9 @@
       "created": 1787752741,
       "description": "GLM-5.3-Flash is a native multimodal model from Z.ai. It is suited for efficient coding and long-horizon agent tasks. Its hybrid sparse and linear attention architecture maintains accurate long-context behavior while...",
       "pricing": {
-        "prompt": "0.0000000318",
-        "completion": "0.000000083",
-        "input_cache_read": "0.00000003"
+        "prompt": "0.0000000052",
+        "completion": "0.0000001985",
+        "input_cache_read": "0.0000000052"
       },
       "context_length": 1048576,
       "architecture": {
@@ -4740,7 +4741,7 @@
       "description": "This model always redirects to the latest model in the Kimi family.",
       "pricing": {
         "prompt": "0.000000238",
-        "completion": "0.000024",
+        "completion": "0.000016",
         "input_cache_read": "0.000000228"
       },
       "context_length": 1048576,
@@ -6274,8 +6275,9 @@
       "created": 1771223018,
       "description": "The Qwen3.5 series 397B-A17B native vision-language model is built on a hybrid architecture that integrates a linear attention mechanism with a sparse mixture-of-experts model, achieving higher inference efficiency. It delivers...",
       "pricing": {
-        "prompt": "0.00000039",
-        "completion": "0.00000234"
+        "prompt": "0.0000005",
+        "completion": "0.0000036",
+        "input_cache_read": "0.0000003"
       },
       "context_length": 262144,
       "architecture": {
@@ -6284,7 +6286,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 65536
+        "max_completion_tokens": 235929
       }
     },
     {
@@ -7277,7 +7279,8 @@
       "description": "Kimi K2 Thinking is Moonshot AI\u2019s most advanced open reasoning model to date, extending the K2 series into agentic, long-horizon reasoning. Built on the trillion-parameter Mixture-of-Experts (MoE) architecture introduced in...",
       "pricing": {
         "prompt": "0.0000006",
-        "completion": "0.0000025"
+        "completion": "0.0000025",
+        "input_cache_read": "0.00000015"
       },
       "context_length": 262144,
       "architecture": {
@@ -7286,7 +7289,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 235929
+        "max_completion_tokens": 98304
       }
     },
     {
@@ -8572,8 +8575,8 @@
       "created": 1750443016,
       "description": "Mistral-Small-3.2-24B-Instruct-2506 is an updated 24B parameter model from Mistral optimized for instruction following, repetition reduction, and improved function calling. Compared to the 3.1 release, version 3.2 significantly improves accuracy on...",
       "pricing": {
-        "prompt": "0.00000009375",
-        "completion": "0.00000025"
+        "prompt": "0.000000075",
+        "completion": "0.0000002"
       },
       "context_length": 256000,
       "architecture": {
