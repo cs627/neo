@@ -1,7 +1,27 @@
 {
-  "fetched_at": "2026-10-23T01:00:30Z",
-  "total": 468,
+  "fetched_at": "2026-10-24T01:00:12Z",
+  "total": 469,
   "models": [
+    {
+      "id": "moonshotai/kimi-k3.1-pro",
+      "name": "MoonshotAI: Kimi K3.1 Pro",
+      "created": 1792778188,
+      "description": "Kimi K3.1 Pro is Moonshot AI's flagship open-weight multimodal reasoning model and a post-trained successor to Kimi K3, with a 1M-token context window. It is built for long-horizon coding, 3D...",
+      "pricing": {
+        "prompt": "0.000002",
+        "completion": "0.00001",
+        "input_cache_read": "0.0000002"
+      },
+      "context_length": 1048576,
+      "architecture": {
+        "modality": "text+image+video->text",
+        "tokenizer": "Other"
+      },
+      "top_provider": {
+        "name": "",
+        "max_completion_tokens": 943718
+      }
+    },
     {
       "id": "recursive/flint-v1.0:free",
       "name": "Recursive: Flint (free)",
@@ -31,7 +51,7 @@
         "completion": "0.0000006",
         "input_cache_read": "0.000000015"
       },
-      "context_length": 1000000,
+      "context_length": 1048576,
       "architecture": {
         "modality": "text+image+video->text",
         "tokenizer": "Other"
@@ -1472,9 +1492,9 @@
       "created": 1789399174,
       "description": "This model always redirects to the latest model in the DeepSeek Pro family.",
       "pricing": {
-        "prompt": "0.000000225",
+        "prompt": "0.0000001188",
         "completion": "0.000008",
-        "input_cache_read": "0.00000023"
+        "input_cache_read": "0.00000012"
       },
       "context_length": 1048576,
       "architecture": {
@@ -1492,9 +1512,9 @@
       "created": 1789399150,
       "description": "This model always redirects to the latest model in the DeepSeek Flash family.",
       "pricing": {
-        "prompt": "0.00000007",
-        "completion": "0.0000005",
-        "input_cache_read": "0.000000008"
+        "prompt": "0.00000002",
+        "completion": "0.000001",
+        "input_cache_read": "0.000000015"
       },
       "context_length": 1048576,
       "architecture": {
@@ -1746,9 +1766,9 @@
       "created": 1789021285,
       "description": "DeepSeek V4.1 Flash is a sparse mixture-of-experts model from DeepSeek, and the first built on the company's Causal Encoder-Decoder (CED) architecture. It activates 8B parameters on input and 16B on...",
       "pricing": {
-        "prompt": "0.000000165",
-        "completion": "0.00000066",
-        "input_cache_read": "0.000000006"
+        "prompt": "0.00000002",
+        "completion": "0.000001",
+        "input_cache_read": "0.000000015"
       },
       "context_length": 1048576,
       "architecture": {
@@ -2186,9 +2206,9 @@
       "created": 1787817633,
       "description": "This model always redirects to the latest model in the GLM Flash family.",
       "pricing": {
-        "prompt": "0.0000000052",
-        "completion": "0.0000001985",
-        "input_cache_read": "0.0000000052"
+        "prompt": "0.0000000274",
+        "completion": "0.0000000852",
+        "input_cache_read": "0.0000000274"
       },
       "context_length": 1048576,
       "architecture": {
@@ -2197,7 +2217,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 943718
+        "max_completion_tokens": 131072
       }
     },
     {
@@ -2226,9 +2246,9 @@
       "created": 1787752741,
       "description": "GLM-5.3-Flash is a native multimodal model from Z.ai. It is suited for efficient coding and long-horizon agent tasks. Its hybrid sparse and linear attention architecture maintains accurate long-context behavior while...",
       "pricing": {
-        "prompt": "0.0000000052",
-        "completion": "0.0000001985",
-        "input_cache_read": "0.0000000052"
+        "prompt": "0.00000015",
+        "completion": "0.0000005",
+        "input_cache_read": "0.00000003"
       },
       "context_length": 1048576,
       "architecture": {
@@ -2237,7 +2257,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 943718
+        "max_completion_tokens": 943717
       }
     },
     {
@@ -2424,9 +2444,9 @@
       "created": 1786722910,
       "description": "Qwen3.8 27B is an open-weight dense vision-language model from Qwen. It is suited for coding, professional workflows, research, multimodal interaction, and long-running agent tasks, with flexible thinking that can be...",
       "pricing": {
-        "prompt": "0.00000004",
-        "completion": "0.00000135",
-        "input_cache_read": "0.000000018"
+        "prompt": "0.0000002",
+        "completion": "0.0000025",
+        "input_cache_read": "0.00000009"
       },
       "context_length": 1000000,
       "architecture": {
@@ -2435,7 +2455,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 65536
+        "max_completion_tokens": 235929
       }
     },
     {
@@ -2850,8 +2870,8 @@
       "created": 1785606009,
       "description": "This model always redirects to the latest model in the DeepSeek V4 Flash family.",
       "pricing": {
-        "prompt": "0.0000000475",
-        "completion": "0.0000001568",
+        "prompt": "0.0000000422",
+        "completion": "0.0000001694",
         "input_cache_read": "0.000000028"
       },
       "context_length": 1048576,
@@ -2870,9 +2890,9 @@
       "created": 1785478908,
       "description": "DeepSeek V4 Flash 0731 is a sparse mixture-of-experts model from DeepSeek, with 13B active parameters out of 284B total. This re-post-trained revision is suited for coding, reasoning, and agent workflows....",
       "pricing": {
-        "prompt": "0.00000044",
-        "completion": "0.00000132",
-        "input_cache_read": "0.000000014"
+        "prompt": "0.00000004444",
+        "completion": "0.00000013332",
+        "input_cache_read": "0.000000001414"
       },
       "context_length": 1048576,
       "architecture": {
@@ -3253,7 +3273,7 @@
       "description": "Kimi K3 is a 2.8T parameter open-weight multimodal reasoning model from Moonshot AI. It is suited for complex coding, knowledge work, and long-horizon agentic workflows, and is particularly strong at...",
       "pricing": {
         "prompt": "0.000000239",
-        "completion": "0.000011936",
+        "completion": "0.0000108",
         "input_cache_read": "0.00000021"
       },
       "context_length": 1048576,
@@ -4054,7 +4074,7 @@
       "pricing": {
         "prompt": "0.0000006712",
         "completion": "0.00000335",
-        "input_cache_read": "0.00000018"
+        "input_cache_read": "0.00000015"
       },
       "context_length": 262144,
       "architecture": {
@@ -5017,9 +5037,9 @@
       "created": 1777000679,
       "description": "DeepSeek V4 Pro is a large-scale Mixture-of-Experts model from DeepSeek with 1.6T total parameters and 49B activated parameters, supporting a 1M-token context window. It is designed for advanced reasoning, coding,...",
       "pricing": {
-        "prompt": "0.00000095526",
-        "completion": "0.00000191052",
-        "input_cache_read": "0.000000079605"
+        "prompt": "0.000000652152",
+        "completion": "0.000001304304",
+        "input_cache_read": "0.000000054346"
       },
       "context_length": 1048576,
       "architecture": {
@@ -5267,9 +5287,9 @@
       "created": 1775227989,
       "description": "Gemma 4 26B A4B IT is an instruction-tuned Mixture-of-Experts (MoE) model from Google DeepMind. Despite 25.2B total parameters, only 3.8B activate per token during inference \u2014 delivering near-31B quality at...",
       "pricing": {
-        "prompt": "0.0000000765",
-        "completion": "0.000000255",
-        "input_cache_read": "0.0000000425"
+        "prompt": "0.0000000675",
+        "completion": "0.000000225",
+        "input_cache_read": "0.0000000375"
       },
       "context_length": 262144,
       "architecture": {
@@ -5756,9 +5776,8 @@
       "created": 1773152396,
       "description": "Qwen3.5-9B is a multimodal foundation model from the Qwen3.5 family, designed to deliver strong reasoning, coding, and visual understanding in an efficient 9B-parameter architecture. It uses a unified vision-language design...",
       "pricing": {
-        "prompt": "0.00000008",
-        "completion": "0.00000013",
-        "input_cache_read": "0.00000004"
+        "prompt": "0.00000017",
+        "completion": "0.00000025"
       },
       "context_length": 262144,
       "architecture": {
@@ -5767,7 +5786,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 65536
+        "max_completion_tokens": 235929
       }
     },
     {
@@ -6904,7 +6923,7 @@
       "pricing": {
         "prompt": "0.0000003",
         "completion": "0.0000009",
-        "input_cache_read": "0.000000055"
+        "input_cache_read": "0.00000005"
       },
       "context_length": 131072,
       "architecture": {

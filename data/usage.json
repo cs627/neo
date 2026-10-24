@@ -1,8 +1,8 @@
 {
-  "fetched_at": "2026-10-23T01:00:30Z",
+  "fetched_at": "2026-10-24T01:00:12Z",
   "credits": {
     "total_credits": 800,
-    "total_usage": 536.295419904
+    "total_usage": 540.006677617
   },
   "key": {
     "label": "sk-or-v1-68b...d59",
@@ -14,10 +14,10 @@
     "include_byok_in_limit": false,
     "budgets": [],
     "effective_budget": null,
-    "usage": 506.974329095,
-    "usage_daily": 0.005715032,
-    "usage_weekly": 12.139398959,
-    "usage_monthly": 148.596278809,
+    "usage": 510.685586808,
+    "usage_daily": 0,
+    "usage_weekly": 15.850656672,
+    "usage_monthly": 152.307536522,
     "byok_usage": 0,
     "byok_usage_daily": 0,
     "byok_usage_weekly": 0,
