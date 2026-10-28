@@ -1,7 +1,69 @@
 {
-  "fetched_at": "2026-10-27T01:00:21Z",
-  "total": 462,
+  "fetched_at": "2026-10-28T01:00:53Z",
+  "total": 464,
   "models": [
+    {
+      "id": "openai/gpt-6.1-terra-pro",
+      "name": "OpenAI: GPT-6.1 Terra Pro",
+      "created": 1793038556,
+      "description": "GPT-6.1 Terra Pro is the same underlying model as [GPT-6.1 Terra](https://openrouter.ai/openai/gpt-6.1-terra), served with `reasoning.mode` set to `pro` for higher-quality responses on complex tasks. **Cost note:** pro mode spends far more...",
+      "pricing": {
+        "prompt": "0.000001",
+        "completion": "0.000005",
+        "web_search": "0.01",
+        "input_cache_read": "0.00000005",
+        "input_cache_write": "0.00000125",
+        "overrides": [
+          {
+            "min_prompt_tokens": 272000,
+            "prompt": "0.000002",
+            "completion": "0.0000075",
+            "input_cache_read": "0.0000001",
+            "input_cache_write": "0.0000025"
+          }
+        ]
+      },
+      "context_length": 1050000,
+      "architecture": {
+        "modality": "text+image+file->text",
+        "tokenizer": "GPT"
+      },
+      "top_provider": {
+        "name": "",
+        "max_completion_tokens": 128000
+      }
+    },
+    {
+      "id": "openai/gpt-6.1-terra-pro:batch",
+      "name": "OpenAI: GPT-6.1 Terra Pro (batch)",
+      "created": 1793038556,
+      "description": "GPT-6.1 Terra Pro is the same underlying model as [GPT-6.1 Terra](https://openrouter.ai/openai/gpt-6.1-terra), served with `reasoning.mode` set to `pro` for higher-quality responses on complex tasks. **Cost note:** pro mode spends far more...",
+      "pricing": {
+        "prompt": "0.0000005",
+        "completion": "0.0000025",
+        "web_search": "0.01",
+        "input_cache_read": "0.000000025",
+        "input_cache_write": "0.000000625",
+        "overrides": [
+          {
+            "min_prompt_tokens": 272000,
+            "prompt": "0.000001",
+            "completion": "0.00000375",
+            "input_cache_read": "0.00000005",
+            "input_cache_write": "0.00000125"
+          }
+        ]
+      },
+      "context_length": 1050000,
+      "architecture": {
+        "modality": "text+image+file->text",
+        "tokenizer": "GPT"
+      },
+      "top_provider": {
+        "name": "",
+        "max_completion_tokens": 128000
+      }
+    },
     {
       "id": "openai/gpt-6.1-terra",
       "name": "OpenAI: GPT-6.1 Terra",
@@ -301,6 +363,26 @@
       "top_provider": {
         "name": "",
         "max_completion_tokens": 131072
+      }
+    },
+    {
+      "id": "prism-ml/ternary-bonsai-2-9b",
+      "name": "PrismML: Ternary Bonsai 2 9B",
+      "created": 1792130995,
+      "description": "Ternary Bonsai 2 9B is PrismML\u2019s compact, open-weight language model for conversational AI, reasoning, and tool use. Built on Qwen3.5, it uses ternary weights packed into 2 bits for efficient...",
+      "pricing": {
+        "prompt": "0.00000008",
+        "completion": "0.00000013",
+        "input_cache_read": "0.00000004"
+      },
+      "context_length": 262144,
+      "architecture": {
+        "modality": "text+image->text",
+        "tokenizer": "Qwen"
+      },
+      "top_provider": {
+        "name": "",
+        "max_completion_tokens": 65536
       }
     },
     {
@@ -1384,7 +1466,7 @@
       "id": "nvidia/switchyard",
       "name": "NVIDIA: Switchyard",
       "created": 1790025947,
-      "description": "Switchyard is an open-source model router that switches between multiple models to optimize the cost of requests. By default it will use OpenRouter market data to select the most popular...",
+      "description": "Switchyard is an open-source model routing system that switches between multiple models to optimize the cost of requests. By default it will use OpenRouter market data to select the most...",
       "pricing": {
         "prompt": "-1",
         "completion": "-1"
@@ -1554,9 +1636,9 @@
       "created": 1789399174,
       "description": "This model always redirects to the latest model in the DeepSeek Pro family.",
       "pricing": {
-        "prompt": "0.0000002546",
+        "prompt": "0.0000002565",
         "completion": "0.000008",
-        "input_cache_read": "0.00000025"
+        "input_cache_read": "0.00000026"
       },
       "context_length": 1048576,
       "architecture": {
@@ -1574,9 +1656,9 @@
       "created": 1789399150,
       "description": "This model always redirects to the latest model in the DeepSeek Flash family.",
       "pricing": {
-        "prompt": "0.00000004",
-        "completion": "0.0000005",
-        "input_cache_read": "0.00000003"
+        "prompt": "0.0000000182",
+        "completion": "0.0000018",
+        "input_cache_read": "0.000000015"
       },
       "context_length": 1048576,
       "architecture": {
@@ -1585,7 +1667,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 393216
+        "max_completion_tokens": 943718
       }
     },
     {
@@ -2268,8 +2350,8 @@
       "created": 1787817633,
       "description": "This model always redirects to the latest model in the GLM Flash family.",
       "pricing": {
-        "prompt": "0.0000000413",
-        "completion": "0.0000000758",
+        "prompt": "0.0000000345",
+        "completion": "0.0000000823",
         "input_cache_read": "0.00000003"
       },
       "context_length": 1048576,
@@ -2972,9 +3054,9 @@
       "created": 1785478908,
       "description": "DeepSeek V4 Flash 0731 is a sparse mixture-of-experts model from DeepSeek, with 13B active parameters out of 284B total. This re-post-trained revision is suited for coding, reasoning, and agent workflows....",
       "pricing": {
-        "prompt": "0.00000044",
-        "completion": "0.00000132",
-        "input_cache_read": "0.000000014"
+        "prompt": "0.000000119",
+        "completion": "0.000000238",
+        "input_cache_read": "0.0000000238"
       },
       "context_length": 1048576,
       "architecture": {
@@ -2983,7 +3065,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 131072
+        "max_completion_tokens": 943718
       }
     },
     {
@@ -3354,9 +3436,9 @@
       "created": 1784215858,
       "description": "Kimi K3 is a 2.8T parameter open-weight multimodal reasoning model from Moonshot AI. It is suited for complex coding, knowledge work, and long-horizon agentic workflows, and is particularly strong at...",
       "pricing": {
-        "prompt": "0.000000189",
-        "completion": "0.00002",
-        "input_cache_read": "0.000000179"
+        "prompt": "0.0000002",
+        "completion": "0.0000115",
+        "input_cache_read": "0.00000019"
       },
       "context_length": 1048576,
       "architecture": {
@@ -4842,9 +4924,9 @@
       "created": 1777318428,
       "description": "This model always redirects to the latest model in the Kimi family.",
       "pricing": {
-        "prompt": "0.0000001795",
+        "prompt": "0.0000001605",
         "completion": "0.00000894",
-        "input_cache_read": "0.00000017"
+        "input_cache_read": "0.00000016"
       },
       "context_length": 1048576,
       "architecture": {
@@ -4968,8 +5050,8 @@
       "description": "Qwen3.6-35B-A3B is an open-weight multimodal model from Alibaba Cloud with 35 billion total parameters and 3 billion active parameters per token. It uses a hybrid sparse mixture-of-experts architecture combining Gated...",
       "pricing": {
         "prompt": "0.0000001",
-        "completion": "0.00000095",
-        "input_cache_read": "0.00000005"
+        "completion": "0.0000009",
+        "input_cache_read": "0.000000025"
       },
       "context_length": 262144,
       "architecture": {
@@ -4987,8 +5069,8 @@
       "created": 1777255064,
       "description": "Qwen3.6 27B is a dense 27-billion-parameter language model from the Qwen Team at Alibaba, released in April 2026. It features hybrid multimodal capabilities \u2014 accepting text, image, and video inputs...",
       "pricing": {
-        "prompt": "0.00000032",
-        "completion": "0.0000032"
+        "prompt": "0.00000045",
+        "completion": "0.0000027"
       },
       "context_length": 262144,
       "architecture": {
@@ -4997,7 +5079,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 81920
+        "max_completion_tokens": 65536
       }
     },
     {
@@ -5118,9 +5200,9 @@
       "created": 1777000679,
       "description": "DeepSeek V4 Pro is a large-scale Mixture-of-Experts model from DeepSeek with 1.6T total parameters and 49B activated parameters, supporting a 1M-token context window. It is designed for advanced reasoning, coding,...",
       "pricing": {
-        "prompt": "0.00000095526",
-        "completion": "0.00000191052",
-        "input_cache_read": "0.000000079605"
+        "prompt": "0.000000875394",
+        "completion": "0.000001750788",
+        "input_cache_read": "0.0000000729495"
       },
       "context_length": 1048576,
       "architecture": {
@@ -5178,9 +5260,9 @@
       "created": 1776874273,
       "description": "MiMo-V2.5-Pro is Xiaomi\u2019s flagship model, delivering strong performance in general agentic capabilities, complex software engineering, and long-horizon tasks, with top rankings on benchmarks such as ClawEval, GDPVal, and SWE-bench Pro....",
       "pricing": {
-        "prompt": "0.0000003045",
-        "completion": "0.000000609",
-        "input_cache_read": "0.0000000028"
+        "prompt": "0.00000048",
+        "completion": "0.0000018",
+        "input_cache_read": "0.000000096"
       },
       "context_length": 1050000,
       "architecture": {
@@ -5189,7 +5271,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 945000
+        "max_completion_tokens": 235929
       }
     },
     {
@@ -5348,9 +5430,9 @@
       "created": 1775578025,
       "description": "GLM-5.1 delivers a major leap in coding capability, with particularly significant gains in handling long-horizon tasks. Unlike previous models built around minute-level interactions, GLM-5.1 can work independently and continuously on...",
       "pricing": {
-        "prompt": "0.000000966",
-        "completion": "0.000003036",
-        "input_cache_read": "0.0000001794"
+        "prompt": "0.0000014",
+        "completion": "0.0000044",
+        "input_cache_read": "0.00000026"
       },
       "context_length": 204800,
       "architecture": {
@@ -5359,7 +5441,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 128000
+        "max_completion_tokens": 131072
       }
     },
     {
@@ -5752,28 +5834,8 @@
       "created": 1773245239,
       "description": "NVIDIA Nemotron 3 Super is a 120B-parameter open hybrid MoE model, activating just 12B parameters for maximum compute efficiency and accuracy in complex multi-agent applications. Built on a hybrid Mamba-Transformer...",
       "pricing": {
-        "prompt": "0.0000003",
-        "completion": "0.0000024",
-        "input_cache_read": "0.00000015"
-      },
-      "context_length": 262144,
-      "architecture": {
-        "modality": "text->text",
-        "tokenizer": "Other"
-      },
-      "top_provider": {
-        "name": "",
-        "max_completion_tokens": 235929
-      }
-    },
-    {
-      "id": "nvidia/nemotron-3-super-120b-a12b:free",
-      "name": "NVIDIA: Nemotron 3 Super (free)",
-      "created": 1773245239,
-      "description": "NVIDIA Nemotron 3 Super is a 120B-parameter open hybrid MoE model, activating just 12B parameters for maximum compute efficiency and accuracy in complex multi-agent applications. Built on a hybrid Mamba-Transformer...",
-      "pricing": {
-        "prompt": "0",
-        "completion": "0"
+        "prompt": "0.00000008",
+        "completion": "0.00000045"
       },
       "context_length": 262144,
       "architecture": {
@@ -6801,7 +6863,8 @@
       "description": "NVIDIA Nemotron 3 Nano 30B A3B is a small language MoE model with highest compute efficiency and accuracy for developers to build specialized agentic AI systems. The model is fully...",
       "pricing": {
         "prompt": "0.00000006",
-        "completion": "0.00000024"
+        "completion": "0.00000024",
+        "input_cache_read": "0.000000012"
       },
       "context_length": 262144,
       "architecture": {
@@ -7910,7 +7973,8 @@
       "description": "Hermes 4 is a large-scale reasoning model built on Meta-Llama-3.1-405B and released by Nous Research. It introduces a hybrid reasoning mode, where the model can choose to deliberate internally with...",
       "pricing": {
         "prompt": "0.000001",
-        "completion": "0.000003"
+        "completion": "0.000003",
+        "input_cache_read": "0.0000002"
       },
       "context_length": 131072,
       "architecture": {
@@ -8278,7 +8342,8 @@
       "description": "Qwen3-30B-A3B-Instruct-2507 is a 30.5B-parameter mixture-of-experts language model from Qwen, with 3.3B active parameters per inference. It operates in non-thinking mode and is designed for high-quality instruction following, multilingual understanding, and...",
       "pricing": {
         "prompt": "0.0000001",
-        "completion": "0.0000003"
+        "completion": "0.0000003",
+        "input_cache_read": "0.0000001"
       },
       "context_length": 262144,
       "architecture": {
@@ -9136,9 +9201,8 @@
       "created": 1741905510,
       "description": "Gemma 3 introduces multimodality, supporting vision-language input and text outputs. It handles context windows up to 128k tokens, understands over 140 languages, and offers improved math, reasoning, and chat capabilities,...",
       "pricing": {
-        "prompt": "0.00000004",
-        "completion": "0.00000005",
-        "input_cache_read": "0.00000002"
+        "prompt": "0.00000005",
+        "completion": "0.0000001"
       },
       "context_length": 131072,
       "architecture": {
@@ -9147,7 +9211,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 117964
+        "max_completion_tokens": 16384
       }
     },
     {
@@ -10004,9 +10068,8 @@
       "created": 1721692800,
       "description": "Meta's latest class of model (Llama 3.1) launched with a variety of sizes & flavors. This 8B instruct-tuned version is fast and efficient. It has demonstrated strong performance compared to...",
       "pricing": {
-        "prompt": "0.00000005",
-        "completion": "0.00000008",
-        "input_cache_read": "0.000000025"
+        "prompt": "0.00000002",
+        "completion": "0.00000004"
       },
       "context_length": 131072,
       "architecture": {
@@ -10015,7 +10078,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 117964
+        "max_completion_tokens": 16384
       }
     },
     {
