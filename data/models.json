@@ -1,7 +1,27 @@
 {
-  "fetched_at": "2026-10-28T01:00:53Z",
-  "total": 464,
+  "fetched_at": "2026-10-29T01:00:52Z",
+  "total": 421,
   "models": [
+    {
+      "id": "particle-ai/particle-1",
+      "name": "Particle AI: Particle-1",
+      "created": 1793207893,
+      "description": "Particle-1 is a token-efficient agentic coding model from Particle AI, post-trained on DeepSeek V4.1 Flash. It is suited for software engineering work such as terminal workflows, codebase changes, and data...",
+      "pricing": {
+        "prompt": "0.00000025",
+        "completion": "0.000001",
+        "input_cache_read": "0.00000003"
+      },
+      "context_length": 1048576,
+      "architecture": {
+        "modality": "text+image->text",
+        "tokenizer": "Other"
+      },
+      "top_provider": {
+        "name": "",
+        "max_completion_tokens": 131072
+      }
+    },
     {
       "id": "openai/gpt-6.1-terra-pro",
       "name": "OpenAI: GPT-6.1 Terra Pro",
@@ -191,90 +211,9 @@
       "created": 1792225624,
       "description": "DeepSeek V4.1 Flash 1017 is the October 17, 2026 snapshot of DeepSeek V4.1 Flash, served by DeepSeek under the `deepseek-flash` API model name. V4.1 Flash is a sparse mixture-of-experts model...",
       "pricing": {
-        "prompt": "0.00000015",
-        "completion": "0.0000006",
-        "input_cache_read": "0.000000003",
-        "overrides": [
-          {
-            "utc_days": [
-              "saturday",
-              "sunday"
-            ],
-            "prompt": "0.00000015",
-            "completion": "0.0000006",
-            "input_cache_read": "0.000000003"
-          },
-          {
-            "utc_days": [
-              "monday",
-              "tuesday",
-              "wednesday",
-              "thursday",
-              "friday"
-            ],
-            "utc_start": 0,
-            "utc_end": 100,
-            "prompt": "0.00000015",
-            "completion": "0.0000006",
-            "input_cache_read": "0.000000003"
-          },
-          {
-            "utc_days": [
-              "monday",
-              "tuesday",
-              "wednesday",
-              "thursday",
-              "friday"
-            ],
-            "utc_start": 100,
-            "utc_end": 400,
-            "prompt": "0.0000003",
-            "completion": "0.0000012",
-            "input_cache_read": "0.000000006"
-          },
-          {
-            "utc_days": [
-              "monday",
-              "tuesday",
-              "wednesday",
-              "thursday",
-              "friday"
-            ],
-            "utc_start": 400,
-            "utc_end": 600,
-            "prompt": "0.00000015",
-            "completion": "0.0000006",
-            "input_cache_read": "0.000000003"
-          },
-          {
-            "utc_days": [
-              "monday",
-              "tuesday",
-              "wednesday",
-              "thursday",
-              "friday"
-            ],
-            "utc_start": 600,
-            "utc_end": 1000,
-            "prompt": "0.0000003",
-            "completion": "0.0000012",
-            "input_cache_read": "0.000000006"
-          },
-          {
-            "utc_days": [
-              "monday",
-              "tuesday",
-              "wednesday",
-              "thursday",
-              "friday"
-            ],
-            "utc_start": 1000,
-            "utc_end": 0,
-            "prompt": "0.00000015",
-            "completion": "0.0000006",
-            "input_cache_read": "0.000000003"
-          }
-        ]
+        "prompt": "0.0000000138",
+        "completion": "0.0000018",
+        "input_cache_read": "0.0000000137"
       },
       "context_length": 1048576,
       "architecture": {
@@ -283,7 +222,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 393216
+        "max_completion_tokens": 943718
       }
     },
     {
@@ -440,7 +379,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 943718
+        "max_completion_tokens": 131072
       }
     },
     {
@@ -810,14 +749,14 @@
         "completion": "0.000000225",
         "input_cache_read": "0.000000015"
       },
-      "context_length": 262144,
+      "context_length": 1000000,
       "architecture": {
         "modality": "text->text",
         "tokenizer": "Other"
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 235929
+        "max_completion_tokens": 262144
       }
     },
     {
@@ -1636,9 +1575,9 @@
       "created": 1789399174,
       "description": "This model always redirects to the latest model in the DeepSeek Pro family.",
       "pricing": {
-        "prompt": "0.0000002565",
+        "prompt": "0.0000001035",
         "completion": "0.000008",
-        "input_cache_read": "0.00000026"
+        "input_cache_read": "0.0000001"
       },
       "context_length": 1048576,
       "architecture": {
@@ -1656,9 +1595,9 @@
       "created": 1789399150,
       "description": "This model always redirects to the latest model in the DeepSeek Flash family.",
       "pricing": {
-        "prompt": "0.0000000182",
+        "prompt": "0.0000000138",
         "completion": "0.0000018",
-        "input_cache_read": "0.000000015"
+        "input_cache_read": "0.0000000137"
       },
       "context_length": 1048576,
       "architecture": {
@@ -1910,9 +1849,9 @@
       "created": 1789021285,
       "description": "DeepSeek V4.1 Flash is a sparse mixture-of-experts model from DeepSeek, and the first built on the company's Causal Encoder-Decoder (CED) architecture. It activates 8B parameters on input and 16B on...",
       "pricing": {
-        "prompt": "0.00000014",
-        "completion": "0.00000042",
-        "input_cache_read": "0.0000000042"
+        "prompt": "0.000000045",
+        "completion": "0.0000005",
+        "input_cache_read": "0.000000006"
       },
       "context_length": 1048576,
       "architecture": {
@@ -1921,7 +1860,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 131072
+        "max_completion_tokens": 943718
       }
     },
     {
@@ -2149,27 +2088,6 @@
       }
     },
     {
-      "id": "meta/muse-spark-1.3-contributor",
-      "name": "Meta: Muse Spark 1.3 Contributor",
-      "created": 1788381519,
-      "description": "Muse Spark 1.3 Contributor is the cost-efficient contributor tier of Meta\u2019s multimodal reasoning model for experimentation, learning, and early-stage agentic, multi-agent, and coding workflows. It is designed to track information...",
-      "pricing": {
-        "prompt": "0.0000001",
-        "completion": "0.0000002",
-        "web_search": "0.0025",
-        "input_cache_read": "0.000000002"
-      },
-      "context_length": 1048576,
-      "architecture": {
-        "modality": "text+image+file+video->text",
-        "tokenizer": "Other"
-      },
-      "top_provider": {
-        "name": "",
-        "max_completion_tokens": 943718
-      }
-    },
-    {
       "id": "meta/muse-spark-1.3",
       "name": "Meta: Muse Spark 1.3",
       "created": 1788378359,
@@ -2196,14 +2114,14 @@
       "created": 1788362056,
       "description": "Gemini 3.8 Flash is Google's most intelligent Flash model with significant gains from 3.7 Flash across software engineering, agentic tasks, and multi-step reasoning.",
       "pricing": {
-        "prompt": "0.000000825",
-        "completion": "0.000004125",
-        "image": "0.000000825",
-        "audio": "0.000000825",
-        "input_audio_cache": "0.0000000825",
+        "prompt": "0.00000075",
+        "completion": "0.00000375",
+        "image": "0.00000075",
+        "audio": "0.00000075",
+        "input_audio_cache": "0.000000075",
         "web_search": "0.014",
-        "internal_reasoning": "0.000004125",
-        "input_cache_read": "0.0000000825",
+        "internal_reasoning": "0.00000375",
+        "input_cache_read": "0.000000075",
         "input_cache_write": "0.0000000416666666666667"
       },
       "context_length": 1048576,
@@ -2295,7 +2213,7 @@
       "description": "Granite 4.2 8B is a dense reasoning model from IBM. It is suited for mathematics, code generation, multilingual dialogue, and agentic workflows that need multi-step reasoning. It supports full, low-effort,...",
       "pricing": {
         "prompt": "0.00000006",
-        "completion": "0.00000025",
+        "completion": "0.00000015",
         "input_cache_read": "0.000000015"
       },
       "context_length": 131072,
@@ -2351,7 +2269,7 @@
       "description": "This model always redirects to the latest model in the GLM Flash family.",
       "pricing": {
         "prompt": "0.0000000345",
-        "completion": "0.0000000823",
+        "completion": "0.0000000798",
         "input_cache_read": "0.00000003"
       },
       "context_length": 1048576,
@@ -2390,8 +2308,8 @@
       "created": 1787752741,
       "description": "GLM-5.3-Flash is a native multimodal model from Z.ai. It is suited for efficient coding and long-horizon agent tasks. Its hybrid sparse and linear attention architecture maintains accurate long-context behavior while...",
       "pricing": {
-        "prompt": "0.00000015",
-        "completion": "0.0000005",
+        "prompt": "0.0000000345",
+        "completion": "0.0000000798",
         "input_cache_read": "0.00000003"
       },
       "context_length": 1048576,
@@ -2401,7 +2319,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 943717
+        "max_completion_tokens": 131072
       }
     },
     {
@@ -2422,27 +2340,6 @@
       "top_provider": {
         "name": "",
         "max_completion_tokens": 131072
-      }
-    },
-    {
-      "id": "meta/muse-spark-1.2-contributor",
-      "name": "Meta: Muse Spark 1.2 Contributor",
-      "created": 1787336476,
-      "description": "Muse Spark 1.2 contributor tier is a reasoning model from Meta designed for developers who want to start building at an even lower cost. It\u2019s meaningfully cheaper than Muse Spark...",
-      "pricing": {
-        "prompt": "0.0000001",
-        "completion": "0.0000002",
-        "web_search": "0.0025",
-        "input_cache_read": "0.000000002"
-      },
-      "context_length": 1048576,
-      "architecture": {
-        "modality": "text+image+file+video->text",
-        "tokenizer": "Other"
-      },
-      "top_provider": {
-        "name": "",
-        "max_completion_tokens": 943718
       }
     },
     {
@@ -2744,90 +2641,9 @@
       "created": 1786549364,
       "description": "DeepSeek V4 Pro 0813 is a large-scale mixture-of-experts model from DeepSeek. This is the GA release of DeepSeek V4 Pro.",
       "pricing": {
-        "prompt": "0.00000066",
-        "completion": "0.00000198",
-        "input_cache_read": "0.000000022",
-        "overrides": [
-          {
-            "utc_days": [
-              "saturday",
-              "sunday"
-            ],
-            "prompt": "0.00000066",
-            "completion": "0.00000198",
-            "input_cache_read": "0.000000022"
-          },
-          {
-            "utc_days": [
-              "monday",
-              "tuesday",
-              "wednesday",
-              "thursday",
-              "friday"
-            ],
-            "utc_start": 0,
-            "utc_end": 100,
-            "prompt": "0.00000066",
-            "completion": "0.00000198",
-            "input_cache_read": "0.000000022"
-          },
-          {
-            "utc_days": [
-              "monday",
-              "tuesday",
-              "wednesday",
-              "thursday",
-              "friday"
-            ],
-            "utc_start": 100,
-            "utc_end": 400,
-            "prompt": "0.00000132",
-            "completion": "0.00000396",
-            "input_cache_read": "0.000000044"
-          },
-          {
-            "utc_days": [
-              "monday",
-              "tuesday",
-              "wednesday",
-              "thursday",
-              "friday"
-            ],
-            "utc_start": 400,
-            "utc_end": 600,
-            "prompt": "0.00000066",
-            "completion": "0.00000198",
-            "input_cache_read": "0.000000022"
-          },
-          {
-            "utc_days": [
-              "monday",
-              "tuesday",
-              "wednesday",
-              "thursday",
-              "friday"
-            ],
-            "utc_start": 600,
-            "utc_end": 1000,
-            "prompt": "0.00000132",
-            "completion": "0.00000396",
-            "input_cache_read": "0.000000044"
-          },
-          {
-            "utc_days": [
-              "monday",
-              "tuesday",
-              "wednesday",
-              "thursday",
-              "friday"
-            ],
-            "utc_start": 1000,
-            "utc_end": 0,
-            "prompt": "0.00000066",
-            "completion": "0.00000198",
-            "input_cache_read": "0.000000022"
-          }
-        ]
+        "prompt": "0.0000001035",
+        "completion": "0.000008",
+        "input_cache_read": "0.0000001"
       },
       "context_length": 1048576,
       "architecture": {
@@ -2866,26 +2682,6 @@
       "top_provider": {
         "name": "",
         "max_completion_tokens": 450000
-      }
-    },
-    {
-      "id": "liquid/lfm-2.5-2.6b",
-      "name": "LiquidAI: LFM2.5-2.6B",
-      "created": 1786470519,
-      "description": "LFM2.5-2.6B is a compact reasoning model from Liquid AI. It is suited for agent workflows, data extraction, RAG, and long-context processing. Liquid advises against using it for agentic coding or...",
-      "pricing": {
-        "prompt": "0.00000035",
-        "completion": "0.0000005",
-        "input_cache_read": "0.00000004"
-      },
-      "context_length": 128000,
-      "architecture": {
-        "modality": "text->text",
-        "tokenizer": "Other"
-      },
-      "top_provider": {
-        "name": "",
-        "max_completion_tokens": 8192
       }
     },
     {
@@ -2939,27 +2735,6 @@
       "context_length": 1000000,
       "architecture": {
         "modality": "text->text",
-        "tokenizer": "Other"
-      },
-      "top_provider": {
-        "name": "",
-        "max_completion_tokens": 65536
-      }
-    },
-    {
-      "id": "sakana/sakana-namazu",
-      "name": "Sakana: Sakana Namazu",
-      "created": 1786410129,
-      "description": "Sakana Namazu is a Japanese-specialized reasoning model from Sakana AI, based on Kimi K2.6 with additional training for Japanese language and business contexts. It is suited for Japanese instruction following,...",
-      "pricing": {
-        "prompt": "0.00000095",
-        "completion": "0.000004",
-        "web_search": "0.007",
-        "input_cache_read": "0.00000015"
-      },
-      "context_length": 262144,
-      "architecture": {
-        "modality": "text+image+file->text",
         "tokenizer": "Other"
       },
       "top_provider": {
@@ -3436,9 +3211,9 @@
       "created": 1784215858,
       "description": "Kimi K3 is a 2.8T parameter open-weight multimodal reasoning model from Moonshot AI. It is suited for complex coding, knowledge work, and long-horizon agentic workflows, and is particularly strong at...",
       "pricing": {
-        "prompt": "0.0000002",
-        "completion": "0.0000115",
-        "input_cache_read": "0.00000019"
+        "prompt": "0.000000192",
+        "completion": "0.00002",
+        "input_cache_read": "0.000000182"
       },
       "context_length": 1048576,
       "architecture": {
@@ -4052,29 +3827,6 @@
       }
     },
     {
-      "id": "anthropic/claude-sonnet-5:batch",
-      "name": "Anthropic: Claude Sonnet 5 (batch)",
-      "created": 1782843083,
-      "description": "Sonnet 5 is Anthropic's most capable Sonnet-class model, with frontier performance across coding, agents, and professional work. It supports adaptive thinking with selectable reasoning effort levels (low, medium, high, max,...",
-      "pricing": {
-        "prompt": "0.000001",
-        "completion": "0.000005",
-        "web_search": "0.01",
-        "input_cache_read": "0.0000001",
-        "input_cache_write": "0.00000125",
-        "input_cache_write_1h": "0.000002"
-      },
-      "context_length": 1000000,
-      "architecture": {
-        "modality": "text+image+file->text",
-        "tokenizer": "Claude"
-      },
-      "top_provider": {
-        "name": "",
-        "max_completion_tokens": 128000
-      }
-    },
-    {
       "id": "google/gemini-3.1-flash-lite-image",
       "name": "Google: Nano Banana 2 Lite (Gemini 3.1 Flash Lite Image)",
       "created": 1782837225,
@@ -4197,9 +3949,9 @@
       "created": 1781631930,
       "description": "GLM 5.2 is a large-scale reasoning model from Z.ai. It supports text input and output with a 1M-token context window, and is suited for long-horizon agent workflows, project-level software engineering,...",
       "pricing": {
-        "prompt": "0.0000000341",
-        "completion": "0.000007",
-        "input_cache_read": "0.000000033"
+        "prompt": "0.000000006",
+        "completion": "0.0000054",
+        "input_cache_read": "0.000000005"
       },
       "context_length": 1048576,
       "architecture": {
@@ -4285,29 +4037,6 @@
         "input_cache_read": "0.000001",
         "input_cache_write": "0.0000125",
         "input_cache_write_1h": "0.00002"
-      },
-      "context_length": 1000000,
-      "architecture": {
-        "modality": "text+image+file->text",
-        "tokenizer": "Claude"
-      },
-      "top_provider": {
-        "name": "",
-        "max_completion_tokens": 128000
-      }
-    },
-    {
-      "id": "anthropic/claude-fable-5:batch",
-      "name": "Anthropic: Claude Fable 5 (batch)",
-      "created": 1781007515,
-      "description": "Claude Fable 5 is a Mythos-class model from Anthropic, built for autonomous knowledge work and coding. It supports text, image, and file inputs with text output, with reasoning support and...",
-      "pricing": {
-        "prompt": "0.000005",
-        "completion": "0.000025",
-        "web_search": "0.01",
-        "input_cache_read": "0.0000005",
-        "input_cache_write": "0.00000625",
-        "input_cache_write_1h": "0.00001"
       },
       "context_length": 1000000,
       "architecture": {
@@ -4497,29 +4226,6 @@
         "input_cache_read": "0.0000005",
         "input_cache_write": "0.00000625",
         "input_cache_write_1h": "0.00001"
-      },
-      "context_length": 1000000,
-      "architecture": {
-        "modality": "text+image+file->text",
-        "tokenizer": "Claude"
-      },
-      "top_provider": {
-        "name": "",
-        "max_completion_tokens": 128000
-      }
-    },
-    {
-      "id": "anthropic/claude-opus-4.8:batch",
-      "name": "Anthropic: Claude Opus 4.8 (batch)",
-      "created": 1779905091,
-      "description": "Claude Opus 4.8 is Anthropic's most capable generally available model in the Opus family. It supports text, image, and file inputs with text output, with reasoning support and a 1M-token...",
-      "pricing": {
-        "prompt": "0.0000025",
-        "completion": "0.0000125",
-        "web_search": "0.01",
-        "input_cache_read": "0.00000025",
-        "input_cache_write": "0.000003125",
-        "input_cache_write_1h": "0.000005"
       },
       "context_length": 1000000,
       "architecture": {
@@ -4924,9 +4630,9 @@
       "created": 1777318428,
       "description": "This model always redirects to the latest model in the Kimi family.",
       "pricing": {
-        "prompt": "0.0000001605",
-        "completion": "0.00000894",
-        "input_cache_read": "0.00000016"
+        "prompt": "0.0000001824",
+        "completion": "0.0000093388",
+        "input_cache_read": "0.00000018"
       },
       "context_length": 1048576,
       "architecture": {
@@ -5110,33 +4816,6 @@
       }
     },
     {
-      "id": "openai/gpt-5.5-pro:batch",
-      "name": "OpenAI: GPT-5.5 Pro (batch)",
-      "created": 1777051896,
-      "description": "GPT-5.5 Pro is OpenAI\u2019s high-capability model optimized for deep reasoning and accuracy on complex, high-stakes workloads. It features a 1M+ token context window (922K input, 128K output) with support for...",
-      "pricing": {
-        "prompt": "0.000015",
-        "completion": "0.00009",
-        "web_search": "0.01",
-        "overrides": [
-          {
-            "min_prompt_tokens": 272000,
-            "prompt": "0.00003",
-            "completion": "0.000135"
-          }
-        ]
-      },
-      "context_length": 1050000,
-      "architecture": {
-        "modality": "text+image+file->text",
-        "tokenizer": "GPT"
-      },
-      "top_provider": {
-        "name": "",
-        "max_completion_tokens": 128000
-      }
-    },
-    {
       "id": "openai/gpt-5.5",
       "name": "OpenAI: GPT-5.5",
       "created": 1777051893,
@@ -5166,43 +4845,14 @@
       }
     },
     {
-      "id": "openai/gpt-5.5:batch",
-      "name": "OpenAI: GPT-5.5 (batch)",
-      "created": 1777051893,
-      "description": "GPT-5.5 is OpenAI\u2019s frontier model designed for complex professional workloads, building on GPT-5.4 with stronger reasoning, higher reliability, and improved token efficiency on hard tasks. It features a 1M+ token...",
-      "pricing": {
-        "prompt": "0.0000025",
-        "completion": "0.000015",
-        "web_search": "0.01",
-        "input_cache_read": "0.00000025",
-        "overrides": [
-          {
-            "min_prompt_tokens": 272000,
-            "prompt": "0.000005",
-            "completion": "0.0000225",
-            "input_cache_read": "0.0000005"
-          }
-        ]
-      },
-      "context_length": 1050000,
-      "architecture": {
-        "modality": "text+image+file->text",
-        "tokenizer": "GPT"
-      },
-      "top_provider": {
-        "name": "",
-        "max_completion_tokens": 128000
-      }
-    },
-    {
       "id": "deepseek/deepseek-v4-pro",
       "name": "DeepSeek: DeepSeek V4 Pro 0423",
       "created": 1777000679,
       "description": "DeepSeek V4 Pro is a large-scale Mixture-of-Experts model from DeepSeek with 1.6T total parameters and 49B activated parameters, supporting a 1M-token context window. It is designed for advanced reasoning, coding,...",
       "pricing": {
-        "prompt": "0.000000875394",
-        "completion": "0.000001750788",
-        "input_cache_read": "0.0000000729495"
+        "prompt": "0.00000095526",
+        "completion": "0.00000191052",
+        "input_cache_read": "0.000000079605"
       },
       "context_length": 1048576,
       "architecture": {
@@ -5220,9 +4870,9 @@
       "created": 1777000666,
       "description": "DeepSeek V4 Flash is an efficiency-optimized Mixture-of-Experts model from DeepSeek with 284B total parameters and 13B activated parameters, supporting a 1M-token context window. It is designed for fast inference and...",
       "pricing": {
-        "prompt": "0.00000014",
-        "completion": "0.00000028",
-        "input_cache_read": "0.000000028"
+        "prompt": "0.000000091",
+        "completion": "0.000000182",
+        "input_cache_read": "0.0000000182"
       },
       "context_length": 1048576,
       "architecture": {
@@ -5231,7 +4881,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 131072
+        "max_completion_tokens": 943717
       }
     },
     {
@@ -5390,29 +5040,6 @@
         "input_cache_read": "0.0000005",
         "input_cache_write": "0.00000625",
         "input_cache_write_1h": "0.00001"
-      },
-      "context_length": 1000000,
-      "architecture": {
-        "modality": "text+image+file->text",
-        "tokenizer": "Claude"
-      },
-      "top_provider": {
-        "name": "",
-        "max_completion_tokens": 128000
-      }
-    },
-    {
-      "id": "anthropic/claude-opus-4.7:batch",
-      "name": "Anthropic: Claude Opus 4.7 (batch)",
-      "created": 1776351100,
-      "description": "Opus 4.7 is the next generation of Anthropic's Opus family, built for long-running, asynchronous agents. Building on the coding and agentic strengths of Opus 4.6, it delivers stronger performance on...",
-      "pricing": {
-        "prompt": "0.0000025",
-        "completion": "0.0000125",
-        "web_search": "0.01",
-        "input_cache_read": "0.00000025",
-        "input_cache_write": "0.000003125",
-        "input_cache_write_1h": "0.000005"
       },
       "context_length": 1000000,
       "architecture": {
@@ -5726,27 +5353,6 @@
       }
     },
     {
-      "id": "openai/gpt-5.4-nano:batch",
-      "name": "OpenAI: GPT-5.4 Nano (batch)",
-      "created": 1773748187,
-      "description": "GPT-5.4 nano is the most lightweight and cost-efficient variant of the GPT-5.4 family, optimized for speed-critical and high-volume tasks. It supports text and image inputs and is designed for low-latency...",
-      "pricing": {
-        "prompt": "0.0000001",
-        "completion": "0.000000625",
-        "web_search": "0.01",
-        "input_cache_read": "0.00000001"
-      },
-      "context_length": 400000,
-      "architecture": {
-        "modality": "text+image+file->text",
-        "tokenizer": "GPT"
-      },
-      "top_provider": {
-        "name": "",
-        "max_completion_tokens": 128000
-      }
-    },
-    {
       "id": "openai/gpt-5.4-mini",
       "name": "OpenAI: GPT-5.4 Mini",
       "created": 1773748178,
@@ -5756,27 +5362,6 @@
         "completion": "0.0000045",
         "web_search": "0.01",
         "input_cache_read": "0.000000075"
-      },
-      "context_length": 400000,
-      "architecture": {
-        "modality": "text+image+file->text",
-        "tokenizer": "GPT"
-      },
-      "top_provider": {
-        "name": "",
-        "max_completion_tokens": 128000
-      }
-    },
-    {
-      "id": "openai/gpt-5.4-mini:batch",
-      "name": "OpenAI: GPT-5.4 Mini (batch)",
-      "created": 1773748178,
-      "description": "GPT-5.4 mini brings the core capabilities of GPT-5.4 to a faster, more efficient model optimized for high-throughput workloads. It supports text and image inputs with strong performance across reasoning, coding,...",
-      "pricing": {
-        "prompt": "0.000000375",
-        "completion": "0.00000225",
-        "web_search": "0.01",
-        "input_cache_read": "0.0000000375"
       },
       "context_length": 400000,
       "architecture": {
@@ -5834,17 +5419,18 @@
       "created": 1773245239,
       "description": "NVIDIA Nemotron 3 Super is a 120B-parameter open hybrid MoE model, activating just 12B parameters for maximum compute efficiency and accuracy in complex multi-agent applications. Built on a hybrid Mamba-Transformer...",
       "pricing": {
-        "prompt": "0.00000008",
-        "completion": "0.00000045"
+        "prompt": "0.0000003",
+        "completion": "0.0000024",
+        "input_cache_read": "0.00000015"
       },
-      "context_length": 262144,
+      "context_length": 1048576,
       "architecture": {
         "modality": "text->text",
         "tokenizer": "Other"
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 235929
+        "max_completion_tokens": 262144
       }
     },
     {
@@ -5920,33 +5506,6 @@
       }
     },
     {
-      "id": "openai/gpt-5.4-pro:batch",
-      "name": "OpenAI: GPT-5.4 Pro (batch)",
-      "created": 1772734366,
-      "description": "GPT-5.4 Pro is OpenAI's most advanced model, building on GPT-5.4's unified architecture with enhanced reasoning capabilities for complex, high-stakes tasks. It features a 1M+ token context window (922K input, 128K...",
-      "pricing": {
-        "prompt": "0.000015",
-        "completion": "0.00009",
-        "web_search": "0.01",
-        "overrides": [
-          {
-            "min_prompt_tokens": 272000,
-            "prompt": "0.00003",
-            "completion": "0.000135"
-          }
-        ]
-      },
-      "context_length": 1050000,
-      "architecture": {
-        "modality": "text+image+file->text",
-        "tokenizer": "GPT"
-      },
-      "top_provider": {
-        "name": "",
-        "max_completion_tokens": 128000
-      }
-    },
-    {
       "id": "openai/gpt-5.4",
       "name": "OpenAI: GPT-5.4",
       "created": 1772734352,
@@ -5962,35 +5521,6 @@
             "prompt": "0.000005",
             "completion": "0.0000225",
             "input_cache_read": "0.0000005"
-          }
-        ]
-      },
-      "context_length": 1050000,
-      "architecture": {
-        "modality": "text+image+file->text",
-        "tokenizer": "GPT"
-      },
-      "top_provider": {
-        "name": "",
-        "max_completion_tokens": 128000
-      }
-    },
-    {
-      "id": "openai/gpt-5.4:batch",
-      "name": "OpenAI: GPT-5.4 (batch)",
-      "created": 1772734352,
-      "description": "GPT-5.4 is OpenAI\u2019s latest frontier model, unifying the Codex and GPT lines into a single system. It features a 1M+ token context window (922K input, 128K output) with support for...",
-      "pricing": {
-        "prompt": "0.00000125",
-        "completion": "0.0000075",
-        "web_search": "0.01",
-        "input_cache_read": "0.000000125",
-        "overrides": [
-          {
-            "min_prompt_tokens": 272000,
-            "prompt": "0.0000025",
-            "completion": "0.00001125",
-            "input_cache_read": "0.00000025"
           }
         ]
       },
@@ -6342,29 +5872,6 @@
       }
     },
     {
-      "id": "anthropic/claude-sonnet-4.6:batch",
-      "name": "Anthropic: Claude Sonnet 4.6 (batch)",
-      "created": 1771342990,
-      "description": "Sonnet 4.6 is Anthropic's most capable Sonnet-class model yet, with frontier performance across coding, agents, and professional work. It excels at iterative development, complex codebase navigation, end-to-end project management with...",
-      "pricing": {
-        "prompt": "0.0000015",
-        "completion": "0.0000075",
-        "web_search": "0.01",
-        "input_cache_read": "0.00000015",
-        "input_cache_write": "0.000001875",
-        "input_cache_write_1h": "0.000003"
-      },
-      "context_length": 1000000,
-      "architecture": {
-        "modality": "text+image+file->text",
-        "tokenizer": "Claude"
-      },
-      "top_provider": {
-        "name": "",
-        "max_completion_tokens": 128000
-      }
-    },
-    {
       "id": "qwen/qwen3.5-plus-02-15",
       "name": "Qwen: Qwen3.5 Plus 2026-02-15",
       "created": 1771229416,
@@ -6462,29 +5969,6 @@
         "input_cache_read": "0.0000005",
         "input_cache_write": "0.00000625",
         "input_cache_write_1h": "0.00001"
-      },
-      "context_length": 1000000,
-      "architecture": {
-        "modality": "text+image+file->text",
-        "tokenizer": "Claude"
-      },
-      "top_provider": {
-        "name": "",
-        "max_completion_tokens": 128000
-      }
-    },
-    {
-      "id": "anthropic/claude-opus-4.6:batch",
-      "name": "Anthropic: Claude Opus 4.6 (batch)",
-      "created": 1770219050,
-      "description": "Opus 4.6 is Anthropic\u2019s strongest model for coding and long-running professional tasks. It is built for agents that operate across entire workflows rather than single prompts, making it especially effective...",
-      "pricing": {
-        "prompt": "0.0000025",
-        "completion": "0.0000125",
-        "web_search": "0.01",
-        "input_cache_read": "0.00000025",
-        "input_cache_write": "0.000003125",
-        "input_cache_write_1h": "0.000005"
       },
       "context_length": 1000000,
       "architecture": {
@@ -6877,27 +6361,6 @@
       }
     },
     {
-      "id": "openai/gpt-5.2-chat",
-      "name": "OpenAI: GPT-5.2 Chat",
-      "created": 1765389783,
-      "description": "GPT-5.2 Chat (AKA Instant) is the fast, lightweight member of the 5.2 family, optimized for low-latency chat while retaining strong general intelligence. It uses adaptive reasoning to selectively \u201cthink\u201d on...",
-      "pricing": {
-        "prompt": "0.00000175",
-        "completion": "0.000014",
-        "web_search": "0.01",
-        "input_cache_read": "0.000000175"
-      },
-      "context_length": 128000,
-      "architecture": {
-        "modality": "text+image+file->text",
-        "tokenizer": "GPT"
-      },
-      "top_provider": {
-        "name": "",
-        "max_completion_tokens": 32000
-      }
-    },
-    {
       "id": "openai/gpt-5.2-pro",
       "name": "OpenAI: GPT-5.2 Pro",
       "created": 1765389780,
@@ -6905,26 +6368,6 @@
       "pricing": {
         "prompt": "0.000021",
         "completion": "0.000168",
-        "web_search": "0.01"
-      },
-      "context_length": 400000,
-      "architecture": {
-        "modality": "text+image+file->text",
-        "tokenizer": "GPT"
-      },
-      "top_provider": {
-        "name": "",
-        "max_completion_tokens": 128000
-      }
-    },
-    {
-      "id": "openai/gpt-5.2-pro:batch",
-      "name": "OpenAI: GPT-5.2 Pro (batch)",
-      "created": 1765389780,
-      "description": "GPT-5.2 Pro is OpenAI\u2019s most advanced model, offering major improvements in agentic coding and long context performance over GPT-5 Pro. It is optimized for complex tasks that require step-by-step reasoning,...",
-      "pricing": {
-        "prompt": "0.0000105",
-        "completion": "0.000084",
         "web_search": "0.01"
       },
       "context_length": 400000,
@@ -6947,27 +6390,6 @@
         "completion": "0.000014",
         "web_search": "0.01",
         "input_cache_read": "0.000000175"
-      },
-      "context_length": 400000,
-      "architecture": {
-        "modality": "text+image+file->text",
-        "tokenizer": "GPT"
-      },
-      "top_provider": {
-        "name": "",
-        "max_completion_tokens": 128000
-      }
-    },
-    {
-      "id": "openai/gpt-5.2:batch",
-      "name": "OpenAI: GPT-5.2 (batch)",
-      "created": 1765389775,
-      "description": "GPT-5.2 is the latest frontier-grade model in the GPT-5 series, offering stronger agentic and long context perfomance compared to GPT-5.1. It uses adaptive reasoning to allocate computation dynamically, responding quickly...",
-      "pricing": {
-        "prompt": "0.000000875",
-        "completion": "0.000007",
-        "web_search": "0.01",
-        "input_cache_read": "0.0000000875"
       },
       "context_length": 400000,
       "architecture": {
@@ -7221,29 +6643,6 @@
       }
     },
     {
-      "id": "anthropic/claude-opus-4.5:batch",
-      "name": "Anthropic: Claude Opus 4.5 (batch)",
-      "created": 1764010580,
-      "description": "Claude Opus 4.5 is Anthropic\u2019s frontier reasoning model optimized for complex software engineering, agentic workflows, and long-horizon computer use. It offers strong multimodal capabilities, competitive performance across real-world coding and...",
-      "pricing": {
-        "prompt": "0.0000025",
-        "completion": "0.0000125",
-        "web_search": "0.01",
-        "input_cache_read": "0.00000025",
-        "input_cache_write": "0.000003125",
-        "input_cache_write_1h": "0.000005"
-      },
-      "context_length": 200000,
-      "architecture": {
-        "modality": "text+image+file->text",
-        "tokenizer": "Claude"
-      },
-      "top_provider": {
-        "name": "",
-        "max_completion_tokens": 64000
-      }
-    },
-    {
       "id": "google/gemini-3-pro-image-preview",
       "name": "Google: Nano Banana Pro (Gemini 3 Pro Image Preview)",
       "created": 1763653797,
@@ -7280,27 +6679,6 @@
         "completion": "0.00001",
         "web_search": "0.01",
         "input_cache_read": "0.000000125"
-      },
-      "context_length": 400000,
-      "architecture": {
-        "modality": "text+image+file->text",
-        "tokenizer": "GPT"
-      },
-      "top_provider": {
-        "name": "",
-        "max_completion_tokens": 128000
-      }
-    },
-    {
-      "id": "openai/gpt-5.1:batch",
-      "name": "OpenAI: GPT-5.1 (batch)",
-      "created": 1763060305,
-      "description": "GPT-5.1 is the latest frontier-grade model in the GPT-5 series, offering stronger general-purpose reasoning, improved instruction adherence, and a more natural conversational style compared to GPT-5. It uses adaptive reasoning...",
-      "pricing": {
-        "prompt": "0.000000625",
-        "completion": "0.000005",
-        "web_search": "0.01",
-        "input_cache_read": "0.0000000625"
       },
       "context_length": 400000,
       "architecture": {
@@ -7520,29 +6898,6 @@
       }
     },
     {
-      "id": "anthropic/claude-haiku-4.5:batch",
-      "name": "Anthropic: Claude Haiku 4.5 (batch)",
-      "created": 1760547638,
-      "description": "Claude Haiku 4.5 is Anthropic\u2019s fastest and most efficient model, delivering near-frontier intelligence at a fraction of the cost and latency of larger Claude models. Matching Claude Sonnet 4\u2019s performance...",
-      "pricing": {
-        "prompt": "0.0000005",
-        "completion": "0.0000025",
-        "web_search": "0.01",
-        "input_cache_read": "0.00000005",
-        "input_cache_write": "0.000000625",
-        "input_cache_write_1h": "0.000001"
-      },
-      "context_length": 200000,
-      "architecture": {
-        "modality": "text+image+file->text",
-        "tokenizer": "Claude"
-      },
-      "top_provider": {
-        "name": "",
-        "max_completion_tokens": 64000
-      }
-    },
-    {
       "id": "qwen/qwen3-vl-8b-instruct",
       "name": "Qwen: Qwen3 VL 8B Instruct",
       "created": 1760463308,
@@ -7670,34 +7025,14 @@
       }
     },
     {
-      "id": "openai/gpt-5-pro:batch",
-      "name": "OpenAI: GPT-5 Pro (batch)",
-      "created": 1759776663,
-      "description": "GPT-5 Pro is OpenAI\u2019s most advanced model, offering major improvements in reasoning, code quality, and user experience. It is optimized for complex tasks that require step-by-step reasoning, instruction following, and...",
-      "pricing": {
-        "prompt": "0.0000075",
-        "completion": "0.00006",
-        "web_search": "0.01"
-      },
-      "context_length": 400000,
-      "architecture": {
-        "modality": "text+image+file->text",
-        "tokenizer": "GPT"
-      },
-      "top_provider": {
-        "name": "",
-        "max_completion_tokens": 128000
-      }
-    },
-    {
       "id": "z-ai/glm-4.6",
       "name": "Z.ai: GLM 4.6",
       "created": 1759235576,
       "description": "Compared with GLM-4.5, this generation brings several key improvements: Longer context window: The context window has been expanded from 128K to 200K tokens, enabling the model to handle more complex...",
       "pricing": {
-        "prompt": "0.00000055",
-        "completion": "0.0000022",
-        "input_cache_read": "0.00000011"
+        "prompt": "0.0000005",
+        "completion": "0.000002",
+        "input_cache_read": "0.0000001"
       },
       "context_length": 204800,
       "architecture": {
@@ -7729,39 +7064,6 @@
             "input_cache_read": "0.0000006",
             "input_cache_write": "0.0000075",
             "input_cache_write_1h": "0.000012"
-          }
-        ]
-      },
-      "context_length": 1000000,
-      "architecture": {
-        "modality": "text+image+file->text",
-        "tokenizer": "Claude"
-      },
-      "top_provider": {
-        "name": "",
-        "max_completion_tokens": 64000
-      }
-    },
-    {
-      "id": "anthropic/claude-sonnet-4.5:batch",
-      "name": "Anthropic: Claude Sonnet 4.5 (batch)",
-      "created": 1759161676,
-      "description": "Claude Sonnet 4.5 is Anthropic\u2019s most advanced Sonnet model to date, optimized for real-world agents and coding workflows. It delivers state-of-the-art performance on coding benchmarks such as SWE-bench Verified, with...",
-      "pricing": {
-        "prompt": "0.0000015",
-        "completion": "0.0000075",
-        "web_search": "0.01",
-        "input_cache_read": "0.00000015",
-        "input_cache_write": "0.000001875",
-        "input_cache_write_1h": "0.000003",
-        "overrides": [
-          {
-            "min_prompt_tokens": 200000,
-            "prompt": "0.000003",
-            "completion": "0.00001125",
-            "input_cache_read": "0.0000003",
-            "input_cache_write": "0.00000375",
-            "input_cache_write_1h": "0.000006"
           }
         ]
       },
@@ -7910,25 +7212,6 @@
       }
     },
     {
-      "id": "qwen/qwen3-next-80b-a3b-thinking",
-      "name": "Qwen: Qwen3 Next 80B A3B Thinking",
-      "created": 1757612284,
-      "description": "Qwen3-Next-80B-A3B-Thinking is a reasoning-first chat model in the Qwen3-Next line that outputs structured \u201cthinking\u201d traces by default. It\u2019s designed for hard multi-step problems; math proofs, code synthesis/debugging, logic, and agentic...",
-      "pricing": {
-        "prompt": "0.00000015",
-        "completion": "0.0000012"
-      },
-      "context_length": 262144,
-      "architecture": {
-        "modality": "text->text",
-        "tokenizer": "Qwen3"
-      },
-      "top_provider": {
-        "name": "",
-        "max_completion_tokens": 235929
-      }
-    },
-    {
       "id": "qwen/qwen3-next-80b-a3b-instruct",
       "name": "Qwen: Qwen3 Next 80B A3B Instruct",
       "created": 1757612213,
@@ -8003,7 +7286,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 32768
+        "max_completion_tokens": 147456
       }
     },
     {
@@ -8068,27 +7351,6 @@
       }
     },
     {
-      "id": "openai/gpt-5:batch",
-      "name": "OpenAI: GPT-5 (batch)",
-      "created": 1754587413,
-      "description": "GPT-5 is OpenAI\u2019s most advanced model, offering major improvements in reasoning, code quality, and user experience. It is optimized for complex tasks that require step-by-step reasoning, instruction following, and accuracy...",
-      "pricing": {
-        "prompt": "0.000000625",
-        "completion": "0.000005",
-        "web_search": "0.01",
-        "input_cache_read": "0.0000000625"
-      },
-      "context_length": 400000,
-      "architecture": {
-        "modality": "text+image+file->text",
-        "tokenizer": "GPT"
-      },
-      "top_provider": {
-        "name": "",
-        "max_completion_tokens": 128000
-      }
-    },
-    {
       "id": "openai/gpt-5-mini",
       "name": "OpenAI: GPT-5 Mini",
       "created": 1754587407,
@@ -8098,27 +7360,6 @@
         "completion": "0.000002",
         "web_search": "0.01",
         "input_cache_read": "0.000000025"
-      },
-      "context_length": 400000,
-      "architecture": {
-        "modality": "text+image+file->text",
-        "tokenizer": "GPT"
-      },
-      "top_provider": {
-        "name": "",
-        "max_completion_tokens": 128000
-      }
-    },
-    {
-      "id": "openai/gpt-5-mini:batch",
-      "name": "OpenAI: GPT-5 Mini (batch)",
-      "created": 1754587407,
-      "description": "GPT-5 Mini is a compact version of GPT-5, designed to handle lighter-weight reasoning tasks. It provides the same instruction-following and safety-tuning benefits as GPT-5, but with reduced latency and cost....",
-      "pricing": {
-        "prompt": "0.000000125",
-        "completion": "0.000001",
-        "web_search": "0.01",
-        "input_cache_read": "0.0000000125"
       },
       "context_length": 400000,
       "architecture": {
@@ -8262,29 +7503,6 @@
         "input_cache_read": "0.0000015",
         "input_cache_write": "0.00001875",
         "input_cache_write_1h": "0.00003"
-      },
-      "context_length": 200000,
-      "architecture": {
-        "modality": "text+image+file->text",
-        "tokenizer": "Claude"
-      },
-      "top_provider": {
-        "name": "",
-        "max_completion_tokens": 32000
-      }
-    },
-    {
-      "id": "anthropic/claude-opus-4.1:batch",
-      "name": "Anthropic: Claude Opus 4.1 (batch)",
-      "created": 1754411591,
-      "description": "Claude Opus 4.1 is an updated version of Anthropic\u2019s flagship model, offering improved performance in coding, reasoning, and agentic tasks. It achieves 74.5% on SWE-bench Verified and shows notable gains...",
-      "pricing": {
-        "prompt": "0.0000075",
-        "completion": "0.0000375",
-        "web_search": "0.01",
-        "input_cache_read": "0.00000075",
-        "input_cache_write": "0.000009375",
-        "input_cache_write_1h": "0.000015"
       },
       "context_length": 200000,
       "architecture": {
@@ -8867,27 +8085,6 @@
       }
     },
     {
-      "id": "openai/o4-mini-high",
-      "name": "OpenAI: o4 Mini High",
-      "created": 1744824212,
-      "description": "OpenAI o4-mini-high is the same model as [o4-mini](/openai/o4-mini) with reasoning_effort set to high. OpenAI o4-mini is a compact reasoning model in the o-series, optimized for fast, cost-efficient performance while retaining...",
-      "pricing": {
-        "prompt": "0.0000011",
-        "completion": "0.0000044",
-        "web_search": "0.01",
-        "input_cache_read": "0.000000275"
-      },
-      "context_length": 200000,
-      "architecture": {
-        "modality": "text+image+file->text",
-        "tokenizer": "GPT"
-      },
-      "top_provider": {
-        "name": "",
-        "max_completion_tokens": 100000
-      }
-    },
-    {
       "id": "openai/o3",
       "name": "OpenAI: o3",
       "created": 1744823457,
@@ -8897,69 +8094,6 @@
         "completion": "0.000008",
         "web_search": "0.01",
         "input_cache_read": "0.0000005"
-      },
-      "context_length": 200000,
-      "architecture": {
-        "modality": "text+image+file->text",
-        "tokenizer": "GPT"
-      },
-      "top_provider": {
-        "name": "",
-        "max_completion_tokens": 100000
-      }
-    },
-    {
-      "id": "openai/o3:batch",
-      "name": "OpenAI: o3 (batch)",
-      "created": 1744823457,
-      "description": "o3 is a well-rounded and powerful model across domains. It sets a new standard for math, science, coding, and visual reasoning tasks. It also excels at technical writing and instruction-following....",
-      "pricing": {
-        "prompt": "0.000001",
-        "completion": "0.000004",
-        "web_search": "0.01",
-        "input_cache_read": "0.00000025"
-      },
-      "context_length": 200000,
-      "architecture": {
-        "modality": "text+image+file->text",
-        "tokenizer": "GPT"
-      },
-      "top_provider": {
-        "name": "",
-        "max_completion_tokens": 100000
-      }
-    },
-    {
-      "id": "openai/o4-mini",
-      "name": "OpenAI: o4 Mini",
-      "created": 1744820942,
-      "description": "OpenAI o4-mini is a compact reasoning model in the o-series, optimized for fast, cost-efficient performance while retaining strong multimodal and agentic capabilities. It supports tool use and demonstrates competitive reasoning...",
-      "pricing": {
-        "prompt": "0.0000011",
-        "completion": "0.0000044",
-        "web_search": "0.01",
-        "input_cache_read": "0.000000275"
-      },
-      "context_length": 200000,
-      "architecture": {
-        "modality": "text+image+file->text",
-        "tokenizer": "GPT"
-      },
-      "top_provider": {
-        "name": "",
-        "max_completion_tokens": 100000
-      }
-    },
-    {
-      "id": "openai/o4-mini:batch",
-      "name": "OpenAI: o4 Mini (batch)",
-      "created": 1744820942,
-      "description": "OpenAI o4-mini is a compact reasoning model in the o-series, optimized for fast, cost-efficient performance while retaining strong multimodal and agentic capabilities. It supports tool use and demonstrates competitive reasoning...",
-      "pricing": {
-        "prompt": "0.00000055",
-        "completion": "0.0000022",
-        "web_search": "0.01",
-        "input_cache_read": "0.0000001375"
       },
       "context_length": 200000,
       "architecture": {
@@ -8993,27 +8127,6 @@
       }
     },
     {
-      "id": "openai/gpt-4.1:batch",
-      "name": "OpenAI: GPT-4.1 (batch)",
-      "created": 1744651385,
-      "description": "GPT-4.1 is a flagship large language model optimized for advanced instruction following, real-world software engineering, and long-context reasoning. It supports a 1 million token context window and outperforms GPT-4o and...",
-      "pricing": {
-        "prompt": "0.000001",
-        "completion": "0.000004",
-        "web_search": "0.01",
-        "input_cache_read": "0.00000025"
-      },
-      "context_length": 1047576,
-      "architecture": {
-        "modality": "text+image+file->text",
-        "tokenizer": "GPT"
-      },
-      "top_provider": {
-        "name": "",
-        "max_completion_tokens": 32768
-      }
-    },
-    {
       "id": "openai/gpt-4.1-mini",
       "name": "OpenAI: GPT-4.1 Mini",
       "created": 1744651381,
@@ -9023,27 +8136,6 @@
         "completion": "0.0000016",
         "web_search": "0.01",
         "input_cache_read": "0.0000001"
-      },
-      "context_length": 1047576,
-      "architecture": {
-        "modality": "text+image+file->text",
-        "tokenizer": "GPT"
-      },
-      "top_provider": {
-        "name": "",
-        "max_completion_tokens": 32768
-      }
-    },
-    {
-      "id": "openai/gpt-4.1-mini:batch",
-      "name": "OpenAI: GPT-4.1 Mini (batch)",
-      "created": 1744651381,
-      "description": "GPT-4.1 Mini is a mid-sized model delivering performance competitive with GPT-4o at substantially lower latency and cost. It retains a 1 million token context window and scores 45.1% on hard...",
-      "pricing": {
-        "prompt": "0.0000002",
-        "completion": "0.0000008",
-        "web_search": "0.01",
-        "input_cache_read": "0.00000005"
       },
       "context_length": 1047576,
       "architecture": {
@@ -9077,27 +8169,6 @@
       }
     },
     {
-      "id": "openai/gpt-4.1-nano:batch",
-      "name": "OpenAI: GPT-4.1 Nano (batch)",
-      "created": 1744651369,
-      "description": "For tasks that demand low latency, GPT\u20114.1 nano is the fastest and cheapest model in the GPT-4.1 series. It delivers exceptional performance at a small size with its 1 million...",
-      "pricing": {
-        "prompt": "0.00000005",
-        "completion": "0.0000002",
-        "web_search": "0.01",
-        "input_cache_read": "0.0000000125"
-      },
-      "context_length": 1047576,
-      "architecture": {
-        "modality": "text+image+file->text",
-        "tokenizer": "GPT"
-      },
-      "top_provider": {
-        "name": "",
-        "max_completion_tokens": 32768
-      }
-    },
-    {
       "id": "meta-llama/llama-4-maverick",
       "name": "Meta: Llama 4 Maverick",
       "created": 1743881822,
@@ -9126,7 +8197,7 @@
         "prompt": "0.0000001",
         "completion": "0.0000003"
       },
-      "context_length": 1310720,
+      "context_length": 327680,
       "architecture": {
         "modality": "text+image->text",
         "tokenizer": "Llama4"
@@ -9154,26 +8225,6 @@
       "top_provider": {
         "name": "",
         "max_completion_tokens": 115200
-      }
-    },
-    {
-      "id": "openai/o1-pro",
-      "name": "OpenAI: o1-pro",
-      "created": 1742423211,
-      "description": "The o1 series of models are trained with reinforcement learning to think before they answer and perform complex reasoning. The o1-pro model uses more compute to think harder and provide...",
-      "pricing": {
-        "prompt": "0.00015",
-        "completion": "0.0006",
-        "web_search": "0.01"
-      },
-      "context_length": 200000,
-      "architecture": {
-        "modality": "text+image+file->text",
-        "tokenizer": "GPT"
-      },
-      "top_provider": {
-        "name": "",
-        "max_completion_tokens": 100000
       }
     },
     {
@@ -9393,27 +8444,6 @@
       }
     },
     {
-      "id": "openai/o3-mini-high",
-      "name": "OpenAI: o3 Mini High",
-      "created": 1739372611,
-      "description": "OpenAI o3-mini-high is the same model as [o3-mini](/openai/o3-mini) with reasoning_effort set to high. o3-mini is a cost-efficient language model optimized for STEM reasoning tasks, particularly excelling in science, mathematics, and...",
-      "pricing": {
-        "prompt": "0.0000011",
-        "completion": "0.0000044",
-        "web_search": "0.01",
-        "input_cache_read": "0.00000055"
-      },
-      "context_length": 200000,
-      "architecture": {
-        "modality": "text+file->text",
-        "tokenizer": "GPT"
-      },
-      "top_provider": {
-        "name": "",
-        "max_completion_tokens": 100000
-      }
-    },
-    {
       "id": "aion-labs/aion-rp-llama-3.1-8b",
       "name": "AionLabs: Aion-RP 1.0 (8B)",
       "created": 1738696718,
@@ -9480,48 +8510,6 @@
       "top_provider": {
         "name": "",
         "max_completion_tokens": 32768
-      }
-    },
-    {
-      "id": "openai/o3-mini",
-      "name": "OpenAI: o3 Mini",
-      "created": 1738351721,
-      "description": "OpenAI o3-mini is a cost-efficient language model optimized for STEM reasoning tasks, particularly excelling in science, mathematics, and coding. This model supports the `reasoning_effort` parameter, which can be set to...",
-      "pricing": {
-        "prompt": "0.0000011",
-        "completion": "0.0000044",
-        "web_search": "0.01",
-        "input_cache_read": "0.00000055"
-      },
-      "context_length": 200000,
-      "architecture": {
-        "modality": "text+file->text",
-        "tokenizer": "GPT"
-      },
-      "top_provider": {
-        "name": "",
-        "max_completion_tokens": 100000
-      }
-    },
-    {
-      "id": "openai/o3-mini:batch",
-      "name": "OpenAI: o3 Mini (batch)",
-      "created": 1738351721,
-      "description": "OpenAI o3-mini is a cost-efficient language model optimized for STEM reasoning tasks, particularly excelling in science, mathematics, and coding. This model supports the `reasoning_effort` parameter, which can be set to...",
-      "pricing": {
-        "prompt": "0.00000055",
-        "completion": "0.0000022",
-        "web_search": "0.01",
-        "input_cache_read": "0.000000275"
-      },
-      "context_length": 200000,
-      "architecture": {
-        "modality": "text+file->text",
-        "tokenizer": "GPT"
-      },
-      "top_provider": {
-        "name": "",
-        "max_completion_tokens": 100000
       }
     },
     {
@@ -9618,27 +8606,6 @@
       "top_provider": {
         "name": "",
         "max_completion_tokens": 16000
-      }
-    },
-    {
-      "id": "openai/o1",
-      "name": "OpenAI: o1",
-      "created": 1734459999,
-      "description": "The latest and strongest model family from OpenAI, o1 is designed to spend more time thinking before responding. The o1 model series is trained with large-scale reinforcement learning to reason...",
-      "pricing": {
-        "prompt": "0.000015",
-        "completion": "0.00006",
-        "web_search": "0.01",
-        "input_cache_read": "0.0000075"
-      },
-      "context_length": 200000,
-      "architecture": {
-        "modality": "text+image+file->text",
-        "tokenizer": "GPT"
-      },
-      "top_provider": {
-        "name": "",
-        "max_completion_tokens": 100000
       }
     },
     {
@@ -10068,8 +9035,9 @@
       "created": 1721692800,
       "description": "Meta's latest class of model (Llama 3.1) launched with a variety of sizes & flavors. This 8B instruct-tuned version is fast and efficient. It has demonstrated strong performance compared to...",
       "pricing": {
-        "prompt": "0.00000002",
-        "completion": "0.00000004"
+        "prompt": "0.00000005",
+        "completion": "0.00000008",
+        "input_cache_read": "0.000000025"
       },
       "context_length": 131072,
       "architecture": {
@@ -10078,7 +9046,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 16384
+        "max_completion_tokens": 117964
       }
     },
     {
@@ -10129,27 +9097,6 @@
         "prompt": "0.00000015",
         "completion": "0.0000006",
         "input_cache_read": "0.000000075"
-      },
-      "context_length": 128000,
-      "architecture": {
-        "modality": "text+image+file->text",
-        "tokenizer": "GPT"
-      },
-      "top_provider": {
-        "name": "",
-        "max_completion_tokens": 16384
-      }
-    },
-    {
-      "id": "openai/gpt-4o-mini:batch",
-      "name": "OpenAI: GPT-4o-mini (batch)",
-      "created": 1721260800,
-      "description": "GPT-4o mini is OpenAI's newest model after [GPT-4 Omni](/models/openai/gpt-4o), supporting both text and image inputs with text outputs. As their most advanced small model, it is many multiples more affordable...",
-      "pricing": {
-        "prompt": "0.000000075",
-        "completion": "0.0000003",
-        "web_search": "0.01",
-        "input_cache_read": "0.0000000375"
       },
       "context_length": 128000,
       "architecture": {
@@ -10220,27 +9167,6 @@
       }
     },
     {
-      "id": "openai/gpt-4o:batch",
-      "name": "OpenAI: GPT-4o (batch)",
-      "created": 1715558400,
-      "description": "GPT-4o (\"o\" for \"omni\") is OpenAI's latest AI model, supporting both text and image inputs with text outputs. It maintains the intelligence level of [GPT-4 Turbo](/models/openai/gpt-4-turbo) while being twice as...",
-      "pricing": {
-        "prompt": "0.00000125",
-        "completion": "0.000005",
-        "web_search": "0.01",
-        "input_cache_read": "0.000000625"
-      },
-      "context_length": 128000,
-      "architecture": {
-        "modality": "text+image+file->text",
-        "tokenizer": "GPT"
-      },
-      "top_provider": {
-        "name": "",
-        "max_completion_tokens": 16384
-      }
-    },
-    {
       "id": "mistralai/mixtral-8x22b-instruct",
       "name": "Mistral: Mixtral 8x22B Instruct",
       "created": 1713312000,
@@ -10258,45 +9184,6 @@
       "top_provider": {
         "name": "",
         "max_completion_tokens": 52428
-      }
-    },
-    {
-      "id": "openai/gpt-4-turbo",
-      "name": "OpenAI: GPT-4 Turbo",
-      "created": 1712620800,
-      "description": "The latest GPT-4 Turbo model with vision capabilities. Vision requests can now use JSON mode and function calling.\n\nTraining data: up to December 2023.",
-      "pricing": {
-        "prompt": "0.00001",
-        "completion": "0.00003"
-      },
-      "context_length": 128000,
-      "architecture": {
-        "modality": "text+image->text",
-        "tokenizer": "GPT"
-      },
-      "top_provider": {
-        "name": "",
-        "max_completion_tokens": 4096
-      }
-    },
-    {
-      "id": "openai/gpt-4-turbo:batch",
-      "name": "OpenAI: GPT-4 Turbo (batch)",
-      "created": 1712620800,
-      "description": "The latest GPT-4 Turbo model with vision capabilities. Vision requests can now use JSON mode and function calling.\n\nTraining data: up to December 2023.",
-      "pricing": {
-        "prompt": "0.000005",
-        "completion": "0.000015",
-        "web_search": "0.01"
-      },
-      "context_length": 128000,
-      "architecture": {
-        "modality": "text+image->text",
-        "tokenizer": "GPT"
-      },
-      "top_provider": {
-        "name": "",
-        "max_completion_tokens": 4096
       }
     },
     {
