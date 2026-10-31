@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-10-30T01:00:56Z",
+  "fetched_at": "2026-10-31T01:00:27Z",
   "total": 420,
   "models": [
     {
@@ -8,9 +8,9 @@
       "created": 1793207893,
       "description": "Particle-1 is a token-efficient agentic coding model from Particle AI, post-trained on DeepSeek V4.1 Flash. It is suited for software engineering work such as terminal workflows, codebase changes, and data...",
       "pricing": {
-        "prompt": "0.00000025",
-        "completion": "0.000001",
-        "input_cache_read": "0.00000003"
+        "prompt": "0.00000005",
+        "completion": "0.0000005",
+        "input_cache_read": "0.000000003"
       },
       "context_length": 1048576,
       "architecture": {
@@ -191,9 +191,25 @@
       "created": 1792379569,
       "description": "MiniMax-M3.1-Flash is a multimodal model from MiniMax. Compared with M3, it delivers significant improvements across multiple benchmarks, particularly in complex agentic tasks, coding, and cybersecurity. It is built for complex,...",
       "pricing": {
-        "prompt": "0.00000015",
-        "completion": "0.0000006",
-        "input_cache_read": "0.000000015"
+        "prompt": "0.000000075",
+        "completion": "0.0000003",
+        "input_cache_read": "0.0000000075",
+        "overrides": [
+          {
+            "utc_start": 1500,
+            "utc_end": 100,
+            "prompt": "0.000000075",
+            "completion": "0.0000003",
+            "input_cache_read": "0.0000000075"
+          },
+          {
+            "utc_start": 100,
+            "utc_end": 1500,
+            "prompt": "0.00000015",
+            "completion": "0.0000006",
+            "input_cache_read": "0.000000015"
+          }
+        ]
       },
       "context_length": 1048576,
       "architecture": {
@@ -211,9 +227,9 @@
       "created": 1792225624,
       "description": "DeepSeek V4.1 Flash 1017 is the October 17, 2026 snapshot of DeepSeek V4.1 Flash, served by DeepSeek under the `deepseek-flash` API model name. V4.1 Flash is a sparse mixture-of-experts model...",
       "pricing": {
-        "prompt": "0.0000000339",
-        "completion": "0.00000114",
-        "input_cache_read": "0.0000000336"
+        "prompt": "0.000000022",
+        "completion": "0.000000192",
+        "input_cache_read": "0.000000004"
       },
       "context_length": 1048576,
       "architecture": {
@@ -930,25 +946,6 @@
       }
     },
     {
-      "id": "typesafe/jev-router",
-      "name": "TypeSafe: Jev Router",
-      "created": 1790363560,
-      "description": "Jev Router picks the best model and reasoning effort for each request, balancing quality, speed, and cost. It runs on [Jev](https://openrouter.ai/~typesafe/jev-latest), TypeSafe's first System One model, and adapts as your...",
-      "pricing": {
-        "prompt": "-1",
-        "completion": "-1"
-      },
-      "context_length": 1000000,
-      "architecture": {
-        "modality": "text+image+file+audio+video->text",
-        "tokenizer": "Router"
-      },
-      "top_provider": {
-        "name": "",
-        "max_completion_tokens": 65536
-      }
-    },
-    {
       "id": "perceptron/perceptron-mk1.5",
       "name": "Perceptron: Perceptron Mk1.5",
       "created": 1790352661,
@@ -1402,25 +1399,6 @@
       }
     },
     {
-      "id": "nvidia/switchyard",
-      "name": "NVIDIA: Switchyard",
-      "created": 1790025947,
-      "description": "Switchyard is an open-source model routing system that switches between multiple models to optimize the cost of requests. By default it will use OpenRouter market data to select the most...",
-      "pricing": {
-        "prompt": "-1",
-        "completion": "-1"
-      },
-      "context_length": 1000000,
-      "architecture": {
-        "modality": "text->text",
-        "tokenizer": "Router"
-      },
-      "top_provider": {
-        "name": "",
-        "max_completion_tokens": null
-      }
-    },
-    {
       "id": "xiaomi/mimo-v2.6-pro-ultraspeed",
       "name": "Xiaomi: MiMo-V2.6-Pro-UltraSpeed",
       "created": 1790021267,
@@ -1576,7 +1554,7 @@
       "description": "This model always redirects to the latest model in the DeepSeek Pro family.",
       "pricing": {
         "prompt": "0.0000001035",
-        "completion": "0.000008",
+        "completion": "0.000004",
         "input_cache_read": "0.0000001"
       },
       "context_length": 1048576,
@@ -1595,9 +1573,9 @@
       "created": 1789399150,
       "description": "This model always redirects to the latest model in the DeepSeek Flash family.",
       "pricing": {
-        "prompt": "0.0000000339",
-        "completion": "0.00000114",
-        "input_cache_read": "0.0000000336"
+        "prompt": "0.000000022",
+        "completion": "0.000000192",
+        "input_cache_read": "0.000000004"
       },
       "context_length": 1048576,
       "architecture": {
@@ -2268,9 +2246,9 @@
       "created": 1787817633,
       "description": "This model always redirects to the latest model in the GLM Flash family.",
       "pricing": {
-        "prompt": "0.0000000457",
-        "completion": "0.0000000701",
-        "input_cache_read": "0.00000003"
+        "prompt": "0.0000000216",
+        "completion": "0.0000001238",
+        "input_cache_read": "0.0000000216"
       },
       "context_length": 1048576,
       "architecture": {
@@ -2308,9 +2286,9 @@
       "created": 1787752741,
       "description": "GLM-5.3-Flash is a native multimodal model from Z.ai. It is suited for efficient coding and long-horizon agent tasks. Its hybrid sparse and linear attention architecture maintains accurate long-context behavior while...",
       "pricing": {
-        "prompt": "0.0000000457",
-        "completion": "0.0000000701",
-        "input_cache_read": "0.00000003"
+        "prompt": "0.0000000216",
+        "completion": "0.0000001238",
+        "input_cache_read": "0.0000000216"
       },
       "context_length": 1048576,
       "architecture": {
@@ -2445,9 +2423,9 @@
       "created": 1787086655,
       "description": "GLM-5.3 is a large-scale reasoning model from Z.ai, built for complex software engineering and long-horizon agent tasks. It supports text input and output with a 1M-token context window, and improves...",
       "pricing": {
-        "prompt": "0.00000008",
-        "completion": "0.0000036",
-        "input_cache_read": "0.000000076"
+        "prompt": "0.0000000699",
+        "completion": "0.0000014",
+        "input_cache_read": "0.0000000689"
       },
       "context_length": 1048576,
       "architecture": {
@@ -2485,9 +2463,9 @@
       "created": 1786722910,
       "description": "Qwen3.8 27B is an open-weight dense vision-language model from Qwen. It is suited for coding, professional workflows, research, multimodal interaction, and long-running agent tasks, with flexible thinking that can be...",
       "pricing": {
-        "prompt": "0.000000039",
-        "completion": "0.00000125",
-        "input_cache_read": "0.0000000039"
+        "prompt": "0.00000015",
+        "completion": "0.000001875",
+        "input_cache_read": "0.0000000375"
       },
       "context_length": 1000000,
       "architecture": {
@@ -2496,7 +2474,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 65536
+        "max_completion_tokens": 235929
       }
     },
     {
@@ -2642,7 +2620,7 @@
       "description": "DeepSeek V4 Pro 0813 is a large-scale mixture-of-experts model from DeepSeek. This is the GA release of DeepSeek V4 Pro.",
       "pricing": {
         "prompt": "0.0000001035",
-        "completion": "0.000008",
+        "completion": "0.000004",
         "input_cache_read": "0.0000001"
       },
       "context_length": 1048576,
@@ -2809,9 +2787,9 @@
       "created": 1785606009,
       "description": "This model always redirects to the latest model in the DeepSeek V4 Flash family.",
       "pricing": {
-        "prompt": "0.0000000419",
-        "completion": "0.0000003",
-        "input_cache_read": "0.0000000409"
+        "prompt": "0.0000000462",
+        "completion": "0.0000001432",
+        "input_cache_read": "0.000000028"
       },
       "context_length": 1048576,
       "architecture": {
@@ -3184,25 +3162,6 @@
       "top_provider": {
         "name": "",
         "max_completion_tokens": 262144
-      }
-    },
-    {
-      "id": "openrouter/auto-beta",
-      "name": "Auto Router (Beta)",
-      "created": 1784311165,
-      "description": "The experimental version of our Auto Router where we test new improvements. Use it to get the latest and greatest version of our general purpose auto router, but expect beta...",
-      "pricing": {
-        "prompt": "-1",
-        "completion": "-1"
-      },
-      "context_length": 2000000,
-      "architecture": {
-        "modality": "text+image+file+audio+video->text+image",
-        "tokenizer": "Router"
-      },
-      "top_provider": {
-        "name": "",
-        "max_completion_tokens": 65536
       }
     },
     {
@@ -3964,32 +3923,13 @@
       }
     },
     {
-      "id": "openrouter/fusion",
-      "name": "OpenRouter: Fusion",
-      "created": 1781371647,
-      "description": "Fusion turns your prompt into a small multi-model deliberation. A panel of expert models (see below) analyzes your prompt in parallel with web search and web fetch enabled, then a...",
-      "pricing": {
-        "prompt": "-1",
-        "completion": "-1"
-      },
-      "context_length": 1000000,
-      "architecture": {
-        "modality": "text->text",
-        "tokenizer": "Router"
-      },
-      "top_provider": {
-        "name": "",
-        "max_completion_tokens": null
-      }
-    },
-    {
       "id": "moonshotai/kimi-k2.7-code",
       "name": "MoonshotAI: Kimi K2.7 Code",
       "created": 1781266361,
       "description": "MoonshotAI: Kimi K2.7 Code is a coding-focused model in Moonshot AI's Kimi K2 family, built to complete end-to-end programming tasks reliably over long contexts. It uses a native multimodal mixture-of-experts...",
       "pricing": {
-        "prompt": "0.00000056",
-        "completion": "0.0000031",
+        "prompt": "0.0000006",
+        "completion": "0.0000035",
         "input_cache_read": "0.00000015"
       },
       "context_length": 262144,
@@ -4630,9 +4570,9 @@
       "created": 1777318428,
       "description": "This model always redirects to the latest model in the Kimi family.",
       "pricing": {
-        "prompt": "0.0000001824",
+        "prompt": "0.0000001634",
         "completion": "0.0000093388",
-        "input_cache_read": "0.00000018"
+        "input_cache_read": "0.00000016"
       },
       "context_length": 1048576,
       "architecture": {
@@ -4775,8 +4715,8 @@
       "created": 1777255064,
       "description": "Qwen3.6 27B is a dense 27-billion-parameter language model from the Qwen Team at Alibaba, released in April 2026. It features hybrid multimodal capabilities \u2014 accepting text, image, and video inputs...",
       "pricing": {
-        "prompt": "0.00000032",
-        "completion": "0.0000032"
+        "prompt": "0.00000045",
+        "completion": "0.0000027"
       },
       "context_length": 262144,
       "architecture": {
@@ -4785,7 +4725,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 81920
+        "max_completion_tokens": 65536
       }
     },
     {
@@ -4850,9 +4790,9 @@
       "created": 1777000679,
       "description": "DeepSeek V4 Pro is a large-scale Mixture-of-Experts model from DeepSeek with 1.6T total parameters and 49B activated parameters, supporting a 1M-token context window. It is designed for advanced reasoning, coding,...",
       "pricing": {
-        "prompt": "0.000000816234",
-        "completion": "0.000001632468",
-        "input_cache_read": "0.0000000680195"
+        "prompt": "0.0000016",
+        "completion": "0.0000032",
+        "input_cache_read": "0.000000135"
       },
       "context_length": 1048576,
       "architecture": {
@@ -4861,7 +4801,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 384000
+        "max_completion_tokens": 393216
       }
     },
     {
@@ -4990,25 +4930,6 @@
       }
     },
     {
-      "id": "openrouter/pareto-code",
-      "name": "Pareto Code Router",
-      "created": 1776747900,
-      "description": "The Pareto Router maintains a tiered shortlist of strong coding models, ranked by [Artificial Analysis](https://artificialanalysis.ai/) coding percentiles. Set min_coding_score between 0 and 1 on the [pareto-router plugin](https://openrouter.ai/docs/guides/routing/routers/pareto-router#the-min_codin",
-      "pricing": {
-        "prompt": "-1",
-        "completion": "-1"
-      },
-      "context_length": 2000000,
-      "architecture": {
-        "modality": "text->text",
-        "tokenizer": "Router"
-      },
-      "top_provider": {
-        "name": "",
-        "max_completion_tokens": null
-      }
-    },
-    {
       "id": "moonshotai/kimi-k2.6",
       "name": "MoonshotAI: Kimi K2.6",
       "created": 1776699402,
@@ -5077,9 +4998,9 @@
       "created": 1775227989,
       "description": "Gemma 4 26B A4B IT is an instruction-tuned Mixture-of-Experts (MoE) model from Google DeepMind. Despite 25.2B total parameters, only 3.8B activate per token during inference \u2014 delivering near-31B quality at...",
       "pricing": {
-        "prompt": "0.0000000765",
-        "completion": "0.000000255",
-        "input_cache_read": "0.0000000425"
+        "prompt": "0.0000000675",
+        "completion": "0.000000225",
+        "input_cache_read": "0.0000000375"
       },
       "context_length": 262144,
       "architecture": {
@@ -5923,8 +5844,8 @@
       "created": 1770908502,
       "description": "MiniMax-M2.5 is a SOTA large language model designed for real-world productivity. Trained in a diverse range of complex real-world digital working environments, M2.5 builds upon the coding expertise of M2.1...",
       "pricing": {
-        "prompt": "0.0000003",
-        "completion": "0.0000012",
+        "prompt": "0.00000027",
+        "completion": "0.00000095",
         "input_cache_read": "0.00000003"
       },
       "context_length": 204800,
@@ -5934,7 +5855,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 131072
+        "max_completion_tokens": 32768
       }
     },
     {
@@ -5998,25 +5919,6 @@
       "top_provider": {
         "name": "",
         "max_completion_tokens": 235929
-      }
-    },
-    {
-      "id": "openrouter/free",
-      "name": "Free Models Router",
-      "created": 1769917427,
-      "description": "The simplest way to get free inference. openrouter/free is a router that selects free models at random from the models available on OpenRouter. The router smartly filters for models that...",
-      "pricing": {
-        "prompt": "0",
-        "completion": "0"
-      },
-      "context_length": 200000,
-      "architecture": {
-        "modality": "text+image->text",
-        "tokenizer": "Router"
-      },
-      "top_provider": {
-        "name": "",
-        "max_completion_tokens": null
       }
     },
     {
@@ -6441,25 +6343,6 @@
       }
     },
     {
-      "id": "openrouter/bodybuilder",
-      "name": "Body Builder (beta)",
-      "created": 1764903653,
-      "description": "Transform your natural language requests into structured OpenRouter API request objects. Describe what you want to accomplish with AI models, and Body Builder will construct the appropriate API calls. Example:...",
-      "pricing": {
-        "prompt": "-1",
-        "completion": "-1"
-      },
-      "context_length": 128000,
-      "architecture": {
-        "modality": "text->text",
-        "tokenizer": "Router"
-      },
-      "top_provider": {
-        "name": "",
-        "max_completion_tokens": null
-      }
-    },
-    {
       "id": "openai/gpt-5.1-codex-max",
       "name": "OpenAI: GPT-5.1-Codex-Max",
       "created": 1764878934,
@@ -6585,9 +6468,9 @@
       "created": 1764594642,
       "description": "DeepSeek-V3.2 is a large language model designed to harmonize high computational efficiency with strong reasoning and agentic tool-use performance. It introduces DeepSeek Sparse Attention (DSA), a fine-grained sparse attention mechanism...",
       "pricing": {
-        "prompt": "0.00000028",
-        "completion": "0.00000042",
-        "input_cache_read": "0.000000028"
+        "prompt": "0.00000026",
+        "completion": "0.00000038",
+        "input_cache_read": "0.00000013"
       },
       "context_length": 163840,
       "architecture": {
@@ -6596,7 +6479,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 65536
+        "max_completion_tokens": 147456
       }
     },
     {
@@ -9206,25 +9089,6 @@
       }
     },
     {
-      "id": "openrouter/auto",
-      "name": "Auto Router",
-      "created": 1699401600,
-      "description": "The Auto Router automatically selects the best model for your prompt, powered by the wisdom of the market. It routes you based on what the OpenRouter community collectively spends on...",
-      "pricing": {
-        "prompt": "-1",
-        "completion": "-1"
-      },
-      "context_length": 2000000,
-      "architecture": {
-        "modality": "text+image+file+audio+video->text+image",
-        "tokenizer": "Router"
-      },
-      "top_provider": {
-        "name": "",
-        "max_completion_tokens": null
-      }
-    },
-    {
       "id": "openai/gpt-3.5-turbo-16k",
       "name": "OpenAI: GPT-3.5 Turbo 16k",
       "created": 1693180800,
@@ -9317,6 +9181,158 @@
       "top_provider": {
         "name": "",
         "max_completion_tokens": 4096
+      }
+    },
+    {
+      "id": "typesafe/jev-router",
+      "name": "TypeSafe: Jev Router",
+      "created": 1790363560,
+      "description": "Jev Router picks the best model and reasoning effort for each request, balancing quality, speed, and cost. It runs on [Jev](https://openrouter.ai/~typesafe/jev-latest), TypeSafe's first System One model, and adapts as your...",
+      "pricing": {
+        "prompt": "-1",
+        "completion": "-1"
+      },
+      "context_length": 1000000,
+      "architecture": {
+        "modality": "text+image+file+audio+video->text",
+        "tokenizer": "Router"
+      },
+      "top_provider": {
+        "name": "",
+        "max_completion_tokens": 65536
+      }
+    },
+    {
+      "id": "nvidia/switchyard",
+      "name": "NVIDIA: Switchyard",
+      "created": 1790025947,
+      "description": "Switchyard is an open-source model routing system that switches between multiple models to optimize the cost of requests. By default it will use OpenRouter market data to select the most...",
+      "pricing": {
+        "prompt": "-1",
+        "completion": "-1"
+      },
+      "context_length": 1000000,
+      "architecture": {
+        "modality": "text->text",
+        "tokenizer": "Router"
+      },
+      "top_provider": {
+        "name": "",
+        "max_completion_tokens": null
+      }
+    },
+    {
+      "id": "openrouter/auto-beta",
+      "name": "Auto Router (Beta)",
+      "created": 1784311165,
+      "description": "The experimental version of our Auto Router where we test new improvements. Use it to get the latest and greatest version of our general purpose auto router, but expect beta...",
+      "pricing": {
+        "prompt": "-1",
+        "completion": "-1"
+      },
+      "context_length": 2000000,
+      "architecture": {
+        "modality": "text+image+file+audio+video->text+image",
+        "tokenizer": "Router"
+      },
+      "top_provider": {
+        "name": "",
+        "max_completion_tokens": 65536
+      }
+    },
+    {
+      "id": "openrouter/fusion",
+      "name": "OpenRouter: Fusion",
+      "created": 1781371647,
+      "description": "Fusion turns your prompt into a small multi-model deliberation. A panel of expert models (see below) analyzes your prompt in parallel with web search and web fetch enabled, then a...",
+      "pricing": {
+        "prompt": "-1",
+        "completion": "-1"
+      },
+      "context_length": 1000000,
+      "architecture": {
+        "modality": "text->text",
+        "tokenizer": "Router"
+      },
+      "top_provider": {
+        "name": "",
+        "max_completion_tokens": null
+      }
+    },
+    {
+      "id": "openrouter/pareto-code",
+      "name": "Pareto Code Router",
+      "created": 1776747900,
+      "description": "The Pareto Router maintains a tiered shortlist of strong coding models, ranked by [Artificial Analysis](https://artificialanalysis.ai/) coding percentiles. Set min_coding_score between 0 and 1 on the [pareto-router plugin](https://openrouter.ai/docs/guides/routing/routers/pareto-router#the-min_codin",
+      "pricing": {
+        "prompt": "-1",
+        "completion": "-1"
+      },
+      "context_length": 2000000,
+      "architecture": {
+        "modality": "text->text",
+        "tokenizer": "Router"
+      },
+      "top_provider": {
+        "name": "",
+        "max_completion_tokens": null
+      }
+    },
+    {
+      "id": "openrouter/free",
+      "name": "Free Models Router",
+      "created": 1769917427,
+      "description": "The simplest way to get free inference. openrouter/free is a router that selects free models at random from the models available on OpenRouter. The router smartly filters for models that...",
+      "pricing": {
+        "prompt": "0",
+        "completion": "0"
+      },
+      "context_length": 200000,
+      "architecture": {
+        "modality": "text+image->text",
+        "tokenizer": "Router"
+      },
+      "top_provider": {
+        "name": "",
+        "max_completion_tokens": null
+      }
+    },
+    {
+      "id": "openrouter/bodybuilder",
+      "name": "Body Builder (beta)",
+      "created": 1764903653,
+      "description": "Transform your natural language requests into structured OpenRouter API request objects. Describe what you want to accomplish with AI models, and Body Builder will construct the appropriate API calls. Example:...",
+      "pricing": {
+        "prompt": "-1",
+        "completion": "-1"
+      },
+      "context_length": 128000,
+      "architecture": {
+        "modality": "text->text",
+        "tokenizer": "Router"
+      },
+      "top_provider": {
+        "name": "",
+        "max_completion_tokens": null
+      }
+    },
+    {
+      "id": "openrouter/auto",
+      "name": "Auto Router",
+      "created": 1699401600,
+      "description": "The Auto Router automatically selects the best model for your prompt, powered by the wisdom of the market. It routes you based on what the OpenRouter community collectively spends on...",
+      "pricing": {
+        "prompt": "-1",
+        "completion": "-1"
+      },
+      "context_length": 2000000,
+      "architecture": {
+        "modality": "text+image+file+audio+video->text+image",
+        "tokenizer": "Router"
+      },
+      "top_provider": {
+        "name": "",
+        "max_completion_tokens": null
       }
     }
   ]
