@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-11-01T01:00:28Z",
+  "fetched_at": "2026-11-02T01:00:41Z",
   "total": 416,
   "models": [
     {
@@ -227,9 +227,9 @@
       "created": 1792225624,
       "description": "DeepSeek V4.1 Flash 1017 is the October 17, 2026 snapshot of DeepSeek V4.1 Flash, served by DeepSeek under the `deepseek-flash` API model name. V4.1 Flash is a sparse mixture-of-experts model...",
       "pricing": {
-        "prompt": "0.00000000982",
-        "completion": "0.0000000753",
-        "input_cache_read": "0.00000000901"
+        "prompt": "0.000000035",
+        "completion": "0.0000005",
+        "input_cache_read": "0.000000005"
       },
       "context_length": 1048576,
       "architecture": {
@@ -1573,9 +1573,9 @@
       "created": 1789399150,
       "description": "This model always redirects to the latest model in the DeepSeek Flash family.",
       "pricing": {
-        "prompt": "0.00000000982",
-        "completion": "0.0000000753",
-        "input_cache_read": "0.00000000901"
+        "prompt": "0.000000035",
+        "completion": "0.0000005",
+        "input_cache_read": "0.000000005"
       },
       "context_length": 1048576,
       "architecture": {
@@ -2246,9 +2246,9 @@
       "created": 1787817633,
       "description": "This model always redirects to the latest model in the GLM Flash family.",
       "pricing": {
-        "prompt": "0.0000000143",
-        "completion": "0.0000000184",
-        "input_cache_read": "0.000000013"
+        "prompt": "0.0000000285",
+        "completion": "0.0000000923",
+        "input_cache_read": "0.0000000285"
       },
       "context_length": 1048576,
       "architecture": {
@@ -2257,7 +2257,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 943718
+        "max_completion_tokens": 131072
       }
     },
     {
@@ -2286,9 +2286,9 @@
       "created": 1787752741,
       "description": "GLM-5.3-Flash is a native multimodal model from Z.ai. It is suited for efficient coding and long-horizon agent tasks. Its hybrid sparse and linear attention architecture maintains accurate long-context behavior while...",
       "pricing": {
-        "prompt": "0.0000000143",
-        "completion": "0.0000000184",
-        "input_cache_read": "0.000000013"
+        "prompt": "0.0000000285",
+        "completion": "0.0000000923",
+        "input_cache_read": "0.0000000285"
       },
       "context_length": 1048576,
       "architecture": {
@@ -2297,7 +2297,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 943718
+        "max_completion_tokens": 131072
       }
     },
     {
@@ -2423,9 +2423,9 @@
       "created": 1787086655,
       "description": "GLM-5.3 is a large-scale reasoning model from Z.ai, built for complex software engineering and long-horizon agent tasks. It supports text input and output with a 1M-token context window, and improves...",
       "pricing": {
-        "prompt": "0.0000000699",
-        "completion": "0.0000014",
-        "input_cache_read": "0.0000000689"
+        "prompt": "0.00000008",
+        "completion": "0.0000036",
+        "input_cache_read": "0.000000076"
       },
       "context_length": 1048576,
       "architecture": {
@@ -2787,7 +2787,7 @@
       "created": 1785606009,
       "description": "This model always redirects to the latest model in the DeepSeek V4 Flash family.",
       "pricing": {
-        "prompt": "0.0000000434",
+        "prompt": "0.000000059",
         "completion": "0.0000003",
         "input_cache_read": "0.000000035"
       },
@@ -4920,9 +4920,9 @@
       "created": 1775227989,
       "description": "Gemma 4 26B A4B IT is an instruction-tuned Mixture-of-Experts (MoE) model from Google DeepMind. Despite 25.2B total parameters, only 3.8B activate per token during inference \u2014 delivering near-31B quality at...",
       "pricing": {
-        "prompt": "0.0000000675",
-        "completion": "0.000000225",
-        "input_cache_read": "0.0000000375"
+        "prompt": "0.00000002",
+        "completion": "0.000000059",
+        "input_cache_read": "0.00000001"
       },
       "context_length": 262144,
       "architecture": {
@@ -4931,7 +4931,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 235929
+        "max_completion_tokens": 32768
       }
     },
     {
@@ -7243,9 +7243,9 @@
       "created": 1754414229,
       "description": "gpt-oss-20b is an open-weight 21B parameter model released by OpenAI under the Apache 2.0 license. It uses a Mixture-of-Experts (MoE) architecture with 3.6B active parameters per forward pass, optimized for...",
       "pricing": {
-        "prompt": "0.000000018",
-        "completion": "0.00000009",
-        "input_cache_read": "0.000000009"
+        "prompt": "0.00000003",
+        "completion": "0.00000013",
+        "input_cache_read": "0.00000003"
       },
       "context_length": 131072,
       "architecture": {
@@ -7254,7 +7254,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 32768
+        "max_completion_tokens": 117964
       }
     },
     {
@@ -7325,8 +7325,8 @@
       "created": 1753972379,
       "description": "Qwen3-Coder-30B-A3B-Instruct is a 30.5B parameter Mixture-of-Experts (MoE) model with 128 experts (8 active per forward pass), designed for advanced code generation, repository-scale understanding, and agentic tool use. Built on the...",
       "pricing": {
-        "prompt": "0.00000007",
-        "completion": "0.00000028"
+        "prompt": "0.00000015",
+        "completion": "0.0000006"
       },
       "context_length": 262144,
       "architecture": {
