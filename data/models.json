@@ -1,7 +1,26 @@
 {
-  "fetched_at": "2026-11-03T01:00:31Z",
-  "total": 415,
+  "fetched_at": "2026-11-04T01:00:54Z",
+  "total": 418,
   "models": [
+    {
+      "id": "stealth/crouton-alpha",
+      "name": "Crouton Alpha",
+      "created": 1793669930,
+      "description": "Crouton Alpha is a lightweight model built for scalable coding, agentic, and multimodal workflows. It's ideal for executing agentic sub-tasks, tool use, and document analysis in high-volume, repeated work. Developers...",
+      "pricing": {
+        "prompt": "0",
+        "completion": "0"
+      },
+      "context_length": 1048576,
+      "architecture": {
+        "modality": "text+image+file+audio+video->text",
+        "tokenizer": "Other"
+      },
+      "top_provider": {
+        "name": "",
+        "max_completion_tokens": 943718
+      }
+    },
     {
       "id": "z-ai/glm-5.3-flashx-legal",
       "name": "Z.ai: GLM 5.3 FlashX Legal",
@@ -247,9 +266,9 @@
       "created": 1792225624,
       "description": "DeepSeek V4.1 Flash 1017 is the October 17, 2026 snapshot of DeepSeek V4.1 Flash, served by DeepSeek under the `deepseek-flash` API model name. V4.1 Flash is a sparse mixture-of-experts model...",
       "pricing": {
-        "prompt": "0.000000035",
-        "completion": "0.0000005",
-        "input_cache_read": "0.000000005"
+        "prompt": "0.0000000333",
+        "completion": "0.000000475",
+        "input_cache_read": "0.00000000475"
       },
       "context_length": 1048576,
       "architecture": {
@@ -435,7 +454,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 235929
+        "max_completion_tokens": 943718
       }
     },
     {
@@ -1508,6 +1527,35 @@
       }
     },
     {
+      "id": "x-ai/grok-4.7:batch",
+      "name": "SpaceXAI: Grok 4.7 (batch)",
+      "created": 1790007541,
+      "description": "Grok 4.7 is SpaceXAI's flagship model for coding, agentic tasks, and knowledge work, succeeding Grok 4.6. It is particularly strong at long-running software engineering tasks, verifying its own work, and...",
+      "pricing": {
+        "prompt": "0.0000016",
+        "completion": "0.0000048",
+        "web_search": "0.005",
+        "input_cache_read": "0.0000004",
+        "overrides": [
+          {
+            "min_prompt_tokens": 200000,
+            "prompt": "0.0000032",
+            "completion": "0.0000096",
+            "input_cache_read": "0.0000008"
+          }
+        ]
+      },
+      "context_length": 500000,
+      "architecture": {
+        "modality": "text+image+file->text",
+        "tokenizer": "Grok"
+      },
+      "top_provider": {
+        "name": "",
+        "max_completion_tokens": 450000
+      }
+    },
+    {
       "id": "qwen/qwen3.8-omni-flash",
       "name": "Qwen: Qwen3.8 Omni Flash",
       "created": 1789959954,
@@ -1593,9 +1641,9 @@
       "created": 1789399150,
       "description": "This model always redirects to the latest model in the DeepSeek Flash family.",
       "pricing": {
-        "prompt": "0.000000035",
-        "completion": "0.0000005",
-        "input_cache_read": "0.000000005"
+        "prompt": "0.0000000333",
+        "completion": "0.000000475",
+        "input_cache_read": "0.00000000475"
       },
       "context_length": 1048576,
       "architecture": {
@@ -1849,7 +1897,7 @@
       "pricing": {
         "prompt": "0.000000045",
         "completion": "0.0000005",
-        "input_cache_read": "0.000000006"
+        "input_cache_read": "0.000000018"
       },
       "context_length": 1048576,
       "architecture": {
@@ -2211,7 +2259,7 @@
       "description": "Granite 4.2 8B is a dense reasoning model from IBM. It is suited for mathematics, code generation, multilingual dialogue, and agentic workflows that need multi-step reasoning. It supports full, low-effort,...",
       "pricing": {
         "prompt": "0.00000006",
-        "completion": "0.00000015",
+        "completion": "0.00000025",
         "input_cache_read": "0.000000015"
       },
       "context_length": 131072,
@@ -2266,9 +2314,9 @@
       "created": 1787817633,
       "description": "This model always redirects to the latest model in the GLM Flash family.",
       "pricing": {
-        "prompt": "0.0000000285",
-        "completion": "0.0000000923",
-        "input_cache_read": "0.0000000285"
+        "prompt": "0.0000000313",
+        "completion": "0.0000000846",
+        "input_cache_read": "0.00000003"
       },
       "context_length": 1048576,
       "architecture": {
@@ -2306,9 +2354,9 @@
       "created": 1787752741,
       "description": "GLM-5.3-Flash is a native multimodal model from Z.ai. It is suited for efficient coding and long-horizon agent tasks. Its hybrid sparse and linear attention architecture maintains accurate long-context behavior while...",
       "pricing": {
-        "prompt": "0.0000000285",
-        "completion": "0.0000000923",
-        "input_cache_read": "0.0000000285"
+        "prompt": "0.0000000313",
+        "completion": "0.0000000846",
+        "input_cache_read": "0.00000003"
       },
       "context_length": 1048576,
       "architecture": {
@@ -2669,6 +2717,35 @@
             "prompt": "0.000004",
             "completion": "0.000012",
             "input_cache_read": "0.000001"
+          }
+        ]
+      },
+      "context_length": 500000,
+      "architecture": {
+        "modality": "text+image+file->text",
+        "tokenizer": "Grok"
+      },
+      "top_provider": {
+        "name": "",
+        "max_completion_tokens": 450000
+      }
+    },
+    {
+      "id": "x-ai/grok-4.6:batch",
+      "name": "SpaceXAI: Grok 4.6 (batch)",
+      "created": 1786548957,
+      "description": "Grok 4.6 is a model from SpaceXAI with frontier performance on coding, knowledge work, and STEM. It is succeeded by [Grok 4.7](/x-ai/grok-4.7).",
+      "pricing": {
+        "prompt": "0.0000016",
+        "completion": "0.0000048",
+        "web_search": "0.005",
+        "input_cache_read": "0.0000004",
+        "overrides": [
+          {
+            "min_prompt_tokens": 200000,
+            "prompt": "0.0000032",
+            "completion": "0.0000096",
+            "input_cache_read": "0.0000008"
           }
         ]
       },
@@ -3151,9 +3228,9 @@
       "created": 1784215858,
       "description": "Kimi K3 is a 2.8T parameter open-weight multimodal reasoning model from Moonshot AI. It is suited for complex coding, knowledge work, and long-horizon agentic workflows, and is particularly strong at...",
       "pricing": {
-        "prompt": "0.000000192",
-        "completion": "0.000015",
-        "input_cache_read": "0.000000182"
+        "prompt": "0.000000276",
+        "completion": "0.0000096",
+        "input_cache_read": "0.00000013"
       },
       "context_length": 1048576,
       "architecture": {
@@ -4514,9 +4591,9 @@
       "created": 1777318428,
       "description": "This model always redirects to the latest model in the Kimi family.",
       "pricing": {
-        "prompt": "0.0000001495",
-        "completion": "0.00000715",
-        "input_cache_read": "0.00000007475"
+        "prompt": "0.0000001729",
+        "completion": "0.0000097439",
+        "input_cache_read": "0.00000017"
       },
       "context_length": 1048576,
       "architecture": {
@@ -4942,9 +5019,9 @@
       "created": 1775227989,
       "description": "Gemma 4 26B A4B IT is an instruction-tuned Mixture-of-Experts (MoE) model from Google DeepMind. Despite 25.2B total parameters, only 3.8B activate per token during inference \u2014 delivering near-31B quality at...",
       "pricing": {
-        "prompt": "0.000000068",
-        "completion": "0.000000205",
-        "input_cache_read": "0.000000034"
+        "prompt": "0.00000007",
+        "completion": "0.000000211",
+        "input_cache_read": "0.000000035"
       },
       "context_length": 262144,
       "architecture": {
@@ -7227,9 +7304,9 @@
       "created": 1754414231,
       "description": "gpt-oss-120b is an open-weight, 117B-parameter Mixture-of-Experts (MoE) language model from OpenAI designed for high-reasoning, agentic, and general-purpose production use cases. It activates 5.1B parameters per forward pass and is optimized...",
       "pricing": {
-        "prompt": "0.00000015",
-        "completion": "0.0000006",
-        "input_cache_read": "0.000000075"
+        "prompt": "0.000000026",
+        "completion": "0.000000096",
+        "input_cache_read": "0.000000023"
       },
       "context_length": 131072,
       "architecture": {
@@ -8441,9 +8518,8 @@
       "created": 1733506137,
       "description": "The Meta Llama 3.3 multilingual large language model (LLM) is a pretrained and instruction tuned generative model in 70B (text in/text out). The Llama 3.3 instruction tuned text only model...",
       "pricing": {
-        "prompt": "0.0000002",
-        "completion": "0.00000052",
-        "input_cache_read": "0.0000001"
+        "prompt": "0.0000001",
+        "completion": "0.00000032"
       },
       "context_length": 131072,
       "architecture": {
@@ -8452,7 +8528,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 128000
+        "max_completion_tokens": 16384
       }
     },
     {
@@ -8787,8 +8863,8 @@
       "created": 1721692800,
       "description": "Meta's latest class of model (Llama 3.1) launched with a variety of sizes & flavors. This 70B instruct-tuned version is optimized for high quality dialogue usecases. It has demonstrated strong...",
       "pricing": {
-        "prompt": "0.0000004",
-        "completion": "0.0000004"
+        "prompt": "0.00000072",
+        "completion": "0.00000072"
       },
       "context_length": 131072,
       "architecture": {
@@ -8797,7 +8873,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 16384
+        "max_completion_tokens": 8192
       }
     },
     {
