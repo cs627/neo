@@ -1,7 +1,47 @@
 {
-  "fetched_at": "2026-11-04T01:00:54Z",
+  "fetched_at": "2026-11-05T01:00:17Z",
   "total": 418,
   "models": [
+    {
+      "id": "ricursiveai/ripple-65b-preview",
+      "name": "ricursiveAI/Ripple-65B-Preview",
+      "created": 1793818990,
+      "description": "Ripple-65B-Preview by ricursiveAI, a 65B model with native tool calling, served in BF16.",
+      "pricing": {
+        "prompt": "0.0000002",
+        "completion": "0.0000006",
+        "input_cache_read": "0.00000005"
+      },
+      "context_length": 1048576,
+      "architecture": {
+        "modality": "text->text",
+        "tokenizer": "Other"
+      },
+      "top_provider": {
+        "name": "",
+        "max_completion_tokens": 131072
+      }
+    },
+    {
+      "id": "tencent/hy4",
+      "name": "Tencent: Hy4",
+      "created": 1793766031,
+      "description": "The official release of Hy4 delivers comprehensive and substantial improvements over Hy4 Preview, with particularly strong gains in agentic capabilities and performance across a wide range of long-horizon, real-world productivity...",
+      "pricing": {
+        "prompt": "0.000000417",
+        "completion": "0.0000012505",
+        "input_cache_read": "0.000000021"
+      },
+      "context_length": 1048576,
+      "architecture": {
+        "modality": "text+image->text",
+        "tokenizer": "Other"
+      },
+      "top_provider": {
+        "name": "",
+        "max_completion_tokens": 65536
+      }
+    },
     {
       "id": "stealth/crouton-alpha",
       "name": "Crouton Alpha",
@@ -266,9 +306,9 @@
       "created": 1792225624,
       "description": "DeepSeek V4.1 Flash 1017 is the October 17, 2026 snapshot of DeepSeek V4.1 Flash, served by DeepSeek under the `deepseek-flash` API model name. V4.1 Flash is a sparse mixture-of-experts model...",
       "pricing": {
-        "prompt": "0.0000000333",
-        "completion": "0.000000475",
-        "input_cache_read": "0.00000000475"
+        "prompt": "0.000000006",
+        "completion": "0.0000005",
+        "input_cache_read": "0.000000005"
       },
       "context_length": 1048576,
       "architecture": {
@@ -1641,9 +1681,9 @@
       "created": 1789399150,
       "description": "This model always redirects to the latest model in the DeepSeek Flash family.",
       "pricing": {
-        "prompt": "0.0000000333",
-        "completion": "0.000000475",
-        "input_cache_read": "0.00000000475"
+        "prompt": "0.000000006",
+        "completion": "0.0000005",
+        "input_cache_read": "0.000000005"
       },
       "context_length": 1048576,
       "architecture": {
@@ -2314,9 +2354,9 @@
       "created": 1787817633,
       "description": "This model always redirects to the latest model in the GLM Flash family.",
       "pricing": {
-        "prompt": "0.0000000313",
-        "completion": "0.0000000846",
-        "input_cache_read": "0.00000003"
+        "prompt": "0.0000000285",
+        "completion": "0.0000000923",
+        "input_cache_read": "0.0000000285"
       },
       "context_length": 1048576,
       "architecture": {
@@ -2354,8 +2394,8 @@
       "created": 1787752741,
       "description": "GLM-5.3-Flash is a native multimodal model from Z.ai. It is suited for efficient coding and long-horizon agent tasks. Its hybrid sparse and linear attention architecture maintains accurate long-context behavior while...",
       "pricing": {
-        "prompt": "0.0000000313",
-        "completion": "0.0000000846",
+        "prompt": "0.00000015",
+        "completion": "0.0000005",
         "input_cache_read": "0.00000003"
       },
       "context_length": 1048576,
@@ -2365,7 +2405,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 131072
+        "max_completion_tokens": 943717
       }
     },
     {
@@ -2491,9 +2531,9 @@
       "created": 1787086655,
       "description": "GLM-5.3 is a large-scale reasoning model from Z.ai, built for complex software engineering and long-horizon agent tasks. It supports text input and output with a 1M-token context window, and improves...",
       "pricing": {
-        "prompt": "0.00000008",
-        "completion": "0.0000036",
-        "input_cache_read": "0.000000076"
+        "prompt": "0.0000000699",
+        "completion": "0.0000014",
+        "input_cache_read": "0.0000000689"
       },
       "context_length": 1048576,
       "architecture": {
@@ -2688,7 +2728,7 @@
       "description": "DeepSeek V4 Pro 0813 is a large-scale mixture-of-experts model from DeepSeek. This is the GA release of DeepSeek V4 Pro.",
       "pricing": {
         "prompt": "0.000000115",
-        "completion": "0.000004",
+        "completion": "0.0000046",
         "input_cache_read": "0.00000011"
       },
       "context_length": 1048576,
@@ -2929,25 +2969,6 @@
         "input_cache_read": "0.0000001"
       },
       "context_length": 524288,
-      "architecture": {
-        "modality": "text+image+audio->text",
-        "tokenizer": "Other"
-      },
-      "top_provider": {
-        "name": "",
-        "max_completion_tokens": 262144
-      }
-    },
-    {
-      "id": "thinkingmachines/inkling-small:free",
-      "name": "Thinking Machines: Inkling Small (free)",
-      "created": 1785443117,
-      "description": "Inkling Small is an open-weight multimodal mixture-of-experts model from Thinking Machines Lab, with 12B active parameters out of 276B total. It is positioned as the smaller, more efficient member of...",
-      "pricing": {
-        "prompt": "0",
-        "completion": "0"
-      },
-      "context_length": 1048576,
       "architecture": {
         "modality": "text+image+audio->text",
         "tokenizer": "Other"
@@ -3204,33 +3225,14 @@
       }
     },
     {
-      "id": "thinkingmachines/inkling:free",
-      "name": "Thinking Machines: Inkling (free)",
-      "created": 1784325956,
-      "description": "Inkling is an open-weight multimodal mixture-of-experts model from Thinking Machines Lab, with 41B active parameters out of 975B total. It is designed for general-purpose reasoning, coding, agentic and tool-use systems,...",
-      "pricing": {
-        "prompt": "0",
-        "completion": "0"
-      },
-      "context_length": 1048576,
-      "architecture": {
-        "modality": "text+image+audio->text",
-        "tokenizer": "Other"
-      },
-      "top_provider": {
-        "name": "",
-        "max_completion_tokens": 262144
-      }
-    },
-    {
       "id": "moonshotai/kimi-k3",
       "name": "MoonshotAI: Kimi K3",
       "created": 1784215858,
       "description": "Kimi K3 is a 2.8T parameter open-weight multimodal reasoning model from Moonshot AI. It is suited for complex coding, knowledge work, and long-horizon agentic workflows, and is particularly strong at...",
       "pricing": {
-        "prompt": "0.000000276",
-        "completion": "0.0000096",
-        "input_cache_read": "0.00000013"
+        "prompt": "0.000000192",
+        "completion": "0.000016",
+        "input_cache_read": "0.000000182"
       },
       "context_length": 1048576,
       "architecture": {
@@ -4591,9 +4593,9 @@
       "created": 1777318428,
       "description": "This model always redirects to the latest model in the Kimi family.",
       "pricing": {
-        "prompt": "0.0000001729",
-        "completion": "0.0000097439",
-        "input_cache_read": "0.00000017"
+        "prompt": "0.0000001624",
+        "completion": "0.0000093388",
+        "input_cache_read": "0.00000016"
       },
       "context_length": 1048576,
       "architecture": {
@@ -4895,7 +4897,7 @@
         "completion": "0.000002",
         "input_cache_read": "0.00000008"
       },
-      "context_length": 1050000,
+      "context_length": 1000000,
       "architecture": {
         "modality": "text+image+audio+video->text",
         "tokenizer": "Other"
@@ -5019,9 +5021,9 @@
       "created": 1775227989,
       "description": "Gemma 4 26B A4B IT is an instruction-tuned Mixture-of-Experts (MoE) model from Google DeepMind. Despite 25.2B total parameters, only 3.8B activate per token during inference \u2014 delivering near-31B quality at...",
       "pricing": {
-        "prompt": "0.00000007",
-        "completion": "0.000000211",
-        "input_cache_read": "0.000000035"
+        "prompt": "0.000000037",
+        "completion": "0.00000011",
+        "input_cache_read": "0.000000018"
       },
       "context_length": 262144,
       "architecture": {
@@ -7304,9 +7306,9 @@
       "created": 1754414231,
       "description": "gpt-oss-120b is an open-weight, 117B-parameter Mixture-of-Experts (MoE) language model from OpenAI designed for high-reasoning, agentic, and general-purpose production use cases. It activates 5.1B parameters per forward pass and is optimized...",
       "pricing": {
-        "prompt": "0.000000026",
-        "completion": "0.000000096",
-        "input_cache_read": "0.000000023"
+        "prompt": "0.000000023",
+        "completion": "0.000000085",
+        "input_cache_read": "0.000000021"
       },
       "context_length": 131072,
       "architecture": {
@@ -8059,9 +8061,9 @@
       "created": 1743881822,
       "description": "Llama 4 Maverick 17B Instruct (128E) is a high-capacity multimodal language model from Meta, built on a mixture-of-experts (MoE) architecture with 128 experts and 17 billion active parameters per forward...",
       "pricing": {
-        "prompt": "0.0000001875",
-        "completion": "0.0000006525",
-        "input_cache_read": "0.00000005"
+        "prompt": "0.00000035",
+        "completion": "0.000001",
+        "input_cache_read": "0.00000017"
       },
       "context_length": 524288,
       "architecture": {
@@ -8070,7 +8072,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 16384
+        "max_completion_tokens": 32768
       }
     },
     {
@@ -8518,8 +8520,9 @@
       "created": 1733506137,
       "description": "The Meta Llama 3.3 multilingual large language model (LLM) is a pretrained and instruction tuned generative model in 70B (text in/text out). The Llama 3.3 instruction tuned text only model...",
       "pricing": {
-        "prompt": "0.0000001",
-        "completion": "0.00000032"
+        "prompt": "0.0000002",
+        "completion": "0.00000052",
+        "input_cache_read": "0.0000001"
       },
       "context_length": 131072,
       "architecture": {
@@ -8528,7 +8531,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 16384
+        "max_completion_tokens": 128000
       }
     },
     {
