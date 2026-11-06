@@ -1,7 +1,47 @@
 {
-  "fetched_at": "2026-11-05T01:00:17Z",
+  "fetched_at": "2026-11-06T01:00:16Z",
   "total": 418,
   "models": [
+    {
+      "id": "google/gemini-omni-1.2-flash",
+      "name": "Google: Gemini Omni 1.2 Flash",
+      "created": 1793898961,
+      "description": "Gemini Omni 1.2 Flash is Google's native multimodal video generation and editing model, the successor to Gemini Omni 1.1 Flash. It generates clips up to 15 seconds long with native...",
+      "pricing": {
+        "prompt": "0.0000015",
+        "completion": "0.000009",
+        "web_search": "0.014"
+      },
+      "context_length": 131072,
+      "architecture": {
+        "modality": "text+image+video->text+video",
+        "tokenizer": "Gemini"
+      },
+      "top_provider": {
+        "name": "",
+        "max_completion_tokens": 65536
+      }
+    },
+    {
+      "id": "google/gemini-omni-1.1-flash",
+      "name": "Google: Gemini Omni 1.1 Flash",
+      "created": 1793825668,
+      "description": "Gemini Omni 1.1 Flash is Google's native multimodal video generation and editing model, the generally available successor to Gemini Omni Flash Preview. It is suited for text-to-video, image-to-video, first and...",
+      "pricing": {
+        "prompt": "0.0000015",
+        "completion": "0.000009",
+        "web_search": "0.014"
+      },
+      "context_length": 131072,
+      "architecture": {
+        "modality": "text+image+video->text+video",
+        "tokenizer": "Gemini"
+      },
+      "top_provider": {
+        "name": "",
+        "max_completion_tokens": 65536
+      }
+    },
     {
       "id": "ricursiveai/ripple-65b-preview",
       "name": "ricursiveAI/Ripple-65B-Preview",
@@ -365,9 +405,9 @@
       "created": 1792160499,
       "description": "Beam 1.0 is Reflection's open-weight reasoning model for coding and long-horizon agentic workflows. It uses a sparse mixture-of-experts architecture with 501B total and 23B active parameters per token, and a...",
       "pricing": {
-        "prompt": "0.00000025",
+        "prompt": "0.0000003",
         "completion": "0.000001",
-        "input_cache_read": "0.00000005"
+        "input_cache_read": "0.00000004"
       },
       "context_length": 1048576,
       "architecture": {
@@ -376,7 +416,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 131072
+        "max_completion_tokens": 943718
       }
     },
     {
@@ -1661,9 +1701,9 @@
       "created": 1789399174,
       "description": "This model always redirects to the latest model in the DeepSeek Pro family.",
       "pricing": {
-        "prompt": "0.0000001035",
+        "prompt": "0.0000000927",
         "completion": "0.000008",
-        "input_cache_read": "0.0000001"
+        "input_cache_read": "0.0000000927"
       },
       "context_length": 1048576,
       "architecture": {
@@ -1732,7 +1772,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 4096
+        "max_completion_tokens": 8192
       }
     },
     {
@@ -1955,9 +1995,9 @@
       "created": 1789021285,
       "description": "DeepSeek V4.1 Flash is a sparse mixture-of-experts model from DeepSeek, and the first built on the company's Causal Encoder-Decoder (CED) architecture. It activates 8B parameters on input and 16B on...",
       "pricing": {
-        "prompt": "0.00000005",
-        "completion": "0.00000015",
-        "input_cache_read": "0.000000004"
+        "prompt": "0.000000112",
+        "completion": "0.000000336",
+        "input_cache_read": "0.00000000336"
       },
       "context_length": 1048576,
       "architecture": {
@@ -1966,7 +2006,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 384000
+        "max_completion_tokens": 131072
       }
     },
     {
@@ -2434,9 +2474,9 @@
       "created": 1787311563,
       "description": "DeepSeek V4 Flash Vision Exp is an experimental vision-enabled version of [DeepSeek V4 Flash 0731](https://openrouter.ai/deepseek/deepseek-v4-flash-0731) from DeepSeek, adding image understanding while matching the base model on text capabilities including agents,...",
       "pricing": {
-        "prompt": "0.0000002156",
-        "completion": "0.0000006468",
-        "input_cache_read": "0.00000000686"
+        "prompt": "0.00000044",
+        "completion": "0.00000132",
+        "input_cache_read": "0.000000014"
       },
       "context_length": 1048576,
       "architecture": {
@@ -2445,7 +2485,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 262144
+        "max_completion_tokens": 943717
       }
     },
     {
@@ -2727,9 +2767,9 @@
       "created": 1786549364,
       "description": "DeepSeek V4 Pro 0813 is a large-scale mixture-of-experts model from DeepSeek. This is the GA release of DeepSeek V4 Pro.",
       "pricing": {
-        "prompt": "0.000000115",
-        "completion": "0.0000046",
-        "input_cache_read": "0.00000011"
+        "prompt": "0.000000103",
+        "completion": "0.00000411",
+        "input_cache_read": "0.000000098"
       },
       "context_length": 1048576,
       "architecture": {
@@ -2895,6 +2935,26 @@
       "top_provider": {
         "name": "",
         "max_completion_tokens": 16384
+      }
+    },
+    {
+      "id": "inclusionai/ling-3.0-tiny",
+      "name": "inclusionAI: Ling 3.0 Tiny",
+      "created": 1786034890,
+      "description": "Ling 3.0 Tiny is a mixture-of-experts model from InclusionAI, with 1.3B active parameters out of 7.9B total. It is designed for responsive agents, instruction following, and multi-turn conversations, with switchable...",
+      "pricing": {
+        "prompt": "0.000000015",
+        "completion": "0.000000045",
+        "input_cache_read": "0.000000003"
+      },
+      "context_length": 262144,
+      "architecture": {
+        "modality": "text->text",
+        "tokenizer": "Other"
+      },
+      "top_provider": {
+        "name": "",
+        "max_completion_tokens": 250000
       }
     },
     {
@@ -3953,7 +4013,7 @@
       "pricing": {
         "prompt": "0.0000006",
         "completion": "0.0000035",
-        "input_cache_read": "0.00000015"
+        "input_cache_read": "0.00000016"
       },
       "context_length": 262144,
       "architecture": {
@@ -4593,9 +4653,9 @@
       "created": 1777318428,
       "description": "This model always redirects to the latest model in the Kimi family.",
       "pricing": {
-        "prompt": "0.0000001624",
-        "completion": "0.0000093388",
-        "input_cache_read": "0.00000016"
+        "prompt": "0.0000001539",
+        "completion": "0.0000105539",
+        "input_cache_read": "0.00000015"
       },
       "context_length": 1048576,
       "architecture": {
@@ -4813,9 +4873,9 @@
       "created": 1777000679,
       "description": "DeepSeek V4 Pro is a large-scale Mixture-of-Experts model from DeepSeek with 1.6T total parameters and 49B activated parameters, supporting a 1M-token context window. It is designed for advanced reasoning, coding,...",
       "pricing": {
-        "prompt": "0.0000016",
-        "completion": "0.0000032",
-        "input_cache_read": "0.000000135"
+        "prompt": "0.00000095526",
+        "completion": "0.00000191052",
+        "input_cache_read": "0.000000079605"
       },
       "context_length": 1048576,
       "architecture": {
@@ -4824,7 +4884,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 393216
+        "max_completion_tokens": 384000
       }
     },
     {
@@ -5021,9 +5081,9 @@
       "created": 1775227989,
       "description": "Gemma 4 26B A4B IT is an instruction-tuned Mixture-of-Experts (MoE) model from Google DeepMind. Despite 25.2B total parameters, only 3.8B activate per token during inference \u2014 delivering near-31B quality at...",
       "pricing": {
-        "prompt": "0.000000037",
-        "completion": "0.00000011",
-        "input_cache_read": "0.000000018"
+        "prompt": "0.0000000765",
+        "completion": "0.000000255",
+        "input_cache_read": "0.0000000425"
       },
       "context_length": 262144,
       "architecture": {
@@ -5032,7 +5092,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 32768
+        "max_completion_tokens": 235929
       }
     },
     {
@@ -5261,9 +5321,9 @@
       "created": 1773836697,
       "description": "MiniMax-M2.7 is a next-generation large language model designed for autonomous, real-world productivity and continuous improvement. Built to actively participate in its own evolution, M2.7 integrates advanced agentic capabilities through multi-agent...",
       "pricing": {
-        "prompt": "0.0000003",
-        "completion": "0.0000012",
-        "input_cache_read": "0.00000006"
+        "prompt": "0.00000021",
+        "completion": "0.00000084",
+        "input_cache_read": "0.000000042"
       },
       "context_length": 204800,
       "architecture": {
@@ -5272,7 +5332,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 131072
+        "max_completion_tokens": 176947
       }
     },
     {
@@ -5984,26 +6044,6 @@
       }
     },
     {
-      "id": "minimax/minimax-m2-her",
-      "name": "MiniMax: MiniMax M2-her",
-      "created": 1769177239,
-      "description": "MiniMax M2-her is a dialogue-first large language model built for immersive roleplay, character-driven chat, and expressive multi-turn conversations. Designed to stay consistent in tone and personality, it supports rich message...",
-      "pricing": {
-        "prompt": "0.0000003",
-        "completion": "0.0000012",
-        "input_cache_read": "0.00000003"
-      },
-      "context_length": 65536,
-      "architecture": {
-        "modality": "text->text",
-        "tokenizer": "Other"
-      },
-      "top_provider": {
-        "name": "",
-        "max_completion_tokens": 2048
-      }
-    },
-    {
       "id": "writer/palmyra-x5",
       "name": "Writer: Palmyra X5",
       "created": 1769003823,
@@ -6154,26 +6194,6 @@
       "top_provider": {
         "name": "",
         "max_completion_tokens": 32768
-      }
-    },
-    {
-      "id": "minimax/minimax-m2.1",
-      "name": "MiniMax: MiniMax M2.1",
-      "created": 1766454997,
-      "description": "MiniMax-M2.1 is a lightweight, state-of-the-art large language model optimized for coding, agentic workflows, and modern application development. With only 10 billion activated parameters, it delivers a major jump in real-world...",
-      "pricing": {
-        "prompt": "0.0000003",
-        "completion": "0.0000012",
-        "input_cache_read": "0.00000003"
-      },
-      "context_length": 204800,
-      "architecture": {
-        "modality": "text->text",
-        "tokenizer": "Other"
-      },
-      "top_provider": {
-        "name": "",
-        "max_completion_tokens": 131072
       }
     },
     {
@@ -6720,25 +6740,6 @@
       }
     },
     {
-      "id": "minimax/minimax-m2",
-      "name": "MiniMax: MiniMax M2",
-      "created": 1761252093,
-      "description": "MiniMax-M2 is a compact, high-efficiency large language model optimized for end-to-end coding and agentic workflows. With 10 billion activated parameters (230 billion total), it delivers near-frontier intelligence across general reasoning,...",
-      "pricing": {
-        "prompt": "0.000000255",
-        "completion": "0.00000102"
-      },
-      "context_length": 204800,
-      "architecture": {
-        "modality": "text->text",
-        "tokenizer": "Other"
-      },
-      "top_provider": {
-        "name": "",
-        "max_completion_tokens": 131072
-      }
-    },
-    {
       "id": "openai/gpt-5-image-mini",
       "name": "OpenAI: GPT-5 Image Mini",
       "created": 1760624583,
@@ -7103,9 +7104,8 @@
       "created": 1757612213,
       "description": "Qwen3-Next-80B-A3B-Instruct is an instruction-tuned chat model in the Qwen3-Next series optimized for fast, stable responses without \u201cthinking\u201d traces. It targets complex tasks across reasoning, code generation, knowledge QA, and multilingual...",
       "pricing": {
-        "prompt": "0.0000001",
-        "completion": "0.0000011",
-        "input_cache_read": "0.00000007"
+        "prompt": "0.00000009",
+        "completion": "0.0000011"
       },
       "context_length": 262144,
       "architecture": {
@@ -7114,7 +7114,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 235929
+        "max_completion_tokens": 16384
       }
     },
     {
@@ -7306,9 +7306,9 @@
       "created": 1754414231,
       "description": "gpt-oss-120b is an open-weight, 117B-parameter Mixture-of-Experts (MoE) language model from OpenAI designed for high-reasoning, agentic, and general-purpose production use cases. It activates 5.1B parameters per forward pass and is optimized...",
       "pricing": {
-        "prompt": "0.000000023",
-        "completion": "0.000000085",
-        "input_cache_read": "0.000000021"
+        "prompt": "0.000000013",
+        "completion": "0.000000047",
+        "input_cache_read": "0.000000011"
       },
       "context_length": 131072,
       "architecture": {
@@ -7591,8 +7591,9 @@
       "created": 1753119555,
       "description": "Qwen3-235B-A22B-Instruct-2507 is a multilingual, instruction-tuned mixture-of-experts language model based on the Qwen3-235B architecture, with 22B active parameters per forward pass. It is optimized for general-purpose text generation, including instruction following,...",
       "pricing": {
-        "prompt": "0.00000009",
-        "completion": "0.00000055"
+        "prompt": "0.00000014",
+        "completion": "0.0000008",
+        "input_cache_read": "0.00000005"
       },
       "context_length": 262144,
       "architecture": {
@@ -7601,7 +7602,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 16384
+        "max_completion_tokens": 117964
       }
     },
     {
@@ -8439,25 +8440,6 @@
       }
     },
     {
-      "id": "minimax/minimax-01",
-      "name": "MiniMax: MiniMax-01",
-      "created": 1736915462,
-      "description": "MiniMax-01 is a combines MiniMax-Text-01 for text generation and MiniMax-VL-01 for image understanding. It has 456 billion parameters, with 45.9 billion parameters activated per inference, and can handle a context...",
-      "pricing": {
-        "prompt": "0.0000002",
-        "completion": "0.0000011"
-      },
-      "context_length": 1000192,
-      "architecture": {
-        "modality": "text+image->text",
-        "tokenizer": "Other"
-      },
-      "top_provider": {
-        "name": "",
-        "max_completion_tokens": 900172
-      }
-    },
-    {
       "id": "microsoft/phi-4",
       "name": "Microsoft: Phi 4",
       "created": 1736489872,
@@ -8520,9 +8502,9 @@
       "created": 1733506137,
       "description": "The Meta Llama 3.3 multilingual large language model (LLM) is a pretrained and instruction tuned generative model in 70B (text in/text out). The Llama 3.3 instruction tuned text only model...",
       "pricing": {
-        "prompt": "0.0000002",
-        "completion": "0.00000052",
-        "input_cache_read": "0.0000001"
+        "prompt": "0.00000059",
+        "completion": "0.00000079",
+        "input_cache_read": "0.000000295"
       },
       "context_length": 131072,
       "architecture": {
@@ -8531,7 +8513,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 128000
+        "max_completion_tokens": 32768
       }
     },
     {
@@ -9171,6 +9153,44 @@
       }
     },
     {
+      "id": "openrouter/auto",
+      "name": "Auto Router",
+      "created": 1793885889,
+      "description": "Auto is OpenRouter\u2019s flagship model router, built for general-purpose usage. It adapts to each request, choosing cost-optimal models and adjusting reasoning effort. It balances task difficulty, benchmark results, live prices,...",
+      "pricing": {
+        "prompt": "-1",
+        "completion": "-1"
+      },
+      "context_length": 2000000,
+      "architecture": {
+        "modality": "text+image+file+audio+video->text+image",
+        "tokenizer": "Router"
+      },
+      "top_provider": {
+        "name": "",
+        "max_completion_tokens": null
+      }
+    },
+    {
+      "id": "openrouter/auto-code",
+      "name": "Auto Code",
+      "created": 1793884321,
+      "description": "Auto Code is OpenRouter\u2019s router built specifically for coding agents and harnesses. It uses the same routing engine as the [Auto Router](https://openrouter.ai/openrouter/auto), with every request treated as part of an...",
+      "pricing": {
+        "prompt": "-1",
+        "completion": "-1"
+      },
+      "context_length": 2000000,
+      "architecture": {
+        "modality": "text+image+file+audio+video->text+image",
+        "tokenizer": "Router"
+      },
+      "top_provider": {
+        "name": "",
+        "max_completion_tokens": 65536
+      }
+    },
+    {
       "id": "typesafe/jev-router",
       "name": "TypeSafe: Jev Router",
       "created": 1790363560,
@@ -9296,25 +9316,6 @@
       "context_length": 128000,
       "architecture": {
         "modality": "text->text",
-        "tokenizer": "Router"
-      },
-      "top_provider": {
-        "name": "",
-        "max_completion_tokens": null
-      }
-    },
-    {
-      "id": "openrouter/auto",
-      "name": "Auto Router",
-      "created": 1699401600,
-      "description": "The Auto Router automatically selects the best model for your prompt, powered by the wisdom of the market. It routes you based on what the OpenRouter community collectively spends on...",
-      "pricing": {
-        "prompt": "-1",
-        "completion": "-1"
-      },
-      "context_length": 2000000,
-      "architecture": {
-        "modality": "text+image+file+audio+video->text+image",
         "tokenizer": "Router"
       },
       "top_provider": {

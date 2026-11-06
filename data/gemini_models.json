@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-11-05T01:00:17Z",
+  "fetched_at": "2026-11-06T01:00:16Z",
   "total": 50,
   "models": [
     {
@@ -335,6 +335,17 @@
       "outputTokenLimit": 65536
     },
     {
+      "name": "models/gemini-omni-1.2-flash",
+      "description": "Gemini Omni 1.2 Flash",
+      "displayName": "Gemini Omni 1.2 Flash",
+      "supportedMethods": [
+        "generateContent",
+        "countTokens"
+      ],
+      "inputTokenLimit": 131072,
+      "outputTokenLimit": 65536
+    },
+    {
       "name": "models/gemini-3.5-transcribe",
       "description": "Gemini 3.5 Transcribe",
       "displayName": "Gemini 3.5 Transcribe",
@@ -593,16 +604,6 @@
       ],
       "inputTokenLimit": 8192,
       "outputTokenLimit": 1
-    },
-    {
-      "name": "models/aqa",
-      "description": "Model trained to return answers to questions that are grounded in provided sources, along with estimating answerable probability.",
-      "displayName": "Model that performs Attributed Question Answering.",
-      "supportedMethods": [
-        "generateAnswer"
-      ],
-      "inputTokenLimit": 7168,
-      "outputTokenLimit": 1024
     }
   ]
 }
