@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-11-08T01:00:46Z",
+  "fetched_at": "2026-11-08T01:10:23Z",
   "total": 424,
   "models": [
     {
@@ -349,9 +349,9 @@
       "created": 1792379569,
       "description": "MiniMax-M3.1-Flash is a multimodal model from MiniMax. Compared with M3, it delivers significant improvements across multiple benchmarks, particularly in complex agentic tasks, coding, and cybersecurity. It is built for complex,...",
       "pricing": {
-        "prompt": "0.000000075",
-        "completion": "0.0000003",
-        "input_cache_read": "0.0000000075",
+        "prompt": "0.00000015",
+        "completion": "0.0000006",
+        "input_cache_read": "0.000000015",
         "overrides": [
           {
             "utc_start": 1500,
@@ -7425,9 +7425,9 @@
       "created": 1754414231,
       "description": "gpt-oss-120b is an open-weight, 117B-parameter Mixture-of-Experts (MoE) language model from OpenAI designed for high-reasoning, agentic, and general-purpose production use cases. It activates 5.1B parameters per forward pass and is optimized...",
       "pricing": {
-        "prompt": "0.000000018",
-        "completion": "0.000000066",
-        "input_cache_read": "0.000000016"
+        "prompt": "0.000000022",
+        "completion": "0.00000008",
+        "input_cache_read": "0.00000002"
       },
       "context_length": 131072,
       "architecture": {
