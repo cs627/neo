@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-11-09T01:00:57Z",
+  "fetched_at": "2026-11-10T01:00:29Z",
   "total": 50,
   "models": [
     {
@@ -541,7 +541,7 @@
         "generateContent",
         "countTokens"
       ],
-      "inputTokenLimit": 131072,
+      "inputTokenLimit": 1048576,
       "outputTokenLimit": 65536
     },
     {
@@ -552,7 +552,7 @@
         "generateContent",
         "countTokens"
       ],
-      "inputTokenLimit": 131072,
+      "inputTokenLimit": 1048576,
       "outputTokenLimit": 65536
     },
     {
@@ -563,7 +563,7 @@
         "generateContent",
         "countTokens"
       ],
-      "inputTokenLimit": 131072,
+      "inputTokenLimit": 1048576,
       "outputTokenLimit": 65536
     },
     {
