@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-11-10T01:00:29Z",
+  "fetched_at": "2026-11-11T01:00:28Z",
   "total": 50,
   "models": [
     {
@@ -408,6 +408,18 @@
       "outputTokenLimit": 32768
     },
     {
+      "name": "models/gemini-4-carbon",
+      "description": "Gemini 4 Carbon",
+      "displayName": "Gemini 4 Carbon",
+      "supportedMethods": [
+        "generateContent",
+        "countTokens",
+        "batchGenerateContent"
+      ],
+      "inputTokenLimit": 1048576,
+      "outputTokenLimit": 32768
+    },
+    {
       "name": "models/lyria-3-clip-preview",
       "description": "Lyria 3 30s model Preview",
       "displayName": "Lyria 3 Clip Preview",
@@ -583,19 +595,6 @@
       "name": "models/gemini-embedding-2-preview",
       "description": "Obtain a distributed representation of multimodal content.",
       "displayName": "Gemini Embedding 2 Preview",
-      "supportedMethods": [
-        "embedContent",
-        "countTextTokens",
-        "countTokens",
-        "asyncBatchEmbedContent"
-      ],
-      "inputTokenLimit": 8192,
-      "outputTokenLimit": 1
-    },
-    {
-      "name": "models/gemini-embedding-2",
-      "description": "Obtain a distributed representation of multimodal content.",
-      "displayName": "Gemini Embedding 2",
       "supportedMethods": [
         "embedContent",
         "countTextTokens",
