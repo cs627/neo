@@ -1,16 +1,15 @@
 {
-  "fetched_at": "2026-11-11T01:00:28Z",
-  "total": 433,
+  "fetched_at": "2026-11-12T01:00:31Z",
+  "total": 431,
   "models": [
     {
-      "id": "baidu/ernie-5.5-flash-preview",
-      "name": "Baidu: ERNIE-5.5-Flash-Preview",
+      "id": "baidu/ernie-5.5-flash-preview:free",
+      "name": "Baidu: ERNIE-5.5-Flash-Preview (free)",
       "created": 1794333533,
       "description": "ERNIE 5.5 Flash Preview is the latest foundation model in the ERNIE family, with comprehensive improvements in coding, agentic capabilities, knowledge work, and deep research. It has 280 billion total...",
       "pricing": {
-        "prompt": "0.00000028",
-        "completion": "0.00000113",
-        "input_cache_read": "0.000000028"
+        "prompt": "0",
+        "completion": "0"
       },
       "context_length": 1024000,
       "architecture": {
@@ -1135,6 +1134,26 @@
       }
     },
     {
+      "id": "unbiased/pareto-26.10-preview",
+      "name": "Pareto 26.10 Preview",
+      "created": 1790863623,
+      "description": "Pareto is a multimodal composite model built for research, coding, and agentic workflows, while delivering frontier-level performance across a broad range of general-purpose tasks. This is a preview of the...",
+      "pricing": {
+        "prompt": "0.0000008",
+        "completion": "0.0000032",
+        "input_cache_read": "0.00000003"
+      },
+      "context_length": 1048576,
+      "architecture": {
+        "modality": "text+image->text",
+        "tokenizer": "Other"
+      },
+      "top_provider": {
+        "name": "",
+        "max_completion_tokens": 131072
+      }
+    },
+    {
       "id": "openai/gpt-6.1-sol-pro",
       "name": "OpenAI: GPT-6.1 Sol Pro",
       "created": 1790702886,
@@ -2215,9 +2234,9 @@
       "created": 1789021285,
       "description": "DeepSeek V4.1 Flash is a sparse mixture-of-experts model from DeepSeek, and the first built on the company's Causal Encoder-Decoder (CED) architecture. It activates 8B parameters on input and 16B on...",
       "pricing": {
-        "prompt": "0.000000051",
-        "completion": "0.000000567",
-        "input_cache_read": "0.000000018"
+        "prompt": "0.000000006",
+        "completion": "0.0000005",
+        "input_cache_read": "0.000000005"
       },
       "context_length": 1048576,
       "architecture": {
@@ -2578,7 +2597,7 @@
       "description": "Granite 4.2 8B is a dense reasoning model from IBM. It is suited for mathematics, code generation, multilingual dialogue, and agentic workflows that need multi-step reasoning. It supports full, low-effort,...",
       "pricing": {
         "prompt": "0.00000006",
-        "completion": "0.00000025",
+        "completion": "0.00000015",
         "input_cache_read": "0.000000015"
       },
       "context_length": 131072,
@@ -2693,9 +2712,9 @@
       "created": 1787752741,
       "description": "GLM-5.3-Flash is a native multimodal model from Z.ai. It is suited for efficient coding and long-horizon agent tasks. Its hybrid sparse and linear attention architecture maintains accurate long-context behavior while...",
       "pricing": {
-        "prompt": "0.000000042",
+        "prompt": "0.000000047",
         "completion": "0.000000061",
-        "input_cache_read": "0.000000018"
+        "input_cache_read": "0.00000002"
       },
       "context_length": 1048576,
       "architecture": {
@@ -2830,9 +2849,9 @@
       "created": 1787086655,
       "description": "GLM-5.3 is a large-scale reasoning model from Z.ai, built for complex software engineering and long-horizon agent tasks. It supports text input and output with a 1M-token context window, and improves...",
       "pricing": {
-        "prompt": "0.00000045",
-        "completion": "0.000002",
-        "input_cache_read": "0.0000001"
+        "prompt": "0.00000035",
+        "completion": "0.000001075",
+        "input_cache_read": "0.000000118"
       },
       "context_length": 1048576,
       "architecture": {
@@ -2841,7 +2860,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 131072
+        "max_completion_tokens": 943718
       }
     },
     {
@@ -2988,32 +3007,6 @@
       "architecture": {
         "modality": "text->text",
         "tokenizer": "Qwen"
-      },
-      "top_provider": {
-        "name": "",
-        "max_completion_tokens": 131072
-      }
-    },
-    {
-      "id": "bytedance-seed/seed-2.0-code",
-      "name": "ByteDance Seed: Seed-2.0-Code",
-      "created": 1786550701,
-      "description": "Seed 2.0 Code is a model from ByteDance Seed optimized for agentic coding. It is suited for frontend development, multilingual programming tasks, and coding-agent workflows in tools such as Claude...",
-      "pricing": {
-        "prompt": "0.0000005",
-        "completion": "0.000003",
-        "overrides": [
-          {
-            "min_prompt_tokens": 128000,
-            "prompt": "0.000001",
-            "completion": "0.000006"
-          }
-        ]
-      },
-      "context_length": 262144,
-      "architecture": {
-        "modality": "text+image+video->text",
-        "tokenizer": "Other"
       },
       "top_provider": {
         "name": "",
@@ -4330,9 +4323,9 @@
       "created": 1781631930,
       "description": "GLM 5.2 is a large-scale reasoning model from Z.ai. It supports text input and output with a 1M-token context window, and is suited for long-horizon agent workflows, project-level software engineering,...",
       "pricing": {
-        "prompt": "0.000000527",
+        "prompt": "0.00000035",
         "completion": "0.000001075",
-        "input_cache_read": "0.000000178"
+        "input_cache_read": "0.000000118"
       },
       "context_length": 1048576,
       "architecture": {
@@ -4994,7 +4987,7 @@
       "description": "This model always redirects to the latest model in the Kimi family.",
       "pricing": {
         "prompt": "0.0000001824",
-        "completion": "0.0000093388",
+        "completion": "0.0000110055",
         "input_cache_read": "0.00000018"
       },
       "context_length": 1048576,
@@ -5401,9 +5394,9 @@
       "created": 1775578025,
       "description": "GLM-5.1 delivers a major leap in coding capability, with particularly significant gains in handling long-horizon tasks. Unlike previous models built around minute-level interactions, GLM-5.1 can work independently and continuously on...",
       "pricing": {
-        "prompt": "0.00000133",
-        "completion": "0.00000418",
-        "input_cache_read": "0.000000247"
+        "prompt": "0.0000014",
+        "completion": "0.0000044",
+        "input_cache_read": "0.00000026"
       },
       "context_length": 204800,
       "architecture": {
@@ -5766,7 +5759,7 @@
         "prompt": "0.000000075",
         "completion": "0.0000004"
       },
-      "context_length": 1048576,
+      "context_length": 262144,
       "architecture": {
         "modality": "text->text",
         "tokenizer": "Other"
@@ -5808,8 +5801,9 @@
       "created": 1773152396,
       "description": "Qwen3.5-9B is a multimodal foundation model from the Qwen3.5 family, designed to deliver strong reasoning, coding, and visual understanding in an efficient 9B-parameter architecture. It uses a unified vision-language design...",
       "pricing": {
-        "prompt": "0.00000017",
-        "completion": "0.00000025"
+        "prompt": "0.000000139",
+        "completion": "0.000000204",
+        "input_cache_read": "0.000000125"
       },
       "context_length": 262144,
       "architecture": {
@@ -5818,7 +5812,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 235929
+        "max_completion_tokens": 40960
       }
     },
     {
@@ -6246,9 +6240,9 @@
       "created": 1770908502,
       "description": "MiniMax-M2.5 is a SOTA large language model designed for real-world productivity. Trained in a diverse range of complex real-world digital working environments, M2.5 builds upon the coding expertise of M2.1...",
       "pricing": {
-        "prompt": "0.0000003",
-        "completion": "0.0000012",
-        "input_cache_read": "0.00000006"
+        "prompt": "0.00000027",
+        "completion": "0.00000108",
+        "input_cache_read": "0.000000027"
       },
       "context_length": 200000,
       "architecture": {
@@ -6257,7 +6251,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 58982
+        "max_completion_tokens": 128000
       }
     },
     {
@@ -6461,58 +6455,6 @@
       "top_provider": {
         "name": "",
         "max_completion_tokens": 128000
-      }
-    },
-    {
-      "id": "bytedance-seed/seed-1.6-flash",
-      "name": "ByteDance Seed: Seed 1.6 Flash",
-      "created": 1766505011,
-      "description": "Seed 1.6 Flash is an ultra-fast multimodal deep thinking model by ByteDance Seed, supporting both text and visual understanding. It features a 256k context window and can generate outputs of...",
-      "pricing": {
-        "prompt": "0.000000075",
-        "completion": "0.0000003",
-        "overrides": [
-          {
-            "min_prompt_tokens": 128000,
-            "prompt": "0.0000001",
-            "completion": "0.0000008"
-          }
-        ]
-      },
-      "context_length": 262144,
-      "architecture": {
-        "modality": "text+image+video->text",
-        "tokenizer": "Other"
-      },
-      "top_provider": {
-        "name": "",
-        "max_completion_tokens": 32768
-      }
-    },
-    {
-      "id": "bytedance-seed/seed-1.6",
-      "name": "ByteDance Seed: Seed 1.6",
-      "created": 1766504997,
-      "description": "Seed 1.6 is a general-purpose model released by the ByteDance Seed team. It incorporates multimodal capabilities and adaptive deep thinking with a 256K context window.",
-      "pricing": {
-        "prompt": "0.00000025",
-        "completion": "0.000002",
-        "overrides": [
-          {
-            "min_prompt_tokens": 128000,
-            "prompt": "0.0000005",
-            "completion": "0.000004"
-          }
-        ]
-      },
-      "context_length": 262144,
-      "architecture": {
-        "modality": "text+image+video->text",
-        "tokenizer": "Other"
-      },
-      "top_provider": {
-        "name": "",
-        "max_completion_tokens": 32768
       }
     },
     {
@@ -8556,7 +8498,7 @@
       "description": "Gemma 3 introduces multimodality, supporting vision-language input and text outputs. It handles context windows up to 128k tokens, understands over 140 languages, and offers improved math, reasoning, and chat capabilities,...",
       "pricing": {
         "prompt": "0.00000008",
-        "completion": "0.00000045",
+        "completion": "0.00000035",
         "input_cache_read": "0.00000004"
       },
       "context_length": 131072,
