@@ -1,7 +1,26 @@
 {
-  "fetched_at": "2026-11-13T01:00:34Z",
-  "total": 439,
+  "fetched_at": "2026-11-14T01:00:29Z",
+  "total": 436,
   "models": [
+    {
+      "id": "inclusionai/ling-3.2-flash:free",
+      "name": "inclusionAI: Ling 3.2 Flash (free)",
+      "created": 1794591958,
+      "description": "Ling 3.2 Flash is a hybrid reasoning model from inclusionAI that accepts text and image input, with a 1M-token context window and up to 200 images per request. Thinking can...",
+      "pricing": {
+        "prompt": "0",
+        "completion": "0"
+      },
+      "context_length": 1048576,
+      "architecture": {
+        "modality": "text+image->text",
+        "tokenizer": "Other"
+      },
+      "top_provider": {
+        "name": "",
+        "max_completion_tokens": 262144
+      }
+    },
     {
       "id": "google/gemini-4-hydrogen",
       "name": "Google: Gemini 4 Hydrogen",
@@ -377,9 +396,9 @@
       "created": 1793818990,
       "description": "Ripple-65B-Preview by ricursiveAI, a 65B model with native tool calling, served in BF16.",
       "pricing": {
-        "prompt": "0.0000002",
-        "completion": "0.0000006",
-        "input_cache_read": "0.00000005"
+        "prompt": "0.0000001",
+        "completion": "0.0000003",
+        "input_cache_read": "0.000000025"
       },
       "context_length": 1048576,
       "architecture": {
@@ -620,8 +639,8 @@
       "created": 1792778188,
       "description": "Kimi K3.1 Pro is Moonshot AI's flagship open-weight multimodal reasoning model and a post-trained successor to Kimi K3, with a 1M-token context window. It is built for long-horizon coding, 3D...",
       "pricing": {
-        "prompt": "0.0000002375",
-        "completion": "0.0000084114",
+        "prompt": "0.000002",
+        "completion": "0.00001",
         "input_cache_read": "0.0000002"
       },
       "context_length": 1048576,
@@ -715,9 +734,9 @@
       "created": 1792225624,
       "description": "DeepSeek V4.1 Flash 1017 is the October 17, 2026 snapshot of DeepSeek V4.1 Flash, served by DeepSeek under the `deepseek-flash` API model name. V4.1 Flash is a sparse mixture-of-experts model...",
       "pricing": {
-        "prompt": "0.000000022",
-        "completion": "0.0000004",
-        "input_cache_read": "0.000000004"
+        "prompt": "0.000000038",
+        "completion": "0.0000005",
+        "input_cache_read": "0.00000001"
       },
       "context_length": 1048576,
       "architecture": {
@@ -864,7 +883,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 262144
+        "max_completion_tokens": 943718
       }
     },
     {
@@ -1242,25 +1261,6 @@
       "top_provider": {
         "name": "",
         "max_completion_tokens": 262144
-      }
-    },
-    {
-      "id": "apodex/apodex-1.1-mini:free",
-      "name": "Apodex: Apodex 1.1 Mini (free)",
-      "created": 1790875335,
-      "description": "Apodex 1.1 Mini is a reasoning-first model from Apodex, built for complex, long-horizon research and forecasting tasks. It works directly with files, data, code, and tools to produce verifiable results,...",
-      "pricing": {
-        "prompt": "0",
-        "completion": "0"
-      },
-      "context_length": 262144,
-      "architecture": {
-        "modality": "text->text",
-        "tokenizer": "Other"
-      },
-      "top_provider": {
-        "name": "",
-        "max_completion_tokens": 235929
       }
     },
     {
@@ -2110,9 +2110,9 @@
       "created": 1789399150,
       "description": "This model always redirects to the latest model in the DeepSeek Flash family.",
       "pricing": {
-        "prompt": "0.000000022",
-        "completion": "0.0000004",
-        "input_cache_read": "0.000000004"
+        "prompt": "0.000000038",
+        "completion": "0.0000005",
+        "input_cache_read": "0.00000001"
       },
       "context_length": 1048576,
       "architecture": {
@@ -2364,9 +2364,9 @@
       "created": 1789021285,
       "description": "DeepSeek V4.1 Flash is a sparse mixture-of-experts model from DeepSeek, and the first built on the company's Causal Encoder-Decoder (CED) architecture. It activates 8B parameters on input and 16B on...",
       "pricing": {
-        "prompt": "0.000000022",
-        "completion": "0.0000004",
-        "input_cache_read": "0.000000004"
+        "prompt": "0.0000000507",
+        "completion": "0.0000002028",
+        "input_cache_read": "0.000000001014"
       },
       "context_length": 1048576,
       "architecture": {
@@ -2375,7 +2375,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 943718
+        "max_completion_tokens": 393216
       }
     },
     {
@@ -2563,26 +2563,6 @@
       }
     },
     {
-      "id": "inclusionai/ling-3.0-flash-sante",
-      "name": "inclusionAI: Ling 3.0 Flash Sante",
-      "created": 1788545946,
-      "description": "Ling 3.0 Flash Sante is a health and medicine-focused mixture-of-experts model from InclusionAI, built on Ling 3.0 Flash with 5.1B active parameters out of 124B total. It is designed for...",
-      "pricing": {
-        "prompt": "0.000000042",
-        "completion": "0.0000001232",
-        "input_cache_read": "0.0000000084"
-      },
-      "context_length": 262144,
-      "architecture": {
-        "modality": "text->text",
-        "tokenizer": "Other"
-      },
-      "top_provider": {
-        "name": "",
-        "max_completion_tokens": 32768
-      }
-    },
-    {
       "id": "qwen/qwen3.8-max-0902",
       "name": "Qwen: Qwen3.8 Max (0902)",
       "created": 1788469704,
@@ -2747,7 +2727,7 @@
       "description": "Granite 4.2 8B is a dense reasoning model from IBM. It is suited for mathematics, code generation, multilingual dialogue, and agentic workflows that need multi-step reasoning. It supports full, low-effort,...",
       "pricing": {
         "prompt": "0.00000006",
-        "completion": "0.00000015",
+        "completion": "0.00000025",
         "input_cache_read": "0.000000015"
       },
       "context_length": 131072,
@@ -2794,26 +2774,6 @@
       "top_provider": {
         "name": "",
         "max_completion_tokens": 64000
-      }
-    },
-    {
-      "id": "inclusionai/ling-3.0-flash-fin",
-      "name": "inclusionAI: Ling 3.0 Flash Fin",
-      "created": 1787846290,
-      "description": "Ling 3.0 Flash Fin is a finance-focused mixture-of-experts model from InclusionAI, built on Ling 3.0 Flash with 5.1B active parameters out of 124B total. It is designed for real-world investment...",
-      "pricing": {
-        "prompt": "0.000000042",
-        "completion": "0.0000001232",
-        "input_cache_read": "0.0000000084"
-      },
-      "context_length": 262144,
-      "architecture": {
-        "modality": "text->text",
-        "tokenizer": "Other"
-      },
-      "top_provider": {
-        "name": "",
-        "max_completion_tokens": 32768
       }
     },
     {
@@ -3043,7 +3003,7 @@
         "completion": "0.000001875",
         "input_cache_read": "0.0000000375"
       },
-      "context_length": 1048575,
+      "context_length": 1024000,
       "architecture": {
         "modality": "text+image+video->text",
         "tokenizer": "Qwen"
@@ -3259,25 +3219,6 @@
       "top_provider": {
         "name": "",
         "max_completion_tokens": 450000
-      }
-    },
-    {
-      "id": "liquid/lfm-2.5-2.6b:free",
-      "name": "LiquidAI: LFM2.5-2.6B (free)",
-      "created": 1786470519,
-      "description": "LFM2.5-2.6B is a compact reasoning model from Liquid AI. It is suited for agent workflows, data extraction, RAG, and long-context processing. Liquid advises against using it for agentic coding or...",
-      "pricing": {
-        "prompt": "0",
-        "completion": "0"
-      },
-      "context_length": 65536,
-      "architecture": {
-        "modality": "text->text",
-        "tokenizer": "Other"
-      },
-      "top_provider": {
-        "name": "",
-        "max_completion_tokens": 8192
       }
     },
     {
@@ -5376,9 +5317,9 @@
       "created": 1777000679,
       "description": "DeepSeek V4 Pro is a large-scale Mixture-of-Experts model from DeepSeek with 1.6T total parameters and 49B activated parameters, supporting a 1M-token context window. It is designed for advanced reasoning, coding,...",
       "pricing": {
-        "prompt": "0.00000095526",
-        "completion": "0.00000191052",
-        "input_cache_read": "0.000000079605"
+        "prompt": "0.0000009",
+        "completion": "0.0000015",
+        "input_cache_read": "0.00000025"
       },
       "context_length": 1048576,
       "architecture": {
@@ -5387,7 +5328,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 384000
+        "max_completion_tokens": 393216
       }
     },
     {
@@ -5584,9 +5525,9 @@
       "created": 1775227989,
       "description": "Gemma 4 26B A4B IT is an instruction-tuned Mixture-of-Experts (MoE) model from Google DeepMind. Despite 25.2B total parameters, only 3.8B activate per token during inference \u2014 delivering near-31B quality at...",
       "pricing": {
-        "prompt": "0.0000000765",
-        "completion": "0.000000255",
-        "input_cache_read": "0.0000000425"
+        "prompt": "0.0000000675",
+        "completion": "0.000000225",
+        "input_cache_read": "0.0000000375"
       },
       "context_length": 262144,
       "architecture": {
@@ -5971,9 +5912,9 @@
       "created": 1773152396,
       "description": "Qwen3.5-9B is a multimodal foundation model from the Qwen3.5 family, designed to deliver strong reasoning, coding, and visual understanding in an efficient 9B-parameter architecture. It uses a unified vision-language design...",
       "pricing": {
-        "prompt": "0.000000107",
-        "completion": "0.000000158",
-        "input_cache_read": "0.000000097"
+        "prompt": "0.000000164",
+        "completion": "0.00000024",
+        "input_cache_read": "0.000000147"
       },
       "context_length": 262144,
       "architecture": {
@@ -6411,17 +6352,17 @@
       "description": "MiniMax-M2.5 is a SOTA large language model designed for real-world productivity. Trained in a diverse range of complex real-world digital working environments, M2.5 builds upon the coding expertise of M2.1...",
       "pricing": {
         "prompt": "0.00000027",
-        "completion": "0.00000108",
-        "input_cache_read": "0.000000027"
+        "completion": "0.00000095",
+        "input_cache_read": "0.00000003"
       },
-      "context_length": 200000,
+      "context_length": 198000,
       "architecture": {
         "modality": "text->text",
         "tokenizer": "Other"
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 128000
+        "max_completion_tokens": 32768
       }
     },
     {
@@ -8915,8 +8856,8 @@
       "created": 1735241320,
       "description": "DeepSeek-V3 is the latest model from the DeepSeek team, building upon the instruction following and coding abilities of the previous versions. Pre-trained on nearly 15 trillion tokens, the reported evaluations...",
       "pricing": {
-        "prompt": "0.00000032",
-        "completion": "0.00000089"
+        "prompt": "0.0000002574",
+        "completion": "0.0000010287"
       },
       "context_length": 163840,
       "architecture": {
@@ -8925,7 +8866,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 16384
+        "max_completion_tokens": 16000
       }
     },
     {
@@ -9147,8 +9088,8 @@
       "created": 1727222400,
       "description": "Llama 3.2 3B is a 3-billion-parameter multilingual large language model, optimized for advanced natural language processing tasks like dialogue generation, reasoning, and summarization. Designed with the latest transformer architecture, it...",
       "pricing": {
-        "prompt": "0.00000005",
-        "completion": "0.00000033"
+        "prompt": "0.0000000509",
+        "completion": "0.000000335"
       },
       "context_length": 131072,
       "architecture": {
@@ -9157,7 +9098,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 117964
+        "max_completion_tokens": 72000
       }
     },
     {
