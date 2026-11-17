@@ -1,7 +1,48 @@
 {
-  "fetched_at": "2026-11-16T01:01:12Z",
-  "total": 432,
+  "fetched_at": "2026-11-17T01:00:39Z",
+  "total": 435,
   "models": [
+    {
+      "id": "tencent/hy4-flash",
+      "name": "Tencent: Hy4 flash",
+      "created": 1794838706,
+      "description": "Hy4 flash is a cost-efficient variant of [Hy4](https://openrouter.ai/tencent/hy4) from Tencent, served with roughly a quarter of the flagship's parameter count for lower latency and cost. It targets code assistance, agent...",
+      "pricing": {
+        "prompt": "0.000000035",
+        "completion": "0.0000001405",
+        "input_cache_read": "0.0000000015"
+      },
+      "context_length": 1048576,
+      "architecture": {
+        "modality": "text+image->text",
+        "tokenizer": "Other"
+      },
+      "top_provider": {
+        "name": "",
+        "max_completion_tokens": 65536
+      }
+    },
+    {
+      "id": "qwen/qwen4-max",
+      "name": "Qwen: Qwen4 Max",
+      "created": 1794795526,
+      "description": "Qwen4 Max is the flagship model in Alibaba's Qwen4 series. It accepts text, image, and video input and returns text, with a 1M-token context window and reasoning enabled by default....",
+      "pricing": {
+        "prompt": "0.000001425",
+        "completion": "0.000004275",
+        "input_cache_read": "0.00000007125",
+        "input_cache_write": "0.00000178125"
+      },
+      "context_length": 1000000,
+      "architecture": {
+        "modality": "text+image+video->text",
+        "tokenizer": "Qwen"
+      },
+      "top_provider": {
+        "name": "",
+        "max_completion_tokens": 131072
+      }
+    },
     {
       "id": "inclusionai/ling-3.2-flash:free",
       "name": "inclusionAI: Ling 3.2 Flash (free)",
@@ -639,9 +680,9 @@
       "created": 1792778188,
       "description": "Kimi K3.1 Pro is Moonshot AI's flagship open-weight multimodal reasoning model and a post-trained successor to Kimi K3, with a 1M-token context window. It is built for long-horizon coding, 3D...",
       "pricing": {
-        "prompt": "0.0000023",
-        "completion": "0.0000115",
-        "input_cache_read": "0.00000023"
+        "prompt": "0.0000002403",
+        "completion": "0.0000084023",
+        "input_cache_read": "0.0000002"
       },
       "context_length": 1048576,
       "architecture": {
@@ -659,9 +700,9 @@
       "created": 1792778188,
       "description": "Kimi K3.1 Pro is Moonshot AI's flagship open-weight multimodal reasoning model and a post-trained successor to Kimi K3, with a 1M-token context window. It is built for long-horizon coding, 3D...",
       "pricing": {
-        "prompt": "0.0000007",
-        "completion": "0.000006",
-        "input_cache_read": "0.0000001"
+        "prompt": "0.000000372",
+        "completion": "0.000005583",
+        "input_cache_read": "0.000000119"
       },
       "context_length": 1048576,
       "architecture": {
@@ -734,9 +775,9 @@
       "created": 1792225624,
       "description": "DeepSeek V4.1 Flash 1017 is the October 17, 2026 snapshot of DeepSeek V4.1 Flash, served by DeepSeek under the `deepseek-flash` API model name. V4.1 Flash is a sparse mixture-of-experts model...",
       "pricing": {
-        "prompt": "0.00000002",
-        "completion": "0.000000108",
-        "input_cache_read": "0.000000007"
+        "prompt": "0.000000036",
+        "completion": "0.0000005",
+        "input_cache_read": "0.00000001"
       },
       "context_length": 1048576,
       "architecture": {
@@ -745,7 +786,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 384000
+        "max_completion_tokens": 943718
       }
     },
     {
@@ -754,8 +795,8 @@
       "created": 1792225624,
       "description": "DeepSeek V4.1 Flash 1017 is the October 17, 2026 snapshot of DeepSeek V4.1 Flash, served by DeepSeek under the `deepseek-flash` API model name. V4.1 Flash is a sparse mixture-of-experts model...",
       "pricing": {
-        "prompt": "0.000000029",
-        "completion": "0.000000253",
+        "prompt": "0.000000036",
+        "completion": "0.00000032",
         "input_cache_read": "0.000000003"
       },
       "context_length": 1048576,
@@ -1498,9 +1539,9 @@
       "created": 1790199651,
       "description": "GLM-5.3-Prime is the high-speed variant of Z.ai's GLM-5.3, inheriting its full capabilities while delivering 1.5\u20132\u00d7 the output throughput through inference acceleration. It supports text input and output with a 1M-token...",
       "pricing": {
-        "prompt": "0.0000028",
-        "completion": "0.0000088",
-        "input_cache_read": "0.00000056"
+        "prompt": "0.00000168",
+        "completion": "0.00000528",
+        "input_cache_read": "0.000000336"
       },
       "context_length": 1000000,
       "architecture": {
@@ -2110,9 +2151,9 @@
       "created": 1789399150,
       "description": "This model always redirects to the latest model in the DeepSeek Flash family.",
       "pricing": {
-        "prompt": "0.00000002",
-        "completion": "0.000000108",
-        "input_cache_read": "0.000000007"
+        "prompt": "0.000000036",
+        "completion": "0.0000005",
+        "input_cache_read": "0.00000001"
       },
       "context_length": 1048576,
       "architecture": {
@@ -2121,7 +2162,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 384000
+        "max_completion_tokens": 943718
       }
     },
     {
@@ -2727,7 +2768,7 @@
       "description": "Granite 4.2 8B is a dense reasoning model from IBM. It is suited for mathematics, code generation, multilingual dialogue, and agentic workflows that need multi-step reasoning. It supports full, low-effort,...",
       "pricing": {
         "prompt": "0.00000006",
-        "completion": "0.00000025",
+        "completion": "0.00000015",
         "input_cache_read": "0.000000015"
       },
       "context_length": 131072,
@@ -2842,9 +2883,9 @@
       "created": 1787752741,
       "description": "GLM-5.3-Flash is a native multimodal model from Z.ai. It is suited for efficient coding and long-horizon agent tasks. Its hybrid sparse and linear attention architecture maintains accurate long-context behavior while...",
       "pricing": {
-        "prompt": "0.00000005",
-        "completion": "0.00000018",
-        "input_cache_read": "0.00000001"
+        "prompt": "0.000000024",
+        "completion": "0.000000069",
+        "input_cache_read": "0.000000012"
       },
       "context_length": 1048576,
       "architecture": {
@@ -2853,7 +2894,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 131072
+        "max_completion_tokens": 943718
       }
     },
     {
@@ -2979,9 +3020,9 @@
       "created": 1787086655,
       "description": "GLM-5.3 is a large-scale reasoning model from Z.ai, built for complex software engineering and long-horizon agent tasks. It supports text input and output with a 1M-token context window, and improves...",
       "pricing": {
-        "prompt": "0.00000045",
-        "completion": "0.000002",
-        "input_cache_read": "0.0000001"
+        "prompt": "0.000000281",
+        "completion": "0.00000125",
+        "input_cache_read": "0.000000062"
       },
       "context_length": 1048576,
       "architecture": {
@@ -2990,7 +3031,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 131072
+        "max_completion_tokens": 943718
       }
     },
     {
@@ -3231,7 +3272,7 @@
         "completion": "0.0000002",
         "input_cache_read": "0.00000004"
       },
-      "context_length": 262144,
+      "context_length": 1048576,
       "architecture": {
         "modality": "text->text",
         "tokenizer": "Other"
@@ -3286,8 +3327,8 @@
       "created": 1786302394,
       "description": "Muse Glimmer 30B is a dense, open-weight multimodal model from Meta Superintelligence Labs, distilled from Muse Spark and optimized for autonomous agents on consumer hardware. It is suited for long-horizon...",
       "pricing": {
-        "prompt": "0.0000003",
-        "completion": "0.0000012",
+        "prompt": "0.00000035",
+        "completion": "0.0000015",
         "input_cache_read": "0.00000004"
       },
       "context_length": 131072,
@@ -3297,7 +3338,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 16384
+        "max_completion_tokens": 117964
       }
     },
     {
@@ -4429,6 +4470,26 @@
       }
     },
     {
+      "id": "z-ai/glm-5.2:batch",
+      "name": "Z.ai: GLM 5.2 (batch)",
+      "created": 1781631930,
+      "description": "GLM 5.2 is a large-scale reasoning model from Z.ai. It supports text input and output with a 1M-token context window, and is suited for long-horizon agent workflows, project-level software engineering,...",
+      "pricing": {
+        "prompt": "0.000000322",
+        "completion": "0.000000989",
+        "input_cache_read": "0.000000109"
+      },
+      "context_length": 1048576,
+      "architecture": {
+        "modality": "text->text",
+        "tokenizer": "Other"
+      },
+      "top_provider": {
+        "name": "",
+        "max_completion_tokens": 943718
+      }
+    },
+    {
       "id": "moonshotai/kimi-k2.7-code",
       "name": "MoonshotAI: Kimi K2.7 Code",
       "created": 1781266361,
@@ -5505,9 +5566,9 @@
       "created": 1775227989,
       "description": "Gemma 4 26B A4B IT is an instruction-tuned Mixture-of-Experts (MoE) model from Google DeepMind. Despite 25.2B total parameters, only 3.8B activate per token during inference \u2014 delivering near-31B quality at...",
       "pricing": {
-        "prompt": "0.0000000675",
-        "completion": "0.000000225",
-        "input_cache_read": "0.0000000375"
+        "prompt": "0.0000000765",
+        "completion": "0.000000255",
+        "input_cache_read": "0.0000000425"
       },
       "context_length": 262144,
       "architecture": {
@@ -6331,9 +6392,9 @@
       "created": 1770908502,
       "description": "MiniMax-M2.5 is a SOTA large language model designed for real-world productivity. Trained in a diverse range of complex real-world digital working environments, M2.5 builds upon the coding expertise of M2.1...",
       "pricing": {
-        "prompt": "0.00000027",
-        "completion": "0.00000095",
-        "input_cache_read": "0.00000003"
+        "prompt": "0.000000295",
+        "completion": "0.0000012",
+        "input_cache_read": "0.00000006"
       },
       "context_length": 198000,
       "architecture": {
@@ -6342,7 +6403,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 32768
+        "max_completion_tokens": 176947
       }
     },
     {
@@ -7659,9 +7720,9 @@
       "created": 1754414229,
       "description": "gpt-oss-20b is an open-weight 21B parameter model released by OpenAI under the Apache 2.0 license. It uses a Mixture-of-Experts (MoE) architecture with 3.6B active parameters per forward pass, optimized for...",
       "pricing": {
-        "prompt": "0.000000075",
-        "completion": "0.0000003",
-        "input_cache_read": "0.0000000375"
+        "prompt": "0.00000003",
+        "completion": "0.00000013",
+        "input_cache_read": "0.00000003"
       },
       "context_length": 131072,
       "architecture": {
@@ -7670,7 +7731,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 65536
+        "max_completion_tokens": 117964
       }
     },
     {
