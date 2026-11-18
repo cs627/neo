@@ -1,7 +1,255 @@
 {
-  "fetched_at": "2026-11-17T01:00:39Z",
-  "total": 435,
+  "fetched_at": "2026-11-18T01:00:21Z",
+  "total": 443,
   "models": [
+    {
+      "id": "openai/gpt-6.2-astra-pro",
+      "name": "OpenAI: GPT-6.2 Astra Pro",
+      "created": 1794938432,
+      "description": "GPT-6.2 Astra Pro is the same underlying model as [GPT-6.2 Astra](https://openrouter.ai/openai/gpt-6.2-astra), served with `reasoning.mode` set to `pro` for higher-quality responses on complex tasks. **Cost note:** pro mode spends far more...",
+      "pricing": {
+        "prompt": "0.000008",
+        "completion": "0.00004",
+        "web_search": "0.01",
+        "input_cache_read": "0.0000004",
+        "input_cache_write": "0.00001",
+        "overrides": [
+          {
+            "min_prompt_tokens": 272000,
+            "prompt": "0.000016",
+            "completion": "0.00006",
+            "input_cache_read": "0.0000008",
+            "input_cache_write": "0.00002"
+          }
+        ]
+      },
+      "context_length": 1050000,
+      "architecture": {
+        "modality": "text+image+file->text",
+        "tokenizer": "GPT"
+      },
+      "top_provider": {
+        "name": "",
+        "max_completion_tokens": 128000
+      }
+    },
+    {
+      "id": "openai/gpt-6.2-astra-pro:batch",
+      "name": "OpenAI: GPT-6.2 Astra Pro (batch)",
+      "created": 1794938432,
+      "description": "GPT-6.2 Astra Pro is the same underlying model as [GPT-6.2 Astra](https://openrouter.ai/openai/gpt-6.2-astra), served with `reasoning.mode` set to `pro` for higher-quality responses on complex tasks. **Cost note:** pro mode spends far more...",
+      "pricing": {
+        "prompt": "0.000004",
+        "completion": "0.00002",
+        "web_search": "0.01",
+        "input_cache_read": "0.0000002",
+        "input_cache_write": "0.000005",
+        "overrides": [
+          {
+            "min_prompt_tokens": 272000,
+            "prompt": "0.000008",
+            "completion": "0.00003",
+            "input_cache_read": "0.0000004",
+            "input_cache_write": "0.00001"
+          }
+        ]
+      },
+      "context_length": 1050000,
+      "architecture": {
+        "modality": "text+image+file->text",
+        "tokenizer": "GPT"
+      },
+      "top_provider": {
+        "name": "",
+        "max_completion_tokens": 128000
+      }
+    },
+    {
+      "id": "openai/gpt-6.2-astra",
+      "name": "OpenAI: GPT-6.2 Astra",
+      "created": 1794938423,
+      "description": "GPT-6.2 Astra is the flagship model in the GPT-6.2 series from OpenAI, built for the hardest projects. It is suited for real-world engineering, professional work and scientific research, with stronger...",
+      "pricing": {
+        "prompt": "0.000008",
+        "completion": "0.00004",
+        "web_search": "0.01",
+        "input_cache_read": "0.0000004",
+        "input_cache_write": "0.00001",
+        "overrides": [
+          {
+            "min_prompt_tokens": 272000,
+            "prompt": "0.000016",
+            "completion": "0.00006",
+            "input_cache_read": "0.0000008",
+            "input_cache_write": "0.00002"
+          }
+        ]
+      },
+      "context_length": 1050000,
+      "architecture": {
+        "modality": "text+image+file->text",
+        "tokenizer": "GPT"
+      },
+      "top_provider": {
+        "name": "",
+        "max_completion_tokens": 128000
+      }
+    },
+    {
+      "id": "openai/gpt-6.2-astra:batch",
+      "name": "OpenAI: GPT-6.2 Astra (batch)",
+      "created": 1794938423,
+      "description": "GPT-6.2 Astra is the flagship model in the GPT-6.2 series from OpenAI, built for the hardest projects. It is suited for real-world engineering, professional work and scientific research, with stronger...",
+      "pricing": {
+        "prompt": "0.000004",
+        "completion": "0.00002",
+        "web_search": "0.01",
+        "input_cache_read": "0.0000002",
+        "input_cache_write": "0.000005",
+        "overrides": [
+          {
+            "min_prompt_tokens": 272000,
+            "prompt": "0.000008",
+            "completion": "0.00003",
+            "input_cache_read": "0.0000004",
+            "input_cache_write": "0.00001"
+          }
+        ]
+      },
+      "context_length": 1050000,
+      "architecture": {
+        "modality": "text+image+file->text",
+        "tokenizer": "GPT"
+      },
+      "top_provider": {
+        "name": "",
+        "max_completion_tokens": 128000
+      }
+    },
+    {
+      "id": "openai/gpt-6.2-sol-pro",
+      "name": "OpenAI: GPT-6.2 Sol Pro",
+      "created": 1794938409,
+      "description": "GPT-6.2 Sol Pro is the same underlying model as [GPT-6.2 Sol](https://openrouter.ai/openai/gpt-6.2-sol), served with `reasoning.mode` set to `pro` for higher-quality responses on complex tasks. **Cost note:** pro mode spends far more...",
+      "pricing": {
+        "prompt": "0.000002",
+        "completion": "0.00001",
+        "web_search": "0.01",
+        "input_cache_read": "0.0000001",
+        "input_cache_write": "0.0000025",
+        "overrides": [
+          {
+            "min_prompt_tokens": 272000,
+            "prompt": "0.000004",
+            "completion": "0.000015",
+            "input_cache_read": "0.0000002",
+            "input_cache_write": "0.000005"
+          }
+        ]
+      },
+      "context_length": 1050000,
+      "architecture": {
+        "modality": "text+image+file->text",
+        "tokenizer": "GPT"
+      },
+      "top_provider": {
+        "name": "",
+        "max_completion_tokens": 128000
+      }
+    },
+    {
+      "id": "openai/gpt-6.2-sol-pro:batch",
+      "name": "OpenAI: GPT-6.2 Sol Pro (batch)",
+      "created": 1794938409,
+      "description": "GPT-6.2 Sol Pro is the same underlying model as [GPT-6.2 Sol](https://openrouter.ai/openai/gpt-6.2-sol), served with `reasoning.mode` set to `pro` for higher-quality responses on complex tasks. **Cost note:** pro mode spends far more...",
+      "pricing": {
+        "prompt": "0.000001",
+        "completion": "0.000005",
+        "web_search": "0.01",
+        "input_cache_read": "0.00000005",
+        "input_cache_write": "0.00000125",
+        "overrides": [
+          {
+            "min_prompt_tokens": 272000,
+            "prompt": "0.000002",
+            "completion": "0.0000075",
+            "input_cache_read": "0.0000001",
+            "input_cache_write": "0.0000025"
+          }
+        ]
+      },
+      "context_length": 1050000,
+      "architecture": {
+        "modality": "text+image+file->text",
+        "tokenizer": "GPT"
+      },
+      "top_provider": {
+        "name": "",
+        "max_completion_tokens": 128000
+      }
+    },
+    {
+      "id": "openai/gpt-6.2-sol",
+      "name": "OpenAI: GPT-6.2 Sol",
+      "created": 1794938371,
+      "description": "GPT-6.2 Sol is an upgrade to GPT-6.1 Sol from OpenAI, positioned below the flagship GPT-6.2 Astra in the GPT-6.2 series. It is an efficient, versatile model for everyday work, suited...",
+      "pricing": {
+        "prompt": "0.000002",
+        "completion": "0.00001",
+        "web_search": "0.01",
+        "input_cache_read": "0.0000001",
+        "input_cache_write": "0.0000025",
+        "overrides": [
+          {
+            "min_prompt_tokens": 272000,
+            "prompt": "0.000004",
+            "completion": "0.000015",
+            "input_cache_read": "0.0000002",
+            "input_cache_write": "0.000005"
+          }
+        ]
+      },
+      "context_length": 1050000,
+      "architecture": {
+        "modality": "text+image+file->text",
+        "tokenizer": "GPT"
+      },
+      "top_provider": {
+        "name": "",
+        "max_completion_tokens": 128000
+      }
+    },
+    {
+      "id": "openai/gpt-6.2-sol:batch",
+      "name": "OpenAI: GPT-6.2 Sol (batch)",
+      "created": 1794938371,
+      "description": "GPT-6.2 Sol is an upgrade to GPT-6.1 Sol from OpenAI, positioned below the flagship GPT-6.2 Astra in the GPT-6.2 series. It is an efficient, versatile model for everyday work, suited...",
+      "pricing": {
+        "prompt": "0.000001",
+        "completion": "0.000005",
+        "web_search": "0.01",
+        "input_cache_read": "0.00000005",
+        "input_cache_write": "0.00000125",
+        "overrides": [
+          {
+            "min_prompt_tokens": 272000,
+            "prompt": "0.000002",
+            "completion": "0.0000075",
+            "input_cache_read": "0.0000001",
+            "input_cache_write": "0.0000025"
+          }
+        ]
+      },
+      "context_length": 1050000,
+      "architecture": {
+        "modality": "text+image+file->text",
+        "tokenizer": "GPT"
+      },
+      "top_provider": {
+        "name": "",
+        "max_completion_tokens": 128000
+      }
+    },
     {
       "id": "tencent/hy4-flash",
       "name": "Tencent: Hy4 flash",
@@ -702,7 +950,7 @@
       "pricing": {
         "prompt": "0.000000372",
         "completion": "0.000005583",
-        "input_cache_read": "0.000000119"
+        "input_cache_read": "0.0000001"
       },
       "context_length": 1048576,
       "architecture": {
@@ -796,7 +1044,7 @@
       "description": "DeepSeek V4.1 Flash 1017 is the October 17, 2026 snapshot of DeepSeek V4.1 Flash, served by DeepSeek under the `deepseek-flash` API model name. V4.1 Flash is a sparse mixture-of-experts model...",
       "pricing": {
         "prompt": "0.000000036",
-        "completion": "0.00000032",
+        "completion": "0.00000015",
         "input_cache_read": "0.000000003"
       },
       "context_length": 1048576,
@@ -2211,18 +2459,18 @@
       "created": 1789130932,
       "description": "This model always redirects to the latest model in the GPT Astra family.",
       "pricing": {
-        "prompt": "0.00001",
-        "completion": "0.00005",
+        "prompt": "0.000008",
+        "completion": "0.00004",
         "web_search": "0.01",
-        "input_cache_read": "0.000001",
-        "input_cache_write": "0.0000125",
+        "input_cache_read": "0.0000004",
+        "input_cache_write": "0.00001",
         "overrides": [
           {
             "min_prompt_tokens": 272000,
-            "prompt": "0.00002",
-            "completion": "0.000075",
-            "input_cache_read": "0.000002",
-            "input_cache_write": "0.000025"
+            "prompt": "0.000016",
+            "completion": "0.00006",
+            "input_cache_read": "0.0000008",
+            "input_cache_write": "0.00002"
           }
         ]
       },
@@ -2405,9 +2653,9 @@
       "created": 1789021285,
       "description": "DeepSeek V4.1 Flash is a sparse mixture-of-experts model from DeepSeek, and the first built on the company's Causal Encoder-Decoder (CED) architecture. It activates 8B parameters on input and 16B on...",
       "pricing": {
-        "prompt": "0.00000014",
-        "completion": "0.00000042",
-        "input_cache_read": "0.0000000042"
+        "prompt": "0.000000051",
+        "completion": "0.000000567",
+        "input_cache_read": "0.000000018"
       },
       "context_length": 1048576,
       "architecture": {
@@ -2416,7 +2664,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 393216
+        "max_completion_tokens": 943718
       }
     },
     {
@@ -2885,7 +3133,7 @@
       "pricing": {
         "prompt": "0.000000024",
         "completion": "0.000000069",
-        "input_cache_read": "0.000000012"
+        "input_cache_read": "0.00000001"
       },
       "context_length": 1048576,
       "architecture": {
@@ -3040,9 +3288,9 @@
       "created": 1786722910,
       "description": "Qwen3.8 27B is an open-weight dense vision-language model from Qwen. It is suited for coding, professional workflows, research, multimodal interaction, and long-running agent tasks, with flexible thinking that can be...",
       "pricing": {
-        "prompt": "0.00000015",
-        "completion": "0.000001875",
-        "input_cache_read": "0.0000000375"
+        "prompt": "0.00000006",
+        "completion": "0.0000022",
+        "input_cache_read": "0.000000059"
       },
       "context_length": 1024000,
       "architecture": {
@@ -4495,9 +4743,9 @@
       "created": 1781266361,
       "description": "MoonshotAI: Kimi K2.7 Code is a coding-focused model in Moonshot AI's Kimi K2 family, built to complete end-to-end programming tasks reliably over long contexts. It uses a native multimodal mixture-of-experts...",
       "pricing": {
-        "prompt": "0.0000006",
-        "completion": "0.0000035",
-        "input_cache_read": "0.00000016"
+        "prompt": "0.0000007",
+        "completion": "0.00000375",
+        "input_cache_read": "0.00000017"
       },
       "context_length": 262144,
       "architecture": {
@@ -4580,9 +4828,9 @@
       "created": 1780551208,
       "description": "NVIDIA Nemotron 3 Ultra is an open frontier-reasoning and orchestration model from NVIDIA, with 55B active parameters out of 550B total (MoE). Built on a hybrid Transformer-Mamba mixture-of-experts architecture, it...",
       "pricing": {
-        "prompt": "0.0000006",
-        "completion": "0.0000024",
-        "input_cache_read": "0.00000012"
+        "prompt": "0.0000005",
+        "completion": "0.0000022",
+        "input_cache_read": "0.0000001"
       },
       "context_length": 262144,
       "architecture": {
@@ -4591,7 +4839,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 182520
+        "max_completion_tokens": 16384
       }
     },
     {
@@ -5138,9 +5386,9 @@
       "created": 1777318428,
       "description": "This model always redirects to the latest model in the Kimi family.",
       "pricing": {
-        "prompt": "0.0000001824",
-        "completion": "0.0000110055",
-        "input_cache_read": "0.00000018"
+        "prompt": "0.00000019",
+        "completion": "0.0000106066",
+        "input_cache_read": "0.00000019"
       },
       "context_length": 1048576,
       "architecture": {
@@ -5953,9 +6201,9 @@
       "created": 1773152396,
       "description": "Qwen3.5-9B is a multimodal foundation model from the Qwen3.5 family, designed to deliver strong reasoning, coding, and visual understanding in an efficient 9B-parameter architecture. It uses a unified vision-language design...",
       "pricing": {
-        "prompt": "0.00000017",
-        "completion": "0.00000025",
-        "input_cache_read": "0.000000153"
+        "prompt": "0.000000079",
+        "completion": "0.000000116",
+        "input_cache_read": "0.000000071"
       },
       "context_length": 262144,
       "architecture": {
@@ -6122,8 +6370,8 @@
       "created": 1772053810,
       "description": "The Qwen3.5 27B native vision-language Dense model incorporates a linear attention mechanism, delivering fast response times while balancing inference speed and performance. Its overall capabilities are comparable to those of...",
       "pricing": {
-        "prompt": "0.00000026",
-        "completion": "0.0000026"
+        "prompt": "0.0000003",
+        "completion": "0.0000024"
       },
       "context_length": 262144,
       "architecture": {
@@ -6132,7 +6380,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 81920
+        "max_completion_tokens": 65536
       }
     },
     {
@@ -6372,9 +6620,9 @@
       "created": 1771223018,
       "description": "The Qwen3.5 series 397B-A17B native vision-language model is built on a hybrid architecture that integrates a linear attention mechanism with a sparse mixture-of-experts model, achieving higher inference efficiency. It delivers...",
       "pricing": {
-        "prompt": "0.0000006",
-        "completion": "0.0000036",
-        "input_cache_read": "0.00000012"
+        "prompt": "0.00000045",
+        "completion": "0.000003",
+        "input_cache_read": "0.00000022"
       },
       "context_length": 262144,
       "architecture": {
@@ -6383,7 +6631,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 64000
+        "max_completion_tokens": 81920
       }
     },
     {
@@ -6767,7 +7015,7 @@
       "pricing": {
         "prompt": "0.0000003",
         "completion": "0.0000009",
-        "input_cache_read": "0.000000055"
+        "input_cache_read": "0.00000005"
       },
       "context_length": 131072,
       "architecture": {
@@ -7479,8 +7727,9 @@
       "created": 1757612213,
       "description": "Qwen3-Next-80B-A3B-Instruct is an instruction-tuned chat model in the Qwen3-Next series optimized for fast, stable responses without \u201cthinking\u201d traces. It targets complex tasks across reasoning, code generation, knowledge QA, and multilingual...",
       "pricing": {
-        "prompt": "0.00000009",
-        "completion": "0.0000011"
+        "prompt": "0.0000001",
+        "completion": "0.0000011",
+        "input_cache_read": "0.00000007"
       },
       "context_length": 262144,
       "architecture": {
@@ -7489,7 +7738,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 16384
+        "max_completion_tokens": 235929
       }
     },
     {
@@ -7557,9 +7806,9 @@
       "created": 1755095639,
       "description": "Mistral Medium 3.1 is an updated version of Mistral Medium 3, which is a high-performance enterprise-grade language model designed to deliver frontier-level capabilities at significantly reduced operational cost. It balances...",
       "pricing": {
-        "prompt": "0.0000004",
-        "completion": "0.000002",
-        "input_cache_read": "0.00000004"
+        "prompt": "0.00000044",
+        "completion": "0.0000022",
+        "input_cache_read": "0.000000044"
       },
       "context_length": 131072,
       "architecture": {
@@ -7720,9 +7969,9 @@
       "created": 1754414229,
       "description": "gpt-oss-20b is an open-weight 21B parameter model released by OpenAI under the Apache 2.0 license. It uses a Mixture-of-Experts (MoE) architecture with 3.6B active parameters per forward pass, optimized for...",
       "pricing": {
-        "prompt": "0.00000003",
-        "completion": "0.00000013",
-        "input_cache_read": "0.00000003"
+        "prompt": "0.000000018",
+        "completion": "0.00000009",
+        "input_cache_read": "0.000000009"
       },
       "context_length": 131072,
       "architecture": {
@@ -8100,9 +8349,8 @@
       "created": 1750443016,
       "description": "Mistral-Small-3.2-24B-Instruct-2506 is an updated 24B parameter model from Mistral optimized for instruction following, repetition reduction, and improved function calling. Compared to the 3.1 release, version 3.2 significantly improves accuracy on...",
       "pricing": {
-        "prompt": "0.0000001",
-        "completion": "0.0000003",
-        "input_cache_read": "0.00000001"
+        "prompt": "0.000000075",
+        "completion": "0.0000002"
       },
       "context_length": 256000,
       "architecture": {
@@ -8111,7 +8359,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 26214
+        "max_completion_tokens": 16384
       }
     },
     {
@@ -8258,9 +8506,9 @@
       "created": 1746627341,
       "description": "Mistral Medium 3 is a high-performance enterprise-grade language model designed to deliver frontier-level capabilities at significantly reduced operational cost. It balances state-of-the-art reasoning and multimodal performance with 8\u00d7 lower cost...",
       "pricing": {
-        "prompt": "0.0000004",
-        "completion": "0.000002",
-        "input_cache_read": "0.00000004"
+        "prompt": "0.00000044",
+        "completion": "0.0000022",
+        "input_cache_read": "0.000000044"
       },
       "context_length": 131072,
       "architecture": {
@@ -8593,7 +8841,7 @@
       "description": "Gemma 3 introduces multimodality, supporting vision-language input and text outputs. It handles context windows up to 128k tokens, understands over 140 languages, and offers improved math, reasoning, and chat capabilities,...",
       "pricing": {
         "prompt": "0.00000008",
-        "completion": "0.00000035",
+        "completion": "0.00000045",
         "input_cache_read": "0.00000004"
       },
       "context_length": 131072,
@@ -9546,7 +9794,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 64000
+        "max_completion_tokens": 128000
       }
     },
     {
@@ -9565,7 +9813,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 64000
+        "max_completion_tokens": 128000
       }
     },
     {
@@ -9603,7 +9851,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 64000
+        "max_completion_tokens": 128000
       }
     },
     {
