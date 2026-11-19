@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-11-18T01:00:21Z",
+  "fetched_at": "2026-11-19T01:00:24Z",
   "total": 50,
   "models": [
     {
@@ -432,6 +432,18 @@
       "outputTokenLimit": 65536
     },
     {
+      "name": "models/gemini-4-neon",
+      "description": "Gemini 4 Neon",
+      "displayName": "Gemini 4 Neon",
+      "supportedMethods": [
+        "generateContent",
+        "countTokens",
+        "batchGenerateContent"
+      ],
+      "inputTokenLimit": 1048576,
+      "outputTokenLimit": 65536
+    },
+    {
       "name": "models/lyria-3-clip-preview",
       "description": "Lyria 3 30s model Preview",
       "displayName": "Lyria 3 Clip Preview",
@@ -589,19 +601,6 @@
       ],
       "inputTokenLimit": 1048576,
       "outputTokenLimit": 65536
-    },
-    {
-      "name": "models/gemini-embedding-001",
-      "description": "Obtain a distributed representation of a text.",
-      "displayName": "Gemini Embedding 001",
-      "supportedMethods": [
-        "embedContent",
-        "countTextTokens",
-        "countTokens",
-        "asyncBatchEmbedContent"
-      ],
-      "inputTokenLimit": 2048,
-      "outputTokenLimit": 1
     }
   ]
 }
