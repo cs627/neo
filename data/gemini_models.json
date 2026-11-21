@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-11-20T01:00:40Z",
+  "fetched_at": "2026-11-21T01:00:41Z",
   "total": 50,
   "models": [
     {
@@ -592,15 +592,17 @@
       "outputTokenLimit": 65536
     },
     {
-      "name": "models/deep-research-pro-preview-12-2025",
-      "description": "Deprecated preview agent; automatically rerouting traffic to deep-research-preview-04-2026.",
-      "displayName": "Deep Research Pro Preview (Dec-12-2025) [Rerouted]",
+      "name": "models/gemini-embedding-001",
+      "description": "Obtain a distributed representation of a text.",
+      "displayName": "Gemini Embedding 001",
       "supportedMethods": [
-        "generateContent",
-        "countTokens"
+        "embedContent",
+        "countTextTokens",
+        "countTokens",
+        "asyncBatchEmbedContent"
       ],
-      "inputTokenLimit": 1048576,
-      "outputTokenLimit": 65536
+      "inputTokenLimit": 2048,
+      "outputTokenLimit": 1
     }
   ]
 }
