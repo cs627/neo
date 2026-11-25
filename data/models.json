@@ -1,7 +1,67 @@
 {
-  "fetched_at": "2026-11-24T01:00:47Z",
-  "total": 441,
+  "fetched_at": "2026-11-25T01:00:46Z",
+  "total": 437,
   "models": [
+    {
+      "id": "upstage/solar-mini-4-5",
+      "name": "Upstage: Solar Mini 4.5 (Preview)",
+      "created": 1795562304,
+      "description": "Solar Mini 4.5 is Upstage's compact language model, built on a proprietary mixture-of-experts architecture with 35B total and 3B active parameters and a 524K context window. It is a step...",
+      "pricing": {
+        "prompt": "0.00000001",
+        "completion": "0.00000004",
+        "input_cache_read": "0.000000001"
+      },
+      "context_length": 524288,
+      "architecture": {
+        "modality": "text->text",
+        "tokenizer": "Other"
+      },
+      "top_provider": {
+        "name": "",
+        "max_completion_tokens": 131072
+      }
+    },
+    {
+      "id": "upstage/solar-pro-4-contributor",
+      "name": "Upstage: Solar Pro 4 Contributor",
+      "created": 1795562304,
+      "description": "Solar Pro 4 Contributor is the same Solar Pro 4 model from Upstage, offered at a lower rate in exchange for allowing Upstage to use interaction data to improve its...",
+      "pricing": {
+        "prompt": "0.00000009",
+        "completion": "0.00000036",
+        "input_cache_read": "0.000000009"
+      },
+      "context_length": 524288,
+      "architecture": {
+        "modality": "text->text",
+        "tokenizer": "Other"
+      },
+      "top_provider": {
+        "name": "",
+        "max_completion_tokens": 131072
+      }
+    },
+    {
+      "id": "xiaomi/mimo-v2.6-flash-mopd",
+      "name": "Xiaomi: MiMo-V2.6-Flash-MOPD",
+      "created": 1795456634,
+      "description": "MiMo-V2.6-Flash-MOPD is an updated checkpoint of Xiaomi's MiMo-V2.6-Flash, a Mixture-of-Experts model with 309B total and 15B active parameters, a 1M-token context window, and native multimodal input. It adds a multi-teacher...",
+      "pricing": {
+        "prompt": "0.00000015",
+        "completion": "0.00000042",
+        "input_cache_read": "0.00000002"
+      },
+      "context_length": 1048576,
+      "architecture": {
+        "modality": "text+image+audio+video->text",
+        "tokenizer": "Other"
+      },
+      "top_provider": {
+        "name": "",
+        "max_completion_tokens": 32768
+      }
+    },
     {
       "id": "thinkingmachines/inkling-2-mini",
       "name": "Thinking Machines: Inkling 2 Mini",
@@ -1079,9 +1139,9 @@
       "created": 1792379569,
       "description": "MiniMax-M3.1-Flash is a multimodal model from MiniMax. Compared with M3, it delivers significant improvements across multiple benchmarks, particularly in complex agentic tasks, coding, and cybersecurity. It is built for complex,...",
       "pricing": {
-        "prompt": "0.0000001",
-        "completion": "0.0000004",
-        "input_cache_read": "0.000000025"
+        "prompt": "0.000000075",
+        "completion": "0.0000003",
+        "input_cache_read": "0.0000000075"
       },
       "context_length": 1048576,
       "architecture": {
@@ -1090,7 +1150,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 943718
+        "max_completion_tokens": 131072
       }
     },
     {
@@ -1614,9 +1674,9 @@
       "created": 1790950024,
       "description": "Ling 3.1 Flash is a hybrid reasoning mixture-of-experts model from inclusionAI, with 25B active parameters out of 560B total.",
       "pricing": {
-        "prompt": "0.00000006",
-        "completion": "0.00000018",
-        "input_cache_read": "0.000000012"
+        "prompt": "0.000000075",
+        "completion": "0.000000225",
+        "input_cache_read": "0.000000015"
       },
       "context_length": 1048576,
       "architecture": {
@@ -2729,9 +2789,9 @@
       "created": 1789021285,
       "description": "DeepSeek V4.1 Flash is a sparse mixture-of-experts model from DeepSeek, and the first built on the company's Causal Encoder-Decoder (CED) architecture. It activates 8B parameters on input and 16B on...",
       "pricing": {
-        "prompt": "0.0000000498",
-        "completion": "0.0000001992",
-        "input_cache_read": "0.000000000996"
+        "prompt": "0.00000014",
+        "completion": "0.00000042",
+        "input_cache_read": "0.0000000042"
       },
       "context_length": 1048576,
       "architecture": {
@@ -3187,9 +3247,9 @@
       "created": 1787752741,
       "description": "GLM-5.3-Flash is a native multimodal model from Z.ai. It is suited for efficient coding and long-horizon agent tasks. Its hybrid sparse and linear attention architecture maintains accurate long-context behavior while...",
       "pricing": {
-        "prompt": "0.0000000356",
-        "completion": "0.0000000815",
-        "input_cache_read": "0.00000003"
+        "prompt": "0.00000012",
+        "completion": "0.00000038",
+        "input_cache_read": "0.00000002"
       },
       "context_length": 1048576,
       "architecture": {
@@ -3198,7 +3258,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 131072
+        "max_completion_tokens": 943718
       }
     },
     {
@@ -3227,9 +3287,9 @@
       "created": 1787311563,
       "description": "DeepSeek V4 Flash Vision Exp is an experimental vision-enabled version of [DeepSeek V4 Flash 0731](https://openrouter.ai/deepseek/deepseek-v4-flash-0731) from DeepSeek, adding image understanding while matching the base model on text capabilities including agents,...",
       "pricing": {
-        "prompt": "0.0000002156",
-        "completion": "0.0000006468",
-        "input_cache_read": "0.00000000686"
+        "prompt": "0.00000044",
+        "completion": "0.00000132",
+        "input_cache_read": "0.000000028"
       },
       "context_length": 1048576,
       "architecture": {
@@ -3238,7 +3298,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 262144
+        "max_completion_tokens": 393216
       }
     },
     {
@@ -3396,25 +3456,6 @@
       "top_provider": {
         "name": "",
         "max_completion_tokens": 235929
-      }
-    },
-    {
-      "id": "dots-studio/dots-3-note-preview:free",
-      "name": "Dots Studio: Dots3-Note Preview (free)",
-      "created": 1786680361,
-      "description": "Dots3-Note Preview is an open-weight mixture-of-experts model from Dots Studio, with 16B active parameters out of 280B total. It is the lightest model in the Dots 3 family and is...",
-      "pricing": {
-        "prompt": "0",
-        "completion": "0"
-      },
-      "context_length": 512000,
-      "architecture": {
-        "modality": "text+image->text",
-        "tokenizer": "Other"
-      },
-      "top_provider": {
-        "name": "",
-        "max_completion_tokens": 460800
       }
     },
     {
@@ -3732,7 +3773,7 @@
       "created": 1785606009,
       "description": "This model always redirects to the latest model in the DeepSeek V4 Flash family.",
       "pricing": {
-        "prompt": "0.0000000434",
+        "prompt": "0.000000047",
         "completion": "0.0000003",
         "input_cache_read": "0.000000035"
       },
@@ -3752,7 +3793,7 @@
       "created": 1785478908,
       "description": "DeepSeek V4 Flash 0731 is a sparse mixture-of-experts model from DeepSeek, with 13B active parameters out of 284B total. This re-post-trained revision is suited for coding, reasoning, and agent workflows....",
       "pricing": {
-        "prompt": "0.0000000434",
+        "prompt": "0.000000047",
         "completion": "0.0000003",
         "input_cache_read": "0.000000035"
       },
@@ -4583,9 +4624,25 @@
       "created": 1783344048,
       "description": "Hy3 is a 295B-parameter Mixture-of-Experts model from Tencent (21B active, 192 experts with top-8 routing) built for reasoning, agentic workflows, and real-world production use. It supports a configurable reasoning effort:...",
       "pricing": {
-        "prompt": "0.00000014",
-        "completion": "0.00000058",
-        "input_cache_read": "0.000000035"
+        "prompt": "0.000000132",
+        "completion": "0.000000528",
+        "input_cache_read": "0.000000033",
+        "overrides": [
+          {
+            "utc_start": 0,
+            "utc_end": 1600,
+            "prompt": "0.000000132",
+            "completion": "0.000000528",
+            "input_cache_read": "0.000000033"
+          },
+          {
+            "utc_start": 1600,
+            "utc_end": 0,
+            "prompt": "0.0000000825",
+            "completion": "0.00000033",
+            "input_cache_read": "0.000000020625"
+          }
+        ]
       },
       "context_length": 262144,
       "architecture": {
@@ -4594,7 +4651,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 235929
+        "max_completion_tokens": 128000
       }
     },
     {
@@ -4981,7 +5038,7 @@
         "completion": "0.00000115",
         "input_cache_read": "0.00000004"
       },
-      "context_length": 262144,
+      "context_length": 256000,
       "architecture": {
         "modality": "text+image+video->text",
         "tokenizer": "Other"
@@ -5503,9 +5560,9 @@
       "created": 1777260255,
       "description": "Qwen3.6-35B-A3B is an open-weight multimodal model from Alibaba Cloud with 35 billion total parameters and 3 billion active parameters per token. It uses a hybrid sparse mixture-of-experts architecture combining Gated...",
       "pricing": {
-        "prompt": "0.00000005",
-        "completion": "0.0000007",
-        "input_cache_read": "0.000000025"
+        "prompt": "0.0000001",
+        "completion": "0.00000089",
+        "input_cache_read": "0.000000035"
       },
       "context_length": 262144,
       "architecture": {
@@ -5598,9 +5655,9 @@
       "created": 1777000679,
       "description": "DeepSeek V4 Pro is a large-scale Mixture-of-Experts model from DeepSeek with 1.6T total parameters and 49B activated parameters, supporting a 1M-token context window. It is designed for advanced reasoning, coding,...",
       "pricing": {
-        "prompt": "0.0000009",
-        "completion": "0.0000015",
-        "input_cache_read": "0.0000002"
+        "prompt": "0.00000128",
+        "completion": "0.00000256",
+        "input_cache_read": "0.000000108"
       },
       "context_length": 1048576,
       "architecture": {
@@ -5630,26 +5687,6 @@
       "top_provider": {
         "name": "",
         "max_completion_tokens": 393216
-      }
-    },
-    {
-      "id": "xiaomi/mimo-v2.5",
-      "name": "Xiaomi: MiMo-V2.5",
-      "created": 1776874269,
-      "description": "MiMo-V2.5 is a native omnimodal model by Xiaomi. It delivers Pro-level agentic performance at roughly half the inference cost, while surpassing MiMo-V2-Omni in multimodal perception across image and video understanding...",
-      "pricing": {
-        "prompt": "0.0000004",
-        "completion": "0.000002",
-        "input_cache_read": "0.00000008"
-      },
-      "context_length": 1000000,
-      "architecture": {
-        "modality": "text+image+audio+video->text",
-        "tokenizer": "Other"
-      },
-      "top_provider": {
-        "name": "",
-        "max_completion_tokens": 65536
       }
     },
     {
@@ -6590,18 +6627,18 @@
       "created": 1770908502,
       "description": "MiniMax-M2.5 is a SOTA large language model designed for real-world productivity. Trained in a diverse range of complex real-world digital working environments, M2.5 builds upon the coding expertise of M2.1...",
       "pricing": {
-        "prompt": "0.00000027",
-        "completion": "0.00000095",
-        "input_cache_read": "0.00000003"
+        "prompt": "0.0000003",
+        "completion": "0.0000012",
+        "input_cache_read": "0.00000006"
       },
-      "context_length": 198000,
+      "context_length": 65536,
       "architecture": {
         "modality": "text->text",
         "tokenizer": "Other"
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 32768
+        "max_completion_tokens": 58982
       }
     },
     {
@@ -7231,26 +7268,6 @@
       }
     },
     {
-      "id": "moonshotai/kimi-k2-thinking",
-      "name": "MoonshotAI: Kimi K2 Thinking",
-      "created": 1762440622,
-      "description": "Kimi K2 Thinking is Moonshot AI\u2019s most advanced open reasoning model to date, extending the K2 series into agentic, long-horizon reasoning. Built on the trillion-parameter Mixture-of-Experts (MoE) architecture introduced in...",
-      "pricing": {
-        "prompt": "0.0000006",
-        "completion": "0.0000025",
-        "input_cache_read": "0.00000015"
-      },
-      "context_length": 262144,
-      "architecture": {
-        "modality": "text->text",
-        "tokenizer": "Other"
-      },
-      "top_provider": {
-        "name": "",
-        "max_completion_tokens": 98304
-      }
-    },
-    {
       "id": "amazon/nova-premier-v1",
       "name": "Amazon: Nova Premier 1.0",
       "created": 1761950332,
@@ -7692,25 +7709,6 @@
       }
     },
     {
-      "id": "moonshotai/kimi-k2-0905",
-      "name": "MoonshotAI: Kimi K2 0905",
-      "created": 1757021147,
-      "description": "Kimi K2 0905 is the September update of [Kimi K2 0711](moonshotai/kimi-k2). It is a large-scale Mixture-of-Experts (MoE) language model developed by Moonshot AI, featuring 1 trillion total parameters with 32...",
-      "pricing": {
-        "prompt": "0.0000006",
-        "completion": "0.0000025"
-      },
-      "context_length": 262144,
-      "architecture": {
-        "modality": "text->text",
-        "tokenizer": "Other"
-      },
-      "top_provider": {
-        "name": "",
-        "max_completion_tokens": 98304
-      }
-    },
-    {
       "id": "nousresearch/hermes-4-405b",
       "name": "Nous: Hermes 4 405B",
       "created": 1756235463,
@@ -7748,26 +7746,6 @@
       "top_provider": {
         "name": "",
         "max_completion_tokens": 147456
-      }
-    },
-    {
-      "id": "mistralai/mistral-medium-3.1",
-      "name": "Mistral: Mistral Medium 3.1",
-      "created": 1755095639,
-      "description": "Mistral Medium 3.1 is an updated version of Mistral Medium 3, which is a high-performance enterprise-grade language model designed to deliver frontier-level capabilities at significantly reduced operational cost. It balances...",
-      "pricing": {
-        "prompt": "0.00000044",
-        "completion": "0.0000022",
-        "input_cache_read": "0.000000044"
-      },
-      "context_length": 131072,
-      "architecture": {
-        "modality": "text+image+file->text",
-        "tokenizer": "Mistral"
-      },
-      "top_provider": {
-        "name": "",
-        "max_completion_tokens": 104857
       }
     },
     {
@@ -8180,25 +8158,6 @@
       }
     },
     {
-      "id": "moonshotai/kimi-k2",
-      "name": "MoonshotAI: Kimi K2 0711",
-      "created": 1752263252,
-      "description": "Kimi K2 Instruct is a large-scale Mixture-of-Experts (MoE) language model developed by Moonshot AI, featuring 1 trillion total parameters with 32 billion active per forward pass. It is optimized for...",
-      "pricing": {
-        "prompt": "0.00000057",
-        "completion": "0.0000023"
-      },
-      "context_length": 131072,
-      "architecture": {
-        "modality": "text->text",
-        "tokenizer": "Other"
-      },
-      "top_provider": {
-        "name": "",
-        "max_completion_tokens": 98304
-      }
-    },
-    {
       "id": "cognitivecomputations/dolphin-mistral-24b-venice-edition",
       "name": "Venice: Uncensored",
       "created": 1752094966,
@@ -8447,26 +8406,6 @@
       "top_provider": {
         "name": "",
         "max_completion_tokens": 32000
-      }
-    },
-    {
-      "id": "mistralai/mistral-medium-3",
-      "name": "Mistral: Mistral Medium 3",
-      "created": 1746627341,
-      "description": "Mistral Medium 3 is a high-performance enterprise-grade language model designed to deliver frontier-level capabilities at significantly reduced operational cost. It balances state-of-the-art reasoning and multimodal performance with 8\u00d7 lower cost...",
-      "pricing": {
-        "prompt": "0.00000044",
-        "completion": "0.0000022",
-        "input_cache_read": "0.000000044"
-      },
-      "context_length": 131072,
-      "architecture": {
-        "modality": "text+image+file->text",
-        "tokenizer": "Mistral"
-      },
-      "top_provider": {
-        "name": "",
-        "max_completion_tokens": 104857
       }
     },
     {
