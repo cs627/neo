@@ -1,6 +1,6 @@
 {
-  "fetched_at": "2026-11-27T01:00:32Z",
-  "total": 441,
+  "fetched_at": "2026-11-28T01:00:30Z",
+  "total": 440,
   "models": [
     {
       "id": "inclusionai/lingsante-3.1-air-vl",
@@ -88,9 +88,9 @@
       "created": 1795227585,
       "description": "Inkling 2 Mini is an open-weight multimodal looped transformer from Thinking Machines Lab, with 3.4B active parameters out of 26.4B total (MoE). Its middle layers run three times with shared...",
       "pricing": {
-        "prompt": "0.000000075",
-        "completion": "0.0000003",
-        "input_cache_read": "0.000000015"
+        "prompt": "0.00000006",
+        "completion": "0.00000024",
+        "input_cache_read": "0.000000012"
       },
       "context_length": 1048576,
       "architecture": {
@@ -483,13 +483,14 @@
       }
     },
     {
-      "id": "inclusionai/ling-3.2-flash:free",
-      "name": "inclusionAI: Ling 3.2 Flash (free)",
+      "id": "inclusionai/ling-3.2-flash",
+      "name": "inclusionAI: Ling 3.2 Flash",
       "created": 1794591958,
       "description": "Ling 3.2 Flash is a hybrid reasoning model from inclusionAI that accepts text and image input, with a 1M-token context window and up to 200 images per request. Thinking can...",
       "pricing": {
-        "prompt": "0",
-        "completion": "0"
+        "prompt": "0.0000003",
+        "completion": "0.0000009",
+        "input_cache_read": "0.00000006"
       },
       "context_length": 1048576,
       "architecture": {
@@ -670,8 +671,8 @@
       "created": 1794261847,
       "description": "Inkling 2 Small is an open-weight multimodal mixture-of-experts reasoning model from Thinking Machines Lab, with 17B active parameters out of 594B total. It is the first model in the second...",
       "pricing": {
-        "prompt": "0.0000003",
-        "completion": "0.000001",
+        "prompt": "0.00000015",
+        "completion": "0.0000005",
         "input_cache_read": "0.00000003"
       },
       "context_length": 1048576,
@@ -1239,9 +1240,9 @@
       "created": 1792160499,
       "description": "Beam 1.0 is Reflection's open-weight reasoning model for coding and long-horizon agentic workflows. It uses a sparse mixture-of-experts architecture with 501B total and 23B active parameters per token, and a...",
       "pricing": {
-        "prompt": "0.0000003",
+        "prompt": "0.00000025",
         "completion": "0.000001",
-        "input_cache_read": "0.00000004"
+        "input_cache_read": "0.00000005"
       },
       "context_length": 1048576,
       "architecture": {
@@ -1250,7 +1251,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 943718
+        "max_completion_tokens": 131072
       }
     },
     {
@@ -1338,7 +1339,7 @@
       "description": "NVIDIA Nemotron 3.5 Super VL is an open multimodal mixture-of-experts model from NVIDIA, with 12B active parameters out of 120B total. It takes text, images, documents, GUI screenshots, and video...",
       "pricing": {
         "prompt": "0.00000015",
-        "completion": "0.00000047",
+        "completion": "0.00000045",
         "input_cache_read": "0.00000002"
       },
       "context_length": 1048576,
@@ -1348,7 +1349,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 943718
+        "max_completion_tokens": 131072
       }
     },
     {
@@ -2455,9 +2456,9 @@
       "created": 1789399174,
       "description": "This model always redirects to the latest model in the DeepSeek Pro family.",
       "pricing": {
-        "prompt": "0.000000111",
-        "completion": "0.00000444",
-        "input_cache_read": "0.000000097"
+        "prompt": "0.0000000999",
+        "completion": "0.000005",
+        "input_cache_read": "0.0000000999"
       },
       "context_length": 1048576,
       "architecture": {
@@ -2466,7 +2467,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 943718
+        "max_completion_tokens": 393216
       }
     },
     {
@@ -2729,9 +2730,9 @@
       "created": 1789021285,
       "description": "DeepSeek V4.1 Flash is a sparse mixture-of-experts model from DeepSeek, and the first built on the company's Causal Encoder-Decoder (CED) architecture. It activates 8B parameters on input and 16B on...",
       "pricing": {
-        "prompt": "0.00000014",
-        "completion": "0.00000042",
-        "input_cache_read": "0.0000000042"
+        "prompt": "0.000000051",
+        "completion": "0.000000567",
+        "input_cache_read": "0.000000018"
       },
       "context_length": 1048576,
       "architecture": {
@@ -2740,7 +2741,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 393216
+        "max_completion_tokens": 943718
       }
     },
     {
@@ -3227,9 +3228,9 @@
       "created": 1787311563,
       "description": "DeepSeek V4 Flash Vision Exp is an experimental vision-enabled version of [DeepSeek V4 Flash 0731](https://openrouter.ai/deepseek/deepseek-v4-flash-0731) from DeepSeek, adding image understanding while matching the base model on text capabilities including agents,...",
       "pricing": {
-        "prompt": "0.00000044",
-        "completion": "0.00000132",
-        "input_cache_read": "0.000000028"
+        "prompt": "0.0000002156",
+        "completion": "0.0000006468",
+        "input_cache_read": "0.00000000686"
       },
       "context_length": 1048576,
       "architecture": {
@@ -3238,7 +3239,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 393216
+        "max_completion_tokens": 262144
       }
     },
     {
@@ -3479,14 +3480,14 @@
         "completion": "0.000006",
         "input_cache_read": "0.00000025"
       },
-      "context_length": 1048576,
+      "context_length": 1000000,
       "architecture": {
         "modality": "text->text",
         "tokenizer": "Qwen"
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 65536
+        "max_completion_tokens": 900000
       }
     },
     {
@@ -3495,9 +3496,9 @@
       "created": 1786549364,
       "description": "DeepSeek V4 Pro 0813 is a large-scale mixture-of-experts model from DeepSeek. This is the GA release of DeepSeek V4 Pro.",
       "pricing": {
-        "prompt": "0.00000025",
+        "prompt": "0.0000000999",
         "completion": "0.000005",
-        "input_cache_read": "0.000000125"
+        "input_cache_read": "0.0000000999"
       },
       "context_length": 1048576,
       "architecture": {
@@ -3713,9 +3714,9 @@
       "created": 1785606009,
       "description": "This model always redirects to the latest model in the DeepSeek V4 Flash family.",
       "pricing": {
-        "prompt": "0.000000047",
-        "completion": "0.0000003",
-        "input_cache_read": "0.000000035"
+        "prompt": "0.00000004532",
+        "completion": "0.00000013596",
+        "input_cache_read": "0.000000001442"
       },
       "context_length": 1048576,
       "architecture": {
@@ -3724,7 +3725,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 943718
+        "max_completion_tokens": 131072
       }
     },
     {
@@ -3733,7 +3734,7 @@
       "created": 1785478908,
       "description": "DeepSeek V4 Flash 0731 is a sparse mixture-of-experts model from DeepSeek, with 13B active parameters out of 284B total. This re-post-trained revision is suited for coding, reasoning, and agent workflows....",
       "pricing": {
-        "prompt": "0.000000047",
+        "prompt": "0.0000000456",
         "completion": "0.0000003",
         "input_cache_read": "0.000000035"
       },
@@ -5595,9 +5596,9 @@
       "created": 1777000679,
       "description": "DeepSeek V4 Pro is a large-scale Mixture-of-Experts model from DeepSeek with 1.6T total parameters and 49B activated parameters, supporting a 1M-token context window. It is designed for advanced reasoning, coding,...",
       "pricing": {
-        "prompt": "0.000000888188",
-        "completion": "0.0000015887",
-        "input_cache_read": "0.0000002"
+        "prompt": "0.000000493382",
+        "completion": "0.0000015016",
+        "input_cache_read": "0.00000023"
       },
       "context_length": 1048576,
       "architecture": {
@@ -5743,9 +5744,9 @@
       "created": 1775227989,
       "description": "Gemma 4 26B A4B IT is an instruction-tuned Mixture-of-Experts (MoE) model from Google DeepMind. Despite 25.2B total parameters, only 3.8B activate per token during inference \u2014 delivering near-31B quality at...",
       "pricing": {
-        "prompt": "0.0000000765",
-        "completion": "0.000000255",
-        "input_cache_read": "0.0000000425"
+        "prompt": "0.0000000675",
+        "completion": "0.000000225",
+        "input_cache_read": "0.0000000375"
       },
       "context_length": 262144,
       "architecture": {
@@ -6149,8 +6150,9 @@
       "created": 1773152396,
       "description": "Qwen3.5-9B is a multimodal foundation model from the Qwen3.5 family, designed to deliver strong reasoning, coding, and visual understanding in an efficient 9B-parameter architecture. It uses a unified vision-language design...",
       "pricing": {
-        "prompt": "0.0000001",
-        "completion": "0.00000025"
+        "prompt": "0.000000075",
+        "completion": "0.00000011",
+        "input_cache_read": "0.000000067"
       },
       "context_length": 262144,
       "architecture": {
@@ -6159,7 +6161,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 235929
+        "max_completion_tokens": 40960
       }
     },
     {
@@ -8091,25 +8093,6 @@
       }
     },
     {
-      "id": "qwen/qwen3-235b-a22b-thinking-2507",
-      "name": "Qwen: Qwen3 235B A22B Thinking 2507",
-      "created": 1753449557,
-      "description": "Qwen3-235B-A22B-Thinking-2507 is a high-performance, open-weight Mixture-of-Experts (MoE) language model optimized for complex reasoning tasks. It activates 22B of its 235B parameters per forward pass and natively supports up to 262,144...",
-      "pricing": {
-        "prompt": "0.00000045",
-        "completion": "0.0000035"
-      },
-      "context_length": 128000,
-      "architecture": {
-        "modality": "text->text",
-        "tokenizer": "Qwen3"
-      },
-      "top_provider": {
-        "name": "",
-        "max_completion_tokens": 16384
-      }
-    },
-    {
       "id": "qwen/qwen3-coder",
       "name": "Qwen: Qwen3 Coder 480B A35B",
       "created": 1753230546,
@@ -8728,8 +8711,9 @@
       "created": 1741905510,
       "description": "Gemma 3 introduces multimodality, supporting vision-language input and text outputs. It handles context windows up to 128k tokens, understands over 140 languages, and offers improved math, reasoning, and chat capabilities,...",
       "pricing": {
-        "prompt": "0.00000005",
-        "completion": "0.0000001"
+        "prompt": "0.00000004",
+        "completion": "0.00000005",
+        "input_cache_read": "0.00000002"
       },
       "context_length": 131072,
       "architecture": {
@@ -8738,7 +8722,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 16384
+        "max_completion_tokens": 117964
       }
     },
     {
@@ -8805,8 +8789,7 @@
       "description": "Gemma 3 introduces multimodality, supporting vision-language input and text outputs. It handles context windows up to 128k tokens, understands over 140 languages, and offers improved math, reasoning, and chat capabilities,...",
       "pricing": {
         "prompt": "0.00000008",
-        "completion": "0.00000045",
-        "input_cache_read": "0.00000004"
+        "completion": "0.00000016"
       },
       "context_length": 131072,
       "architecture": {
@@ -8815,7 +8798,7 @@
       },
       "top_provider": {
         "name": "",
-        "max_completion_tokens": 117964
+        "max_completion_tokens": 16384
       }
     },
     {
